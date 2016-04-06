@@ -28,11 +28,30 @@ public class ApplicationAssembly: TyphoonAssembly {
         }
     }
     
+    //-------------------------------------------------------------------------------------------
+    // MARK: - Controller Assembly
+    //-------------------------------------------------------------------------------------------
+    
     public dynamic func parkingListController() -> AnyObject {
         
         return TyphoonDefinition.withClass(ParkingListController.self) {
             (definition) in
             definition.injectProperty("addressService", with: self.webServiceAssembly.addressService())
         }
+    }
+    
+    public dynamic func parkingDetailController() -> AnyObject {
+        return TyphoonDefinition.withClass(DetailParkingController.self)
+    }
+    
+    
+    
+    public dynamic func postParkingController() -> AnyObject {
+        return TyphoonDefinition.withClass(PostParkingController.self)
+    }
+    
+    
+    public dynamic func mapViewController() -> AnyObject {
+        return TyphoonDefinition.withClass(MapViewController.self)
     }
 }
