@@ -1,7 +1,6 @@
 # Project Name - *pakr*
 
-**Pakr** is a maps app using the Google Map or Apple Map.
-
+**Pakr** is an app that use maps for displaying some parking lotsp.
 
 Submitted by: **TooSweet Team **
 
