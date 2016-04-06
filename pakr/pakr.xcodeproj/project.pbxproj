@@ -10,24 +10,24 @@
 		3F0307493FD86C361F066914 /* Pods_pakr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */; };
 		B7E6A075BE6CF992A0DCE1E4 /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A3F0867F2355371979F5 /* AddressService.swift */; };
 		B7E6A21070A5FB9C7EB05CC0 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */; };
-		B7E6A221706E0BCD0F9E134E /* DetailParking.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A7AC796DCE5E52237003 /* DetailParking.xib */; };
 		B7E6A37B4128883770945324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A74955DDC111574F709E /* AppDelegate.swift */; };
 		B7E6A3D65E1294BD703628E9 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A64CD911848F7934D761 /* UserHandler.swift */; };
 		B7E6A44372B866D295A5587A /* PostParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */; };
 		B7E6A487B5EB4277A0B8D246 /* DetailParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AC0F61B56B8A9F89ECAC /* DetailParkingController.swift */; };
-		B7E6A54FF81FFE6434D30035 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A9C1F89D96C53934A963 /* MapView.xib */; };
 		B7E6A5D9D4213DB4883FE8AB /* AuthServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBCF05AEC412975E729 /* AuthServiceImpl.swift */; };
 		B7E6A62A10338F796346CE5F /* AuthServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A9B8DFDA2A1CB8191DED /* AuthServiceMockImpl.swift */; };
 		B7E6A73C13BE782631124113 /* ParkingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */; };
 		B7E6A96BD3BC50135EE2C14D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */; };
-		B7E6A9B62C4CA60F7B1CA600 /* ParkingList.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A065E029FB84DFB10C46 /* ParkingList.xib */; };
 		B7E6AA55A60D9FE6987C7DA2 /* AddressServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */; };
 		B7E6AA9BC8DAC7B6FECB387E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ABE02108C1C170F5453D /* MapViewController.swift */; };
-		B7E6ACCA39823F8634754121 /* PostParking.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A76F111435D6088ABB3F /* PostParking.xib */; };
+		B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */; };
 		B7E6ACD219AD3465B20C69D6 /* UserHandlerMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */; };
-		B7E6AD27532E360F124B53FA /* DataHandlerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACB7F3C6021375C4A763 /* DataHandlerAssembly.swift */; };
 		B7E6ADBF476483DFA8AE25CA /* AddressServiceParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */; };
 		B7E6AFFCCF705A10C615643F /* UserHandlerRealmImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBE3CB69516A762B1C7 /* UserHandlerRealmImpl.swift */; };
+		D61619751CB59DCA00E394A9 /* DetailParking.xib in Resources */ = {isa = PBXBuildFile; fileRef = D61619741CB59DCA00E394A9 /* DetailParking.xib */; };
+		D61619771CB59DEE00E394A9 /* ParkingList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D61619761CB59DEE00E394A9 /* ParkingList.xib */; };
+		D61619791CB59E0700E394A9 /* PostParking.xib in Resources */ = {isa = PBXBuildFile; fileRef = D61619781CB59E0700E394A9 /* PostParking.xib */; };
+		D616197B1CB59E1A00E394A9 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D616197A1CB59E1A00E394A9 /* MapView.xib */; };
 		D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD471CB2F64F0012253C /* Main.storyboard */; };
 		D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD4C1CB2F64F0012253C /* LaunchScreen.storyboard */; };
 		D6B3FD561CB2F87E0012253C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3FD551CB2F87E0012253C /* User.swift */; };
@@ -40,7 +40,6 @@
 		2C596D7631085654ECD2A4E9 /* Pods-pakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1FBE9FA491EAFB591259CD /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
 		B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E6A065E029FB84DFB10C46 /* ParkingList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingList.xib; sourceTree = "<group>"; };
 		B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B7E6A3F0867F2355371979F5 /* AddressService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
 		B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerMockImpl.swift; sourceTree = "<group>"; };
@@ -48,18 +47,19 @@
 		B7E6A64CD911848F7934D761 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
 		B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostParkingController.swift; sourceTree = "<group>"; };
 		B7E6A74955DDC111574F709E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7E6A76F111435D6088ABB3F /* PostParking.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostParking.xib; sourceTree = "<group>"; };
-		B7E6A7AC796DCE5E52237003 /* DetailParking.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailParking.xib; sourceTree = "<group>"; };
 		B7E6A9B8DFDA2A1CB8191DED /* AuthServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceMockImpl.swift; sourceTree = "<group>"; };
-		B7E6A9C1F89D96C53934A963 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		B7E6ABE02108C1C170F5453D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B7E6AC0F61B56B8A9F89ECAC /* DetailParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailParkingController.swift; sourceTree = "<group>"; };
-		B7E6ACB7F3C6021375C4A763 /* DataHandlerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandlerAssembly.swift; sourceTree = "<group>"; };
+		B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataHandlerAssembly.swift; path = Assembly/DataHandlerAssembly.swift; sourceTree = "<group>"; };
 		B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingListController.swift; sourceTree = "<group>"; };
 		B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceParseImpl.swift; sourceTree = "<group>"; };
 		B7E6AEBCF05AEC412975E729 /* AuthServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceImpl.swift; sourceTree = "<group>"; };
 		B7E6AEBE3CB69516A762B1C7 /* UserHandlerRealmImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerRealmImpl.swift; sourceTree = "<group>"; };
 		B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceMockImpl.swift; sourceTree = "<group>"; };
+		D61619741CB59DCA00E394A9 /* DetailParking.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailParking.xib; sourceTree = "<group>"; };
+		D61619761CB59DEE00E394A9 /* ParkingList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkingList.xib; sourceTree = "<group>"; };
+		D61619781CB59E0700E394A9 /* PostParking.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostParking.xib; sourceTree = "<group>"; };
+		D616197A1CB59E1A00E394A9 /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		D6B3FD401CB2F64F0012253C /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3FD481CB2F64F0012253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6B3FD4D1CB2F64F0012253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		B7E6A4EB6874CAFC17A46629 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B7E6A76F111435D6088ABB3F /* PostParking.xib */,
+				D61619781CB59E0700E394A9 /* PostParking.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 		B7E6AD79E98DBC9342C235B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B7E6A9C1F89D96C53934A963 /* MapView.xib */,
+				D616197A1CB59E1A00E394A9 /* MapView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 		B7E6AEFE4DFA5186789FBE62 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B7E6A065E029FB84DFB10C46 /* ParkingList.xib */,
+				D61619761CB59DEE00E394A9 /* ParkingList.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 		B7E6AF926BA40B8D7BE56B85 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B7E6A7AC796DCE5E52237003 /* DetailParking.xib */,
+				D61619741CB59DCA00E394A9 /* DetailParking.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			children = (
 				D6B3FD5B1CB2FCBF0012253C /* ApplicationAssembly.swift */,
 				B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */,
-				B7E6ACB7F3C6021375C4A763 /* DataHandlerAssembly.swift */,
+				B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */,
 			);
 			name = Assembly;
 			sourceTree = "<group>";
@@ -347,12 +347,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6B3FD631CB3EA7B0012253C /* Info.plist in Resources */,
+				D61619771CB59DEE00E394A9 /* ParkingList.xib in Resources */,
 				D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */,
 				D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */,
-				B7E6A9B62C4CA60F7B1CA600 /* ParkingList.xib in Resources */,
-				B7E6A221706E0BCD0F9E134E /* DetailParking.xib in Resources */,
-				B7E6A54FF81FFE6434D30035 /* MapView.xib in Resources */,
-				B7E6ACCA39823F8634754121 /* PostParking.xib in Resources */,
+				D61619791CB59E0700E394A9 /* PostParking.xib in Resources */,
+				D61619751CB59DCA00E394A9 /* DetailParking.xib in Resources */,
+				D616197B1CB59E1A00E394A9 /* MapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +415,6 @@
 				D6B3FD561CB2F87E0012253C /* User.swift in Sources */,
 				D6B3FD591CB2F8B40012253C /* Parking.swift in Sources */,
 				B7E6A21070A5FB9C7EB05CC0 /* WebServiceAssembly.swift in Sources */,
-				B7E6AD27532E360F124B53FA /* DataHandlerAssembly.swift in Sources */,
 				B7E6A73C13BE782631124113 /* ParkingListController.swift in Sources */,
 				B7E6ADBF476483DFA8AE25CA /* AddressServiceParseImpl.swift in Sources */,
 				B7E6AA55A60D9FE6987C7DA2 /* AddressServiceMockImpl.swift in Sources */,
@@ -430,6 +429,7 @@
 				B7E6A487B5EB4277A0B8D246 /* DetailParkingController.swift in Sources */,
 				B7E6AA9BC8DAC7B6FECB387E /* MapViewController.swift in Sources */,
 				B7E6A44372B866D295A5587A /* PostParkingController.swift in Sources */,
+				B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

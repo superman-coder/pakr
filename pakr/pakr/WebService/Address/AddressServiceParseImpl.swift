@@ -6,4 +6,6 @@
 import Foundation
 
 public class AddressServiceParseImpl: NSObject, AddressService {
+    public func loadAddress() {
+    }
 }

@@ -6,7 +6,7 @@
 import Foundation
 import Typhoon
 
-class DataHandlerAssembly: TyphoonAssembly {
+public class DataHandlerAssembly: TyphoonAssembly {
 
     public dynamic func userHandler() -> AnyObject {
         return TyphoonDefinition.withClass(UserHandlerMockImpl.self)

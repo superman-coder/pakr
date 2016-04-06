@@ -40,6 +40,7 @@
 	<array>
         <string>ApplicationAssembly</string>
         <string>WebServiceAssembly</string>
+		<string>DataHandlerAssembly</string>
     </array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

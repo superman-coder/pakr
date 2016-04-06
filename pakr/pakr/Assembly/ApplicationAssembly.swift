@@ -30,7 +30,7 @@ public class ApplicationAssembly: TyphoonAssembly {
     
     public dynamic func parkingListController() -> AnyObject {
         
-        return TyphoonDefinition.withClass(ListParkingController.self) {
+        return TyphoonDefinition.withClass(ParkingListController.self) {
             (definition) in
             definition.injectProperty("addressService", with: self.webServiceAssembly.addressService())
         }
