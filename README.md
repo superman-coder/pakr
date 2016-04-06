@@ -1,4 +1,4 @@
-# Project Name - *Easy Park*
+##Easy Park
 
 **Easy Park** is an app that use maps for displaying some parking areas around a specific location.
 
