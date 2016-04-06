@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'pakr' do
+  pod 'Typhoon', :head
+  pod 'RealmSwift'
+  pod 'AFNetworking'
+end
+
