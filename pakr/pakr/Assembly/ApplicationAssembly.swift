@@ -16,6 +16,7 @@ public class ApplicationAssembly: TyphoonAssembly {
      * can instantiate Typhoon with any assembly tha satisfies the module interface.
      */
     public var webServiceAssembly: WebServiceAssembly!
+    public var dataHandlerAssembly: DataHandlerAssembly!
 
     /*
      * This is the definition for our AppDelegate. Typhoon will inject the specified properties
@@ -31,7 +32,7 @@ public class ApplicationAssembly: TyphoonAssembly {
         
         return TyphoonDefinition.withClass(ListParkingController.self) {
             (definition) in
-            definition.injectProperty(#selector(ListParkingController.addressService), with: self.webServiceAssembly.addressService())
+            definition.injectProperty("addressService", with: self.webServiceAssembly.addressService())
         }
     }
 }

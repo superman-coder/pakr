@@ -12,10 +12,7 @@ public class WebServiceAssembly: TyphoonAssembly {
         return TyphoonDefinition.withClass(AddressServiceMockImpl.self)
     }
 
-    /*
-    * A config definition, referencing properties that will be loaded from a plist.
-    */
-    public dynamic func config() -> AnyObject {
-        return TyphoonDefinition.withConfigName("Configuration.plist")
+    public dynamic func authService() -> AnyObject {
+        return TyphoonDefinition.withClass(AuthServiceMockImpl.self)
     }
 }
