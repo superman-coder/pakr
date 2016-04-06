@@ -25,3 +25,4 @@ The following **optional** features are implemented:
 - [] User can view nearest, exactly distance
 
 ## Wire Frame
+![Video Walkthrough](https://github.com/superman-coder/pakr/blob/master/design/IMG_1763.JPG)
