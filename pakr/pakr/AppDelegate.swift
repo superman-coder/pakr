@@ -1,11 +1,6 @@
 //
 //  AppDelegate.swift
 //  pakr
-//
-//  Created by Huynh Quang Thao on 4/5/16.
-//  Copyright © 2016 Pakr. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -15,8 +10,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window = window
+
+        let rootViewController = PakrTabBarController()
+        window.rootViewController = rootViewController
+
+       return true
     }
 
     func applicationWillResignActive(application: UIApplication) {

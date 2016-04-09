@@ -4,10 +4,7 @@
 //
 
 import Foundation
+import UIKit
 
-enum ParkingType {
-    case Bike
-    case Motor
-    case Car
-    case General
+class ProfileController: UIViewController {
 }

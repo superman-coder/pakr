@@ -4,10 +4,6 @@
 //
 
 import Foundation
-
-enum ParkingType {
-    case Bike
-    case Motor
-    case Car
-    case General
+import UIKit
+class SearchViewController: UIKit.UIViewController {
 }
