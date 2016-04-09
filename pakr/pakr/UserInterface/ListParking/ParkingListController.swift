@@ -15,7 +15,6 @@ class ParkingListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initTableView()
-//        addressService.loadAddress()
     }
     
     func initTableView() {
@@ -42,12 +41,7 @@ extension ParkingListController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-        /*
-         UITableViewHeaderFooterView *footer = (UITableViewHeaderFooterView *)view;
-         footer.backgroundView.backgroundColor = [UIColor clearColor];
-         */
-        
-        let footer = view as! UITableViewHeaderFooterView
+       let footer = view as! UITableViewHeaderFooterView
         footer.backgroundView?.backgroundColor = UIColor.clearColor()
     }
     
