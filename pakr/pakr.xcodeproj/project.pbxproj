@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3F0307493FD86C361F066914 /* Pods_pakr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */; };
+		7221DB191CB8D08B002BD0B3 /* ParkingResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221DB171CB8D08B002BD0B3 /* ParkingResultCell.swift */; };
+		7221DB1A1CB8D08B002BD0B3 /* ParkingResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7221DB181CB8D08B002BD0B3 /* ParkingResultCell.xib */; };
+		7221DB1C1CB8D0A2002BD0B3 /* ParkingListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7221DB1B1CB8D0A2002BD0B3 /* ParkingListController.xib */; };
+		7221DB1E1CB8D6D7002BD0B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7221DB1D1CB8D6D7002BD0B3 /* Images.xcassets */; };
+		7221DB211CB8F02D002BD0B3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221DB1F1CB8F02D002BD0B3 /* TestViewController.swift */; };
+		7221DB221CB8F02D002BD0B3 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7221DB201CB8F02D002BD0B3 /* TestViewController.xib */; };
+		728CA22F1CB6CD0800793E9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728CA22E1CB6CD0800793E9C /* HomeViewController.swift */; };
 		B7E6A075BE6CF992A0DCE1E4 /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A3F0867F2355371979F5 /* AddressService.swift */; };
 		B7E6A21070A5FB9C7EB05CC0 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */; };
 		B7E6A37B4128883770945324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A74955DDC111574F709E /* AppDelegate.swift */; };
@@ -25,7 +32,6 @@
 		B7E6ADBF476483DFA8AE25CA /* AddressServiceParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */; };
 		B7E6AFFCCF705A10C615643F /* UserHandlerRealmImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBE3CB69516A762B1C7 /* UserHandlerRealmImpl.swift */; };
 		D61619751CB59DCA00E394A9 /* DetailParking.xib in Resources */ = {isa = PBXBuildFile; fileRef = D61619741CB59DCA00E394A9 /* DetailParking.xib */; };
-		D61619771CB59DEE00E394A9 /* ParkingList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D61619761CB59DEE00E394A9 /* ParkingList.xib */; };
 		D61619791CB59E0700E394A9 /* PostParking.xib in Resources */ = {isa = PBXBuildFile; fileRef = D61619781CB59E0700E394A9 /* PostParking.xib */; };
 		D616197B1CB59E1A00E394A9 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D616197A1CB59E1A00E394A9 /* MapView.xib */; };
 		D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD471CB2F64F0012253C /* Main.storyboard */; };
@@ -39,6 +45,13 @@
 /* Begin PBXFileReference section */
 		2C596D7631085654ECD2A4E9 /* Pods-pakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1FBE9FA491EAFB591259CD /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
+		7221DB171CB8D08B002BD0B3 /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingResultCell.swift; sourceTree = "<group>"; };
+		7221DB181CB8D08B002BD0B3 /* ParkingResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkingResultCell.xib; sourceTree = "<group>"; };
+		7221DB1B1CB8D0A2002BD0B3 /* ParkingListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkingListController.xib; sourceTree = "<group>"; };
+		7221DB1D1CB8D6D7002BD0B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7221DB1F1CB8F02D002BD0B3 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		7221DB201CB8F02D002BD0B3 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		728CA22E1CB6CD0800793E9C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B7E6A3F0867F2355371979F5 /* AddressService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
@@ -57,7 +70,6 @@
 		B7E6AEBE3CB69516A762B1C7 /* UserHandlerRealmImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerRealmImpl.swift; sourceTree = "<group>"; };
 		B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceMockImpl.swift; sourceTree = "<group>"; };
 		D61619741CB59DCA00E394A9 /* DetailParking.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailParking.xib; sourceTree = "<group>"; };
-		D61619761CB59DEE00E394A9 /* ParkingList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkingList.xib; sourceTree = "<group>"; };
 		D61619781CB59E0700E394A9 /* PostParking.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostParking.xib; sourceTree = "<group>"; };
 		D616197A1CB59E1A00E394A9 /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		D6B3FD401CB2F64F0012253C /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +99,24 @@
 				B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		728CA22B1CB6CC2E00793E9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6B3FD471CB2F64F0012253C /* Main.storyboard */,
+				D6B3FD4C1CB2F64F0012253C /* LaunchScreen.storyboard */,
+				7221DB1D1CB8D6D7002BD0B3 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		728CA22D1CB6CCEF00793E9C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				728CA22E1CB6CD0800793E9C /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B7E6A14F1307F56DB422F1F6 /* MapView */ = {
@@ -145,6 +175,7 @@
 		B7E6AA3D75E1E8D3951E50FF /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				728CA22D1CB6CCEF00793E9C /* Home */,
 				B7E6AEB8A0F97B02DD100D09 /* ListParking */,
 				B7E6A94180F47DE613FDF832 /* DetailParking */,
 				B7E6A1D6FFCFA14D27CAF123 /* PostParking */,
@@ -194,7 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */,
+				7221DB1B1CB8D0A2002BD0B3 /* ParkingListController.xib */,
 				B7E6AEFE4DFA5186789FBE62 /* View */,
+				7221DB1F1CB8F02D002BD0B3 /* TestViewController.swift */,
+				7221DB201CB8F02D002BD0B3 /* TestViewController.xib */,
 			);
 			path = ListParking;
 			sourceTree = "<group>";
@@ -202,7 +236,8 @@
 		B7E6AEFE4DFA5186789FBE62 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D61619761CB59DEE00E394A9 /* ParkingList.xib */,
+				7221DB171CB8D08B002BD0B3 /* ParkingResultCell.swift */,
+				7221DB181CB8D08B002BD0B3 /* ParkingResultCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,11 +283,10 @@
 				D6B3FD5D1CB2FE4E0012253C /* Configuration */,
 				D6B3FD5A1CB2FC950012253C /* Assembly */,
 				D6B3FD571CB2F8860012253C /* Model */,
-				D6B3FD471CB2F64F0012253C /* Main.storyboard */,
-				D6B3FD4C1CB2F64F0012253C /* LaunchScreen.storyboard */,
 				B7E6ABE5799A80B801866A9C /* WebService */,
 				B7E6A5FD8429BFCB50372348 /* DataHandler */,
 				B7E6AA3D75E1E8D3951E50FF /* UserInterface */,
+				728CA22B1CB6CC2E00793E9C /* Resources */,
 			);
 			path = pakr;
 			sourceTree = "<group>";
@@ -346,12 +380,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7221DB1E1CB8D6D7002BD0B3 /* Images.xcassets in Resources */,
 				D6B3FD631CB3EA7B0012253C /* Info.plist in Resources */,
-				D61619771CB59DEE00E394A9 /* ParkingList.xib in Resources */,
+				7221DB1A1CB8D08B002BD0B3 /* ParkingResultCell.xib in Resources */,
 				D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */,
 				D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */,
 				D61619791CB59E0700E394A9 /* PostParking.xib in Resources */,
+				7221DB221CB8F02D002BD0B3 /* TestViewController.xib in Resources */,
 				D61619751CB59DCA00E394A9 /* DetailParking.xib in Resources */,
+				7221DB1C1CB8D0A2002BD0B3 /* ParkingListController.xib in Resources */,
 				D616197B1CB59E1A00E394A9 /* MapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +450,7 @@
 			files = (
 				D6B3FD5C1CB2FCBF0012253C /* ApplicationAssembly.swift in Sources */,
 				D6B3FD561CB2F87E0012253C /* User.swift in Sources */,
+				7221DB211CB8F02D002BD0B3 /* TestViewController.swift in Sources */,
 				D6B3FD591CB2F8B40012253C /* Parking.swift in Sources */,
 				B7E6A21070A5FB9C7EB05CC0 /* WebServiceAssembly.swift in Sources */,
 				B7E6A73C13BE782631124113 /* ParkingListController.swift in Sources */,
@@ -426,6 +464,8 @@
 				B7E6A3D65E1294BD703628E9 /* UserHandler.swift in Sources */,
 				B7E6ACD219AD3465B20C69D6 /* UserHandlerMockImpl.swift in Sources */,
 				B7E6A37B4128883770945324 /* AppDelegate.swift in Sources */,
+				7221DB191CB8D08B002BD0B3 /* ParkingResultCell.swift in Sources */,
+				728CA22F1CB6CD0800793E9C /* HomeViewController.swift in Sources */,
 				B7E6A487B5EB4277A0B8D246 /* DetailParkingController.swift in Sources */,
 				B7E6AA9BC8DAC7B6FECB387E /* MapViewController.swift in Sources */,
 				B7E6A44372B866D295A5587A /* PostParkingController.swift in Sources */,
@@ -547,7 +587,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pakr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderschool.pakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./pakr/Pakr-Bridging-Header.h";
 			};
@@ -560,7 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pakr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderschool.pakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./pakr/Pakr-Bridging-Header.h";
 			};
