@@ -6,6 +6,7 @@
 import Foundation
 
 @objc public protocol AddressService {
-    func loadAddress()
+    //func getNearByParkingLotByLocation(location: Coordinate, radius: Float, success:([] -> Void),
+                                       
 }
 

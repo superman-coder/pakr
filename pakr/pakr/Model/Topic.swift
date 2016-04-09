@@ -9,9 +9,11 @@ class Topic: Post {
 
     let parking: Parking!
     var comments: [Comment]?
+    var rating: Int!
 
-    init(topicId: String!, user: User!, date: NSDate!, parking: Parking!) {
+    init(topicId: String!, userId: String!, date: NSDate!, parking: Parking!, rating: Int!) {
+        self.rating = rating
         self.parking = parking
-        super.init(postId: topicId, user: user, dateCreated: date)
+        super.init(postId: topicId, userId: userId, dateCreated: date)
     }
 }

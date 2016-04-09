@@ -8,17 +8,13 @@ import Foundation
 class Post: NSObject {
 
     let postId: String!
-    let user: User!
+    let userId: String!
+    var user: User?
     let dateCreated: NSDate!
-    let upvote: Int!
-    let downvote: Int!
-
-    init(postId: String!, user: User!, dateCreated: NSDate!) {
+    
+    init(postId: String!, userId: String!, dateCreated: NSDate!) {
         self.postId = postId
-        self.user = user
+        self.userId = userId
         self.dateCreated = dateCreated
-        self.upvote = 0
-        self.downvote = 0
     }
-
 }
