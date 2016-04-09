@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingListController" customModule="pakr" customModuleProvider="target">
+            <connections>
+                <outlet property="parkingTableView" destination="Vwa-0m-Gjv" id="HbC-et-Qbg"/>
+                <outlet property="view" destination="Bvj-3T-POh" id="7yq-kJ-YHk"/>
+            </connections>
+        </placeholder>
+        <view contentMode="scaleToFill" id="Bvj-3T-POh">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-0m-Gjv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LeD-u4-we2"/>
+                        <outlet property="delegate" destination="-1" id="ePO-OX-gP1"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Vwa-0m-Gjv" firstAttribute="leading" secondItem="Bvj-3T-POh" secondAttribute="leading" id="E4p-aT-esC"/>
+                <constraint firstAttribute="bottom" secondItem="Vwa-0m-Gjv" secondAttribute="bottom" id="c0L-bg-6Yb"/>
+                <constraint firstItem="Vwa-0m-Gjv" firstAttribute="top" secondItem="Bvj-3T-POh" secondAttribute="top" id="kum-o9-rYW"/>
+                <constraint firstAttribute="trailing" secondItem="Vwa-0m-Gjv" secondAttribute="trailing" id="vAP-cu-q2J"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+</document>
