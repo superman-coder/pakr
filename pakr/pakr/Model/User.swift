@@ -17,6 +17,7 @@ class User: NSObject {
     let name: String!
     let avatarUrl: String?
     var topics: [Topic]?
+    var bookmarks: [Bookmark]?
 
     init(userId: String!, role: Role!, email: String!, dateCreated: NSDate!, name: String!, avatarUrl: String?) {
         self.email = email

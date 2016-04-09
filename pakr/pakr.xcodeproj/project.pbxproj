@@ -15,6 +15,7 @@
 		B7E6A3D65E1294BD703628E9 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A64CD911848F7934D761 /* UserHandler.swift */; };
 		B7E6A44372B866D295A5587A /* PostParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */; };
 		B7E6A487B5EB4277A0B8D246 /* DetailParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AC0F61B56B8A9F89ECAC /* DetailParkingController.swift */; };
+		B7E6A4BFBCD7923ADA3F45CA /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEAAE0C15EA017667262 /* Bookmark.swift */; };
 		B7E6A5D9D4213DB4883FE8AB /* AuthServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBCF05AEC412975E729 /* AuthServiceImpl.swift */; };
 		B7E6A62A10338F796346CE5F /* AuthServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A9B8DFDA2A1CB8191DED /* AuthServiceMockImpl.swift */; };
 		B7E6A69D20E8AB22EFE03008 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACCA59B8D39D81B2FA82 /* Role.swift */; };
@@ -65,6 +66,7 @@
 		B7E6ACCA59B8D39D81B2FA82 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Role.swift; path = Model/Role.swift; sourceTree = "<group>"; };
 		B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingListController.swift; sourceTree = "<group>"; };
 		B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceParseImpl.swift; sourceTree = "<group>"; };
+		B7E6AEAAE0C15EA017667262 /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bookmark.swift; path = Model/Bookmark.swift; sourceTree = "<group>"; };
 		B7E6AEBCF05AEC412975E729 /* AuthServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceImpl.swift; sourceTree = "<group>"; };
 		B7E6AEBE3CB69516A762B1C7 /* UserHandlerRealmImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerRealmImpl.swift; sourceTree = "<group>"; };
 		B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceMockImpl.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				B7E6ACCA59B8D39D81B2FA82 /* Role.swift */,
 				B7E6A6F6C0A2AD0502AF2AD1 /* Coordinate.swift */,
 				B7E6A53E688EDA0857F6C959 /* ParkingType.swift */,
+				B7E6AEAAE0C15EA017667262 /* Bookmark.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				B7E6A69D20E8AB22EFE03008 /* Role.swift in Sources */,
 				B7E6AD80EBACB446162D0817 /* Coordinate.swift in Sources */,
 				B7E6A70EEB7DA2D318EC880F /* ParkingType.swift in Sources */,
+				B7E6A4BFBCD7923ADA3F45CA /* Bookmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
