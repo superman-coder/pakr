@@ -10,18 +10,24 @@
 		3F0307493FD86C361F066914 /* Pods_pakr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */; };
 		B7E6A075BE6CF992A0DCE1E4 /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A3F0867F2355371979F5 /* AddressService.swift */; };
 		B7E6A21070A5FB9C7EB05CC0 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */; };
+		B7E6A2CC1BD2D342730E5223 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A82B8995E5086C6A3B67 /* Comment.swift */; };
 		B7E6A37B4128883770945324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A74955DDC111574F709E /* AppDelegate.swift */; };
 		B7E6A3D65E1294BD703628E9 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A64CD911848F7934D761 /* UserHandler.swift */; };
 		B7E6A44372B866D295A5587A /* PostParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */; };
 		B7E6A487B5EB4277A0B8D246 /* DetailParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AC0F61B56B8A9F89ECAC /* DetailParkingController.swift */; };
 		B7E6A5D9D4213DB4883FE8AB /* AuthServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBCF05AEC412975E729 /* AuthServiceImpl.swift */; };
 		B7E6A62A10338F796346CE5F /* AuthServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A9B8DFDA2A1CB8191DED /* AuthServiceMockImpl.swift */; };
+		B7E6A69D20E8AB22EFE03008 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACCA59B8D39D81B2FA82 /* Role.swift */; };
+		B7E6A70EEB7DA2D318EC880F /* ParkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A53E688EDA0857F6C959 /* ParkingType.swift */; };
 		B7E6A73C13BE782631124113 /* ParkingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */; };
 		B7E6A96BD3BC50135EE2C14D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */; };
+		B7E6A9A948080C2EA9188F58 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A9ABC83F8CC6647C187D /* Topic.swift */; };
 		B7E6AA55A60D9FE6987C7DA2 /* AddressServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */; };
 		B7E6AA9BC8DAC7B6FECB387E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ABE02108C1C170F5453D /* MapViewController.swift */; };
 		B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */; };
+		B7E6AC241E7292C7D1E66C84 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A0B43B52197822E7CF50 /* Post.swift */; };
 		B7E6ACD219AD3465B20C69D6 /* UserHandlerMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */; };
+		B7E6AD80EBACB446162D0817 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A6F6C0A2AD0502AF2AD1 /* Coordinate.swift */; };
 		B7E6ADBF476483DFA8AE25CA /* AddressServiceParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */; };
 		B7E6AFFCCF705A10C615643F /* UserHandlerRealmImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBE3CB69516A762B1C7 /* UserHandlerRealmImpl.swift */; };
 		D61619751CB59DCA00E394A9 /* DetailParking.xib in Resources */ = {isa = PBXBuildFile; fileRef = D61619741CB59DCA00E394A9 /* DetailParking.xib */; };
@@ -40,17 +46,23 @@
 		2C596D7631085654ECD2A4E9 /* Pods-pakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1FBE9FA491EAFB591259CD /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
 		B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E6A0B43B52197822E7CF50 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Model/Post.swift; sourceTree = "<group>"; };
 		B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B7E6A3F0867F2355371979F5 /* AddressService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
 		B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerMockImpl.swift; sourceTree = "<group>"; };
+		B7E6A53E688EDA0857F6C959 /* ParkingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingType.swift; sourceTree = "<group>"; };
 		B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServiceAssembly.swift; path = Assembly/WebServiceAssembly.swift; sourceTree = "<group>"; };
 		B7E6A64CD911848F7934D761 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
+		B7E6A6F6C0A2AD0502AF2AD1 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostParkingController.swift; sourceTree = "<group>"; };
 		B7E6A74955DDC111574F709E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7E6A82B8995E5086C6A3B67 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Model/Comment.swift; sourceTree = "<group>"; };
+		B7E6A9ABC83F8CC6647C187D /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Topic.swift; path = Model/Topic.swift; sourceTree = "<group>"; };
 		B7E6A9B8DFDA2A1CB8191DED /* AuthServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceMockImpl.swift; sourceTree = "<group>"; };
 		B7E6ABE02108C1C170F5453D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B7E6AC0F61B56B8A9F89ECAC /* DetailParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailParkingController.swift; sourceTree = "<group>"; };
 		B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataHandlerAssembly.swift; path = Assembly/DataHandlerAssembly.swift; sourceTree = "<group>"; };
+		B7E6ACCA59B8D39D81B2FA82 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Role.swift; path = Model/Role.swift; sourceTree = "<group>"; };
 		B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingListController.swift; sourceTree = "<group>"; };
 		B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceParseImpl.swift; sourceTree = "<group>"; };
 		B7E6AEBCF05AEC412975E729 /* AuthServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceImpl.swift; sourceTree = "<group>"; };
@@ -262,6 +274,12 @@
 			children = (
 				D6B3FD551CB2F87E0012253C /* User.swift */,
 				D6B3FD581CB2F8B40012253C /* Parking.swift */,
+				B7E6A0B43B52197822E7CF50 /* Post.swift */,
+				B7E6A9ABC83F8CC6647C187D /* Topic.swift */,
+				B7E6A82B8995E5086C6A3B67 /* Comment.swift */,
+				B7E6ACCA59B8D39D81B2FA82 /* Role.swift */,
+				B7E6A6F6C0A2AD0502AF2AD1 /* Coordinate.swift */,
+				B7E6A53E688EDA0857F6C959 /* ParkingType.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -430,6 +448,12 @@
 				B7E6AA9BC8DAC7B6FECB387E /* MapViewController.swift in Sources */,
 				B7E6A44372B866D295A5587A /* PostParkingController.swift in Sources */,
 				B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */,
+				B7E6AC241E7292C7D1E66C84 /* Post.swift in Sources */,
+				B7E6A9A948080C2EA9188F58 /* Topic.swift in Sources */,
+				B7E6A2CC1BD2D342730E5223 /* Comment.swift in Sources */,
+				B7E6A69D20E8AB22EFE03008 /* Role.swift in Sources */,
+				B7E6AD80EBACB446162D0817 /* Coordinate.swift in Sources */,
+				B7E6A70EEB7DA2D318EC880F /* ParkingType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
