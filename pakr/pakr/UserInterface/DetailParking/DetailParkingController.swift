@@ -32,25 +32,25 @@ class DetailParkingController: UIViewController {
     
 // MARK: - Private Method
     func setData(){
-        if parkingModel == nil { return }
-        let imageUrl = parkingModel.imageUrl?.first
-        if imageUrl != nil {
-            imgParkingLot.setImageWithURL(NSURL(string: imageUrl!)!, placeholderImage: UIImage(named: "parkingLot"))
-        }
-        let avatarUrl = parkingModel.user.avatarUrl
-        if avatarUrl != nil {
-            imgUser.setImageWithURL(NSURL(string: avatarUrl!)!, placeholderImage:UIImage(named: "username"))
-        }
-        lblUserName.text = parkingModel.user.name
-        lblPhoneNumber.text = parkingModel.telphoneNumber
-
-        // warningformat day same region*/
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "en_US")
-        formatter.dateFormat = "hh:mm a"
-        lblTimeClose.text = formatter.stringFromDate(parkingModel.openTime!)
-        lblAddress.text = parkingModel.addressName
-        
+//        if parkingModel == nil { return }
+//        let imageUrl = parkingModel.imageUrl?.first
+//        if imageUrl != nil {
+//            imgParkingLot.setImageWithURL(NSURL(string: imageUrl!)!, placeholderImage: UIImage(named: "parkingLot"))
+//        }
+//        let avatarUrl = parkingModel.user.avatarUrl
+//        if avatarUrl != nil {
+//            imgUser.setImageWithURL(NSURL(string: avatarUrl!)!, placeholderImage:UIImage(named: "username"))
+//        }
+//        lblUserName.text = parkingModel.user.name
+//        lblPhoneNumber.text = parkingModel.telphoneNumber
+//
+//        // warningformat day same region*/
+//        let formatter = NSDateFormatter()
+//        formatter.locale = NSLocale(localeIdentifier: "en_US")
+//        formatter.dateFormat = "hh:mm a"
+//        lblTimeClose.text = formatter.stringFromDate(parkingModel.openTime!)
+//        lblAddress.text = parkingModel.addressName
+//
 //        lblTimeClose.text
 //        lblMotoPrice
 //        lblCarPrice

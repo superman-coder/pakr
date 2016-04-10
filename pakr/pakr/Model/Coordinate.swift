@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Coordinate {
+@objc class Coordinate: NSObject {
     let latitude: Double!
     let longitude: Double!
 

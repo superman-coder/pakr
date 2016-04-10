@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
 
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = rootViewController
 
         window.makeKeyAndVisible()
-        
-       return true
+
+        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {

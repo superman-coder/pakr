@@ -5,8 +5,9 @@
 
 import Foundation
 
-public class AddressServiceMockImpl: NSObject, AddressService {
-    public func loadAddress() {
-        print("mock loading address service")
+class AddressServiceMockImpl: NSObject, AddressService {
+    func getNearByParkingLotByLocation(location location: Coordinate, radius radius: Float, success:([Topic] -> Void), fail: (NSError -> Void)) {
+        let res = Repository.TopicRepos
+        success(res)
     }
 }

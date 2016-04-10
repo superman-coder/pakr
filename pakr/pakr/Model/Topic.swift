@@ -5,7 +5,7 @@
 
 import Foundation
 
-class Topic: Post {
+@objc class Topic: Post {
 
     let parking: Parking!
     var comments: [Comment]?

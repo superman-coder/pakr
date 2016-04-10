@@ -30,6 +30,7 @@
 		B7E6A5D9D4213DB4883FE8AB /* AuthServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBCF05AEC412975E729 /* AuthServiceImpl.swift */; };
 		B7E6A62A10338F796346CE5F /* AuthServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A9B8DFDA2A1CB8191DED /* AuthServiceMockImpl.swift */; };
 		B7E6A69D20E8AB22EFE03008 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACCA59B8D39D81B2FA82 /* Role.swift */; };
+		B7E6A712AD85148DF33A867A /* WebServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A6572E08FE8421E7BA9D /* WebServiceFactory.swift */; };
 		B7E6A73C13BE782631124113 /* ParkingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */; };
 		B7E6A8F8AF0DDEB5FA8648BE /* PakrTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A11C2EE4B5043E6E7B9F /* PakrTabBarController.swift */; };
 		B7E6A96BD3BC50135EE2C14D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */; };
@@ -40,6 +41,7 @@
 		B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */; };
 		B7E6AC241E7292C7D1E66C84 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A0B43B52197822E7CF50 /* Post.swift */; };
 		B7E6ACD219AD3465B20C69D6 /* UserHandlerMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */; };
+		B7E6AD4CD4619F41DBC1ABA0 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A81B2077E3932819670D /* Repository.swift */; };
 		B7E6ADBF476483DFA8AE25CA /* AddressServiceParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */; };
 		B7E6AE0A275883B67C161505 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A47796553DEC5C92919D /* BaseViewController.swift */; };
 		B7E6AEC95BBD373C7EB1A1A0 /* PakrNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AED941C515C32B8BDC00 /* PakrNavigationController.swift */; };
@@ -80,9 +82,11 @@
 		B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerMockImpl.swift; sourceTree = "<group>"; };
 		B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServiceAssembly.swift; path = Assembly/WebServiceAssembly.swift; sourceTree = "<group>"; };
 		B7E6A64CD911848F7934D761 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
+		B7E6A6572E08FE8421E7BA9D /* WebServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceFactory.swift; sourceTree = "<group>"; };
 		B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostParkingController.swift; sourceTree = "<group>"; };
 		B7E6A74955DDC111574F709E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E6A7DB6ABAC6877E79449E /* PostParkingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostParkingController.xib; sourceTree = "<group>"; };
+		B7E6A81B2077E3932819670D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B7E6A82B8995E5086C6A3B67 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Model/Comment.swift; sourceTree = "<group>"; };
 		B7E6A9ABC83F8CC6647C187D /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Topic.swift; path = Model/Topic.swift; sourceTree = "<group>"; };
 		B7E6A9B8DFDA2A1CB8191DED /* AuthServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceMockImpl.swift; sourceTree = "<group>"; };
@@ -206,6 +210,14 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		B7E6A9162077FED24CACB0CD /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				B7E6A6572E08FE8421E7BA9D /* WebServiceFactory.swift */,
+			);
+			path = factory;
+			sourceTree = "<group>";
+		};
 		B7E6A94180F47DE613FDF832 /* DetailParking */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +267,7 @@
 			children = (
 				B7E6AD35909E04EA0DDE8CB5 /* Address */,
 				B7E6A71C5302CEE688644A40 /* Authentication */,
+				B7E6A81B2077E3932819670D /* Repository.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -344,6 +357,7 @@
 				B7E6AA3D75E1E8D3951E50FF /* UserInterface */,
 				B7E6A39325053A87C6183C09 /* CustomController */,
 				728CA22B1CB6CC2E00793E9C /* Resources */,
+				B7E6A9162077FED24CACB0CD /* factory */,
 			);
 			path = pakr;
 			sourceTree = "<group>";
@@ -552,6 +566,8 @@
 				B7E6A211F7295A59670C947C /* SearchController.swift in Sources */,
 				B7E6A2A075F8286A670F5446 /* BookmarkController.swift in Sources */,
 				B7E6AE0A275883B67C161505 /* BaseViewController.swift in Sources */,
+				B7E6A712AD85148DF33A867A /* WebServiceFactory.swift in Sources */,
+				B7E6AD4CD4619F41DBC1ABA0 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
