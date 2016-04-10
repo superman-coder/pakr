@@ -35,7 +35,6 @@
 		B7E6A8F8AF0DDEB5FA8648BE /* PakrTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A11C2EE4B5043E6E7B9F /* PakrTabBarController.swift */; };
 		B7E6A96BD3BC50135EE2C14D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */; };
 		B7E6A9A948080C2EA9188F58 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A9ABC83F8CC6647C187D /* Topic.swift */; };
-		B7E6AA4F91FE073086455AC5 /* PostParkingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A7DB6ABAC6877E79449E /* PostParkingController.xib */; };
 		B7E6AA55A60D9FE6987C7DA2 /* AddressServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */; };
 		B7E6AA9BC8DAC7B6FECB387E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ABE02108C1C170F5453D /* MapController.swift */; };
 		B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */; };
@@ -47,11 +46,13 @@
 		B7E6AEC95BBD373C7EB1A1A0 /* PakrNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AED941C515C32B8BDC00 /* PakrNavigationController.swift */; };
 		B7E6AF06553A31CDABAA6AF5 /* MapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A3102AEFE5E91685EAD4 /* MapController.xib */; };
 		B7E6AFFCCF705A10C615643F /* UserHandlerRealmImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBE3CB69516A762B1C7 /* UserHandlerRealmImpl.swift */; };
+		D60993B91CBA765D0066C37C /* PostParkingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60993B81CBA765D0066C37C /* PostParkingController.xib */; };
 		D697FDA91CB8D20500914437 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDA81CB8D20500914437 /* SearchController.xib */; };
 		D697FDAB1CB8D22000914437 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAA1CB8D22000914437 /* ProfileController.xib */; };
 		D697FDAD1CB8EBF400914437 /* BookmarkController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAC1CB8EBF400914437 /* BookmarkController.xib */; };
 		D697FDB21CB9131300914437 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697FDB01CB9131300914437 /* Coordinate.swift */; };
 		D697FDB31CB9131300914437 /* ParkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697FDB11CB9131300914437 /* ParkingType.swift */; };
+		D697FDB91CBA60A300914437 /* CustomTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D697FDB81CBA60A300914437 /* CustomTimePicker.m */; };
 		D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD471CB2F64F0012253C /* Main.storyboard */; };
 		D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD4C1CB2F64F0012253C /* LaunchScreen.storyboard */; };
 		D6B3FD561CB2F87E0012253C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3FD551CB2F87E0012253C /* User.swift */; };
@@ -85,7 +86,6 @@
 		B7E6A6572E08FE8421E7BA9D /* WebServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceFactory.swift; sourceTree = "<group>"; };
 		B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostParkingController.swift; sourceTree = "<group>"; };
 		B7E6A74955DDC111574F709E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7E6A7DB6ABAC6877E79449E /* PostParkingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostParkingController.xib; sourceTree = "<group>"; };
 		B7E6A81B2077E3932819670D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B7E6A82B8995E5086C6A3B67 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Model/Comment.swift; sourceTree = "<group>"; };
 		B7E6A9ABC83F8CC6647C187D /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Topic.swift; path = Model/Topic.swift; sourceTree = "<group>"; };
@@ -103,11 +103,15 @@
 		B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceMockImpl.swift; sourceTree = "<group>"; };
 		B7E6AED941C515C32B8BDC00 /* PakrNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrNavigationController.swift; sourceTree = "<group>"; };
 		B7E6AFEAE8B58F93790A8BDD /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		D60993B81CBA765D0066C37C /* PostParkingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostParkingController.xib; sourceTree = "<group>"; };
 		D697FDA81CB8D20500914437 /* SearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		D697FDAA1CB8D22000914437 /* ProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		D697FDAC1CB8EBF400914437 /* BookmarkController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkController.xib; sourceTree = "<group>"; };
 		D697FDB01CB9131300914437 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinate.swift; path = Model/Coordinate.swift; sourceTree = "<group>"; };
 		D697FDB11CB9131300914437 /* ParkingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkingType.swift; path = Model/ParkingType.swift; sourceTree = "<group>"; };
+		D697FDB71CBA60A300914437 /* CustomTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTimePicker.h; sourceTree = "<group>"; };
+		D697FDB81CBA60A300914437 /* CustomTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimePicker.m; sourceTree = "<group>"; };
+		D697FDBA1CBA611700914437 /* Pakr-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pakr-Bridging-Header.h"; sourceTree = "<group>"; };
 		D6B3FD401CB2F64F0012253C /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3FD481CB2F64F0012253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6B3FD4D1CB2F64F0012253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -177,9 +181,19 @@
 			isa = PBXGroup;
 			children = (
 				B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */,
-				B7E6A7DB6ABAC6877E79449E /* PostParkingController.xib */,
+				B7E6A34B6C5A8DC52D77F864 /* InfoScreen */,
+				B7E6AB721DF8604835BDDA9F /* MapImageScreen */,
+				B7E6AB926749868AD4C50268 /* SelectPlaceScreen */,
+				D60993B81CBA765D0066C37C /* PostParkingController.xib */,
 			);
 			path = PostParking;
+			sourceTree = "<group>";
+		};
+		B7E6A34B6C5A8DC52D77F864 /* InfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InfoScreen;
 			sourceTree = "<group>";
 		};
 		B7E6A39325053A87C6183C09 /* CustomController */ = {
@@ -192,12 +206,29 @@
 			path = CustomController;
 			sourceTree = "<group>";
 		};
+		B7E6A570B474DA7E6D345403 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B7E6A6A60BC64AA8621BAF7D /* TimePicker */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		B7E6A5FD8429BFCB50372348 /* DataHandler */ = {
 			isa = PBXGroup;
 			children = (
 				B7E6AA67F738135A8D1EE336 /* User */,
 			);
 			path = DataHandler;
+			sourceTree = "<group>";
+		};
+		B7E6A6A60BC64AA8621BAF7D /* TimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				D697FDB71CBA60A300914437 /* CustomTimePicker.h */,
+				D697FDB81CBA60A300914437 /* CustomTimePicker.m */,
+			);
+			path = TimePicker;
 			sourceTree = "<group>";
 		};
 		B7E6A71C5302CEE688644A40 /* Authentication */ = {
@@ -260,6 +291,20 @@
 				B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		B7E6AB721DF8604835BDDA9F /* MapImageScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapImageScreen;
+			sourceTree = "<group>";
+		};
+		B7E6AB926749868AD4C50268 /* SelectPlaceScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SelectPlaceScreen;
 			sourceTree = "<group>";
 		};
 		B7E6ABE5799A80B801866A9C /* WebService */ = {
@@ -358,6 +403,7 @@
 				B7E6A39325053A87C6183C09 /* CustomController */,
 				728CA22B1CB6CC2E00793E9C /* Resources */,
 				B7E6A9162077FED24CACB0CD /* factory */,
+				B7E6A570B474DA7E6D345403 /* Widget */,
 			);
 			path = pakr;
 			sourceTree = "<group>";
@@ -391,6 +437,7 @@
 		D6B3FD5D1CB2FE4E0012253C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				D697FDBA1CBA611700914437 /* Pakr-Bridging-Header.h */,
 				D6B3FD621CB3EA7B0012253C /* Info.plist */,
 				B7E6A74955DDC111574F709E /* AppDelegate.swift */,
 			);
@@ -470,8 +517,8 @@
 				D697FDAB1CB8D22000914437 /* ProfileController.xib in Resources */,
 				B7E6AF06553A31CDABAA6AF5 /* MapController.xib in Resources */,
 				D697FDA91CB8D20500914437 /* SearchController.xib in Resources */,
-				B7E6AA4F91FE073086455AC5 /* PostParkingController.xib in Resources */,
 				D697FDAD1CB8EBF400914437 /* BookmarkController.xib in Resources */,
+				D60993B91CBA765D0066C37C /* PostParkingController.xib in Resources */,
 				7221DB1C1CB8D0A2002BD0B3 /* ParkingListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +613,7 @@
 				B7E6A211F7295A59670C947C /* SearchController.swift in Sources */,
 				B7E6A2A075F8286A670F5446 /* BookmarkController.swift in Sources */,
 				B7E6AE0A275883B67C161505 /* BaseViewController.swift in Sources */,
+				D697FDB91CBA60A300914437 /* CustomTimePicker.m in Sources */,
 				B7E6A712AD85148DF33A867A /* WebServiceFactory.swift in Sources */,
 				B7E6AD4CD4619F41DBC1ABA0 /* Repository.swift in Sources */,
 			);

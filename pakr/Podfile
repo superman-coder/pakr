@@ -5,5 +5,7 @@ target 'pakr' do
   pod 'Typhoon', :head
   pod 'RealmSwift'
   pod 'AFNetworking'
+  pod "AYStepperView"
+  pod 'MBXPageViewController'
 end
 
