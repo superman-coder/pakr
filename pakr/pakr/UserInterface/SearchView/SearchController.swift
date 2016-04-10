@@ -5,5 +5,5 @@
 
 import Foundation
 import UIKit
-class SearchViewController: UIKit.UIViewController {
+class SearchController: UIKit.UIViewController {
 }
