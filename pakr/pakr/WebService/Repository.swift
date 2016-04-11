@@ -28,37 +28,37 @@ class Repository {
         static let fsoft = Coordinate(latitude: 10, longitude: 10)
     }
 
-    static let ParkingRepos: [Parking] = [
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
-    ]
-
+//    static let ParkingRepos: [Parking] = [
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//            Parking(parkingName: "benh vien Tu Du", dateCreated: NSDate(), addressName: "173/2 Nguyen Thi Minh Khai", latitude: Repository.AddressRepos.bv_TuDu.latitude, longitude: Repository.AddressRepos.bv_TuDu.longitude, parkingType: ParkingType.General),
+//    ]
+//
     static let TopicRepos: [Topic] = [
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[0], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[1], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[2], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[3], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[4], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[5], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[6], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[7], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[8], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[9], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[10], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[11], rating: 4),
-            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[12], rating: 4)
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[0], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[1], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[2], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[3], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[4], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[5], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[6], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[7], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[8], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[9], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[10], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[11], rating: 4),
+//            Topic(topicId: "1", userId: "1", date: NSDate(), parking: Repository.ParkingRepos[12], rating: 4)
     ]
 }
