@@ -60,11 +60,11 @@ class DetailParkingController: UIViewController {
 
     
     @IBAction func callAction(sender: AnyObject) {
-        if parkingModel == nil { return }
-        let busPhone = parkingModel.telphoneNumber
-            if let url = NSURL(string: "tel://\(busPhone)") {
-            UIApplication.sharedApplication().openURL(url)
-        }
+//        if parkingModel == nil { return }
+//        let busPhone = parkingModel.telphoneNumber
+//            if let url = NSURL(string: "tel://\(busPhone)") {
+//            UIApplication.sharedApplication().openURL(url)
+//        }
     }
     @IBAction func commentAction(sender: AnyObject) {
         self.presentViewController(CommentsViewController(), animated: true, completion: nil)

@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum ParkingType {
+enum VehicleType {
     case Bike
     case Motor
     case Car
