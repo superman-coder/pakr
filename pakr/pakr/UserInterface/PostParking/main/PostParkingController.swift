@@ -102,6 +102,7 @@ extension PostParkingController: MBXPageControllerDataSource {
 
 extension PostParkingController: MBXPageControllerDataDelegate {
     func MBXPageChangedToIndex(index: Int) {
+        print("click \(index)")
         self.stepView.userInteractionEnabled = false
         self.stepView.updateCurrentStepIndex(UInt(index), completionBlock: {
             Void -> Void in

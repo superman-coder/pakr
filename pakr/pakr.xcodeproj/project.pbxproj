@@ -30,13 +30,10 @@
 		B7E6A5D9D4213DB4883FE8AB /* AuthServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEBCF05AEC412975E729 /* AuthServiceImpl.swift */; };
 		B7E6A62A10338F796346CE5F /* AuthServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A9B8DFDA2A1CB8191DED /* AuthServiceMockImpl.swift */; };
 		B7E6A682DD8BF2AC7176D630 /* VerifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A57B5CA20E3442894E29 /* VerifyController.swift */; };
-		B7E6A69D20E8AB22EFE03008 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACCA59B8D39D81B2FA82 /* Role.swift */; };
 		B7E6A712AD85148DF33A867A /* WebServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A6572E08FE8421E7BA9D /* WebServiceFactory.swift */; };
 		B7E6A73C13BE782631124113 /* ParkingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */; };
 		B7E6A8F8AF0DDEB5FA8648BE /* PakrTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A11C2EE4B5043E6E7B9F /* PakrTabBarController.swift */; };
 		B7E6A96BD3BC50135EE2C14D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */; };
-		B7E6A9A948080C2EA9188F58 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A9ABC83F8CC6647C187D /* Topic.swift */; };
-		B7E6AA4F91FE073086455AC5 /* PostParkingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A7DB6ABAC6877E79449E /* PostParkingController.xib */; };
 		B7E6AA55A60D9FE6987C7DA2 /* AddressServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */; };
 		B7E6AA9BC8DAC7B6FECB387E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ABE02108C1C170F5453D /* MapController.swift */; };
 		B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */; };
@@ -51,12 +48,6 @@
 		D6015FDF1CBACC5E0050A160 /* PostInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6015FDE1CBACC5E0050A160 /* PostInfoController.xib */; };
 		D6015FE11CBAD0770050A160 /* VerifyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6015FE01CBAD0770050A160 /* VerifyController.xib */; };
 		D6015FE31CBAD0F10050A160 /* SelectMapImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6015FE21CBAD0F10050A160 /* SelectMapImageController.xib */; };
-		D697FDA91CB8D20500914437 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDA81CB8D20500914437 /* SearchController.xib */; };
-		D697FDAB1CB8D22000914437 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAA1CB8D22000914437 /* ProfileController.xib */; };
-		D697FDAD1CB8EBF400914437 /* BookmarkController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAC1CB8EBF400914437 /* BookmarkController.xib */; };
-		D697FDB21CB9131300914437 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697FDB01CB9131300914437 /* Coordinate.swift */; };
-		D697FDB31CB9131300914437 /* ParkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697FDB11CB9131300914437 /* ParkingType.swift */; };
-		D697FDB91CBA60A300914437 /* CustomTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D697FDB81CBA60A300914437 /* CustomTimePicker.m */; };
 		D6015FEE1CBBD7250050A160 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6015FE81CBBD7250050A160 /* Bookmark.swift */; };
 		D6015FEF1CBBD7250050A160 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6015FE91CBBD7250050A160 /* Comment.swift */; };
 		D6015FF01CBBD7250050A160 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6015FEA1CBBD7250050A160 /* Post.swift */; };
@@ -72,6 +63,7 @@
 		D697FDA91CB8D20500914437 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDA81CB8D20500914437 /* SearchController.xib */; };
 		D697FDAB1CB8D22000914437 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAA1CB8D22000914437 /* ProfileController.xib */; };
 		D697FDAD1CB8EBF400914437 /* BookmarkController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAC1CB8EBF400914437 /* BookmarkController.xib */; };
+		D697FDB91CBA60A300914437 /* CustomTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D697FDB81CBA60A300914437 /* CustomTimePicker.m */; };
 		D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD471CB2F64F0012253C /* Main.storyboard */; };
 		D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD4C1CB2F64F0012253C /* LaunchScreen.storyboard */; };
 		D6B3FD5C1CB2FCBF0012253C /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3FD5B1CB2FCBF0012253C /* ApplicationAssembly.swift */; };
@@ -109,7 +101,6 @@
 		B7E6AC0F61B56B8A9F89ECAC /* DetailParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailParkingController.swift; sourceTree = "<group>"; };
 		B7E6AC398FA05D592136702C /* PostParkingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostParkingController.xib; sourceTree = "<group>"; };
 		B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataHandlerAssembly.swift; path = Assembly/DataHandlerAssembly.swift; sourceTree = "<group>"; };
-		B7E6ACCA59B8D39D81B2FA82 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Role.swift; path = Model/Role.swift; sourceTree = "<group>"; };
 		B7E6ACEA06E025FCC04FA0E7 /* PostParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostParkingController.swift; sourceTree = "<group>"; };
 		B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingListController.swift; sourceTree = "<group>"; };
 		B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceParseImpl.swift; sourceTree = "<group>"; };
@@ -123,14 +114,6 @@
 		D6015FDE1CBACC5E0050A160 /* PostInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostInfoController.xib; sourceTree = "<group>"; };
 		D6015FE01CBAD0770050A160 /* VerifyController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyController.xib; sourceTree = "<group>"; };
 		D6015FE21CBAD0F10050A160 /* SelectMapImageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectMapImageController.xib; sourceTree = "<group>"; };
-		D697FDA81CB8D20500914437 /* SearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
-		D697FDAA1CB8D22000914437 /* ProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
-		D697FDAC1CB8EBF400914437 /* BookmarkController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkController.xib; sourceTree = "<group>"; };
-		D697FDB01CB9131300914437 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinate.swift; path = Model/Coordinate.swift; sourceTree = "<group>"; };
-		D697FDB11CB9131300914437 /* ParkingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkingType.swift; path = Model/ParkingType.swift; sourceTree = "<group>"; };
-		D697FDB71CBA60A300914437 /* CustomTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTimePicker.h; sourceTree = "<group>"; };
-		D697FDB81CBA60A300914437 /* CustomTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimePicker.m; sourceTree = "<group>"; };
-		D697FDBA1CBA611700914437 /* Pakr-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pakr-Bridging-Header.h"; sourceTree = "<group>"; };
 		D6015FE81CBBD7250050A160 /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bookmark.swift; path = Model/Web/Bookmark.swift; sourceTree = "<group>"; };
 		D6015FE91CBBD7250050A160 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Model/Web/Comment.swift; sourceTree = "<group>"; };
 		D6015FEA1CBBD7250050A160 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Model/Web/Post.swift; sourceTree = "<group>"; };
@@ -146,6 +129,9 @@
 		D697FDA81CB8D20500914437 /* SearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		D697FDAA1CB8D22000914437 /* ProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		D697FDAC1CB8EBF400914437 /* BookmarkController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkController.xib; sourceTree = "<group>"; };
+		D697FDB71CBA60A300914437 /* CustomTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTimePicker.h; sourceTree = "<group>"; };
+		D697FDB81CBA60A300914437 /* CustomTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimePicker.m; sourceTree = "<group>"; };
+		D697FDBA1CBA611700914437 /* Pakr-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pakr-Bridging-Header.h"; sourceTree = "<group>"; };
 		D6B3FD401CB2F64F0012253C /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3FD481CB2F64F0012253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6B3FD4D1CB2F64F0012253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -672,7 +658,6 @@
 				728CA22F1CB6CD0800793E9C /* HomeViewController.swift in Sources */,
 				B7E6A487B5EB4277A0B8D246 /* DetailParkingController.swift in Sources */,
 				B7E6AA9BC8DAC7B6FECB387E /* MapController.swift in Sources */,
-				B7E6A44372B866D295A5587A /* PostParkingController.swift in Sources */,
 				D6015FF01CBBD7250050A160 /* Post.swift in Sources */,
 				B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */,
 				B7E6AEC95BBD373C7EB1A1A0 /* PakrNavigationController.swift in Sources */,
@@ -807,7 +792,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pakr/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coderschool.pakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -821,7 +806,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pakr/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coderschool.pakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";

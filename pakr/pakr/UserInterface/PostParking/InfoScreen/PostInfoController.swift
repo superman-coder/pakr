@@ -12,27 +12,46 @@ import Material
 
 class PostInfoController: BaseViewController {
     
-    
+    @IBOutlet weak var businessNameTextField: TextField!
+    @IBOutlet weak var businessDescriptionTextField: TextField!
+    @IBOutlet weak var businessTelephoneTextField: TextField!
     @IBOutlet weak var parkingNameTextField: TextField!
-    @IBOutlet weak var parkingDescription: TextView!
-    
+    @IBOutlet weak var parkingAddressTextField: TextField!
+    @IBOutlet weak var parkingDescriptionTextField: TextField!
+   
+    @IBOutlet weak var test: TextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // parkingNameTextField.delegate = self
-        parkingNameTextField.placeholder = "Email"
-        
-        
-        /*
-         Used to display the error message, which is displayed when
-         the user presses the 'return' key.
-         */
-        parkingNameTextField.detailLabel = UILabel()
-        parkingNameTextField.detailLabel!.text = "Email is incorrect."
-        parkingNameTextField.detailLabel!.font = RobotoFont.regularWithSize(12)
-        parkingNameTextField.detailLabelActiveColor = MaterialColor.red.accent3
-        //		emailField.detailLabelAutoHideEnabled = false // Uncomment this line to have manual hiding.
+//        updateTextField(businessNameTextField, placeHolder: "your company here", text: "is not correct")
+//        
+//        updateTextField(test, placeHolder: "hello", text: "hello thao")
+    }
     
-        parkingDescription.text = ""
+    func updateTextField(textField: TextField!, placeHolder: String!, text: String!) {
+        textField.placeholder = placeHolder
+        textField.placeholderTextColor = MaterialColor.grey.base
+        textField.font = RobotoFont.regularWithSize(12)
+        textField.textColor = MaterialColor.black
+        textField.text = text
+
+        
+        textField.detailLabel = UILabel()
+        textField.titleLabel!.font = RobotoFont.mediumWithSize(12)
+        textField.titleLabelColor = MaterialColor.grey.base
+        textField.titleLabelActiveColor = MaterialColor.blue.accent3
+        
+        let image = UIImage(named: "ic_close_white")?.imageWithRenderingMode(.AlwaysTemplate)
+        
+//        let clearButton: FlatButton = FlatButton()
+//        clearButton.pulseColor = MaterialColor.grey.base
+//        clearButton.pulseScale = false
+//        clearButton.tintColor = MaterialColor.grey.base
+//        clearButton.setImage(image, forState: .Normal)
+//        clearButton.setImage(image, forState: .Highlighted)
+//        
+//        textField.clearButton = clearButton
+       
+        //textField.detailLabelActiveColor = MaterialColor.red.accent3
     }
 }
