@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostInfoController" customModule="pakr" customModuleProvider="target">
             <connections>
+                <outlet property="parkingDescription" destination="Q76-To-gsg" id="2BZ-6b-8IW"/>
+                <outlet property="parkingNameTextField" destination="WwC-fc-xUq" id="zvv-sq-Mdo"/>
                 <outlet property="view" destination="iN0-l3-epB" id="iFh-qV-Rv8"/>
             </connections>
         </placeholder>
@@ -15,13 +17,36 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBx-ni-zid">
-                    <rect key="frame" x="8" y="39" width="42" height="21"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WwC-fc-xUq" customClass="TextField" customModule="Material">
+                    <rect key="frame" x="30" y="30" width="540" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q76-To-gsg" customClass="TextView">
+                    <rect key="frame" x="30" y="90" width="540" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="rtT-AI-0Zp"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9P-mL-p2j" customClass="MaterialLabel" customModule="Material">
+                    <rect key="frame" x="70" y="256" width="194" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WwC-fc-xUq" secondAttribute="trailing" constant="30" id="LJ6-dS-1ag"/>
+                <constraint firstItem="WwC-fc-xUq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="O0v-po-z65"/>
+                <constraint firstItem="Q76-To-gsg" firstAttribute="trailing" secondItem="WwC-fc-xUq" secondAttribute="trailing" id="Oc3-W0-J06"/>
+                <constraint firstItem="Q76-To-gsg" firstAttribute="leading" secondItem="WwC-fc-xUq" secondAttribute="leading" id="QWi-18-eVB"/>
+                <constraint firstItem="Q76-To-gsg" firstAttribute="top" secondItem="WwC-fc-xUq" secondAttribute="bottom" constant="30" id="ZdL-K9-hy2"/>
+                <constraint firstItem="WwC-fc-xUq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="smu-o0-hcf"/>
+            </constraints>
         </view>
     </objects>
 </document>

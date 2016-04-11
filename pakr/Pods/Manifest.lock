@@ -14,10 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - AYStepperView (0.1.0):
-    - pop (~> 1.0)
+  - Material (1.39.5)
   - MBXPageViewController (0.8.0)
-  - pop (1.0.9)
   - Realm (0.98.6):
     - Realm/Headers (= 0.98.6)
   - Realm/Headers (0.98.6)
@@ -26,21 +24,23 @@ PODS:
   - Typhoon (HEAD based on 3.4.5):
     - Typhoon/no-arc (= HEAD based on 3.4.5)
   - Typhoon/no-arc (HEAD based on 3.4.5)
+  - YStepperView (0.0.3)
 
 DEPENDENCIES:
   - AFNetworking
-  - AYStepperView
+  - Material (~> 1.0)
   - MBXPageViewController
   - RealmSwift
   - Typhoon (HEAD)
+  - YStepperView
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  AYStepperView: 6bc5399dae562b2d221c47cbd540db438454ecf9
+  Material: c6ebc24f0bcb19c2dce94e8c76b48392c0d67a1c
   MBXPageViewController: 05c5136032801e29af6e40a00f091e929defff30
-  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Realm: 44803f35418c5d89b27825a564247fcd190de37e
   RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
   Typhoon: 200100687af3233ec5ed019064df3c9ffe350475
+  YStepperView: 86e8491b56c2bdbe7017bb70bfacb7eb057bd6d6
 
 COCOAPODS: 0.39.0
