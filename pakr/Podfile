@@ -8,5 +8,6 @@ target 'pakr' do
   pod 'YStepperView'
   pod 'MBXPageViewController'
   pod 'Material', '~> 1.0'
+  pod 'BEMCheckBox'
 end
 

@@ -248,7 +248,7 @@ public class TextField : UITextField {
 	}
 	
 	/// Reference to the clearButton.
-	public private(set) var clearButton: FlatButton!
+	public var clearButton: FlatButton!
 	
 	/// The bottom border layer.
 	public private(set) lazy var lineLayer: CAShapeLayer = CAShapeLayer()

@@ -60,6 +60,8 @@
 		D6015FFB1CBBD7390050A160 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6015FF71CBBD7390050A160 /* VehicleType.swift */; };
 		D6015FFD1CBBD90D0050A160 /* TimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6015FFC1CBBD90D0050A160 /* TimeRange.swift */; };
 		D6015FFF1CBBDD470050A160 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6015FFE1CBBDD470050A160 /* Business.swift */; };
+		D60160021CBD57600050A160 /* LayoutUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60160011CBD57600050A160 /* LayoutUtils.swift */; };
+		D60160051CBD5E180050A160 /* ModifiedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60160041CBD5E180050A160 /* ModifiedTextField.swift */; };
 		D697FDA91CB8D20500914437 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDA81CB8D20500914437 /* SearchController.xib */; };
 		D697FDAB1CB8D22000914437 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAA1CB8D22000914437 /* ProfileController.xib */; };
 		D697FDAD1CB8EBF400914437 /* BookmarkController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAC1CB8EBF400914437 /* BookmarkController.xib */; };
@@ -126,6 +128,8 @@
 		D6015FF71CBBD7390050A160 /* VehicleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleType.swift; path = Model/Parking/VehicleType.swift; sourceTree = "<group>"; };
 		D6015FFC1CBBD90D0050A160 /* TimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeRange.swift; path = Model/Parking/TimeRange.swift; sourceTree = "<group>"; };
 		D6015FFE1CBBDD470050A160 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Business.swift; path = Model/Parking/Business.swift; sourceTree = "<group>"; };
+		D60160011CBD57600050A160 /* LayoutUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutUtils.swift; path = Utils/LayoutUtils.swift; sourceTree = "<group>"; };
+		D60160041CBD5E180050A160 /* ModifiedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModifiedTextField.swift; path = Material/ModifiedTextField.swift; sourceTree = "<group>"; };
 		D697FDA81CB8D20500914437 /* SearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		D697FDAA1CB8D22000914437 /* ProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		D697FDAC1CB8EBF400914437 /* BookmarkController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkController.xib; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		B7E6A570B474DA7E6D345403 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				D60160031CBD5DEE0050A160 /* Material */,
 				B7E6A6A60BC64AA8621BAF7D /* TimePicker */,
 			);
 			path = Widget;
@@ -431,6 +436,22 @@
 			name = Web;
 			sourceTree = "<group>";
 		};
+		D60160001CBD57490050A160 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D60160011CBD57600050A160 /* LayoutUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D60160031CBD5DEE0050A160 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				D60160041CBD5E180050A160 /* ModifiedTextField.swift */,
+			);
+			name = Material;
+			sourceTree = "<group>";
+		};
 		D6B3FD371CB2F64F0012253C = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +473,7 @@
 		D6B3FD421CB2F64F0012253C /* pakr */ = {
 			isa = PBXGroup;
 			children = (
+				D60160001CBD57490050A160 /* Utils */,
 				D6B3FD5D1CB2FE4E0012253C /* Configuration */,
 				D6B3FD5A1CB2FC950012253C /* Assembly */,
 				D6B3FD571CB2F8860012253C /* Model */,
@@ -639,6 +661,7 @@
 				D6015FF91CBBD7390050A160 /* Parking.swift in Sources */,
 				D6015FEE1CBBD7250050A160 /* Bookmark.swift in Sources */,
 				B7E6ADBF476483DFA8AE25CA /* AddressServiceParseImpl.swift in Sources */,
+				D60160021CBD57600050A160 /* LayoutUtils.swift in Sources */,
 				B7E6AA55A60D9FE6987C7DA2 /* AddressServiceMockImpl.swift in Sources */,
 				B7E6A075BE6CF992A0DCE1E4 /* AddressService.swift in Sources */,
 				B7E6A96BD3BC50135EE2C14D /* AuthService.swift in Sources */,
@@ -669,6 +692,7 @@
 				D6015FFD1CBBD90D0050A160 /* TimeRange.swift in Sources */,
 				D6015FEF1CBBD7250050A160 /* Comment.swift in Sources */,
 				B7E6A2A075F8286A670F5446 /* BookmarkController.swift in Sources */,
+				D60160051CBD5E180050A160 /* ModifiedTextField.swift in Sources */,
 				B7E6AE0A275883B67C161505 /* BaseViewController.swift in Sources */,
 				D697FDB91CBA60A300914437 /* CustomTimePicker.m in Sources */,
 				B7E6A712AD85148DF33A867A /* WebServiceFactory.swift in Sources */,

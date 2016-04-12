@@ -19,12 +19,19 @@ class PakrTabBarController: UIKit.UITabBarController {
         var viewControllers: [UIViewController] = []
 
         let navController = UIKit.UINavigationController()
-        let postController = PostParkingController(nibName: "PostParkingController", bundle: nil)
+        let postController = PostInfoController(nibName: "PostInfoController", bundle: nil)
         let postItem = UITabBarItem(title: "Post", image: UIImage(named: "nearby.png"), tag: 0)
         postController.tabBarItem = postItem
         navController.viewControllers = [postController]
         viewControllers.append(navController)
 
+//        let navController = UIKit.UINavigationController()
+//        let postController = PostParkingController(nibName: "PostParkingController", bundle: nil)
+//        let postItem = UITabBarItem(title: "Post", image: UIImage(named: "nearby.png"), tag: 0)
+//        postController.tabBarItem = postItem
+//        navController.viewControllers = [postController]
+//        viewControllers.append(navController)
+//
         let mapController = MapViewController(nibName: "MapController", bundle: nil)
         let mapItem = UITabBarItem(title: "NearBy", image: UIImage(named: "nearby.png"), tag: 0)
         mapController.tabBarItem = mapItem

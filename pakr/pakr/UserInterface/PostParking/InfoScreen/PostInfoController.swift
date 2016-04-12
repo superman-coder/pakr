@@ -9,49 +9,66 @@
 import Foundation
 import UIKit
 import Material
+import BEMCheckBox
 
 class PostInfoController: BaseViewController {
     
     @IBOutlet weak var businessNameTextField: TextField!
     @IBOutlet weak var businessDescriptionTextField: TextField!
     @IBOutlet weak var businessTelephoneTextField: TextField!
+    
     @IBOutlet weak var parkingNameTextField: TextField!
     @IBOutlet weak var parkingAddressTextField: TextField!
     @IBOutlet weak var parkingDescriptionTextField: TextField!
+    
+    @IBOutlet weak var parkingInfoContainer: UIView!
+    @IBOutlet weak var businessInfoContainer: UIView!
+    @IBOutlet weak var bikeDetailContainer: UIView!
+    @IBOutlet weak var motorbikeDetailContainer: UIView!
+    @IBOutlet weak var carDetailContainer: UIView!
+    
+    @IBOutlet weak var bikeMinPriceTextField: TextField!
+    @IBOutlet weak var bikeMaxPriceTextField: TextField!
+    @IBOutlet weak var bikeCheckBox: BEMCheckBox!
+    
+    
+    @IBOutlet weak var motorMinPriceTextField: TextField!
+    @IBOutlet weak var motorMaxPriceTextField: TextField!
+    @IBOutlet weak var motorCheckBox: BEMCheckBox!
+    
+    
+    @IBOutlet weak var carMinPriceTextField: TextField!
+    @IBOutlet weak var carMaxPriceTextField: TextField!
+    @IBOutlet weak var carCheckBox: BEMCheckBox!
    
-    @IBOutlet weak var test: TextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        LayoutUtils.setUpTextField(businessNameTextField, title: "Company Name", suggestionText: "Please tell us your company name")
+        LayoutUtils.setUpTextField(businessDescriptionTextField, title: "Description", suggestionText: "Let us know more about you")
+        LayoutUtils.setUpTextField(businessTelephoneTextField, title: "Telephone number", suggestionText: "How can we contact you")
         
-//        updateTextField(businessNameTextField, placeHolder: "your company here", text: "is not correct")
-//        
-//        updateTextField(test, placeHolder: "hello", text: "hello thao")
+        LayoutUtils.setUpTextField(parkingNameTextField, title: "Parking Name", suggestionText: "make customer easily know parking lot")
+        LayoutUtils.setUpTextField(parkingAddressTextField, title: "Parking Address", suggestionText: "How can we find your parking lot")
+        LayoutUtils.setUpTextField(parkingDescriptionTextField, title: "Parking Detail", suggestionText: "Let us know more")
+        
+        LayoutUtils.setUpTextField(bikeMinPriceTextField, title: "Min Price", suggestionText: "Let us know more")
+        LayoutUtils.setUpTextField(bikeMaxPriceTextField, title: "Max Price", suggestionText: "Let us know more")
+        
+        LayoutUtils.setUpTextField(motorMinPriceTextField, title: "Min Price", suggestionText: "Let us know more")
+        LayoutUtils.setUpTextField(motorMaxPriceTextField, title: "Max Price", suggestionText: "Let us know more")
+ 
+        LayoutUtils.setUpTextField(carMinPriceTextField, title: "Min Price", suggestionText: "Let us know more")
+        LayoutUtils.setUpTextField(carMaxPriceTextField, title: "Max Price", suggestionText: "Let us know more")
+        
     }
     
-    func updateTextField(textField: TextField!, placeHolder: String!, text: String!) {
-        textField.placeholder = placeHolder
-        textField.placeholderTextColor = MaterialColor.grey.base
-        textField.font = RobotoFont.regularWithSize(12)
-        textField.textColor = MaterialColor.black
-        textField.text = text
-
-        
-        textField.detailLabel = UILabel()
-        textField.titleLabel!.font = RobotoFont.mediumWithSize(12)
-        textField.titleLabelColor = MaterialColor.grey.base
-        textField.titleLabelActiveColor = MaterialColor.blue.accent3
-        
-        let image = UIImage(named: "ic_close_white")?.imageWithRenderingMode(.AlwaysTemplate)
-        
-//        let clearButton: FlatButton = FlatButton()
-//        clearButton.pulseColor = MaterialColor.grey.base
-//        clearButton.pulseScale = false
-//        clearButton.tintColor = MaterialColor.grey.base
-//        clearButton.setImage(image, forState: .Normal)
-//        clearButton.setImage(image, forState: .Highlighted)
-//        
-//        textField.clearButton = clearButton
-       
-        //textField.detailLabelActiveColor = MaterialColor.red.accent3
+    override func viewDidLayoutSubviews() {
+        LayoutUtils.dropShadowView(businessInfoContainer)
+        LayoutUtils.dropShadowView(parkingInfoContainer)
+        LayoutUtils.dropShadowView(bikeDetailContainer)
+        LayoutUtils.dropShadowView(motorbikeDetailContainer)
+        LayoutUtils.dropShadowView(carDetailContainer)
     }
+    
 }

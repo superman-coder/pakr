@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BEMCheckBox (1.2.0)
   - Material (1.39.5)
   - MBXPageViewController (0.8.0)
   - Realm (0.98.6):
@@ -28,6 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - BEMCheckBox
   - Material (~> 1.0)
   - MBXPageViewController
   - RealmSwift
@@ -36,6 +38,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BEMCheckBox: fcfbbf42cf23d38fbb605c72f63db9ae82d6acd3
   Material: c6ebc24f0bcb19c2dce94e8c76b48392c0d67a1c
   MBXPageViewController: 05c5136032801e29af6e40a00f091e929defff30
   Realm: 44803f35418c5d89b27825a564247fcd190de37e

@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-pakr/AFNetworking.framework"
+  install_framework "Pods-pakr/BEMCheckBox.framework"
   install_framework "Pods-pakr/MBXPageViewController.framework"
   install_framework "Pods-pakr/Material.framework"
   install_framework "Pods-pakr/Realm.framework"
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-pakr/AFNetworking.framework"
+  install_framework "Pods-pakr/BEMCheckBox.framework"
   install_framework "Pods-pakr/MBXPageViewController.framework"
   install_framework "Pods-pakr/Material.framework"
   install_framework "Pods-pakr/Realm.framework"
