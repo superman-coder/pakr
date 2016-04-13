@@ -20,4 +20,6 @@ class ParkAnnotation: NSObject, MKAnnotation {
         self.coordinate = coordinate
     }
     
+    
+    
 }

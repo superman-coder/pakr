@@ -18,6 +18,8 @@ class MapController: UIViewController {
     var parkingList: [Topic]! = []
     var parkingDataLoadingRadius:Double = 0
     
+    let centerPinLayer = CALayer()
+    
     // Center point on Map
     var currentCenterLocation: CLLocationCoordinate2D?
     // Center point that used to load data
@@ -27,12 +29,19 @@ class MapController: UIViewController {
     // When user first time open app, we will wating for a valid current user location
     var startUpdatingParkingData = false
     
+    // MARK: - Init controller
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupLocationManager()
         initMapView()
         fillAnnotationOnMap(self.createAnnotationList(self.parkingList))
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let bounds = parkMapView.bounds
+        centerPinLayer.position = CGPointMake(bounds.size.width / 2, bounds.size.height / 2)
     }
     
     func setupLocationManager() {
@@ -50,6 +59,13 @@ class MapController: UIViewController {
             let region = MKCoordinateRegionMakeWithDistance(initialLocation, MAP_DEFAULT_RADIUS, MAP_DEFAULT_RADIUS)
             parkMapView.setRegion(region, animated: true)
         }
+        
+        centerPinLayer.contents = UIImage(named: "pin-orange")?.CGImage
+        centerPinLayer.bounds = CGRectMake(0, 0, 29, 42)
+        let bounds = parkMapView.bounds
+        centerPinLayer.position = CGPointMake(bounds.size.width / 2, bounds.size.height / 2)
+        centerPinLayer.anchorPoint = CGPointMake(0.5, 1)
+        parkMapView.layer.addSublayer(centerPinLayer)
     }
     
     func fillAnnotationOnMap(listAnnotation:[ParkAnnotation]) {
@@ -71,6 +87,7 @@ class MapController: UIViewController {
         return NSUserDefaults.standardUserDefaults().getLastSavedLocation()
     }
     
+    // MARK: -
     func mapViewRadius() -> Double {
         let bottomrightScreenPoint = CGPointMake(CGRectGetMaxX(parkMapView.bounds), CGRectGetMaxY(parkMapView.bounds))
         let topleftScreenPoint = CGPointZero
@@ -92,8 +109,9 @@ class MapController: UIViewController {
 
 extension MapController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        
+        print("UPDATE")
         currentCenterLocation = mapView.region.center
+        
         let mapViewRadius = self.mapViewRadius()
         // Dont know why bounds of mapview become Zero, in that case, mapViewRadius is Zero too, 
         // Here we will skip that case.
@@ -108,6 +126,8 @@ extension MapController: MKMapViewDelegate {
             self.loadDataWithCenter(currentDataCenterLocation!.latitude, longitude: currentDataCenterLocation!.longitude, radius: parkingDataLoadingRadius)
         }
     }
+    
+    
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         self.currentUserLocation = userLocation.coordinate
