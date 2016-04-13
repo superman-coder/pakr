@@ -22,11 +22,20 @@ class PostInfoController: BaseViewController {
     @IBOutlet weak var parkingAddressTextField: TextField!
     @IBOutlet weak var parkingDescriptionTextField: TextField!
     
+    @IBOutlet weak var workStartTimeLabel: MaterialLabel!
+    @IBOutlet weak var workEndTimeLabel: MaterialLabel!
+    @IBOutlet weak var weekendStartTimeLabel: MaterialLabel!
+    @IBOutlet weak var weekendEndTimeLabel: MaterialLabel!
+    @IBOutlet weak var capacityTextField: TextField!
+    @IBOutlet weak var priceDescriptionTextField: TextField!
+    
+    
     @IBOutlet weak var parkingInfoContainer: UIView!
     @IBOutlet weak var businessInfoContainer: UIView!
     @IBOutlet weak var bikeDetailContainer: UIView!
     @IBOutlet weak var motorbikeDetailContainer: UIView!
     @IBOutlet weak var carDetailContainer: UIView!
+    @IBOutlet weak var parkingDetailContainer: UIView!
     
     @IBOutlet weak var bikeMinPriceTextField: TextField!
     @IBOutlet weak var bikeMaxPriceTextField: TextField!
@@ -71,6 +80,7 @@ class PostInfoController: BaseViewController {
         LayoutUtils.dropShadowView(bikeDetailContainer)
         LayoutUtils.dropShadowView(motorbikeDetailContainer)
         LayoutUtils.dropShadowView(carDetailContainer)
+        LayoutUtils.dropShadowView(parkingDetailContainer)
 //        var contentRect = CGRectZero
 //        for view in self.scrollView.subviews {
 //            print("size: \(view.frame)")
