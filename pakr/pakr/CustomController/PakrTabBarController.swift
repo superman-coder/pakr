@@ -17,7 +17,7 @@ class PakrTabBarController: UIKit.UITabBarController {
           // set up all view controllers for tab bar
         var viewControllers: [UIViewController] = []
         
-        let mapController = MapViewController(nibName: "MapController", bundle: nil)
+        let mapController = MapController(nibName: "MapController", bundle: nil)
         let mapItem = UITabBarItem(title: "NearBy", image: UIImage(named: "nearby.png"), tag: 0)
         mapController.tabBarItem = mapItem
         viewControllers.append(mapController)

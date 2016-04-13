@@ -23,11 +23,16 @@
 		7221DB191CB8D08B002BD0B3 /* ParkingResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221DB171CB8D08B002BD0B3 /* ParkingResultCell.swift */; };
 		7221DB1A1CB8D08B002BD0B3 /* ParkingResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7221DB181CB8D08B002BD0B3 /* ParkingResultCell.xib */; };
 		7221DB1C1CB8D0A2002BD0B3 /* ParkingListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7221DB1B1CB8D0A2002BD0B3 /* ParkingListController.xib */; };
-		7221DB1E1CB8D6D7002BD0B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7221DB1D1CB8D6D7002BD0B3 /* Images.xcassets */; };
 		728CA22F1CB6CD0800793E9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728CA22E1CB6CD0800793E9C /* HomeViewController.swift */; };
+		72B18ACD1CBA0E6400083DBB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B18ACC1CBA0E6400083DBB /* MapKit.framework */; };
+		72B18ACF1CBA0E6B00083DBB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B18ACE1CBA0E6B00083DBB /* CoreLocation.framework */; };
+		72B18AD21CBA1C5500083DBB /* ParkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B18AD11CBA1C5500083DBB /* ParkAnnotation.swift */; };
+		72B18AD51CBA265500083DBB /* DataServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B18AD41CBA265500083DBB /* DataServiceUtil.swift */; };
+		72B18AD71CBA55DC00083DBB /* PakrPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B18AD61CBA55DC00083DBB /* PakrPreferences.swift */; };
+		72B18AD91CBA681600083DBB /* PakrCLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B18AD81CBA681600083DBB /* PakrCLLocationCoordinate2D.swift */; };
+		72B18ADB1CBAC37100083DBB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B18ADA1CBAC37100083DBB /* Images.xcassets */; };
 		B7E6A075BE6CF992A0DCE1E4 /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A3F0867F2355371979F5 /* AddressService.swift */; };
 		B7E6A10C4888AA03E5295B5B /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A4878F74CC08839EC3A3 /* ProfileController.swift */; };
-		B7E6A21070A5FB9C7EB05CC0 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */; };
 		B7E6A211F7295A59670C947C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AFEAE8B58F93790A8BDD /* SearchController.swift */; };
 		B7E6A2A075F8286A670F5446 /* BookmarkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE9009471BE29BC0025A /* BookmarkController.swift */; };
 		B7E6A37B4128883770945324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A74955DDC111574F709E /* AppDelegate.swift */; };
@@ -43,7 +48,7 @@
 		B7E6AA4F91FE073086455AC5 /* PostParkingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A7DB6ABAC6877E79449E /* PostParkingController.xib */; };
 		B7E6AA55A60D9FE6987C7DA2 /* AddressServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AEC9E575FD98D8129B40 /* AddressServiceMockImpl.swift */; };
 		B7E6AA9BC8DAC7B6FECB387E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ABE02108C1C170F5453D /* MapController.swift */; };
-		B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */; };
+		B7E6AC241E7292C7D1E66C84 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A0B43B52197822E7CF50 /* Post.swift */; };
 		B7E6ACD219AD3465B20C69D6 /* UserHandlerMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */; };
 		B7E6AD4CD4619F41DBC1ABA0 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A81B2077E3932819670D /* Repository.swift */; };
 		B7E6ADBF476483DFA8AE25CA /* AddressServiceParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */; };
@@ -68,8 +73,9 @@
 		D697FDAD1CB8EBF400914437 /* BookmarkController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FDAC1CB8EBF400914437 /* BookmarkController.xib */; };
 		D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD471CB2F64F0012253C /* Main.storyboard */; };
 		D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD4C1CB2F64F0012253C /* LaunchScreen.storyboard */; };
-		D6B3FD5C1CB2FCBF0012253C /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3FD5B1CB2FCBF0012253C /* ApplicationAssembly.swift */; };
 		D6B3FD631CB3EA7B0012253C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B3FD621CB3EA7B0012253C /* Info.plist */; };
+		D6B3FD561CB2F87E0012253C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3FD551CB2F87E0012253C /* User.swift */; };
+		D6B3FD591CB2F8B40012253C /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3FD581CB2F8B40012253C /* Parking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,8 +96,14 @@
 		7221DB171CB8D08B002BD0B3 /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingResultCell.swift; sourceTree = "<group>"; };
 		7221DB181CB8D08B002BD0B3 /* ParkingResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkingResultCell.xib; sourceTree = "<group>"; };
 		7221DB1B1CB8D0A2002BD0B3 /* ParkingListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkingListController.xib; sourceTree = "<group>"; };
-		7221DB1D1CB8D6D7002BD0B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		728CA22E1CB6CD0800793E9C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		72B18ACC1CBA0E6400083DBB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		72B18ACE1CBA0E6B00083DBB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		72B18AD11CBA1C5500083DBB /* ParkAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkAnnotation.swift; sourceTree = "<group>"; };
+		72B18AD41CBA265500083DBB /* DataServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServiceUtil.swift; sourceTree = "<group>"; };
+		72B18AD61CBA55DC00083DBB /* PakrPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrPreferences.swift; sourceTree = "<group>"; };
+		72B18AD81CBA681600083DBB /* PakrCLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrCLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		72B18ADA1CBAC37100083DBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E6A11C2EE4B5043E6E7B9F /* PakrTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrTabBarController.swift; sourceTree = "<group>"; };
 		B7E6A2F42A86EDD4C2F33233 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -100,7 +112,6 @@
 		B7E6A47796553DEC5C92919D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B7E6A4878F74CC08839EC3A3 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		B7E6A49ED497A5AAB2349FDF /* UserHandlerMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerMockImpl.swift; sourceTree = "<group>"; };
-		B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServiceAssembly.swift; path = Assembly/WebServiceAssembly.swift; sourceTree = "<group>"; };
 		B7E6A64CD911848F7934D761 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
 		B7E6A6572E08FE8421E7BA9D /* WebServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceFactory.swift; sourceTree = "<group>"; };
 		B7E6A742459ABD3A81B0A34B /* PostParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostParkingController.swift; sourceTree = "<group>"; };
@@ -111,6 +122,7 @@
 		B7E6ABE02108C1C170F5453D /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		B7E6AC0F61B56B8A9F89ECAC /* DetailParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailParkingController.swift; sourceTree = "<group>"; };
 		B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataHandlerAssembly.swift; path = Assembly/DataHandlerAssembly.swift; sourceTree = "<group>"; };
+		B7E6ACCA59B8D39D81B2FA82 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Role.swift; path = Model/Role.swift; sourceTree = "<group>"; };
 		B7E6AD564631E4044A2E0E21 /* ParkingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingListController.swift; sourceTree = "<group>"; };
 		B7E6AE28AAAAAB540E03E284 /* AddressServiceParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceParseImpl.swift; sourceTree = "<group>"; };
 		B7E6AE9009471BE29BC0025A /* BookmarkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkController.swift; sourceTree = "<group>"; };
@@ -138,6 +150,8 @@
 		D6B3FD481CB2F64F0012253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6B3FD4D1CB2F64F0012253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6B3FD5B1CB2FCBF0012253C /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationAssembly.swift; path = Assembly/ApplicationAssembly.swift; sourceTree = "<group>"; };
+		D6B3FD551CB2F87E0012253C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		D6B3FD581CB2F8B40012253C /* Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parking.swift; path = Model/Parking.swift; sourceTree = "<group>"; };
 		D6B3FD621CB3EA7B0012253C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B18ACF1CBA0E6B00083DBB /* CoreLocation.framework in Frameworks */,
+				72B18ACD1CBA0E6400083DBB /* MapKit.framework in Frameworks */,
 				3F0307493FD86C361F066914 /* Pods_pakr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +185,8 @@
 		32157446F4B180B4B2C96BA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72B18ACE1CBA0E6B00083DBB /* CoreLocation.framework */,
+				72B18ACC1CBA0E6400083DBB /* MapKit.framework */,
 				B6DE7668D2DB19706D02B6CD /* Pods_pakr.framework */,
 			);
 			name = Frameworks;
@@ -180,7 +198,7 @@
 				109A01FC1CBCE48B002FCFFF /* city.jpg */,
 				D6B3FD471CB2F64F0012253C /* Main.storyboard */,
 				D6B3FD4C1CB2F64F0012253C /* LaunchScreen.storyboard */,
-				7221DB1D1CB8D6D7002BD0B3 /* Images.xcassets */,
+				72B18ADA1CBAC37100083DBB /* Images.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -193,9 +211,28 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		72B18AD01CBA1C3500083DBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72B18AD11CBA1C5500083DBB /* ParkAnnotation.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72B18AD31CBA262000083DBB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				72B18AD41CBA265500083DBB /* DataServiceUtil.swift */,
+				72B18AD61CBA55DC00083DBB /* PakrPreferences.swift */,
+				72B18AD81CBA681600083DBB /* PakrCLLocationCoordinate2D.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		B7E6A14F1307F56DB422F1F6 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				72B18AD01CBA1C3500083DBB /* View */,
 				B7E6ABE02108C1C170F5453D /* MapController.swift */,
 				B7E6A3102AEFE5E91685EAD4 /* MapController.xib */,
 			);
@@ -414,8 +451,8 @@
 		D6B3FD421CB2F64F0012253C /* pakr */ = {
 			isa = PBXGroup;
 			children = (
+				72B18AD31CBA262000083DBB /* Utility */,
 				D6B3FD5D1CB2FE4E0012253C /* Configuration */,
-				D6B3FD5A1CB2FC950012253C /* Assembly */,
 				D6B3FD571CB2F8860012253C /* Model */,
 				B7E6ABE5799A80B801866A9C /* WebService */,
 				B7E6A5FD8429BFCB50372348 /* DataHandler */,
@@ -434,16 +471,6 @@
 				D6015FE61CBBD7070050A160 /* Parking */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		D6B3FD5A1CB2FC950012253C /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				D6B3FD5B1CB2FCBF0012253C /* ApplicationAssembly.swift */,
-				B7E6A57418B3A2E331DF1294 /* WebServiceAssembly.swift */,
-				B7E6ACC7D511AE6AC55546DD /* DataHandlerAssembly.swift */,
-			);
-			name = Assembly;
 			sourceTree = "<group>";
 		};
 		D6B3FD5D1CB2FE4E0012253C /* Configuration */ = {
@@ -526,7 +553,10 @@
 				D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */,
 				104FC2811CBE0898006A314C /* PhotosCollectionViewCell.xib in Resources */,
 				D6B3FD631CB3EA7B0012253C /* Info.plist in Resources */,
+				7221DB1A1CB8D08B002BD0B3 /* ParkingResultCell.xib in Resources */,
+				D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */,
 				107814EB1CB90F10009A9506 /* CommentsViewController.xib in Resources */,
+				72B18ADB1CBAC37100083DBB /* Images.xcassets in Resources */,
 				107814EC1CB90F10009A9506 /* DetailParkingController.xib in Resources */,
 				D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */,
 				D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */,
@@ -601,6 +631,9 @@
 				107814EE1CB90F18009A9506 /* CommentsViewController.swift in Sources */,
 				B7E6A21070A5FB9C7EB05CC0 /* WebServiceAssembly.swift in Sources */,
 				104FC27C1CBDF627006A314C /* MoreInfoViewController.swift in Sources */,
+				D6B3FD561CB2F87E0012253C /* User.swift in Sources */,
+				107814EE1CB90F18009A9506 /* CommentsViewController.swift in Sources */,
+				D6B3FD591CB2F8B40012253C /* Parking.swift in Sources */,
 				B7E6A73C13BE782631124113 /* ParkingListController.swift in Sources */,
 				D6015FF91CBBD7390050A160 /* Parking.swift in Sources */,
 				D6015FEE1CBBD7250050A160 /* Bookmark.swift in Sources */,
@@ -609,10 +642,12 @@
 				104FC2801CBE0898006A314C /* PhotosCollectionViewCell.swift in Sources */,
 				B7E6A075BE6CF992A0DCE1E4 /* AddressService.swift in Sources */,
 				B7E6A96BD3BC50135EE2C14D /* AuthService.swift in Sources */,
+				72B18AD91CBA681600083DBB /* PakrCLLocationCoordinate2D.swift in Sources */,
 				B7E6A5D9D4213DB4883FE8AB /* AuthServiceImpl.swift in Sources */,
 				B7E6A62A10338F796346CE5F /* AuthServiceMockImpl.swift in Sources */,
 				D6015FFA1CBBD7390050A160 /* VehicleDetail.swift in Sources */,
 				D6015FFF1CBBDD470050A160 /* Business.swift in Sources */,
+				72B18AD71CBA55DC00083DBB /* PakrPreferences.swift in Sources */,
 				B7E6AFFCCF705A10C615643F /* UserHandlerRealmImpl.swift in Sources */,
 				B7E6A3D65E1294BD703628E9 /* UserHandler.swift in Sources */,
 				109A02011CBD1AD8002FCFFF /* MapDetailViewController.swift in Sources */,
@@ -623,12 +658,20 @@
 				B7E6A37B4128883770945324 /* AppDelegate.swift in Sources */,
 				7221DB191CB8D08B002BD0B3 /* ParkingResultCell.swift in Sources */,
 				D6015FFB1CBBD7390050A160 /* VehicleType.swift in Sources */,
+				72B18AD51CBA265500083DBB /* DataServiceUtil.swift in Sources */,
 				728CA22F1CB6CD0800793E9C /* HomeViewController.swift in Sources */,
 				B7E6A487B5EB4277A0B8D246 /* DetailParkingController.swift in Sources */,
+				72B18AD21CBA1C5500083DBB /* ParkAnnotation.swift in Sources */,
 				B7E6AA9BC8DAC7B6FECB387E /* MapController.swift in Sources */,
 				B7E6A44372B866D295A5587A /* PostParkingController.swift in Sources */,
 				D6015FF01CBBD7250050A160 /* Post.swift in Sources */,
 				B7E6AAB574A8CE41450A9B83 /* DataHandlerAssembly.swift in Sources */,
+				B7E6AC241E7292C7D1E66C84 /* Post.swift in Sources */,
+				B7E6A9A948080C2EA9188F58 /* Topic.swift in Sources */,
+				B7E6A2CC1BD2D342730E5223 /* Comment.swift in Sources */,
+				B7E6A69D20E8AB22EFE03008 /* Role.swift in Sources */,
+				D697FDB31CB9131300914437 /* ParkingType.swift in Sources */,
+				B7E6A4BFBCD7923ADA3F45CA /* Bookmark.swift in Sources */,
 				B7E6AEC95BBD373C7EB1A1A0 /* PakrNavigationController.swift in Sources */,
 				D6015FF31CBBD7250050A160 /* User.swift in Sources */,
 				D6015FF11CBBD7250050A160 /* Role.swift in Sources */,
