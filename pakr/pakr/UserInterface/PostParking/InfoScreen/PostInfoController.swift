@@ -13,6 +13,7 @@ import BEMCheckBox
 
 class PostInfoController: BaseViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var businessNameTextField: TextField!
     @IBOutlet weak var businessDescriptionTextField: TextField!
     @IBOutlet weak var businessTelephoneTextField: TextField!
@@ -61,6 +62,7 @@ class PostInfoController: BaseViewController {
         LayoutUtils.setUpTextField(carMinPriceTextField, title: "Min Price", suggestionText: "Let us know more")
         LayoutUtils.setUpTextField(carMaxPriceTextField, title: "Max Price", suggestionText: "Let us know more")
         
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -69,6 +71,12 @@ class PostInfoController: BaseViewController {
         LayoutUtils.dropShadowView(bikeDetailContainer)
         LayoutUtils.dropShadowView(motorbikeDetailContainer)
         LayoutUtils.dropShadowView(carDetailContainer)
+//        var contentRect = CGRectZero
+//        for view in self.scrollView.subviews {
+//            print("size: \(view.frame)")
+//            contentRect = CGRectUnion(contentRect, view.frame)
+//        }
+//        self.scrollView.contentSize = contentRect.size
     }
     
 }
