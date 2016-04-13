@@ -11,11 +11,11 @@ import Foundation
 class VehicleDetail: NSObject {
     
     let vehicleType: VehicleType!
-    let minPrice: Double!
-    let maxPrice: Double!
+    let minPrice: String!
+    let maxPrice: String!
     let note: String!
     
-    init(vehicleType: VehicleType!, minPrice: Double!, maxPrice: Double!, note: String!) {
+    init(vehicleType: VehicleType!, minPrice: String!, maxPrice: String!, note: String!) {
         self.vehicleType = vehicleType
         self.minPrice = minPrice
         self.maxPrice = maxPrice

@@ -11,6 +11,8 @@
 		104FC27D1CBDF627006A314C /* MoreInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 104FC27B1CBDF627006A314C /* MoreInfoViewController.xib */; };
 		104FC2801CBE0898006A314C /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FC27E1CBE0898006A314C /* PhotosCollectionViewCell.swift */; };
 		104FC2811CBE0898006A314C /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 104FC27F1CBE0898006A314C /* PhotosCollectionViewCell.xib */; };
+		104FC2861CBE11A6006A314C /* parkings.json in Resources */ = {isa = PBXBuildFile; fileRef = 104FC2841CBE11A6006A314C /* parkings.json */; };
+		104FC2871CBE11A6006A314C /* ConfigJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FC2851CBE11A6006A314C /* ConfigJson.swift */; };
 		107814EB1CB90F10009A9506 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107814E91CB90F10009A9506 /* CommentsViewController.xib */; };
 		107814EC1CB90F10009A9506 /* DetailParkingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107814EA1CB90F10009A9506 /* DetailParkingController.xib */; };
 		107814EE1CB90F18009A9506 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107814ED1CB90F18009A9506 /* CommentsViewController.swift */; };
@@ -75,6 +77,8 @@
 		104FC27B1CBDF627006A314C /* MoreInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoViewController.xib; sourceTree = "<group>"; };
 		104FC27E1CBE0898006A314C /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		104FC27F1CBE0898006A314C /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		104FC2841CBE11A6006A314C /* parkings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parkings.json; sourceTree = "<group>"; };
+		104FC2851CBE11A6006A314C /* ConfigJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigJson.swift; sourceTree = "<group>"; };
 		107814E91CB90F10009A9506 /* CommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentsViewController.xib; path = pakr/UserInterface/DetailParking/CommentsViewController.xib; sourceTree = SOURCE_ROOT; };
 		107814EA1CB90F10009A9506 /* DetailParkingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailParkingController.xib; path = pakr/UserInterface/DetailParking/DetailParkingController.xib; sourceTree = SOURCE_ROOT; };
 		107814ED1CB90F18009A9506 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
@@ -445,6 +449,8 @@
 		D6B3FD5D1CB2FE4E0012253C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				104FC2841CBE11A6006A314C /* parkings.json */,
+				104FC2851CBE11A6006A314C /* ConfigJson.swift */,
 				D6B3FD621CB3EA7B0012253C /* Info.plist */,
 				B7E6A74955DDC111574F709E /* AppDelegate.swift */,
 			);
@@ -529,6 +535,7 @@
 				D697FDA91CB8D20500914437 /* SearchController.xib in Resources */,
 				109A02021CBD1AD8002FCFFF /* MapDetailViewController.xib in Resources */,
 				B7E6AA4F91FE073086455AC5 /* PostParkingController.xib in Resources */,
+				104FC2861CBE11A6006A314C /* parkings.json in Resources */,
 				D697FDAD1CB8EBF400914437 /* BookmarkController.xib in Resources */,
 				7221DB1C1CB8D0A2002BD0B3 /* ParkingListController.xib in Resources */,
 				104FC27D1CBDF627006A314C /* MoreInfoViewController.xib in Resources */,
@@ -609,6 +616,7 @@
 				B7E6AFFCCF705A10C615643F /* UserHandlerRealmImpl.swift in Sources */,
 				B7E6A3D65E1294BD703628E9 /* UserHandler.swift in Sources */,
 				109A02011CBD1AD8002FCFFF /* MapDetailViewController.swift in Sources */,
+				104FC2871CBE11A6006A314C /* ConfigJson.swift in Sources */,
 				D6015FF21CBBD7250050A160 /* Topic.swift in Sources */,
 				D6015FF81CBBD7390050A160 /* Coordinate.swift in Sources */,
 				B7E6ACD219AD3465B20C69D6 /* UserHandlerMockImpl.swift in Sources */,
