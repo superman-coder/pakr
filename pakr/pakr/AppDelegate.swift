@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
 
-        let rootViewController = PakrTabBarController()
+        let rootViewController = DetailParkingController()
         window.rootViewController = rootViewController
 
         window.makeKeyAndVisible()
