@@ -130,6 +130,6 @@ class Parking: NSObject {
             let timeRange = TimeRange(openTime: openTime, closeTime: closeTime)
             scheduls.addObject(timeRange)
         }
-         schedule = worktimes.copy() as! [TimeRange]
+         schedule = scheduls.copy() as! [TimeRange]
     }
 }
