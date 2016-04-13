@@ -10,7 +10,6 @@
                 <outlet property="commentsTableHeight" destination="Onq-x7-6v6" id="hUK-i3-Ys0"/>
                 <outlet property="commentsTableView" destination="tPS-0E-Swb" id="8gF-Fd-on3"/>
                 <outlet property="contentView" destination="dNS-8K-Aei" id="Nqe-vi-Mw3"/>
-                <outlet property="contentViewHeight" destination="aV3-2M-0z1" id="o5a-XQ-akn"/>
                 <outlet property="imageChitBottom" destination="ryM-fU-f3J" id="F3k-0a-vV6"/>
                 <outlet property="imgPackingOpaciti" destination="K2m-gv-jPZ" id="Gua-P3-SBR"/>
                 <outlet property="imgParkingTop" destination="BoP-7I-ntW" id="ucx-KO-F2C"/>
@@ -41,11 +40,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0z-pB-JPF" userLabel="___">
-                            <rect key="frame" x="0.0" y="440" width="375" height="135"/>
+                            <rect key="frame" x="0.0" y="455" width="375" height="135"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNS-8K-Aei">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1047"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-gv-jPZ" userLabel="parkingImage">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
@@ -88,13 +87,13 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From this Business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOa-hA-yyd">
-                                    <rect key="frame" x="10" y="460" width="128" height="21"/>
+                                    <rect key="frame" x="10" y="475" width="128" height="21"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvE-mR-P9i" customClass="UIControl">
-                                    <rect key="frame" x="0.0" y="486" width="375" height="40"/>
+                                    <rect key="frame" x="0.0" y="501" width="375" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6G6-ts-KU5" userLabel="businessReview">
                                             <rect key="frame" x="10" y="10" width="36" height="20"/>
@@ -134,13 +133,13 @@
                                     </connections>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o27-lD-LxR">
-                                    <rect key="frame" x="10" y="546" width="48" height="21"/>
+                                    <rect key="frame" x="10" y="561" width="48" height="21"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1ZL-q4-okF">
-                                    <rect key="frame" x="0.0" y="575" width="375" height="128"/>
+                                    <rect key="frame" x="0.0" y="590" width="375" height="128"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="128" id="285-7X-IJj"/>
                                         <constraint firstAttribute="height" constant="150" id="fFa-Uh-RpE"/>
@@ -162,16 +161,16 @@
                                     </connections>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJO-B6-gpS">
-                                    <rect key="frame" x="10" y="723" width="76" height="21"/>
+                                    <rect key="frame" x="10" y="738" width="76" height="21"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tPS-0E-Swb">
-                                    <rect key="frame" x="0.0" y="754" width="375" height="128"/>
+                                    <rect key="frame" x="0.0" y="769" width="375" height="150"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="128" id="Onq-x7-6v6"/>
+                                        <constraint firstAttribute="height" constant="150" id="Onq-x7-6v6"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="eAG-a0-Fhe"/>
@@ -179,17 +178,17 @@
                                     </connections>
                                 </tableView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ryM-fU-f3J">
-                                    <rect key="frame" x="0.0" y="882" width="375" height="128"/>
+                                    <rect key="frame" x="0.0" y="919" width="375" height="128"/>
                                     <color key="backgroundColor" red="0.65851168500000001" green="1" blue="0.39722724250000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="128" id="Pzk-N3-BAp"/>
                                     </constraints>
                                 </imageView>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vnC-5q-VoY">
-                                    <rect key="frame" x="0.0" y="320" width="375" height="120"/>
+                                    <rect key="frame" x="0.0" y="320" width="375" height="135"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="120" id="oqZ-qp-5o1"/>
+                                        <constraint firstAttribute="height" constant="135" id="oqZ-qp-5o1"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="Tvw-J7-d0A"/>
@@ -268,6 +267,7 @@
                                 <constraint firstAttribute="trailing" secondItem="anH-lb-6ei" secondAttribute="trailing" id="1Gq-f8-z2s"/>
                                 <constraint firstItem="M49-Zp-ADO" firstAttribute="bottom" secondItem="K2m-gv-jPZ" secondAttribute="bottom" constant="-10" id="1Xj-x5-54m"/>
                                 <constraint firstItem="K2m-gv-jPZ" firstAttribute="leading" secondItem="dNS-8K-Aei" secondAttribute="leading" id="1Xz-ux-dfK"/>
+                                <constraint firstAttribute="bottom" secondItem="ryM-fU-f3J" secondAttribute="bottom" id="5Nt-go-jT0"/>
                                 <constraint firstItem="anH-lb-6ei" firstAttribute="leading" secondItem="dNS-8K-Aei" secondAttribute="leading" id="5bP-UL-3Gf"/>
                                 <constraint firstItem="K2m-gv-jPZ" firstAttribute="leading" secondItem="M49-Zp-ADO" secondAttribute="trailing" constant="-40" id="5gG-JD-9ws"/>
                                 <constraint firstAttribute="trailing" secondItem="1ZL-q4-okF" secondAttribute="trailing" constant="68" id="5n8-8f-Myr"/>
@@ -290,7 +290,6 @@
                                 <constraint firstItem="anH-lb-6ei" firstAttribute="top" secondItem="dlo-Cp-xca" secondAttribute="bottom" id="VtD-CV-DNh"/>
                                 <constraint firstAttribute="trailing" secondItem="K2m-gv-jPZ" secondAttribute="trailing" id="WK8-ea-z6b"/>
                                 <constraint firstItem="gnz-uR-eLA" firstAttribute="leading" secondItem="UPe-Tr-vyI" secondAttribute="trailing" constant="20" id="Wug-NX-8GC"/>
-                                <constraint firstAttribute="height" constant="1000" id="aV3-2M-0z1"/>
                                 <constraint firstItem="ryM-fU-f3J" firstAttribute="top" secondItem="tPS-0E-Swb" secondAttribute="bottom" id="bLK-7S-huF"/>
                                 <constraint firstItem="gnz-uR-eLA" firstAttribute="centerY" secondItem="UPe-Tr-vyI" secondAttribute="centerY" id="bqN-pO-VuV"/>
                                 <constraint firstItem="K2m-gv-jPZ" firstAttribute="top" secondItem="dNS-8K-Aei" secondAttribute="top" id="dka-Ck-GUM"/>

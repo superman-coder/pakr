@@ -40,16 +40,15 @@ class DetailParkingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let contentHeight = self.imageChitBottom.frame.origin.y + self.imageChitBottom.frame.size.height
-        contentViewHeight.constant = contentHeight
+        
 
         infoTableView.scrollEnabled = false
-        infoTableHeight.constant = 135
+//        infoTableHeight.constant = 135
         infoTableView.rowHeight = 45
         
         
         commentsTableView.scrollEnabled = false
-        commentsTableHeight.constant = 150
+//        commentsTableHeight.constant = 150
         commentsTableView.rowHeight = 50
         //
         setData()
@@ -59,6 +58,8 @@ class DetailParkingController: UIViewController {
         
         let nib = UINib(nibName: "PhotosCollectionViewCell", bundle: nil)
         photoCollectionView.registerNib(nib, forCellWithReuseIdentifier: "PhotosCollectionViewCell")
+//        let contentHeight = self.imageChitBottom.frame.origin.y + self.imageChitBottom.frame.size.height
+//        contentViewHeight.constant = contentHeight
     }
 
     override func didReceiveMemoryWarning() {
