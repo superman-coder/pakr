@@ -119,7 +119,7 @@ extension MapController: MKMapViewDelegate {
             return
         }
         
-        if DataServiceUtil.needToReloadParking(currentDataCenterLocation, newLocation: currentCenterLocation, lastDataLoadingRadius: parkingDataLoadingRadius, newMapViewRadius: mapViewRadius) {
+        if DataServiceUtils.needToReloadParking(currentDataCenterLocation, newLocation: currentCenterLocation, lastDataLoadingRadius: parkingDataLoadingRadius, newMapViewRadius: mapViewRadius) {
             currentDataCenterLocation = currentCenterLocation
             parkingDataLoadingRadius = mapViewRadius * 1.5
             

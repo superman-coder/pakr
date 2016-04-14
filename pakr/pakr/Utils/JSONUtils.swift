@@ -1,5 +1,5 @@
 //
-//  ConfigJson.swift
+//  JSONUtils.swift
 //  pakr
 //
 //  Created by nguyen trung quang on 4/11/16.

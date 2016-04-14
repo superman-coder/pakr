@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class DataServiceUtil: NSObject {
+class DataServiceUtils: NSObject {
     // Reload when distance from current center to last data center > 2/3 * old radius.
     // or zooming out
     class func needToReloadParking(dataCenterPoint:CLLocationCoordinate2D?, newLocation:CLLocationCoordinate2D?, lastDataLoadingRadius:Double, newMapViewRadius:Double) -> Bool {
