@@ -58,7 +58,7 @@ extension ParkingListController: UITableViewDataSource, UITableViewDelegate {
         let parking = topic.parking
         
         let detailVc = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
-        detailVc.parkingModel = parking
+        detailVc.parking = parking
         self.navigationController?.pushViewController(detailVc, animated: true)
     }
 }

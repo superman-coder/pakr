@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
-ConfigJson.getListParkingFromJson
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
-        let rootViewController = DetailParkingController()
+        
+        let rootViewController = PakrTabBarController()
         window.rootViewController = rootViewController
-
+        
         window.makeKeyAndVisible()
-
+        
         return true
     }
 

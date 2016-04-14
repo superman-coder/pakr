@@ -7,6 +7,8 @@ import Foundation
 
 enum Role {
     case Admin
+    case BusinessAuth
+    case BusinessNotAuth
     case UserAuth
     case UserNotAuth
     case UserDeleted

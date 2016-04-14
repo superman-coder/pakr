@@ -14,11 +14,26 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AYStepperView (0.1.0):
+    - pop (~> 1.0)
+  - BEMCheckBox (1.2.0)
+  - Material (1.39.10)
+  - MBXPageViewController (1.0.0)
+  - pop (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking
+  - AYStepperView
+  - BEMCheckBox
+  - Material (~> 1.0)
+  - MBXPageViewController
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AYStepperView: 6bc5399dae562b2d221c47cbd540db438454ecf9
+  BEMCheckBox: fcfbbf42cf23d38fbb605c72f63db9ae82d6acd3
+  Material: ad48594da116b7004751dc042e44cc7a8c52ad0a
+  MBXPageViewController: a706073c28deb7b40a0c83269322859a584b9e66
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
 
 COCOAPODS: 0.39.0

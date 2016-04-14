@@ -1,0 +1,6 @@
+framework module AYStepperView {
+  umbrella header "AYStepperView-umbrella.h"
+
+  export *
+  module * { export * }
+}
