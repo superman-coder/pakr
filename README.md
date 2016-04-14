@@ -31,7 +31,7 @@ The following **required** functionality is completed:
     - [ ] User can unbookmarked
 
 The following **optional** features are implemented:
-- [] User can sign up, login using Facebook (P3)
+- [ ] User can sign up, login using Facebook (P3)
 - [ ] Implement Profile page:
     - Profile page includes following things:
         - [ ] Avatar: User can change avatar
