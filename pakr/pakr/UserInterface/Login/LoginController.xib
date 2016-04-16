@@ -22,12 +22,22 @@
                         <constraint firstAttribute="height" constant="60" id="aPp-mj-ZOW"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHu-pZ-zq0" customClass="FBSDKLoginButton">
+                    <rect key="frame" x="50" y="374" width="500" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="dD9-8k-uOZ"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="25h-8R-jTg" firstAttribute="trailing" secondItem="zHu-pZ-zq0" secondAttribute="trailing" id="08R-dT-w3c"/>
                 <constraint firstAttribute="trailing" secondItem="25h-8R-jTg" secondAttribute="trailing" constant="50" id="8h4-CB-yrA"/>
                 <constraint firstAttribute="bottom" secondItem="25h-8R-jTg" secondAttribute="bottom" constant="76" id="F7k-eH-SbM"/>
+                <constraint firstItem="25h-8R-jTg" firstAttribute="leading" secondItem="zHu-pZ-zq0" secondAttribute="leading" id="VVi-hG-wjS"/>
                 <constraint firstItem="25h-8R-jTg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="jcS-hs-ON5"/>
+                <constraint firstItem="25h-8R-jTg" firstAttribute="top" secondItem="zHu-pZ-zq0" secondAttribute="bottom" constant="30" id="uze-mj-BcC"/>
             </constraints>
         </view>
     </objects>

@@ -13,21 +13,24 @@ import Google
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     var window: UIWindow?
-    
+    var authenService: AuthService!
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
-        GIDSignIn.sharedInstance().signOut()
-
         configureGoogleSignIn()
+       
+        authenService = WebServiceFactory.getAuthService()
         
-        let rootViewController = LoginController(nibName: "LoginController", bundle: nil)
-        // let rootViewController = PakrTabBarController()
-        window.rootViewController = rootViewController
+        if authenService.isLogin() {
+            let rootViewController = PakrTabBarController()
+            window.rootViewController = rootViewController
+        } else {
+            let rootViewController = LoginController(nibName: "LoginController", bundle: nil)
+            window.rootViewController = rootViewController
+        }
         
         window.makeKeyAndVisible()
-        
         return true
     }
     
@@ -50,26 +53,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     // The sign-in flow has finished and was successful if |error| is |nil|.
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
         if (error == nil) {
-            print("App Deleage")
-            // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
-            print("user id: \(userId)")
-            print("fullname: \(fullName)")
-            print("giveName: \(givenName)")
-            // ...
+            print("App Delegate")
+            GoogleAuth.loginSuccess()
+            let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let rootViewController = PakrTabBarController()
+            delegate.window?.rootViewController = rootViewController
+            delegate.window?.makeKeyAndVisible()
         } else {
             print("\(error.localizedDescription)")
         }
     }
     
     func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
+        print("Google disconnect app")
     }
     
     func applicationWillResignActive(application: UIApplication) {
@@ -93,7 +89,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
 }
 

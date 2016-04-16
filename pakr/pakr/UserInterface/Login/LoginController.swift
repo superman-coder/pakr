@@ -13,12 +13,7 @@ import Google
 class LoginController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         GIDSignIn.sharedInstance().uiDelegate = self
-    }
-    
-    @IBAction func googleLoginClick(sender: AnyObject) {
-    
     }
     
     func application(application: UIApplication, openURL url: NSURL, options: [String: AnyObject]) -> Bool {

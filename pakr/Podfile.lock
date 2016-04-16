@@ -17,6 +17,16 @@ PODS:
   - AYStepperView (0.1.0):
     - pop (~> 1.0)
   - BEMCheckBox (1.2.0)
+  - Bolts (1.7.0):
+    - Bolts/AppLinks (= 1.7.0)
+    - Bolts/Tasks (= 1.7.0)
+  - Bolts/AppLinks (1.7.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.7.0)
+  - FBSDKCoreKit (4.11.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.11.0):
+    - FBSDKCoreKit
   - Google/Core (2.0.4):
     - GoogleInterchangeUtilities (~> 1.0)
     - GoogleNetworkingUtilities (~> 1.0)
@@ -50,6 +60,7 @@ DEPENDENCIES:
   - AFNetworking
   - AYStepperView
   - BEMCheckBox
+  - FBSDKLoginKit
   - Google/SignIn
   - Material (~> 1.0)
   - MBXPageViewController
@@ -58,6 +69,9 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AYStepperView: 6bc5399dae562b2d221c47cbd540db438454ecf9
   BEMCheckBox: fcfbbf42cf23d38fbb605c72f63db9ae82d6acd3
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  FBSDKCoreKit: 686ac982723a14ec9ddb85e2f81235d7706c891b
+  FBSDKLoginKit: bade9fc78277764149ccc5bfaadbf13c83175c6a
   Google: d0932824c5b97c96be489aa6f4e8cd6c294d637d
   GoogleAppUtilities: 974598e8ed618c74ead33541d9caffbc3d144266
   GoogleAuthUtilities: 79e4143c77a08081a480b08df27a066cc8944f43

@@ -5,5 +5,8 @@
 
 import Foundation
 
- public protocol AuthService {
+protocol AuthService {
+    func isLogin() -> Bool
+    func logOut()
+    func getLoginUser() -> User?
 }

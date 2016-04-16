@@ -31,7 +31,6 @@
 		B7E6A5C323135FB8258548DA /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A6905926188216D6F1AD /* MapDetailViewController.swift */; };
 		B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD6CB8156C69D362F482 /* ParkAnnotation.swift */; };
 		B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A732F76F5BB71877755C /* PhotosCollectionViewCell.xib */; };
-		B7E6A5F8A058A27D4EE377FF /* PakrPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A0147AB2E3B719D7C7C8 /* PakrPreferences.swift */; };
 		B7E6A60E9906C2D10C8F2F70 /* MapDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A60D20B035896508B0E8 /* MapDetailViewController.xib */; };
 		B7E6A60EEBB24D2C771BB096 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AFC20BF691E4A0CFE221 /* User.swift */; };
 		B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A0FCBFCFE1378FBCFF93 /* MoreInfoViewController.xib */; };
@@ -44,7 +43,6 @@
 		B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A472B3B61BB6955C8474 /* AddressServiceParseImpl.swift */; };
 		B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A280C6A3B7D99D404FB7 /* HomeViewController.swift */; };
 		B7E6A90D275DCF191BE990E9 /* VehicleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AED608E5BCC64FD9D5AE /* VehicleDetail.swift */; };
-		B7E6A934788BD1D66E196B6F /* AuthServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A0CC6B22FE2B74D1E1E0 /* AuthServiceMockImpl.swift */; };
 		B7E6A949DC4DD496BB0052B3 /* PostParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A3F998205793997B411C /* PostParkingController.swift */; };
 		B7E6A9544AAB2F696EC945AA /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A4FF18220112CA540A35 /* AddressService.swift */; };
 		B7E6A999BFF349E7A0407789 /* WebServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A032DDDCAB9FB073B82B /* WebServiceFactory.swift */; };
@@ -76,9 +74,17 @@
 		B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD0D0E1DCF14A45C5066 /* VehicleType.swift */; };
 		B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE9D42431DC887ADB819 /* SelectMapImageController.swift */; };
 		B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A946454CF4EFFE32706D /* Business.swift */; };
+		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
+		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
+		D654A37C1CC2D6900095F74D /* GoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A37B1CC2D6900095F74D /* GoogleAuth.swift */; };
+		D654A37E1CC2D69E0095F74D /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A37D1CC2D69E0095F74D /* FacebookAuth.swift */; };
 		D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */; };
 		D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */; };
 		D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */; };
+		D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E521CC2798000BC6A64 /* CircularImageView.swift */; };
+		D6A14E591CC27DFB00BC6A64 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E581CC27DFB00BC6A64 /* ProfileDataManager.swift */; };
+		D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */; };
+		D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,11 +92,9 @@
 		7295DE651CC13F030001B852 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		8883172CD0A6C2613E2AB210 /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
 		9870136ADB30BD79474A430C /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E6A0147AB2E3B719D7C7C8 /* PakrPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrPreferences.swift; sourceTree = "<group>"; };
 		B7E6A032DDDCAB9FB073B82B /* WebServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceFactory.swift; sourceTree = "<group>"; };
 		B7E6A071EBFF288A1F900705 /* ParkingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingListController.swift; sourceTree = "<group>"; };
 		B7E6A091AAB6F9843BAE5107 /* LayoutUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutUtils.swift; sourceTree = "<group>"; };
-		B7E6A0CC6B22FE2B74D1E1E0 /* AuthServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceMockImpl.swift; sourceTree = "<group>"; };
 		B7E6A0FCBFCFE1378FBCFF93 /* MoreInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreInfoViewController.xib; sourceTree = "<group>"; };
 		B7E6A122699477C5E67ECE5E /* ParkingListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingListController.xib; sourceTree = "<group>"; };
 		B7E6A145EF2DF7DDD58149AD /* Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
@@ -157,9 +161,17 @@
 		B7E6AFC20BF691E4A0CFE221 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7E6AFEBDE30EC4F495F0F9C /* VerifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyController.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
+		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
+		D654A37B1CC2D6900095F74D /* GoogleAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuth.swift; sourceTree = "<group>"; };
+		D654A37D1CC2D69E0095F74D /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
 		D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Login/LoginController.swift; sourceTree = "<group>"; };
 		D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/LoginController.xib; sourceTree = "<group>"; };
+		D6A14E521CC2798000BC6A64 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularImageView.swift; path = ImageView/CircularImageView.swift; sourceTree = "<group>"; };
+		D6A14E581CC27DFB00BC6A64 /* ProfileDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDataManager.swift; path = manager/ProfileDataManager.swift; sourceTree = "<group>"; };
+		D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundCornerImageView.swift; path = ImageView/RoundCornerImageView.swift; sourceTree = "<group>"; };
+		D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtendedCell.swift; path = Cell/ExtendedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +308,8 @@
 		B7E6A60F652838103C34834E /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				D6A14E5E1CC2A43500BC6A64 /* Cell */,
+				D6A14E511CC2796000BC6A64 /* ImageView */,
 				B7E6AB5B2D445570C672F7E2 /* Material */,
 				B7E6AA0225176681C3398A30 /* TimePicker */,
 			);
@@ -305,6 +319,8 @@
 		B7E6A617C69724D814D342E6 /* pakr */ = {
 			isa = PBXGroup;
 			children = (
+				D654A3761CC2D2E50095F74D /* Preferences */,
+				D6A14E611CC2CD5A00BC6A64 /* Extensions */,
 				B7E6AD3B1F8FFDB230C28C56 /* Model */,
 				B7E6A95131E3D6B60B4C352E /* Utils */,
 				B7E6A60F652838103C34834E /* Widget */,
@@ -390,7 +406,6 @@
 				B7E6A091AAB6F9843BAE5107 /* LayoutUtils.swift */,
 				B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */,
 				B7E6A3B5CC8A67FAFE783663 /* DataServiceUtils.swift */,
-				B7E6A0147AB2E3B719D7C7C8 /* PakrPreferences.swift */,
 				B7E6A401D78FD167E1317138 /* JSONUtils.swift */,
 			);
 			path = Utils;
@@ -399,6 +414,7 @@
 		B7E6A96A0627345E65331F41 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				D6A14E571CC27DE100BC6A64 /* manager */,
 				B7E6A331D58A2E2A1A82F0AC /* ProfileController.xib */,
 				B7E6A5F90F4B6CED9046691F /* ProfileController.swift */,
 			);
@@ -512,7 +528,8 @@
 			children = (
 				B7E6A226FB2BED0C358713DA /* AuthService.swift */,
 				B7E6AE1E49483BC6D63D5512 /* AuthServiceImpl.swift */,
-				B7E6A0CC6B22FE2B74D1E1E0 /* AuthServiceMockImpl.swift */,
+				D654A37B1CC2D6900095F74D /* GoogleAuth.swift */,
+				D654A37D1CC2D69E0095F74D /* FacebookAuth.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -545,6 +562,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D654A3761CC2D2E50095F74D /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				D654A3791CC2D3D20095F74D /* MapPreferences.swift */,
+				D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
 		D6A14E4C1CC26CD600BC6A64 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +578,38 @@
 				D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		D6A14E511CC2796000BC6A64 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				D6A14E521CC2798000BC6A64 /* CircularImageView.swift */,
+				D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */,
+			);
+			name = ImageView;
+			sourceTree = "<group>";
+		};
+		D6A14E571CC27DE100BC6A64 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				D6A14E581CC27DFB00BC6A64 /* ProfileDataManager.swift */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
+		D6A14E5E1CC2A43500BC6A64 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		D6A14E611CC2CD5A00BC6A64 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -709,11 +767,11 @@
 				B7E6A6AC99192DAD0784DC3C /* CustomTimePicker.m in Sources */,
 				B7E6A999BFF349E7A0407789 /* WebServiceFactory.swift in Sources */,
 				B7E6A9544AAB2F696EC945AA /* AddressService.swift in Sources */,
+				D6A14E591CC27DFB00BC6A64 /* ProfileDataManager.swift in Sources */,
 				B7E6A36290D6AB8FB4F37590 /* AddressServiceMockImpl.swift in Sources */,
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				B7E6ACA7B43536C10D7B09FA /* AuthService.swift in Sources */,
 				B7E6ABD37D2CFCF7376D282C /* AuthServiceImpl.swift in Sources */,
-				B7E6A934788BD1D66E196B6F /* AuthServiceMockImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
 				B7E6AF19EE30F5B4F828B06D /* UserHandler.swift in Sources */,
 				B7E6A0786F719E522F61EE28 /* UserHandlerMockImpl.swift in Sources */,
@@ -721,6 +779,7 @@
 				B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
 				B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */,
+				D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */,
 				D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */,
 				B7E6AC26951ACD27B35085B9 /* BookmarkController.swift in Sources */,
 				B7E6AA4F18552CCD317FC9B0 /* SearchController.swift in Sources */,
@@ -730,19 +789,24 @@
 				B7E6AA8A109EAEBB232F4B13 /* PostInfoController.swift in Sources */,
 				B7E6A5A04B2FA08E0E2D97D5 /* VerifyController.swift in Sources */,
 				B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */,
+				D654A37C1CC2D6900095F74D /* GoogleAuth.swift in Sources */,
 				B7E6A1770D75BCAC87B58ED1 /* ProfileController.swift in Sources */,
+				D654A37E1CC2D69E0095F74D /* FacebookAuth.swift in Sources */,
 				B7E6AA2D5F5E58C520E27A33 /* MoreInfoViewController.swift in Sources */,
 				B7E6A5C323135FB8258548DA /* MapDetailViewController.swift in Sources */,
 				B7E6A70D6A02D6E611445818 /* PhotosCollectionViewCell.swift in Sources */,
 				B7E6AA091A9768D93EBE360D /* CommentsViewController.swift in Sources */,
 				B7E6AC10C6333F9CB1A58377 /* DetailParkingController.swift in Sources */,
+				D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */,
 				B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */,
+				D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */,
 				B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */,
 				B7E6AF0C09C71FD4655C185F /* PakrNavigationController.swift in Sources */,
 				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
+				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,
 				B7E6A9C2A41FE994DE773C26 /* PakrCLLocationCoordinate2D.swift in Sources */,
+				D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */,
 				B7E6AE1FA3C29FC389132252 /* DataServiceUtils.swift in Sources */,
-				B7E6A5F8A058A27D4EE377FF /* PakrPreferences.swift in Sources */,
 				B7E6A25A2B4DCA5610E27897 /* JSONUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

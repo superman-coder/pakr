@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileController" customModule="pakr" customModuleProvider="target">
             <connections>
+                <outlet property="fullNameTextView" destination="UqP-qr-qiW" id="mkh-Tj-AeH"/>
+                <outlet property="profileImageView" destination="WOV-Bo-FYq" id="iq1-7b-gQw"/>
+                <outlet property="tableView" destination="Axx-6y-IrJ" id="wp7-CA-wan"/>
+                <outlet property="userNameTextView" destination="KXE-ws-QMy" id="pcX-Iq-m6a"/>
                 <outlet property="view" destination="E0n-Ku-6AL" id="AVd-cF-P7k"/>
             </connections>
         </placeholder>
@@ -14,7 +18,57 @@
         <view contentMode="scaleToFill" id="E0n-Ku-6AL">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Axx-6y-IrJ">
+                    <rect key="frame" x="0.0" y="129" width="600" height="471"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5B-Yz-iFP">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="109"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WOV-Bo-FYq" customClass="CircularImageView" customModule="pakr" customModuleProvider="target">
+                            <rect key="frame" x="20" y="19" width="70" height="70"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="M9r-RE-xMs"/>
+                                <constraint firstAttribute="height" constant="70" id="WFN-ux-Ox9"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hqthao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXE-ws-QMy">
+                            <rect key="frame" x="130" y="19" width="69.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Huynh Quang Thao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqP-qr-qiW">
+                            <rect key="frame" x="130" y="50" width="148.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="KXE-ws-QMy" firstAttribute="leading" secondItem="WOV-Bo-FYq" secondAttribute="trailing" constant="40" id="2o8-GM-XAV"/>
+                        <constraint firstItem="UqP-qr-qiW" firstAttribute="top" secondItem="KXE-ws-QMy" secondAttribute="bottom" constant="10" id="KVz-ew-cbf"/>
+                        <constraint firstAttribute="bottom" secondItem="WOV-Bo-FYq" secondAttribute="bottom" constant="20" id="Rer-MZ-FXP"/>
+                        <constraint firstItem="WOV-Bo-FYq" firstAttribute="top" secondItem="p5B-Yz-iFP" secondAttribute="top" constant="19" id="dsR-5c-NZK"/>
+                        <constraint firstItem="WOV-Bo-FYq" firstAttribute="leading" secondItem="p5B-Yz-iFP" secondAttribute="leading" constant="20" id="o0m-QY-I8B"/>
+                        <constraint firstItem="UqP-qr-qiW" firstAttribute="leading" secondItem="KXE-ws-QMy" secondAttribute="leading" id="ruN-XO-zRu"/>
+                        <constraint firstItem="KXE-ws-QMy" firstAttribute="top" secondItem="WOV-Bo-FYq" secondAttribute="top" id="sah-2X-4uG"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Axx-6y-IrJ" firstAttribute="leading" secondItem="E0n-Ku-6AL" secondAttribute="leading" id="4FQ-9b-zMc"/>
+                <constraint firstAttribute="trailing" secondItem="p5B-Yz-iFP" secondAttribute="trailing" id="4Jz-Bf-ePh"/>
+                <constraint firstAttribute="bottom" secondItem="Axx-6y-IrJ" secondAttribute="bottom" id="E9u-aI-rNc"/>
+                <constraint firstItem="Axx-6y-IrJ" firstAttribute="top" secondItem="p5B-Yz-iFP" secondAttribute="bottom" constant="20" id="U05-Bg-xSJ"/>
+                <constraint firstItem="p5B-Yz-iFP" firstAttribute="leading" secondItem="E0n-Ku-6AL" secondAttribute="leading" id="c5o-51-FmW"/>
+                <constraint firstItem="p5B-Yz-iFP" firstAttribute="top" secondItem="E0n-Ku-6AL" secondAttribute="top" id="i6i-jR-kgV"/>
+                <constraint firstAttribute="trailing" secondItem="Axx-6y-IrJ" secondAttribute="trailing" id="ovZ-Y6-nCx"/>
+            </constraints>
             <point key="canvasLocation" x="505" y="184"/>
         </view>
     </objects>

@@ -5,6 +5,33 @@
 
 import Foundation
 
-public class AuthServiceImpl: NSObject, AuthService {
+class AuthServiceImpl: AuthService {
+    
+    func isLogin() -> Bool {
+        let mechanism = NSUserDefaults.standardUserDefaults().getLoginMechanism()
+        if mechanism == LoginMechanism.GOOGLE {
+            return GoogleAuth.isLogin()
+        } else if mechanism == LoginMechanism.FACEBOOK {
+            return FacebookAuth.isLogin()
+        } else {
+            return false
+        }
+    }
 
+    func logOut() {
+        let pref = NSUserDefaults.standardUserDefaults()
+        if pref.getLoginMechanism() == LoginMechanism.GOOGLE {
+            GoogleAuth.signOut()
+        } else {
+            FacebookAuth.signOut()
+        }
+        pref.setLoginMechanism(LoginMechanism.NONE)
+    }
+    
+    func getLoginUser() -> User? {
+        if !isLogin() {
+            return nil
+        }
+        return nil
+    }
 }
