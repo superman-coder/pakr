@@ -10,5 +10,6 @@
 #define Pakr_Bridging_Header_h
 
 #import "CustomTimePicker.h"
+#import <Google/SignIn.h>
 
 #endif /* Pakr_Bridging_Header_h */

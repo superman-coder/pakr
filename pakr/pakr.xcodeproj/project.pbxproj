@@ -76,6 +76,9 @@
 		B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD0D0E1DCF14A45C5066 /* VehicleType.swift */; };
 		B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE9D42431DC887ADB819 /* SelectMapImageController.swift */; };
 		B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A946454CF4EFFE32706D /* Business.swift */; };
+		D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */; };
+		D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */; };
+		D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,13 +123,13 @@
 		B7E6A62B148D4FB6723C6476 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		B7E6A63481B334288580DA83 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		B7E6A6905926188216D6F1AD /* MapDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
-		B7E6A6B8191890B5F1C4CC3E /* Pakr-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pakr-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7E6A6B8191890B5F1C4CC3E /* Pakr-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Pakr-Bridging-Header.h"; path = "../Pakr-Bridging-Header.h"; sourceTree = "<group>"; };
 		B7E6A6E6A6A0E7968A2BDEB8 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		B7E6A732F76F5BB71877755C /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		B7E6A74F09DDD0FB60E1832E /* DetailParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailParkingController.swift; sourceTree = "<group>"; };
 		B7E6A7DADD4E069C9FDC1205 /* PakrTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrTabBarController.swift; sourceTree = "<group>"; };
 		B7E6A8510BAF5056FAF378E0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7E6A8EE7F3988A5CD7DEDA7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		B7E6A8EE7F3988A5CD7DEDA7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		B7E6A946454CF4EFFE32706D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		B7E6A99549118700A88D2B9C /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		B7E6AA27BF66F1D94F9CEBEB /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingResultCell.swift; sourceTree = "<group>"; };
@@ -154,6 +157,9 @@
 		B7E6AFC20BF691E4A0CFE221 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7E6AFEBDE30EC4F495F0F9C /* VerifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyController.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Login/LoginController.swift; sourceTree = "<group>"; };
+		D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/LoginController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,7 @@
 		B7E6A0B8F1F7E1D22FD0CC00 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				D6A14E4C1CC26CD600BC6A64 /* Login */,
 				B7E6A9783C611E74FD2EC42B /* Home */,
 				B7E6A72F93CDF725F9003646 /* MapView */,
 				B7E6A34EE14BFD27A72D3317 /* Bookmark */,
@@ -277,6 +284,9 @@
 		B7E6A39C08F96CC6C1F9AA4A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B7E6A6B8191890B5F1C4CC3E /* Pakr-Bridging-Header.h */,
+				D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */,
+				B7E6A8EE7F3988A5CD7DEDA7 /* Info.plist */,
 				7295DE651CC13F030001B852 /* Images.xcassets */,
 				B7E6A386378DAACA4E24F7D5 /* parkings.json */,
 			);
@@ -299,14 +309,12 @@
 				B7E6A95131E3D6B60B4C352E /* Utils */,
 				B7E6A60F652838103C34834E /* Widget */,
 				B7E6AA32FCBAAC31E8CF365E /* factory */,
-				B7E6A8EE7F3988A5CD7DEDA7 /* Info.plist */,
 				B7E6ABD726F9CFB2E7DE5A84 /* WebService */,
 				B7E6A03F5FF785EEB1D8FCEC /* DataHandler */,
 				B7E6A2ACF500396A05F94F96 /* Configuration */,
 				B7E6A0B8F1F7E1D22FD0CC00 /* UserInterface */,
 				B7E6AEA2FD426EE1E39640E6 /* CustomController */,
 				B7E6A8510BAF5056FAF378E0 /* AppDelegate.swift */,
-				B7E6A6B8191890B5F1C4CC3E /* Pakr-Bridging-Header.h */,
 				B7E6A39C08F96CC6C1F9AA4A /* Resources */,
 			);
 			path = pakr;
@@ -537,6 +545,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D6A14E4C1CC26CD600BC6A64 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */,
+				D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -609,6 +626,8 @@
 				B7E6AEF2228BC974A36C5467 /* SelectMapImageController.xib in Resources */,
 				B7E6A13E90275C7D2181B30E /* ProfileController.xib in Resources */,
 				B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */,
+				D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */,
+				D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */,
 				B7E6A60E9906C2D10C8F2F70 /* MapDetailViewController.xib in Resources */,
 				B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */,
 				B7E6A345492B0A4212E4D537 /* CommentsViewController.xib in Resources */,
@@ -702,6 +721,7 @@
 				B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
 				B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */,
+				D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */,
 				B7E6AC26951ACD27B35085B9 /* BookmarkController.swift in Sources */,
 				B7E6AA4F18552CCD317FC9B0 /* SearchController.swift in Sources */,
 				B7E6AC842CC3B34A20172827 /* ParkingResultCell.swift in Sources */,
@@ -820,6 +840,7 @@
 			baseConfigurationReference = 4FD9FFB8B2A762AE7B807D9E /* Pods-pakr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = pakr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakr;
@@ -832,6 +853,7 @@
 			baseConfigurationReference = 8883172CD0A6C2613E2AB210 /* Pods-pakr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = pakr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakr;
