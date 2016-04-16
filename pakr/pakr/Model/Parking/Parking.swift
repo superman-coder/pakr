@@ -57,7 +57,7 @@ class Parking: NSObject {
         
         let loc = dic["loc"] as! NSDictionary
         let coordinates = loc["coordinates"] as!NSArray
-         coordinate = Coordinate(latitude: coordinates.firstObject as! Double, longitude: coordinates.lastObject as! Double)
+         coordinate = Coordinate(latitude: coordinates.lastObject as! Double, longitude: coordinates.firstObject as! Double)
          verify = false
         
         let vehicles = NSMutableArray()
