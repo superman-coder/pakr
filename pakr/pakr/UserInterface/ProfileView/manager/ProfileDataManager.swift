@@ -11,6 +11,7 @@ import Foundation
 class ProfileDataManager {
     static let ProfileItems: [String] = [
         "Parking List Collections",
+        "Post new Lot",
         "Bookmark",
         "Comments",
         "Settings",

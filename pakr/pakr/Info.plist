@@ -23,11 +23,9 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.803921065829-m34o26vcj57oirk1oa8pqve5o22qdihn</string>
+				<string>fb1106884526040279</string>
 			</array>
 		</dict>
 		<dict>
@@ -38,11 +36,23 @@
 				<string>com.codeschool.pakr</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.803921065829-m34o26vcj57oirk1oa8pqve5o22qdihn</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>CLIENT_ID</key>
 	<string>803921065829-m34o26vcj57oirk1oa8pqve5o22qdihn.apps.googleusercontent.com</string>
+	<key>FacebookAppID</key>
+	<string>1106884526040279</string>
+	<key>FacebookDisplayName</key>
+	<string>Pakr</string>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:803921065829:ios:f27eaed12a560129</string>
 	<key>IS_ADS_ENABLED</key>
@@ -55,6 +65,13 @@
 	<false/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>

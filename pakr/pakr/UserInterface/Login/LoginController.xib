@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController" customModule="pakr" customModuleProvider="target">
             <connections>
+                <outlet property="facebookLoginButton" destination="zHu-pZ-zq0" id="Ads-1v-pOg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="QKX-Gh-mzF"/>
             </connections>
         </placeholder>

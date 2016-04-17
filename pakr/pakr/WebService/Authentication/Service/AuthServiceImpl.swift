@@ -8,14 +8,7 @@ import Foundation
 class AuthServiceImpl: AuthService {
     
     func isLogin() -> Bool {
-        let mechanism = NSUserDefaults.standardUserDefaults().getLoginMechanism()
-        if mechanism == LoginMechanism.GOOGLE {
-            return GoogleAuth.isLogin()
-        } else if mechanism == LoginMechanism.FACEBOOK {
-            return FacebookAuth.isLogin()
-        } else {
-            return false
-        }
+        return GoogleAuth.isLogin() || FacebookAuth.isLogin()
     }
 
     func logOut() {

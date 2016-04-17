@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import Google
 
-class GoogleAuth {
+class GoogleAuth: SocialAuth {
+    
     static func getInstance() -> GIDSignIn {
         return GIDSignIn.sharedInstance()
     }
@@ -29,5 +30,9 @@ class GoogleAuth {
     
     static func loginSuccess() {
         NSUserDefaults.standardUserDefaults().setLoginMechanism(LoginMechanism.GOOGLE)
+    }
+    
+    static func isValidatedWithUrl(url: NSURL) -> Bool {
+        return url.scheme.hasPrefix(NSBundle.mainBundle().bundleIdentifier!) || url.scheme.hasPrefix("com.googleusercontent.apps.")
     }
 }

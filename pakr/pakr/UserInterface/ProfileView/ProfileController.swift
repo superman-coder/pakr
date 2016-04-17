@@ -27,7 +27,7 @@ class ProfileController: UIViewController {
 extension ProfileController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
-        if (row == 4) {
+        if (row == 5) {
             webService.logOut()
             let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
             let loginController = LoginController(nibName: "LoginController", bundle: nil)
