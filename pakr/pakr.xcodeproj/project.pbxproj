@@ -72,6 +72,9 @@
 		B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD0D0E1DCF14A45C5066 /* VehicleType.swift */; };
 		B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE9D42431DC887ADB819 /* SelectMapImageController.swift */; };
 		B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A946454CF4EFFE32706D /* Business.swift */; };
+		D60598B91CC416CB009C5BEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598B81CC416CB009C5BEB /* AddressBook.framework */; };
+		D60598BB1CC416F2009C5BEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BA1CC416F2009C5BEB /* StoreKit.framework */; };
+		D60598BD1CC41701009C5BEB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -159,6 +162,9 @@
 		B7E6AED608E5BCC64FD9D5AE /* VehicleDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDetail.swift; sourceTree = "<group>"; };
 		B7E6AFC20BF691E4A0CFE221 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7E6AFEBDE30EC4F495F0F9C /* VerifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyController.swift; sourceTree = "<group>"; };
+		D60598B81CC416CB009C5BEB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D60598BA1CC416F2009C5BEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -181,6 +187,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60598BD1CC41701009C5BEB /* SystemConfiguration.framework in Frameworks */,
+				D60598BB1CC416F2009C5BEB /* StoreKit.framework in Frameworks */,
+				D60598B91CC416CB009C5BEB /* AddressBook.framework in Frameworks */,
 				23223FA1AA3AF5DA4D275A26 /* Pods_pakr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +200,9 @@
 		081F5D89FB2D7E4CF7A7BA30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */,
+				D60598BA1CC416F2009C5BEB /* StoreKit.framework */,
+				D60598B81CC416CB009C5BEB /* AddressBook.framework */,
 				9870136ADB30BD79474A430C /* Pods_pakr.framework */,
 			);
 			name = Frameworks;

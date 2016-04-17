@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Google
 import FBSDKLoginKit
+import Google
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

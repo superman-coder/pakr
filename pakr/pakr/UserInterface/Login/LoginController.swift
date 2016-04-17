@@ -8,8 +8,8 @@
 
 import Foundation
 import UIKit
-import Google
 import FBSDKLoginKit
+import Google
 
 class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate, FBSDKLoginButtonDelegate {
     
