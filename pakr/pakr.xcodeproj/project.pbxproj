@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1047FF2C1CC387D700B4B6DE /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047FF2A1CC387D700B4B6DE /* ReviewDetailViewController.swift */; };
+		1047FF2D1CC387D700B4B6DE /* ReviewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1047FF2B1CC387D700B4B6DE /* ReviewDetailViewController.xib */; };
+		1047FF301CC38C6700B4B6DE /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047FF2E1CC38C6700B4B6DE /* ReviewViewController.swift */; };
+		1047FF311CC38C6700B4B6DE /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1047FF2F1CC38C6700B4B6DE /* ReviewViewController.xib */; };
 		104FC27C1CBDF627006A314C /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FC27A1CBDF627006A314C /* MoreInfoViewController.swift */; };
 		104FC27D1CBDF627006A314C /* MoreInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 104FC27B1CBDF627006A314C /* MoreInfoViewController.xib */; };
 		104FC2801CBE0898006A314C /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FC27E1CBE0898006A314C /* PhotosCollectionViewCell.swift */; };
 		104FC2811CBE0898006A314C /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 104FC27F1CBE0898006A314C /* PhotosCollectionViewCell.xib */; };
 		104FC2861CBE11A6006A314C /* parkings.json in Resources */ = {isa = PBXBuildFile; fileRef = 104FC2841CBE11A6006A314C /* parkings.json */; };
 		104FC2871CBE11A6006A314C /* ConfigJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FC2851CBE11A6006A314C /* ConfigJson.swift */; };
+		10515CA61CC327B000BEE114 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10515CA41CC327B000BEE114 /* CommentTableViewCell.swift */; };
+		10515CA71CC327B000BEE114 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10515CA51CC327B000BEE114 /* CommentTableViewCell.xib */; };
 		107814EB1CB90F10009A9506 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107814E91CB90F10009A9506 /* CommentsViewController.xib */; };
 		107814EC1CB90F10009A9506 /* DetailParkingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107814EA1CB90F10009A9506 /* DetailParkingController.xib */; };
 		107814EE1CB90F18009A9506 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107814ED1CB90F18009A9506 /* CommentsViewController.swift */; };
@@ -73,18 +79,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		104FC27A1CBDF627006A314C /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
-		104FC27B1CBDF627006A314C /* MoreInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoViewController.xib; sourceTree = "<group>"; };
-		104FC27E1CBE0898006A314C /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
-		104FC27F1CBE0898006A314C /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		1047FF2A1CC387D700B4B6DE /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
+		1047FF2B1CC387D700B4B6DE /* ReviewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewDetailViewController.xib; path = ../Controller/ReviewDetailViewController.xib; sourceTree = "<group>"; };
+		1047FF2E1CC38C6700B4B6DE /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		1047FF2F1CC38C6700B4B6DE /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewViewController.xib; path = ../Controller/ReviewViewController.xib; sourceTree = "<group>"; };
+		104FC27A1CBDF627006A314C /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreInfoViewController.swift; path = ../MoreInfoViewController.swift; sourceTree = "<group>"; };
+		104FC27B1CBDF627006A314C /* MoreInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MoreInfoViewController.xib; path = ../MoreInfoViewController.xib; sourceTree = "<group>"; };
+		104FC27E1CBE0898006A314C /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosCollectionViewCell.swift; path = ../PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		104FC27F1CBE0898006A314C /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotosCollectionViewCell.xib; path = ../PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		104FC2841CBE11A6006A314C /* parkings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parkings.json; sourceTree = "<group>"; };
 		104FC2851CBE11A6006A314C /* ConfigJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigJson.swift; sourceTree = "<group>"; };
+		10515CA41CC327B000BEE114 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		10515CA51CC327B000BEE114 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = ../Controller/CommentTableViewCell.xib; sourceTree = "<group>"; };
 		107814E91CB90F10009A9506 /* CommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentsViewController.xib; path = pakr/UserInterface/DetailParking/CommentsViewController.xib; sourceTree = SOURCE_ROOT; };
 		107814EA1CB90F10009A9506 /* DetailParkingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailParkingController.xib; path = pakr/UserInterface/DetailParking/DetailParkingController.xib; sourceTree = SOURCE_ROOT; };
 		107814ED1CB90F18009A9506 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		109A01FC1CBCE48B002FCFFF /* city.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = city.jpg; sourceTree = "<group>"; };
-		109A01FF1CBD1AD8002FCFFF /* MapDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
-		109A02001CBD1AD8002FCFFF /* MapDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapDetailViewController.xib; sourceTree = "<group>"; };
+		109A01FF1CBD1AD8002FCFFF /* MapDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapDetailViewController.swift; path = ../MapDetailViewController.swift; sourceTree = "<group>"; };
+		109A02001CBD1AD8002FCFFF /* MapDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapDetailViewController.xib; path = ../MapDetailViewController.xib; sourceTree = "<group>"; };
 		2C596D7631085654ECD2A4E9 /* Pods-pakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1FBE9FA491EAFB591259CD /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
 		7221DB171CB8D08B002BD0B3 /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingResultCell.swift; sourceTree = "<group>"; };
@@ -153,15 +165,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		109A01FE1CBD1A61002FCFFF /* Children */ = {
+		10515CA21CC3272A00BEE114 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				109A01FF1CBD1AD8002FCFFF /* MapDetailViewController.swift */,
-				109A02001CBD1AD8002FCFFF /* MapDetailViewController.xib */,
 				104FC27A1CBDF627006A314C /* MoreInfoViewController.swift */,
-				104FC27B1CBDF627006A314C /* MoreInfoViewController.xib */,
 				104FC27E1CBE0898006A314C /* PhotosCollectionViewCell.swift */,
+				10515CA41CC327B000BEE114 /* CommentTableViewCell.swift */,
+				1047FF2A1CC387D700B4B6DE /* ReviewDetailViewController.swift */,
+				1047FF2E1CC38C6700B4B6DE /* ReviewViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10515CA31CC3272A00BEE114 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1047FF2F1CC38C6700B4B6DE /* ReviewViewController.xib */,
+				1047FF2B1CC387D700B4B6DE /* ReviewDetailViewController.xib */,
+				10515CA51CC327B000BEE114 /* CommentTableViewCell.xib */,
+				109A02001CBD1AD8002FCFFF /* MapDetailViewController.xib */,
+				104FC27B1CBDF627006A314C /* MoreInfoViewController.xib */,
 				104FC27F1CBE0898006A314C /* PhotosCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		109A01FE1CBD1A61002FCFFF /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				10515CA21CC3272A00BEE114 /* Controller */,
+				10515CA31CC3272A00BEE114 /* View */,
 			);
 			path = Children;
 			sourceTree = "<group>";
@@ -521,8 +555,10 @@
 			files = (
 				109A01FD1CBCE48B002FCFFF /* city.jpg in Resources */,
 				7221DB1E1CB8D6D7002BD0B3 /* Images.xcassets in Resources */,
+				1047FF311CC38C6700B4B6DE /* ReviewViewController.xib in Resources */,
 				D6B3FD631CB3EA7B0012253C /* Info.plist in Resources */,
 				7221DB1A1CB8D08B002BD0B3 /* ParkingResultCell.xib in Resources */,
+				10515CA71CC327B000BEE114 /* CommentTableViewCell.xib in Resources */,
 				D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */,
 				104FC2811CBE0898006A314C /* PhotosCollectionViewCell.xib in Resources */,
 				D6B3FD631CB3EA7B0012253C /* Info.plist in Resources */,
@@ -531,6 +567,7 @@
 				D6B3FD4E1CB2F64F0012253C /* LaunchScreen.storyboard in Resources */,
 				D6B3FD491CB2F64F0012253C /* Main.storyboard in Resources */,
 				D697FDAB1CB8D22000914437 /* ProfileController.xib in Resources */,
+				1047FF2D1CC387D700B4B6DE /* ReviewDetailViewController.xib in Resources */,
 				B7E6AF06553A31CDABAA6AF5 /* MapController.xib in Resources */,
 				D697FDA91CB8D20500914437 /* SearchController.xib in Resources */,
 				109A02021CBD1AD8002FCFFF /* MapDetailViewController.xib in Resources */,
@@ -619,9 +656,12 @@
 				104FC2871CBE11A6006A314C /* ConfigJson.swift in Sources */,
 				D6015FF21CBBD7250050A160 /* Topic.swift in Sources */,
 				D6015FF81CBBD7390050A160 /* Coordinate.swift in Sources */,
+				1047FF2C1CC387D700B4B6DE /* ReviewDetailViewController.swift in Sources */,
+				10515CA61CC327B000BEE114 /* CommentTableViewCell.swift in Sources */,
 				B7E6ACD219AD3465B20C69D6 /* UserHandlerMockImpl.swift in Sources */,
 				B7E6A37B4128883770945324 /* AppDelegate.swift in Sources */,
 				7221DB191CB8D08B002BD0B3 /* ParkingResultCell.swift in Sources */,
+				1047FF301CC38C6700B4B6DE /* ReviewViewController.swift in Sources */,
 				D6015FFB1CBBD7390050A160 /* VehicleType.swift in Sources */,
 				728CA22F1CB6CD0800793E9C /* HomeViewController.swift in Sources */,
 				B7E6A487B5EB4277A0B8D246 /* DetailParkingController.swift in Sources */,
@@ -703,7 +743,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -743,7 +783,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -12,8 +12,23 @@
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oHe-Yi-dqy">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oHe-Yi-dqy" secondAttribute="trailing" id="h3o-vO-Lrr"/>
+                <constraint firstItem="oHe-Yi-dqy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qp4-cA-bDg"/>
+                <constraint firstItem="oHe-Yi-dqy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sdc-gH-v2v"/>
+                <constraint firstAttribute="bottom" secondItem="oHe-Yi-dqy" secondAttribute="bottom" id="uSx-R1-jaq"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="oHe-Yi-dqy" id="rFo-ug-6ZA"/>
+            </connections>
+            <point key="canvasLocation" x="189" y="58"/>
         </collectionViewCell>
     </objects>
 </document>
