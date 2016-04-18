@@ -25,7 +25,9 @@ class PakrTabBarController: UIKit.UITabBarController {
 //        navController.viewControllers = [postController]
 //        viewControllers.append(navController)
 
-        let navController = UIKit.UINavigationController()
+        var navController: UINavigationController!
+        
+        navController = UINavigationController()
         let postController = PostParkingController(nibName: "PostParkingController", bundle: nil)
         let postItem = UITabBarItem(title: "Post", image: UIImage(named: "nearby.png"), tag: 0)
         postController.tabBarItem = postItem
@@ -37,13 +39,12 @@ class PakrTabBarController: UIKit.UITabBarController {
         mapController.tabBarItem = mapItem
         viewControllers.append(mapController)
 
+        navController = UINavigationController()
         let listParkingController = ParkingListController(nibName: "ParkingListController", bundle: nil)
         let listItem = UITabBarItem(title: "Search", image: UIImage(named: "search.png"), tag: 1)
         listParkingController.tabBarItem = listItem
-        viewControllers.append(listParkingController)
-        
-        let detailParkingController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
-        viewControllers.append(detailParkingController)
+        navController.viewControllers = [listParkingController]
+        viewControllers.append(navController)
         
         let bookmarkController = BookmarkController(nibName: "BookmarkController", bundle: nil)
         let bookmarkItem = UITabBarItem(title: "Bookmark", image: UIImage(named: "favorite.png"), tag: 2)

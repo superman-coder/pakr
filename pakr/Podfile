@@ -4,8 +4,12 @@ use_frameworks!
 target 'pakr' do
     pod 'FBSDKLoginKit'
     pod 'Google/SignIn'
+    pod 'AYStepperView'
+    pod 'MBXPageViewController'
+    pod 'Material', '~> 1.0'
+    pod 'BEMCheckBox'
     pod 'AFNetworking'
-    pod 'AFNetworking'
+    pod 'Alamofire', '~> 3.3'
     pod 'AYStepperView'
     pod 'MBXPageViewController'
     pod 'Material', '~> 1.0'

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         authenService = WebServiceFactory.getAuthService()
         
-        if authenService.isLogin() {
+       if authenService.isLogin() {
             let rootViewController = PakrTabBarController()
             window.rootViewController = rootViewController
         } else {

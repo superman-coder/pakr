@@ -59,7 +59,7 @@ class DetailParkingController: UIViewController {
 // MARK: - Private Method
 
     func setData(){
-        parking = ConfigJson.getListParkingFromJson.first
+        parking = JSONUtils.dummyParkingList.first
         
         arrUrlImageParking = parking.imageUrl
         numberImage = (arrUrlImageParking?.count)! + 1 ?? 1
