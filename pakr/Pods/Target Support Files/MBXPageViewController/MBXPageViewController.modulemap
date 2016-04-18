@@ -1,6 +1,0 @@
-framework module MBXPageViewController {
-  umbrella header "MBXPageViewController-umbrella.h"
-
-  export *
-  module * { export * }
-}
