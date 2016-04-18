@@ -1,0 +1,31 @@
+**Parse**
+We use Heroku for hosting parse, use MLab for hosting MongoDB Database.
+
+Parse-server repository: https://github.com/superman-coder/parse
+We don't need to use this repository. I have configured and pushed to server. I will maintain when there are some changes (if we need)
+
+Parse-dashboard management repository: https://github.com/superman-coder/parse-dashboard
+Using this for management our database. You also can use MLab,too.
+
+Link server: https://pakr-parse.herokuapp.com/parse
+Just for know. Don't need to go this link =)))
+
+Link heroku: https://dashboard.heroku.com/apps/pakr-parse
+Use for config server setting.
+Username: huynhquangthao@gmail.com
+Password: adminkdu
+
+Link MLab MongoDB: https://mlab.com/databases/pakr-database
+Use for management database. We can go here and see all tables here :)
+Username: hqthao
+Password: adminkdu93
+
+**Amazon**
+Link for management: https://console.aws.amazon.com/console/home
+We will use Amazon S3 for uploading image files and Cognito for User Identity.
+Amazon S3 Console: https://console.aws.amazon.com/s3/home?region=eu-west-1
+Cognito Console: https://eu-west-1.console.aws.amazon.com/cognito/home?region=eu-west-1
+Username: huynhquangthao@gmail.com
+Password: adminkdu
+
+
