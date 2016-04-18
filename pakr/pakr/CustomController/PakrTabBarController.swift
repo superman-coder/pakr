@@ -42,6 +42,9 @@ class PakrTabBarController: UIKit.UITabBarController {
         listParkingController.tabBarItem = listItem
         viewControllers.append(listParkingController)
         
+        let detailParkingController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
+        viewControllers.append(detailParkingController)
+        
         let bookmarkController = BookmarkController(nibName: "BookmarkController", bundle: nil)
         let bookmarkItem = UITabBarItem(title: "Bookmark", image: UIImage(named: "favorite.png"), tag: 2)
         bookmarkController.tabBarItem = bookmarkItem

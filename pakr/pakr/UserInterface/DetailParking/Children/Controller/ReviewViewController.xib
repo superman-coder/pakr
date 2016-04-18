@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewViewController" customModule="pakr" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehd-lf-n3K">
+                    <rect key="frame" x="10" y="10" width="300" height="548"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ws-2z-awY" userLabel="line">
+                            <rect key="frame" x="0.0" y="55" width="300" height="1"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="ebF-el-DSe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvF-qA-iDD" userLabel="rateView">
+                            <rect key="frame" x="50" y="10" width="200" height="35"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="1wq-23-Aez"/>
+                                <constraint firstAttribute="width" constant="200" id="ehC-Nv-Hau"/>
+                            </constraints>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-gF-zgh">
+                            <rect key="frame" x="10" y="64" width="280" height="457"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1ws-2z-awY" firstAttribute="leading" secondItem="Ehd-lf-n3K" secondAttribute="leading" id="9Xa-MZ-0gS"/>
+                        <constraint firstItem="ch2-gF-zgh" firstAttribute="leading" secondItem="Ehd-lf-n3K" secondAttribute="leading" constant="10" id="HIe-Pe-RNs"/>
+                        <constraint firstAttribute="trailing" secondItem="ch2-gF-zgh" secondAttribute="trailing" constant="10" id="N6t-nD-yDw"/>
+                        <constraint firstItem="yvF-qA-iDD" firstAttribute="top" secondItem="Ehd-lf-n3K" secondAttribute="top" constant="10" id="NQb-OX-2Ia"/>
+                        <constraint firstAttribute="trailing" secondItem="1ws-2z-awY" secondAttribute="trailing" id="fDy-5f-yde"/>
+                        <constraint firstItem="1ws-2z-awY" firstAttribute="top" secondItem="yvF-qA-iDD" secondAttribute="bottom" constant="10" id="h4E-cR-U4p"/>
+                        <constraint firstItem="ch2-gF-zgh" firstAttribute="top" secondItem="1ws-2z-awY" secondAttribute="bottom" constant="10" id="hUn-3S-bHi"/>
+                        <constraint firstAttribute="bottom" secondItem="ch2-gF-zgh" secondAttribute="bottom" constant="25" id="jj7-rm-85K"/>
+                        <constraint firstItem="yvF-qA-iDD" firstAttribute="centerX" secondItem="Ehd-lf-n3K" secondAttribute="centerX" id="oui-Zl-BNn"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ehd-lf-n3K" secondAttribute="bottom" constant="10" id="DFW-2Z-UEn"/>
+                <constraint firstItem="Ehd-lf-n3K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Rm9-23-MML"/>
+                <constraint firstAttribute="trailing" secondItem="Ehd-lf-n3K" secondAttribute="trailing" constant="10" id="lRB-rg-AVe"/>
+                <constraint firstItem="Ehd-lf-n3K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="r4t-YS-PSt"/>
+            </constraints>
+            <point key="canvasLocation" x="319" y="306"/>
+        </view>
+    </objects>
+</document>

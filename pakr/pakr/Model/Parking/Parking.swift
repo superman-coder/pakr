@@ -23,7 +23,6 @@ class Parking: NSObject {
     var imageUrl: [String]?
     var schedule: [TimeRange]!
 
-//    [price_details, worktime, note, dist, _id, addr, pictures, price, avl, vehicle_type, cap, region, ward, loc, worktime_details, __v, name]
     
     init(business: Business!, parkingName: String!, capacity: Int!, dateCreated: NSDate!, addressName: String, coordinate: Coordinate!, vehicleDetailList: [VehicleDetail]!, schedule: [TimeRange]!, region: [String]!) {
         self.business = business
@@ -57,7 +56,7 @@ class Parking: NSObject {
         
         let loc = dic["loc"] as! NSDictionary
         let coordinates = loc["coordinates"] as!NSArray
-         coordinate = Coordinate(latitude: coordinates.firstObject as! Double, longitude: coordinates.lastObject as! Double)
+         coordinate = Coordinate(latitude: coordinates.lastObject as! Double, longitude: coordinates.firstObject as! Double)
          verify = false
         
         let vehicles = NSMutableArray()
@@ -104,8 +103,8 @@ class Parking: NSObject {
          vehicleList =  vehicles.copy() as! [VehicleDetail]
         
          region = dic["region"] as! [String]
-         imageUrl = dic["pictures"] as? [String]
-        
+//         imageUrl = dic["pictures"] as? [String]
+        imageUrl = ["https://www.dropbox.com/s/crpldiixsjpsdwu/do-xe-tu-dong-puzzle.jpg?dl=0"]
         let scheduls = NSMutableArray()
         var worktimes = []
         if dic["worktime"] != nil {

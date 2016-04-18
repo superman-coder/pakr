@@ -75,6 +75,12 @@
 		D60598B91CC416CB009C5BEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598B81CC416CB009C5BEB /* AddressBook.framework */; };
 		D60598BB1CC416F2009C5BEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BA1CC416F2009C5BEB /* StoreKit.framework */; };
 		D60598BD1CC41701009C5BEB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */; };
+		D60598D51CC4A863009C5BEB /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */; };
+		D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */; };
+		D60598D71CC4A863009C5BEB /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D11CC4A863009C5BEB /* ReviewDetailViewController.swift */; };
+		D60598D81CC4A863009C5BEB /* ReviewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */; };
+		D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D31CC4A863009C5BEB /* ReviewViewController.swift */; };
+		D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D41CC4A863009C5BEB /* ReviewViewController.xib */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -165,6 +171,12 @@
 		D60598B81CC416CB009C5BEB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D60598BA1CC416F2009C5BEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentTableViewCell.swift; path = Children/Controller/CommentTableViewCell.swift; sourceTree = "<group>"; };
+		D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = Children/Controller/CommentTableViewCell.xib; sourceTree = "<group>"; };
+		D60598D11CC4A863009C5BEB /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewDetailViewController.swift; path = Children/Controller/ReviewDetailViewController.swift; sourceTree = "<group>"; };
+		D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewDetailViewController.xib; path = Children/Controller/ReviewDetailViewController.xib; sourceTree = "<group>"; };
+		D60598D31CC4A863009C5BEB /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewViewController.swift; path = Children/Controller/ReviewViewController.swift; sourceTree = "<group>"; };
+		D60598D41CC4A863009C5BEB /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewViewController.xib; path = Children/Controller/ReviewViewController.xib; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -518,6 +530,12 @@
 		B7E6AE0A1EB71547762CC233 /* DetailParking */ = {
 			isa = PBXGroup;
 			children = (
+				D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */,
+				D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */,
+				D60598D11CC4A863009C5BEB /* ReviewDetailViewController.swift */,
+				D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */,
+				D60598D31CC4A863009C5BEB /* ReviewViewController.swift */,
+				D60598D41CC4A863009C5BEB /* ReviewViewController.xib */,
 				B7E6A6D19A75782C1E339414 /* Children */,
 				B7E6AAACA61109CB4F832B73 /* CommentsViewController.xib */,
 				B7E6A2693D20AC447658B4D2 /* DetailParkingController.xib */,
@@ -716,13 +734,16 @@
 				B7E6A13E90275C7D2181B30E /* ProfileController.xib in Resources */,
 				B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */,
 				D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */,
+				D60598D81CC4A863009C5BEB /* ReviewDetailViewController.xib in Resources */,
 				D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */,
 				B7E6A60E9906C2D10C8F2F70 /* MapDetailViewController.xib in Resources */,
 				B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */,
 				B7E6A345492B0A4212E4D537 /* CommentsViewController.xib in Resources */,
 				7295DE671CC13F030001B852 /* Images.xcassets in Resources */,
+				D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */,
 				B7E6ACB7810CEC161EDDFE54 /* DetailParkingController.xib in Resources */,
 				B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */,
+				D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +809,7 @@
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
 				B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */,
 				B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */,
+				D60598D51CC4A863009C5BEB /* CommentTableViewCell.swift in Sources */,
 				B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */,
 				B7E6AA0432B1309BA5CEC6AD /* TimeRange.swift in Sources */,
 				B7E6A5BC6F196BF0F02FAD3A /* Coordinate.swift in Sources */,
@@ -808,6 +830,7 @@
 				B7E6A490B0661ADCFA1A38FB /* UserHandlerRealmImpl.swift in Sources */,
 				B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
+				D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */,
 				B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */,
 				D654A3851CC369F50095F74D /* AuthService.swift in Sources */,
 				D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */,
@@ -836,6 +859,7 @@
 				B7E6AF0C09C71FD4655C185F /* PakrNavigationController.swift in Sources */,
 				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
 				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,
+				D60598D71CC4A863009C5BEB /* ReviewDetailViewController.swift in Sources */,
 				B7E6A9C2A41FE994DE773C26 /* PakrCLLocationCoordinate2D.swift in Sources */,
 				D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */,
 				B7E6AE1FA3C29FC389132252 /* DataServiceUtils.swift in Sources */,
