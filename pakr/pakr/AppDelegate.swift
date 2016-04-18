@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
         
-        let rootViewController = PakrTabBarController()
+//        let rootViewController = PakrTabBarController()
+        let rootViewController = AddressPickerController(nibName: "AddressPickerController", bundle: nil)
         window.rootViewController = rootViewController
         
         window.makeKeyAndVisible()

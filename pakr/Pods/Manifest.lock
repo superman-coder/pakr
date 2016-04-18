@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Alamofire (3.3.1)
   - AYStepperView (0.1.0):
     - pop (~> 1.0)
   - BEMCheckBox (1.2.0)
@@ -23,6 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - Alamofire (~> 3.3)
   - AYStepperView
   - BEMCheckBox
   - Material (~> 1.0)
@@ -30,6 +32,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AYStepperView: 6bc5399dae562b2d221c47cbd540db438454ecf9
   BEMCheckBox: fcfbbf42cf23d38fbb605c72f63db9ae82d6acd3
   Material: ad48594da116b7004751dc042e44cc7a8c52ad0a
