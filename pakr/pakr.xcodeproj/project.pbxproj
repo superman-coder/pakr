@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		23223FA1AA3AF5DA4D275A26 /* Pods_pakr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9870136ADB30BD79474A430C /* Pods_pakr.framework */; };
+		723552991CC4CD8400090651 /* GMPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723552981CC4CD8400090651 /* GMPlace.swift */; };
+		7235529D1CC4D39400090651 /* AddressPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7235529B1CC4D39400090651 /* AddressPickerController.swift */; };
+		7235529E1CC4D39400090651 /* AddressPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7235529C1CC4D39400090651 /* AddressPickerController.xib */; };
+		723552A21CC4D3DB00090651 /* GMPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723552A01CC4D3DB00090651 /* GMPlaceCell.swift */; };
+		723552A31CC4D3DB00090651 /* GMPlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 723552A11CC4D3DB00090651 /* GMPlaceCell.xib */; };
 		7274B8D41CC2884B007E4B82 /* PakrImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */; };
-		7274B8DE1CC28E9F007E4B82 /* AddressPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */; };
-		7274B8DF1CC28E9F007E4B82 /* AddressPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */; };
-		7274B8E21CC32CF9007E4B82 /* GMGeocodeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8E11CC32CF9007E4B82 /* GMGeocodeServices.swift */; };
+		7274B8E21CC32CF9007E4B82 /* GMServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8E11CC32CF9007E4B82 /* GMServices.swift */; };
 		7295DE671CC13F030001B852 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7295DE651CC13F030001B852 /* Images.xcassets */; };
 		B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A43E71032DC2B0D1F1CF /* Repository.swift */; };
 		B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A22BC922751D53642CFB /* PostInfoController.xib */; };
@@ -84,10 +87,13 @@
 
 /* Begin PBXFileReference section */
 		4FD9FFB8B2A762AE7B807D9E /* Pods-pakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.debug.xcconfig"; sourceTree = "<group>"; };
+		723552981CC4CD8400090651 /* GMPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMPlace.swift; sourceTree = "<group>"; };
+		7235529B1CC4D39400090651 /* AddressPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPickerController.swift; sourceTree = "<group>"; };
+		7235529C1CC4D39400090651 /* AddressPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressPickerController.xib; sourceTree = "<group>"; };
+		723552A01CC4D3DB00090651 /* GMPlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMPlaceCell.swift; sourceTree = "<group>"; };
+		723552A11CC4D3DB00090651 /* GMPlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMPlaceCell.xib; sourceTree = "<group>"; };
 		7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrImageUtils.swift; sourceTree = "<group>"; };
-		7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPickerController.swift; sourceTree = "<group>"; };
-		7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressPickerController.xib; sourceTree = "<group>"; };
-		7274B8E11CC32CF9007E4B82 /* GMGeocodeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMGeocodeServices.swift; sourceTree = "<group>"; };
+		7274B8E11CC32CF9007E4B82 /* GMServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMServices.swift; sourceTree = "<group>"; };
 		7295DE651CC13F030001B852 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		8883172CD0A6C2613E2AB210 /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
 		9870136ADB30BD79474A430C /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,10 +190,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		723552971CC4CD7600090651 /* GoogleServices */ = {
+			isa = PBXGroup;
+			children = (
+				723552981CC4CD8400090651 /* GMPlace.swift */,
+			);
+			path = GoogleServices;
+			sourceTree = "<group>";
+		};
+		7235529A1CC4D39400090651 /* AddressPicker */ = {
+			isa = PBXGroup;
+			children = (
+				7235529B1CC4D39400090651 /* AddressPickerController.swift */,
+				7235529C1CC4D39400090651 /* AddressPickerController.xib */,
+				7235529F1CC4D3AD00090651 /* View */,
+			);
+			path = AddressPicker;
+			sourceTree = "<group>";
+		};
+		7235529F1CC4D3AD00090651 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				723552A01CC4D3DB00090651 /* GMPlaceCell.swift */,
+				723552A11CC4D3DB00090651 /* GMPlaceCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7274B8E01CC32CCD007E4B82 /* Geocode */ = {
 			isa = PBXGroup;
 			children = (
-				7274B8E11CC32CF9007E4B82 /* GMGeocodeServices.swift */,
+				7274B8E11CC32CF9007E4B82 /* GMServices.swift */,
 			);
 			path = Geocode;
 			sourceTree = "<group>";
@@ -375,8 +408,7 @@
 		B7E6A7E1D3E68279C9426F63 /* PostParking */ = {
 			isa = PBXGroup;
 			children = (
-				7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */,
-				7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */,
+				7235529A1CC4D39400090651 /* AddressPicker */,
 				B7E6ACF8A9206BE45E4BBF69 /* main */,
 				B7E6A2C6C1C61FE43C6CDC09 /* InfoScreen */,
 				B7E6A013ECD1135877676FCA /* VerifyScreen */,
@@ -491,6 +523,7 @@
 		B7E6AD3B1F8FFDB230C28C56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				723552971CC4CD7600090651 /* GoogleServices */,
 				B7E6A75ACAAD605629EB1236 /* Web */,
 				B7E6A2A0167FEB0B453D6FF5 /* Parking */,
 			);
@@ -622,9 +655,9 @@
 				B7E6AC7B78DB97C1857BFF86 /* BookmarkController.xib in Resources */,
 				B7E6A408A7FCECB2B4DFA109 /* SearchController.xib in Resources */,
 				B7E6AAC9E99348518E9B6D21 /* ParkingResultCell.xib in Resources */,
-				7274B8DF1CC28E9F007E4B82 /* AddressPickerController.xib in Resources */,
 				B7E6A23A88726CC0D19CD553 /* ParkingListController.xib in Resources */,
 				B7E6A75B8792F930FC0D46E8 /* PostParkingController.xib in Resources */,
+				723552A31CC4D3DB00090651 /* GMPlaceCell.xib in Resources */,
 				B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */,
 				B7E6A1037EA58D7A02BD6B2B /* VerifyController.xib in Resources */,
 				B7E6AEF2228BC974A36C5467 /* SelectMapImageController.xib in Resources */,
@@ -635,6 +668,7 @@
 				B7E6A345492B0A4212E4D537 /* CommentsViewController.xib in Resources */,
 				7295DE671CC13F030001B852 /* Images.xcassets in Resources */,
 				B7E6ACB7810CEC161EDDFE54 /* DetailParkingController.xib in Resources */,
+				7235529E1CC4D39400090651 /* AddressPickerController.xib in Resources */,
 				B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,7 +730,8 @@
 			files = (
 				B7E6A7598B1D7BE108B42ACA /* Post.swift in Sources */,
 				B7E6A4AACDDABB7130F3DBA7 /* Role.swift in Sources */,
-				7274B8E21CC32CF9007E4B82 /* GMGeocodeServices.swift in Sources */,
+				7274B8E21CC32CF9007E4B82 /* GMServices.swift in Sources */,
+				723552991CC4CD8400090651 /* GMPlace.swift in Sources */,
 				B7E6A60EEBB24D2C771BB096 /* User.swift in Sources */,
 				B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
@@ -718,11 +753,11 @@
 				B7E6ABD37D2CFCF7376D282C /* AuthServiceImpl.swift in Sources */,
 				B7E6A934788BD1D66E196B6F /* AuthServiceMockImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
-				7274B8DE1CC28E9F007E4B82 /* AddressPickerController.swift in Sources */,
 				B7E6AF19EE30F5B4F828B06D /* UserHandler.swift in Sources */,
 				B7E6A0786F719E522F61EE28 /* UserHandlerMockImpl.swift in Sources */,
 				B7E6A490B0661ADCFA1A38FB /* UserHandlerRealmImpl.swift in Sources */,
 				B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */,
+				723552A21CC4D3DB00090651 /* GMPlaceCell.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
 				B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */,
 				B7E6AC26951ACD27B35085B9 /* BookmarkController.swift in Sources */,
@@ -730,6 +765,7 @@
 				B7E6AC842CC3B34A20172827 /* ParkingResultCell.swift in Sources */,
 				B7E6ABFA04ECC1111B378897 /* ParkingListController.swift in Sources */,
 				B7E6A949DC4DD496BB0052B3 /* PostParkingController.swift in Sources */,
+				7235529D1CC4D39400090651 /* AddressPickerController.swift in Sources */,
 				B7E6AA8A109EAEBB232F4B13 /* PostInfoController.swift in Sources */,
 				B7E6A5A04B2FA08E0E2D97D5 /* VerifyController.swift in Sources */,
 				B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */,
