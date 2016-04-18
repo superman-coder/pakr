@@ -10,4 +10,10 @@
 #define Pakr_Bridging_Header_h
 
 #import <Google/SignIn.h>
+#import <AWSCore/AWSCore.h>
+#import <AWSS3/AWSS3.h>
+#import <AWSDynamoDB/AWSDynamoDB.h>
+#import <AWSSQS/AWSSQS.h>
+#import <AWSSNS/AWSSNS.h>
+#import <AWSCognito/AWSCognito.h>
 #endif /* Pakr_Bridging_Header_h */

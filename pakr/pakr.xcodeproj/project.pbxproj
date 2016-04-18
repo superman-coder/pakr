@@ -75,6 +75,13 @@
 		D60598B91CC416CB009C5BEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598B81CC416CB009C5BEB /* AddressBook.framework */; };
 		D60598BB1CC416F2009C5BEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BA1CC416F2009C5BEB /* StoreKit.framework */; };
 		D60598BD1CC41701009C5BEB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */; };
+		D60598BF1CC41A49009C5BEB /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BE1CC41A49009C5BEB /* AWSMobileHubHelper.framework */; };
+		D60598C11CC4206A009C5BEB /* Sdk in Resources */ = {isa = PBXBuildFile; fileRef = D60598C01CC4206A009C5BEB /* Sdk */; };
+		D60598C41CC42125009C5BEB /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C21CC42125009C5BEB /* AWSCore.framework */; };
+		D60598C51CC42125009C5BEB /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C31CC42125009C5BEB /* AWSS3.framework */; };
+		D60598C71CC42136009C5BEB /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C61CC42136009C5BEB /* AWSCognito.framework */; };
+		D60598C91CC421A3009C5BEB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C81CC421A3009C5BEB /* libsqlite3.tbd */; };
+		D60598CB1CC421AC009C5BEB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598CA1CC421AC009C5BEB /* libz.tbd */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -165,6 +172,13 @@
 		D60598B81CC416CB009C5BEB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D60598BA1CC416F2009C5BEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D60598BE1CC41A49009C5BEB /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSMobileHubHelper.framework; path = AWS/AWSMobileHubHelper.framework; sourceTree = "<group>"; };
+		D60598C01CC4206A009C5BEB /* Sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sdk; sourceTree = "<group>"; };
+		D60598C21CC42125009C5BEB /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = pakr/Sdk/Aws/AWSCore.framework; sourceTree = "<group>"; };
+		D60598C31CC42125009C5BEB /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = pakr/Sdk/Aws/AWSS3.framework; sourceTree = "<group>"; };
+		D60598C61CC42136009C5BEB /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = pakr/Sdk/Aws/extras/AWSCognito.framework; sourceTree = "<group>"; };
+		D60598C81CC421A3009C5BEB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D60598CA1CC421AC009C5BEB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -187,9 +201,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60598CB1CC421AC009C5BEB /* libz.tbd in Frameworks */,
+				D60598C91CC421A3009C5BEB /* libsqlite3.tbd in Frameworks */,
+				D60598C41CC42125009C5BEB /* AWSCore.framework in Frameworks */,
+				D60598C51CC42125009C5BEB /* AWSS3.framework in Frameworks */,
+				D60598C71CC42136009C5BEB /* AWSCognito.framework in Frameworks */,
 				D60598BD1CC41701009C5BEB /* SystemConfiguration.framework in Frameworks */,
 				D60598BB1CC416F2009C5BEB /* StoreKit.framework in Frameworks */,
 				D60598B91CC416CB009C5BEB /* AddressBook.framework in Frameworks */,
+				D60598BF1CC41A49009C5BEB /* AWSMobileHubHelper.framework in Frameworks */,
 				23223FA1AA3AF5DA4D275A26 /* Pods_pakr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +220,11 @@
 		081F5D89FB2D7E4CF7A7BA30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D60598CA1CC421AC009C5BEB /* libz.tbd */,
+				D60598C81CC421A3009C5BEB /* libsqlite3.tbd */,
+				D60598C61CC42136009C5BEB /* AWSCognito.framework */,
+				D60598C21CC42125009C5BEB /* AWSCore.framework */,
+				D60598C31CC42125009C5BEB /* AWSS3.framework */,
 				D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */,
 				D60598BA1CC416F2009C5BEB /* StoreKit.framework */,
 				D60598B81CC416CB009C5BEB /* AddressBook.framework */,
@@ -333,6 +358,8 @@
 		B7E6A617C69724D814D342E6 /* pakr */ = {
 			isa = PBXGroup;
 			children = (
+				D60598C01CC4206A009C5BEB /* Sdk */,
+				D60598BE1CC41A49009C5BEB /* AWSMobileHubHelper.framework */,
 				D654A3761CC2D2E50095F74D /* Preferences */,
 				D6A14E611CC2CD5A00BC6A64 /* Extensions */,
 				B7E6AD3B1F8FFDB230C28C56 /* Model */,
@@ -654,7 +681,6 @@
 				D6490D341CBFF85700016AA6 /* Sources */,
 				D6490D351CBFF85700016AA6 /* Frameworks */,
 				D6490D361CBFF85700016AA6 /* Resources */,
-				2D8E2E2E87BEE0DB1A3892ED /* Embed Pods Frameworks */,
 				4CC4986C9D576B0DC9ABAC64 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -721,6 +747,7 @@
 				B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */,
 				B7E6A345492B0A4212E4D537 /* CommentsViewController.xib in Resources */,
 				7295DE671CC13F030001B852 /* Images.xcassets in Resources */,
+				D60598C11CC4206A009C5BEB /* Sdk in Resources */,
 				B7E6ACB7810CEC161EDDFE54 /* DetailParkingController.xib in Resources */,
 				B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */,
 			);
@@ -729,21 +756,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D8E2E2E87BEE0DB1A3892ED /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pakr/Pods-pakr-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4CC4986C9D576B0DC9ABAC64 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -937,10 +949,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pakr/AWS",
+					"$(PROJECT_DIR)/pakr/Sdk/Aws",
+					"$(PROJECT_DIR)/pakr/Sdk/Aws/extras",
+				);
 				INFOPLIST_FILE = pakr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pakr/Pakr-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Debug;
 		};
@@ -950,10 +970,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pakr/AWS",
+					"$(PROJECT_DIR)/pakr/Sdk/Aws",
+					"$(PROJECT_DIR)/pakr/Sdk/Aws/extras",
+				);
 				INFOPLIST_FILE = pakr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pakr/Pakr-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Release;
 		};
