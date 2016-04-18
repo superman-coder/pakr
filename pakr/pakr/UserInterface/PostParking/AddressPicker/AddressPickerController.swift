@@ -25,6 +25,8 @@ class AddressPickerController: UIViewController {
     @IBOutlet weak var searchControllerView: UIView!
     @IBOutlet weak var searchResultContainerView: UIView!
     @IBOutlet weak var searchResultTableView: UITableView!
+    @IBOutlet weak var searchIconButton: UIButton!
+    @IBOutlet weak var bottomBarView: UIView!
     
     var delegate: AddressPickerDelegate?
     
@@ -67,13 +69,17 @@ class AddressPickerController: UIViewController {
     }
     
     private func initSearchController() {
-        searchControllerView.layer.borderColor = UIColor.yellowColor().CGColor
-        searchControllerView.layer.borderWidth = 0.5
+        LayoutUtils.dropShadowView(searchControllerView)
         searchTextField.delegate = self
         
         searchResultTableView.registerNib(UINib(nibName: "GMPlaceCell", bundle: nil), forCellReuseIdentifier: searchCellReuseId)
         searchResultTableView.dataSource = self
         searchResultTableView.delegate = self
+        
+        bottomBarView.layer.masksToBounds = false
+        bottomBarView.layer.shadowColor = UIColor.blackColor().CGColor
+        bottomBarView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        bottomBarView.layer.shadowOpacity = 0.4
     }
     
     override func viewDidLayoutSubviews() {
@@ -91,23 +97,39 @@ class AddressPickerController: UIViewController {
     }
     
     private func showSearchResultContainer(show:Bool) {
+        if (show != self.searchResultContainerView.hidden) {
+            return
+        }
+        // show true, hidden = false -> return
+        // show false hidden = true -> return
+        // show true, hidden = true -> do
+        // show false, hidden = false -> do
         let initialAlpha:CGFloat = show ? 0 : 1
         self.searchResultContainerView.alpha = initialAlpha
         self.searchResultContainerView.hidden = false
+        
+        if (show) {
+            self.searchTextField.becomeFirstResponder()
+        } else {
+            self.searchTextField.resignFirstResponder()
+        }
+        
+        self.searchTextField.text = nil
+        self.searchResult.removeAll()
+        self.searchResultTableView.reloadData()
+        
         UIView.animateWithDuration(0.3, animations: {
             self.searchResultContainerView.alpha = 1 - initialAlpha
             }) { (finished) in
                 self.searchResultContainerView.hidden = !show
                 
-                if (show) {
-                    self.searchTextField.becomeFirstResponder()
-                } else {
-                    self.searchTextField.resignFirstResponder()
-                }
+        }
+        
+        let targetImage = show ? UIImage(named: "back-gray") : UIImage(named: "search-gray")
+        UIView.transitionWithView(self.searchIconButton, duration: 0.3, options: .TransitionCrossDissolve, animations: { 
+            self.searchIconButton .setImage(targetImage, forState: .Normal)
+            }) { (finished) in
                 
-                self.searchTextField.text = nil
-                self.searchResult.removeAll()
-                self.searchResultTableView.reloadData()
         }
     }
     

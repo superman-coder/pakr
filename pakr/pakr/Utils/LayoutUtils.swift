@@ -41,11 +41,9 @@ class LayoutUtils {
     }
     
     static func dropShadowView(view: UIView) {
-        let shadowPath = UIBezierPath(rect: view.bounds)
         view.layer.masksToBounds = false
         view.layer.shadowColor = UIColor.blackColor().CGColor
         view.layer.shadowOffset = CGSize(width: 0, height: 2)
         view.layer.shadowOpacity = 0.4
-        view.layer.shadowPath = shadowPath.CGPath
     }
 }

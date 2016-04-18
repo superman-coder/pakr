@@ -8,27 +8,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="GMPlaceCell" customModule="pakr" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="GMPlaceCell" customModule="pakr" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hzf-z7-g32">
-                        <rect key="frame" x="0.0" y="0.0" width="64" height="43.5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin-gray" translatesAutoresizingMaskIntoConstraints="NO" id="hzf-z7-g32">
+                        <rect key="frame" x="0.0" y="16" width="64" height="27.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="64" id="ygY-no-SFW"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acM-Q0-aAp">
-                        <rect key="frame" x="64" y="22" width="248" height="18"/>
+                        <rect key="frame" x="64" y="30" width="248" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Coffee House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9z-Mg-6PH">
-                        <rect key="frame" x="64" y="4" width="240" height="18"/>
+                        <rect key="frame" x="64" y="12" width="240" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -38,9 +38,9 @@
                     <constraint firstItem="hzf-z7-g32" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="04i-QV-OY0"/>
                     <constraint firstItem="h9z-Mg-6PH" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6sK-V2-8ad"/>
                     <constraint firstItem="h9z-Mg-6PH" firstAttribute="leading" secondItem="hzf-z7-g32" secondAttribute="trailing" id="hKT-Hk-TfD"/>
-                    <constraint firstItem="hzf-z7-g32" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="j9f-UV-vab"/>
+                    <constraint firstItem="hzf-z7-g32" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="j9f-UV-vab"/>
                     <constraint firstItem="acM-Q0-aAp" firstAttribute="leading" secondItem="hzf-z7-g32" secondAttribute="trailing" id="llh-id-USk"/>
-                    <constraint firstAttribute="bottom" secondItem="hzf-z7-g32" secondAttribute="bottom" id="mpW-I8-CkW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hzf-z7-g32" secondAttribute="bottom" constant="8" id="mpW-I8-CkW"/>
                     <constraint firstAttribute="trailingMargin" secondItem="h9z-Mg-6PH" secondAttribute="trailing" constant="8" id="oni-1y-LQh"/>
                     <constraint firstAttribute="trailing" secondItem="acM-Q0-aAp" secondAttribute="trailing" constant="8" id="qH7-TZ-vgZ"/>
                     <constraint firstItem="acM-Q0-aAp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uWA-JR-J92"/>
@@ -50,6 +50,10 @@
                 <outlet property="addressLabel" destination="acM-Q0-aAp" id="WEo-YX-alE"/>
                 <outlet property="nameLabel" destination="h9z-Mg-6PH" id="6vd-op-EPX"/>
             </connections>
+            <point key="canvasLocation" x="217" y="329"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="pin-gray" width="29" height="41"/>
+    </resources>
 </document>

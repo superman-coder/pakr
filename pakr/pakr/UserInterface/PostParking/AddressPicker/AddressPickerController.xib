@@ -7,8 +7,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressPickerController" customModule="pakr" customModuleProvider="target">
             <connections>
                 <outlet property="addressLabel" destination="agn-UL-DC8" id="hwt-Pa-X1e"/>
+                <outlet property="bottomBarView" destination="f1O-GU-RvX" id="TBE-pF-Xyo"/>
                 <outlet property="mapView" destination="Gev-pW-1pw" id="lHI-fi-bc1"/>
                 <outlet property="searchControllerView" destination="ZjB-yE-1Pg" id="fEq-tO-CNS"/>
+                <outlet property="searchIconButton" destination="xAa-8I-TUE" id="kIl-kp-FvO"/>
                 <outlet property="searchResultContainerView" destination="t5q-mu-v3O" id="UZF-tC-dio"/>
                 <outlet property="searchResultTableView" destination="jxU-vb-2hA" id="NK2-Io-eji"/>
                 <outlet property="searchTextField" destination="5gR-Yu-xHo" id="rGi-e0-Ypd"/>
@@ -21,13 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-pW-1pw">
-                    <rect key="frame" x="0.0" y="44" width="375" height="559"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                 </mapView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1O-GU-RvX" userLabel="Bottom Bar">
-                    <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                    <rect key="frame" x="4" y="599" width="367" height="64"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agn-UL-DC8">
-                            <rect key="frame" x="8" y="8" width="359" height="48"/>
+                            <rect key="frame" x="8" y="8" width="351" height="48"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -81,18 +83,18 @@
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5gR-Yu-xHo">
                             <rect key="frame" x="64" y="6" width="273" height="32"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             <connections>
                                 <action selector="searchTextFieldTextChanged:" destination="-1" eventType="editingChanged" id="kUJ-oW-MxP"/>
                             </connections>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAa-8I-TUE">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAa-8I-TUE">
                             <rect key="frame" x="0.0" y="0.0" width="64" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="64" id="dG8-ex-PhZ"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" image="search-gray"/>
                             <connections>
                                 <action selector="searchControllerBackButtonDidClick:" destination="-1" eventType="touchUpInside" id="21l-yA-gOK"/>
                             </connections>
@@ -114,16 +116,17 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ZjB-yE-1Pg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="3Pd-9l-TXk"/>
-                <constraint firstItem="f1O-GU-RvX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3jX-bW-uFh"/>
+                <constraint firstItem="f1O-GU-RvX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="4" id="3jX-bW-uFh"/>
+                <constraint firstAttribute="bottom" secondItem="Gev-pW-1pw" secondAttribute="bottom" id="6Eh-f8-3S0"/>
                 <constraint firstItem="VZH-K9-FsR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="84p-PE-aQo"/>
                 <constraint firstItem="t5q-mu-v3O" firstAttribute="top" secondItem="VZH-K9-FsR" secondAttribute="bottom" id="BdX-b7-okE"/>
                 <constraint firstAttribute="bottom" secondItem="t5q-mu-v3O" secondAttribute="bottom" id="Gnv-uL-gDQ"/>
                 <constraint firstItem="VZH-K9-FsR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IZj-ji-0Z6"/>
                 <constraint firstAttribute="trailing" secondItem="t5q-mu-v3O" secondAttribute="trailing" id="KVY-26-p8d"/>
-                <constraint firstAttribute="trailing" secondItem="f1O-GU-RvX" secondAttribute="trailing" id="Orv-vW-7Ti"/>
+                <constraint firstAttribute="trailing" secondItem="f1O-GU-RvX" secondAttribute="trailing" constant="4" id="Orv-vW-7Ti"/>
                 <constraint firstItem="Gev-pW-1pw" firstAttribute="top" secondItem="VZH-K9-FsR" secondAttribute="bottom" id="QdN-Nb-UPL"/>
                 <constraint firstItem="ZjB-yE-1Pg" firstAttribute="top" secondItem="VZH-K9-FsR" secondAttribute="bottom" constant="16" id="R57-yf-YiR"/>
-                <constraint firstAttribute="bottom" secondItem="f1O-GU-RvX" secondAttribute="bottom" id="S3h-hw-0J8"/>
+                <constraint firstAttribute="bottom" secondItem="f1O-GU-RvX" secondAttribute="bottom" constant="4" id="S3h-hw-0J8"/>
                 <constraint firstAttribute="trailing" secondItem="Gev-pW-1pw" secondAttribute="trailing" id="aRu-aM-yLa"/>
                 <constraint firstItem="t5q-mu-v3O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hdE-Oo-HyC"/>
                 <constraint firstItem="Gev-pW-1pw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ndT-JC-l48"/>
@@ -132,6 +135,14 @@
                 <constraint firstAttribute="trailing" secondItem="ZjB-yE-1Pg" secondAttribute="trailing" constant="16" id="vbq-Mw-BdB"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="rUK-mM-lSS"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="search-gray" width="18" height="18"/>
+    </resources>
 </document>
