@@ -4,6 +4,7 @@ use_frameworks!
 target 'pakr' do
     pod 'FBSDKLoginKit'
     pod 'Google/SignIn'
+    pod 'Parse'
     pod 'AYStepperView'
     pod 'MBXPageViewController'
     pod 'Material', '~> 1.0'

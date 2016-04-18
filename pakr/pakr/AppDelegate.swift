@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import Google
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
+        
+        setUpParse()
         
         authenService = WebServiceFactory.getAuthService()
         
@@ -34,6 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
    
+    func setUpParse() {
+        let config = ParseClientConfiguration(block: {
+            (ParseMutableClientConfiguration) -> Void in
+            ParseMutableClientConfiguration.applicationId = Constants.Parse.APP_ID
+            ParseMutableClientConfiguration.clientKey = Constants.Parse.MASTER_KEY
+            ParseMutableClientConfiguration.server = Constants.Parse.HOST
+        });
+        
+        Parse.initializeWithConfiguration(config);
+    }
+    
     @available(iOS 9.0, *)
     func application(application: UIApplication, openURL url: NSURL, options: [String: AnyObject]) -> Bool {
         print("step 2 of OAuth2. Url: \(url)")

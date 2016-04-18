@@ -85,6 +85,7 @@
 		D60598D81CC4A863009C5BEB /* ReviewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */; };
 		D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D31CC4A863009C5BEB /* ReviewViewController.swift */; };
 		D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D41CC4A863009C5BEB /* ReviewViewController.xib */; };
+		D60598DC1CC4E181009C5BEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598DB1CC4E181009C5BEB /* Constants.swift */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -185,6 +186,7 @@
 		D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewDetailViewController.xib; path = Children/Controller/ReviewDetailViewController.xib; sourceTree = "<group>"; };
 		D60598D31CC4A863009C5BEB /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewViewController.swift; path = Children/Controller/ReviewViewController.swift; sourceTree = "<group>"; };
 		D60598D41CC4A863009C5BEB /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewViewController.xib; path = Children/Controller/ReviewViewController.xib; sourceTree = "<group>"; };
+		D60598DB1CC4E181009C5BEB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		B7E6A2ACF500396A05F94F96 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				D60598DB1CC4E181009C5BEB /* Constants.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -846,6 +849,7 @@
 				B7E6A36290D6AB8FB4F37590 /* AddressServiceMockImpl.swift in Sources */,
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
+				D60598DC1CC4E181009C5BEB /* Constants.swift in Sources */,
 				D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */,
 				7274B8DE1CC28E9F007E4B82 /* AddressPickerController.swift in Sources */,
 				B7E6AF19EE30F5B4F828B06D /* UserHandler.swift in Sources */,
