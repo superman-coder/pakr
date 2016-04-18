@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ConfigJson: NSObject {
+class JSONUtils: NSObject {
 
-    class var getListParkingFromJson: [Parking] {
+    class var dummyParkingList: [Parking] {
         let path = NSBundle.mainBundle().pathForResource("parkings", ofType: "json")
         let data = try! NSData(contentsOfURL: NSURL(fileURLWithPath: path!), options:NSDataReadingOptions.DataReadingMappedIfSafe)
         let jsonObj =  try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSArray
@@ -20,5 +20,18 @@ class ConfigJson: NSObject {
             arrParking.addObject(parking)
         }
         return arrParking.copy() as! [Parking]
+    }
+    
+    class var dummyTopicList: [Topic] {
+        let path = NSBundle.mainBundle().pathForResource("parkings", ofType: "json")
+        let data = try! NSData(contentsOfURL: NSURL(fileURLWithPath: path!), options:NSDataReadingOptions.DataReadingMappedIfSafe)
+        let jsonObj =  try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSArray
+        var topics:[Topic] = []
+        for dic in jsonObj{
+            let parking = Parking(dic: dic as! NSDictionary)
+            let topic = Topic(topicId: "0", userId: "0", date: NSDate(), parking: parking, rating: 0)
+            topics.append(topic)
+        }
+        return topics
     }
 }

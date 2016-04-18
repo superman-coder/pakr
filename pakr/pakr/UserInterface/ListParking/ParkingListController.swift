@@ -9,19 +9,23 @@ import UIKit
 class ParkingListController: UIViewController {
     
     @IBOutlet weak var parkingTableView: UITableView!
-    var parkSearchResult: [Topic]! = []
+    var parkSearchResult: [Topic]! = JSONUtils.dummyTopicList
     
     internal var addressService: AddressService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initTableView()
+        initTableView()
     }
     
     func initTableView() {
-        self.parkingTableView.registerNib(UINib(nibName: "ParkingResultCell", bundle: nil), forCellReuseIdentifier: "ParkingResultCell")
-        self.parkingTableView.rowHeight = UITableViewAutomaticDimension
-        self.parkingTableView.estimatedRowHeight = 10
+        parkingTableView.registerNib(UINib(nibName: "ParkingResultCell", bundle: nil), forCellReuseIdentifier: "ParkingResultCell")
+        
+        parkingTableView.rowHeight = UITableViewAutomaticDimension
+        parkingTableView.estimatedRowHeight = 10
+        
+        parkingTableView.delegate = self
+        parkingTableView.dataSource = self
     }
 }
 
@@ -59,6 +63,7 @@ extension ParkingListController: UITableViewDataSource, UITableViewDelegate {
         
         let detailVc = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
         detailVc.parking = parking
+        
         self.navigationController?.pushViewController(detailVc, animated: true)
     }
 }

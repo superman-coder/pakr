@@ -18,7 +18,10 @@ class MapController: UIViewController {
     var parkingList: [Topic]! = []
     var parkingDataLoadingRadius:Double = 0
     
-    let centerPinLayer = CALayer()
+    // Rarely modified.
+//    let centerPinLayer = CALayer()
+    var pinImage: UIImage?
+    
     
     // Center point on Map
     var currentCenterLocation: CLLocationCoordinate2D?
@@ -35,13 +38,6 @@ class MapController: UIViewController {
         
         setupLocationManager()
         initMapView()
-        fillAnnotationOnMap(self.createAnnotationList(self.parkingList))
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        let bounds = parkMapView.bounds
-        centerPinLayer.position = CGPointMake(bounds.size.width / 2, bounds.size.height / 2)
     }
     
     func setupLocationManager() {
@@ -60,15 +56,22 @@ class MapController: UIViewController {
             parkMapView.setRegion(region, animated: true)
         }
         
+/* Realize that no need to add center pin - TIEN
         centerPinLayer.contents = UIImage(named: "pin-orange")?.CGImage
         centerPinLayer.bounds = CGRectMake(0, 0, 29, 42)
         let bounds = parkMapView.bounds
         centerPinLayer.position = CGPointMake(bounds.size.width / 2, bounds.size.height / 2)
         centerPinLayer.anchorPoint = CGPointMake(0.5, 1)
         parkMapView.layer.addSublayer(centerPinLayer)
+ */
+    }
+    
+    func reload() {
+        fillAnnotationOnMap(self.createAnnotationList(self.parkingList))
     }
     
     func fillAnnotationOnMap(listAnnotation:[ParkAnnotation]) {
+        self.parkMapView.removeAnnotations(self.parkMapView.annotations)
         self.parkMapView.addAnnotations(listAnnotation)
     }
     
@@ -77,7 +80,7 @@ class MapController: UIViewController {
         for topic in parkingList {
             let parking = topic.parking
             
-            let annotation = ParkAnnotation(title: "Parking name", subtitle: nil, coordinate: CLLocationCoordinate2DMake(parking.coordinate.latitude, parking.coordinate.longitude))
+            let annotation = ParkAnnotation(title: parking.parkingName, subtitle: nil, coordinate: CLLocationCoordinate2DMake(parking.coordinate.latitude, parking.coordinate.longitude))
             listAnnotation.append(annotation)
         }
         return listAnnotation
@@ -104,6 +107,8 @@ class MapController: UIViewController {
     
     func loadDataWithCenter(latitude:Double, longitude:Double, radius:Double) {
         print("Load data with center: (\(latitude),\(longitude)) radius: \(radius)")
+        parkingList = JSONUtils.dummyTopicList
+        reload()
     }
 }
 
@@ -137,6 +142,21 @@ extension MapController: MKMapViewDelegate {
         } else {
             
         }
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseIdentifier = "pakr_annotation"
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseIdentifier)
+        if (annotationView == nil) {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        }
+        if pinImage == nil {
+            pinImage = PakrImageUtils.resizeImage(UIImage(named: "pin-orange")!, toSize: CGSizeMake(29, 42))
+        }
+        annotationView?.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+        annotationView?.canShowCallout = true
+        annotationView?.image = pinImage
+        return annotationView
     }
 }
 
