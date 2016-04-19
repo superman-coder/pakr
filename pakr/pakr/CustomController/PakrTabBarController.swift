@@ -11,6 +11,7 @@ class PakrTabBarController: UIKit.UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        
     }
     
     override func viewWillAppear(animated: Bool) {

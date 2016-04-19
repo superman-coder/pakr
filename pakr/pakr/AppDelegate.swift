@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  pakr
 //
@@ -21,18 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
         
-        setUpParse()
+//        setUpParse()
+//        
+//        authenService = WebServiceFactory.getAuthService()
         
-        authenService = WebServiceFactory.getAuthService()
-        
-       if authenService.isLogin() {
-            let rootViewController = PakrTabBarController()
-            window.rootViewController = rootViewController
-        } else {
-            let rootViewController = LoginController(nibName: "LoginController", bundle: nil)
-            window.rootViewController = rootViewController
-        }
-        
+//       if authenService.isLogin() {
+//            let rootViewController = PakrTabBarController()
+//            window.rootViewController = rootViewController
+//        } else {
+//            let rootViewController = LoginController(nibName: "LoginController", bundle: nil)
+//            window.rootViewController = rootViewController
+//        }
+        let na = UINavigationController(rootViewController: DetailParkingController())
+        window.rootViewController = na
         window.makeKeyAndVisible()
         return true
     }

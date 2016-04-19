@@ -26,4 +26,7 @@ class CommentTableViewCell: UITableViewCell {
     class func initCommentCellFromNib () ->CommentTableViewCell {
         return UINib(nibName: "CommentTableViewCell", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as!CommentTableViewCell
     }
+    class func initSeeAllComment() ->CommentTableViewCell {
+        return UINib(nibName: "CommentTableViewCell", bundle: nil).instantiateWithOwner(nil, options: nil)[2] as!CommentTableViewCell
+    }
 }
