@@ -23,14 +23,15 @@ class PostParkingController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
+        setUpStepView()
         setUpPageView()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        setUpStepView()
-        pageController.reloadPagesToCurrentPageIndex(0)
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        setUpStepView()
+//        pageController.reloadPagesToCurrentPageIndex(0)
+//    }
     
     func setUpNavigationBar() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PostParkingController.onCreateParkingLot))
@@ -46,6 +47,7 @@ class PostParkingController: BaseViewController {
         stepView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
         stepView.userInteractionEnabled = true
         stepViewContainer.addSubview(stepView)
+        
 
         // we use PageViewController. so don't need to add callback manually again  
 //        for i in 0 ..< stepView.stepButtons.count {
@@ -53,7 +55,7 @@ class PostParkingController: BaseViewController {
 //            button.tag = i
 //            button.addTarget(self, action: #selector(PostParkingController.onSwitchScreen), forControlEvents: UIControlEvents.TouchUpInside)
 //        }
-//        
+        
     }
     
     func setUpPageView() {
@@ -64,6 +66,13 @@ class PostParkingController: BaseViewController {
         pageController = MBXPageViewController()
         pageController.MBXDataSource = self
         pageController.MBXDataDelegate = self
+        pageController.reloadPages()
+        for view in self.pageController.view.subviews{
+      let scroll = view as! UIScrollView
+            if scroll .isKindOfClass(UIScrollView){
+                scroll.scrollEnabled = false
+            }
+        }
     }
     
     func onSwitchScreen(sender: UIButton) {
