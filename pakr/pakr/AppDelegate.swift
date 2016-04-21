@@ -21,19 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
         
-//        setUpParse()
-//        
-//        authenService = WebServiceFactory.getAuthService()
+        setUpParse()
         
-//       if authenService.isLogin() {
-//            let rootViewController = PakrTabBarController()
-//            window.rootViewController = rootViewController
-//        } else {
-//            let rootViewController = LoginController(nibName: "LoginController", bundle: nil)
-//            window.rootViewController = rootViewController
-//        }
-        let na = UINavigationController(rootViewController: DetailParkingController())
-        window.rootViewController = na
+        authenService = WebServiceFactory.getAuthService()
+        
+       if authenService.isLogin() {
+            let rootViewController = PakrTabBarController()
+            window.rootViewController = rootViewController
+        } else {
+            let rootViewController = LoginController(nibName: "LoginController", bundle: nil)
+            window.rootViewController = rootViewController
+        }
+//        let na = UINavigationController(rootViewController: DetailParkingController())
+//        window.rootViewController = na
         window.makeKeyAndVisible()
         return true
     }

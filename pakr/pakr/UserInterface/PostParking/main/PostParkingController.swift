@@ -82,7 +82,7 @@ class PostParkingController: BaseViewController {
     }
     
     func onCancelCreate(sender: AnyObject) {
-        
+        self.view.endEditing(false)
     }
 }
 
