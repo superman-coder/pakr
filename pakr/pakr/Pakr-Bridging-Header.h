@@ -16,4 +16,5 @@
 #import <AWSSQS/AWSSQS.h>
 #import <AWSSNS/AWSSNS.h>
 #import <AWSCognito/AWSCognito.h>
+#import <CommonCrypto/CommonCrypto.h>
 #endif /* Pakr_Bridging_Header_h */

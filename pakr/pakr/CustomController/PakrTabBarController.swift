@@ -27,6 +27,9 @@ class PakrTabBarController: UIKit.UITabBarController {
 
         var navController: UINavigationController!
         
+        let pickerController = TestUploadController(nibName: "TestUploadController", bundle: nil)
+        viewControllers.append(pickerController)
+        
         navController = UINavigationController()
         let postController = PostParkingController(nibName: "PostParkingController", bundle: nil)
         let postItem = UITabBarItem(title: "Post", image: UIImage(named: "nearby.png"), tag: 0)

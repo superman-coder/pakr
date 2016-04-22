@@ -79,7 +79,6 @@
 		D60598B91CC416CB009C5BEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598B81CC416CB009C5BEB /* AddressBook.framework */; };
 		D60598BB1CC416F2009C5BEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BA1CC416F2009C5BEB /* StoreKit.framework */; };
 		D60598BD1CC41701009C5BEB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */; };
-		D60598C11CC4206A009C5BEB /* Sdk in Resources */ = {isa = PBXBuildFile; fileRef = D60598C01CC4206A009C5BEB /* Sdk */; };
 		D60598C41CC42125009C5BEB /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C21CC42125009C5BEB /* AWSCore.framework */; };
 		D60598C51CC42125009C5BEB /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C31CC42125009C5BEB /* AWSS3.framework */; };
 		D60598C71CC42136009C5BEB /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C61CC42136009C5BEB /* AWSCognito.framework */; };
@@ -91,6 +90,13 @@
 		D60598D81CC4A863009C5BEB /* ReviewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */; };
 		D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D31CC4A863009C5BEB /* ReviewViewController.swift */; };
 		D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D41CC4A863009C5BEB /* ReviewViewController.xib */; };
+		D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598DD1CC4EA64009C5BEB /* Constants.swift */; };
+		D60598EB1CC4FFAF009C5BEB /* TestUploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598EA1CC4FFAF009C5BEB /* TestUploadController.swift */; };
+		D60598ED1CC5001E009C5BEB /* TestUploadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598EC1CC5001E009C5BEB /* TestUploadController.xib */; };
+		D60598EF1CC963F7009C5BEB /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598EE1CC963F7009C5BEB /* UIImage+Resize.swift */; };
+		D60598F21CC9E0DC009C5BEB /* AWSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F11CC9E0DC009C5BEB /* AWSClient.swift */; };
+		D60598F61CC9E79E009C5BEB /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F51CC9E79E009C5BEB /* MD5.swift */; };
+		D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F71CCA19BB009C5BEB /* FileUtils.swift */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -185,7 +191,6 @@
 		D60598B81CC416CB009C5BEB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D60598BA1CC416F2009C5BEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D60598C01CC4206A009C5BEB /* Sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sdk; sourceTree = "<group>"; };
 		D60598C21CC42125009C5BEB /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = pakr/Sdk/Aws/AWSCore.framework; sourceTree = "<group>"; };
 		D60598C31CC42125009C5BEB /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = pakr/Sdk/Aws/AWSS3.framework; sourceTree = "<group>"; };
 		D60598C61CC42136009C5BEB /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = pakr/Sdk/Aws/extras/AWSCognito.framework; sourceTree = "<group>"; };
@@ -197,6 +202,13 @@
 		D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewDetailViewController.xib; path = Children/Controller/ReviewDetailViewController.xib; sourceTree = "<group>"; };
 		D60598D31CC4A863009C5BEB /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewViewController.swift; path = Children/Controller/ReviewViewController.swift; sourceTree = "<group>"; };
 		D60598D41CC4A863009C5BEB /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewViewController.xib; path = Children/Controller/ReviewViewController.xib; sourceTree = "<group>"; };
+		D60598DD1CC4EA64009C5BEB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D60598EA1CC4FFAF009C5BEB /* TestUploadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUploadController.swift; path = Test/TestUploadController.swift; sourceTree = "<group>"; };
+		D60598EC1CC5001E009C5BEB /* TestUploadController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestUploadController.xib; path = Test/TestUploadController.xib; sourceTree = "<group>"; };
+		D60598EE1CC963F7009C5BEB /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Resize.swift"; path = "Extensions/UIImage+Resize.swift"; sourceTree = "<group>"; };
+		D60598F11CC9E0DC009C5BEB /* AWSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSClient.swift; sourceTree = "<group>"; };
+		D60598F51CC9E79E009C5BEB /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Extensions/MD5.swift; sourceTree = "<group>"; };
+		D60598F71CCA19BB009C5BEB /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -326,6 +338,7 @@
 		B7E6A2ACF500396A05F94F96 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				D60598DD1CC4EA64009C5BEB /* Constants.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -383,7 +396,7 @@
 		B7E6A617C69724D814D342E6 /* pakr */ = {
 			isa = PBXGroup;
 			children = (
-				D60598C01CC4206A009C5BEB /* Sdk */,
+				D60598F01CC9D9BB009C5BEB /* AWS */,
 				D654A3761CC2D2E50095F74D /* Preferences */,
 				D6A14E611CC2CD5A00BC6A64 /* Extensions */,
 				B7E6AD3B1F8FFDB230C28C56 /* Model */,
@@ -448,6 +461,7 @@
 		B7E6A7E1D3E68279C9426F63 /* PostParking */ = {
 			isa = PBXGroup;
 			children = (
+				D60598DF1CC4F7AE009C5BEB /* test */,
 				7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */,
 				7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */,
 				B7E6ACF8A9206BE45E4BBF69 /* main */,
@@ -475,6 +489,7 @@
 				B7E6A3B5CC8A67FAFE783663 /* DataServiceUtils.swift */,
 				B7E6A401D78FD167E1317138 /* JSONUtils.swift */,
 				7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */,
+				D60598F71CCA19BB009C5BEB /* FileUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -617,6 +632,23 @@
 			path = CustomController;
 			sourceTree = "<group>";
 		};
+		D60598DF1CC4F7AE009C5BEB /* test */ = {
+			isa = PBXGroup;
+			children = (
+				D60598EA1CC4FFAF009C5BEB /* TestUploadController.swift */,
+				D60598EC1CC5001E009C5BEB /* TestUploadController.xib */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		D60598F01CC9D9BB009C5BEB /* AWS */ = {
+			isa = PBXGroup;
+			children = (
+				D60598F11CC9E0DC009C5BEB /* AWSClient.swift */,
+			);
+			name = AWS;
+			sourceTree = "<group>";
+		};
 		D6490D2F1CBFF85700016AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +732,8 @@
 		D6A14E611CC2CD5A00BC6A64 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D60598EE1CC963F7009C5BEB /* UIImage+Resize.swift */,
+				D60598F51CC9E79E009C5BEB /* MD5.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -775,6 +809,7 @@
 				B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */,
 				B7E6A1037EA58D7A02BD6B2B /* VerifyController.xib in Resources */,
 				B7E6AEF2228BC974A36C5467 /* SelectMapImageController.xib in Resources */,
+				D60598ED1CC5001E009C5BEB /* TestUploadController.xib in Resources */,
 				B7E6A13E90275C7D2181B30E /* ProfileController.xib in Resources */,
 				B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */,
 				D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */,
@@ -784,7 +819,6 @@
 				B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */,
 				B7E6A345492B0A4212E4D537 /* CommentsViewController.xib in Resources */,
 				7295DE671CC13F030001B852 /* Images.xcassets in Resources */,
-				D60598C11CC4206A009C5BEB /* Sdk in Resources */,
 				D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */,
 				B7E6ACB7810CEC161EDDFE54 /* DetailParkingController.xib in Resources */,
 				B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */,
@@ -870,6 +904,7 @@
 				B7E6A36290D6AB8FB4F37590 /* AddressServiceMockImpl.swift in Sources */,
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
+				D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */,
 				D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */,
 				7274B8DE1CC28E9F007E4B82 /* AddressPickerController.swift in Sources */,
 				B7E6AF19EE30F5B4F828B06D /* UserHandler.swift in Sources */,
@@ -880,11 +915,13 @@
 				D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */,
 				B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */,
 				D654A3851CC369F50095F74D /* AuthService.swift in Sources */,
+				D60598F61CC9E79E009C5BEB /* MD5.swift in Sources */,
 				D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */,
 				D654A3861CC369F50095F74D /* AuthServiceImpl.swift in Sources */,
 				D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */,
 				B7E6AC26951ACD27B35085B9 /* BookmarkController.swift in Sources */,
 				B7E6AA4F18552CCD317FC9B0 /* SearchController.swift in Sources */,
+				D60598EB1CC4FFAF009C5BEB /* TestUploadController.swift in Sources */,
 				B7E6AC842CC3B34A20172827 /* ParkingResultCell.swift in Sources */,
 				B7E6ABFA04ECC1111B378897 /* ParkingListController.swift in Sources */,
 				B7E6A949DC4DD496BB0052B3 /* PostParkingController.swift in Sources */,
@@ -896,11 +933,13 @@
 				D654A38B1CC36A000095F74D /* GoogleAuth.swift in Sources */,
 				B7E6AA2D5F5E58C520E27A33 /* MoreInfoViewController.swift in Sources */,
 				B7E6A5C323135FB8258548DA /* MapDetailViewController.swift in Sources */,
+				D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */,
 				B7E6A70D6A02D6E611445818 /* PhotosCollectionViewCell.swift in Sources */,
 				B7E6AA091A9768D93EBE360D /* CommentsViewController.swift in Sources */,
 				B7E6AC10C6333F9CB1A58377 /* DetailParkingController.swift in Sources */,
 				D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */,
 				D654A38A1CC36A000095F74D /* FacebookAuth.swift in Sources */,
+				D60598F21CC9E0DC009C5BEB /* AWSClient.swift in Sources */,
 				B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */,
 				D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */,
 				B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */,
@@ -910,6 +949,7 @@
 				D60598D71CC4A863009C5BEB /* ReviewDetailViewController.swift in Sources */,
 				B7E6A9C2A41FE994DE773C26 /* PakrCLLocationCoordinate2D.swift in Sources */,
 				D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */,
+				D60598EF1CC963F7009C5BEB /* UIImage+Resize.swift in Sources */,
 				B7E6AE1FA3C29FC389132252 /* DataServiceUtils.swift in Sources */,
 				B7E6A25A2B4DCA5610E27897 /* JSONUtils.swift in Sources */,
 			);

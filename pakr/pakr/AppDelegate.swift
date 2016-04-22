@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
         
+        configureAWS()
+        
         authenService = WebServiceFactory.getAuthService()
         
        if authenService.isLogin() {
@@ -34,6 +36,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
    
+    func configureAWS() {
+        let credentialsProvider = AWSCognitoCredentialsProvider(
+                regionType: Constants.AWS.CognitoRegionType,
+                identityPoolId: Constants.AWS.CognitoIdentityPoolId)
+        
+        let configuration = AWSServiceConfiguration(
+                region: Constants.AWS.DefaultServiceRegionType,
+                credentialsProvider: credentialsProvider)
+        
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+    }
+    
     @available(iOS 9.0, *)
     func application(application: UIApplication, openURL url: NSURL, options: [String: AnyObject]) -> Bool {
         print("step 2 of OAuth2. Url: \(url)")
