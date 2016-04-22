@@ -48,8 +48,8 @@ extension TestUploadController: UIImagePickerControllerDelegate {
             
             awsClient.uploadImage("hqthao", image: image,
                 success: {
-                    Void -> Void in
-                    print("success upload")
+                    (url: String) -> Void in
+                    print("success upload \(url)")
                     self.uploadImageView.setImageWithURL(NSURL(string: "https://farm1.staticflickr.com/2/1418878_1e92283336_m.jpg")!)
                 },
                 error: {

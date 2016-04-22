@@ -23,7 +23,7 @@ class AWSClient {
     }
     
     // MARK: upload image to Amazon S3 service
-    func uploadImage(user: String!, image: UIImage, success: Void -> Void, error: Void -> Void, progress: Int -> Void) {
+    func uploadImage(user: String!, image: UIImage, success: String -> Void, error: Void -> Void, progress: Int -> Void) {
         
         // get data and compress from image
         let imageData = UIImageJPEGRepresentation(image, 0.9);
@@ -51,7 +51,7 @@ class AWSClient {
     }
     
     // MARK: upload a single request to Amazon S3 service
-    func upload(uploadRequest: AWSS3TransferManagerUploadRequest, success: Void -> Void, error: Void -> Void, progress: Int -> Void) {
+    func upload(uploadRequest: AWSS3TransferManagerUploadRequest, success: String -> Void, error: Void -> Void, progress: Int -> Void) {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
        
         // set upload request progress callback
@@ -102,7 +102,8 @@ class AWSClient {
             if task.result != nil {
                 dispatch_async(dispatch_get_main_queue(), {
                     () -> Void in
-                    success()
+                    let url = Constants.AWS.AWS_DOMAIN + uploadRequest.key!
+                    success(url)
                 })
             }
             
