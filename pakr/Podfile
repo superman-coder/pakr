@@ -15,5 +15,6 @@ target 'pakr' do
     pod 'MBXPageViewController'
     pod 'Material', '~> 1.0'
     pod 'BEMCheckBox'
+    pod 'Parse'
 end
 

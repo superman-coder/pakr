@@ -8,6 +8,33 @@
 // 2016
 
 import UIKit
+import Parse
+
+let PKBusiness = "business"
+let PKParkingName = "parking_name"
+let PKCapacity = "capacity"
+let PKAddressName = "address"
+let PKCoordinate = "coordinate"
+let PKVerified = "verified"
+let PKVehicles = "vehicles"
+let PKRegions = "regions"
+let PKImageUrls = "images"
+let PKSchedule = "schedule"
+
+let PKBusinessName = "business_name"
+let PKBusinessDesc = "business_desc"
+let PKBusinessPhone = "business_phone"
+
+let PKCoordinateLat = "coord_lat"
+let PKCoordinateLng = "coord_lng"
+
+let PKVehicleType = "vehicle_type"
+let PKVehiclePriceMin = "vehicle_price_min"
+let PKVehiclePriceMax = "vehicle_price_max"
+let PKVehicleNote = "vehicle_note"
+
+let PKScheduleOpenTime = "schedule_open"
+let PKScheduleCloseTime = "schedule_close"
 
 class Parking: NSObject {
 
@@ -132,3 +159,95 @@ class Parking: NSObject {
          schedule = scheduls.copy() as! [TimeRange]
     }
 }
+
+extension Parking: ParseModelProtocol {
+    /*
+     let business: Business!
+     let dateCreated: NSDate?
+     let parkingName: String!
+     let capacity: Int!
+     var addressName: String!
+     let coordinate: Coordinate!
+     var verify: Bool! = false
+     var vehicleList: [VehicleDetail]!
+     var region: [String]!
+     var imageUrl: [String]?
+     var schedule: [TimeRange]!
+     
+     let PKParkingName = "parking_name"
+     let PKCapacity = "capacity"
+     let PKAddressName = "address"
+     let PKCoordinate = "coordinate"
+     let PKVerified = "verified"
+     let PKVehicles = "vehicles"
+     let PKRegions = "regions"
+     let PKImageUrls = "images"
+     let PKSchedule = "schedule"
+     
+     let PKBusinessName = "business_name"
+     let PKBusinessAddress = "business_address"
+     let PKBusinessPhone = "business_phone"
+     
+     let PKCoordinateLat = "coord_lat"
+     let PKCoordinateLng = "coord_lng"
+     
+     let PKVehicleType = "vehicle_type"
+     let PKVehiclePriceMin = "vehicle_price_min"
+     let PKVehiclePriceMax = "vehicle_price_max"
+     let PKVehicleNote = "vehicle_note"
+     
+     let PKScheduleOpenTime = "schedule_open"
+     let PKScheduleCloseTime = "schedule_close"
+     
+     */
+    
+    func toPFObject() -> PFObject {
+        let parkingPF = PFObject()
+        
+        parkingPF[PKParkingName] = parkingName
+        parkingPF[PKCapacity] = capacity
+        parkingPF[PKAddressName] = addressName
+        parkingPF[PKVerified] = verify
+        parkingPF[PKRegions] = region
+        parkingPF[PKImageUrls] = imageUrl == nil ? NSNull() : imageUrl
+        
+        let businessPF = PFObject()
+        businessPF[PKBusinessName] = business.businessName
+        businessPF[PKBusinessDesc] = business.businessDescription
+        businessPF[PKBusinessPhone] = business.telephone
+        parkingPF[PKBusiness] = businessPF
+        
+        let coordPF = PFObject()
+        coordPF[PKCoordinateLat] = coordinate.latitude
+        coordPF[PKCoordinateLng] = coordinate.longitude
+        parkingPF[PKCoordinate] = coordPF
+        
+        var vehicles: [PFObject] = []
+        for v in vehicleList {
+            let pVehicle = PFObject()
+            pVehicle[PKVehicleType] = v.vehicleType.rawValue
+            pVehicle[PKVehiclePriceMin] = v.minPrice
+            pVehicle[PKVehiclePriceMax] = v.maxPrice
+            pVehicle[PKVehicleNote] = v.note
+            vehicles.append(pVehicle)
+        }
+        parkingPF[PKVehicles] = vehicles
+        
+        var timeRanges: [PFObject] = []
+        for range in schedule {
+            let r = PFObject()
+            r[PKScheduleOpenTime] = range.openTime
+            r[PKScheduleCloseTime] = range.closeTime
+            timeRanges.append(r)
+        }
+        parkingPF[PKSchedule] = timeRanges
+        
+        return parkingPF
+    }
+}
+
+
+
+
+
+

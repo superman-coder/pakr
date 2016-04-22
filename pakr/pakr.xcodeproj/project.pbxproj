@@ -13,6 +13,7 @@
 		7235529E1CC4D39400090651 /* AddressPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7235529C1CC4D39400090651 /* AddressPickerController.xib */; };
 		723552A21CC4D3DB00090651 /* GMPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723552A01CC4D3DB00090651 /* GMPlaceCell.swift */; };
 		723552A31CC4D3DB00090651 /* GMPlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 723552A11CC4D3DB00090651 /* GMPlaceCell.xib */; };
+		723E739D1CC995F3008C527C /* ParseModelProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723E739C1CC995F3008C527C /* ParseModelProxy.swift */; };
 		7274B8D41CC2884B007E4B82 /* PakrImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */; };
 		7274B8E21CC32CF9007E4B82 /* GMServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8E11CC32CF9007E4B82 /* GMServices.swift */; };
 		7295DE671CC13F030001B852 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7295DE651CC13F030001B852 /* Images.xcassets */; };
@@ -112,6 +113,7 @@
 		7235529C1CC4D39400090651 /* AddressPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressPickerController.xib; sourceTree = "<group>"; };
 		723552A01CC4D3DB00090651 /* GMPlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMPlaceCell.swift; sourceTree = "<group>"; };
 		723552A11CC4D3DB00090651 /* GMPlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMPlaceCell.xib; sourceTree = "<group>"; };
+		723E739C1CC995F3008C527C /* ParseModelProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseModelProxy.swift; sourceTree = "<group>"; };
 		7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrImageUtils.swift; sourceTree = "<group>"; };
 		7274B8E11CC32CF9007E4B82 /* GMServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMServices.swift; sourceTree = "<group>"; };
 		7295DE651CC13F030001B852 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
@@ -579,6 +581,7 @@
 				723552971CC4CD7600090651 /* GoogleServices */,
 				B7E6A75ACAAD605629EB1236 /* Web */,
 				B7E6A2A0167FEB0B453D6FF5 /* Parking */,
+				723E739C1CC995F3008C527C /* ParseModelProxy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				B7E6ABD3A10AC65DB81E05D6 /* ModifiedTextField.swift in Sources */,
 				B7E6A6AC99192DAD0784DC3C /* CustomTimePicker.m in Sources */,
 				B7E6A999BFF349E7A0407789 /* WebServiceFactory.swift in Sources */,
+				723E739D1CC995F3008C527C /* ParseModelProxy.swift in Sources */,
 				B7E6A9544AAB2F696EC945AA /* AddressService.swift in Sources */,
 				D6A14E591CC27DFB00BC6A64 /* ProfileDataManager.swift in Sources */,
 				B7E6A36290D6AB8FB4F37590 /* AddressServiceMockImpl.swift in Sources */,

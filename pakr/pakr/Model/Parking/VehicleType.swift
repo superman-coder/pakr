@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum VehicleType {
+enum VehicleType: Int  {
     case Bike
     case Motor
     case Car
