@@ -9,4 +9,6 @@ protocol AuthService {
     func isLogin() -> Bool
     func logOut()
     func getLoginUser() -> User?
+    func isExistUser(emailAddress: String) -> Bool
+    func registerUser(user: User)
 }

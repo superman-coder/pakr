@@ -92,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-pakr/FBSDKLoginKit.framework"
   install_framework "Pods-pakr/MBXPageViewController.framework"
   install_framework "Pods-pakr/Material.framework"
+  install_framework "Pods-pakr/Parse.framework"
   install_framework "Pods-pakr/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -103,5 +104,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-pakr/FBSDKLoginKit.framework"
   install_framework "Pods-pakr/MBXPageViewController.framework"
   install_framework "Pods-pakr/Material.framework"
+  install_framework "Pods-pakr/Parse.framework"
   install_framework "Pods-pakr/pop.framework"
 fi

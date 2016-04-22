@@ -64,6 +64,10 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
         
     }
     
+    func parseServer() {
+        
+    }
+    
     func mainScreen() {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let rootViewController = PakrTabBarController()

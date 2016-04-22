@@ -4,6 +4,7 @@ use_frameworks!
 target 'pakr' do
     pod 'FBSDKLoginKit'
     pod 'Google/SignIn'
+    pod 'Parse'
     pod 'AFNetworking'
     pod 'AFNetworking'
     pod 'AYStepperView'

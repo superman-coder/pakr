@@ -27,4 +27,13 @@ class AuthServiceImpl: AuthService {
         }
         return nil
     }
+    
+    func isExistUser(emailAddress: String) -> Bool {
+        return false
+    }
+    
+    
+    func registerUser(user: User) {
+        
+    }
 }
