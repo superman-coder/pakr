@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         
         setUpParse()
+        configureAWS()
         
         authenService = WebServiceFactory.getAuthService()
         
@@ -48,6 +49,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         });
         
         Parse.initializeWithConfiguration(config);
+    }
+    
+    func configureAWS() {
+        let credentialsProvider = AWSCognitoCredentialsProvider(
+                regionType: Constants.AWS.CognitoRegionType,
+                identityPoolId: Constants.AWS.CognitoIdentityPoolId)
+        
+        let configuration = AWSServiceConfiguration(
+                region: Constants.AWS.DefaultServiceRegionType,
+                credentialsProvider: credentialsProvider)
+        
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
     }
     
     @available(iOS 9.0, *)

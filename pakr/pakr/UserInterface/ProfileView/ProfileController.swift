@@ -6,7 +6,7 @@
 import Foundation
 import UIKit
 
-class ProfileController: UIViewController {
+class ProfileController: BaseViewController {
     @IBOutlet weak var profileImageView: CircularImageView!
     @IBOutlet weak var fullNameTextView: UILabel!
     @IBOutlet weak var userNameTextView: UILabel!

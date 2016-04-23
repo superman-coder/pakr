@@ -15,6 +15,11 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Alamofire (3.3.1)
+  - AWSCognito (2.4.0):
+    - AWSCore (= 2.4.0)
+  - AWSCore (2.4.0)
+  - AWSS3 (2.4.0):
+    - AWSCore (= 2.4.0)
   - AYStepperView (0.1.0):
     - pop (~> 1.0)
   - BEMCheckBox (1.2.1)
@@ -62,6 +67,9 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Alamofire (~> 3.3)
+  - AWSCognito
+  - AWSCore
+  - AWSS3
   - AYStepperView
   - BEMCheckBox
   - FBSDKLoginKit
@@ -73,6 +81,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  AWSCognito: 1d96bd3ccda48918b00862895561dcb2a6080acf
+  AWSCore: 7e0da755786280a76ed4ab4ed8c1d38ced09b460
+  AWSS3: dc00e788fb6733853ecd615a45f9d7dd6ce25823
   AYStepperView: 6bc5399dae562b2d221c47cbd540db438454ecf9
   BEMCheckBox: 264b8b72aa92adbfefa265cc58a0cdb86b207b9f
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4

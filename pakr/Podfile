@@ -11,5 +11,8 @@ target 'pakr' do
     pod 'MBXPageViewController'
     pod 'Material', '~> 1.0'
     pod 'BEMCheckBox'
+    pod 'AWSCore'
+    pod 'AWSS3'
+    pod 'AWSCognito'
 end
 
