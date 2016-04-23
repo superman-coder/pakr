@@ -82,8 +82,13 @@ class PostParkingController: BaseViewController {
     }
     
     func onCancelCreate(sender: AnyObject) {
+       navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func uploadAllImages() {
         
     }
+    
 }
 
 extension PostParkingController: MBXPageControllerDataSource {

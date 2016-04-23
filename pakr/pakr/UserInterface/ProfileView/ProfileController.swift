@@ -12,13 +12,17 @@ class ProfileController: BaseViewController {
     @IBOutlet weak var userNameTextView: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var webService: AuthService!
+    var authService: AuthService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webService = WebServiceFactory.getAuthService()
+        authService = WebServiceFactory.getAuthService()
         
+        profileImageView.setImageWithURL(NSURL(string: (authService.getLoginUser()?.avatarUrl)!)!, placeholderImage: nil)
+        userNameTextView.text = authService.getLoginUser()?.email
+        fullNameTextView.text = authService.getLoginUser()?.name
+       
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -26,14 +30,32 @@ class ProfileController: BaseViewController {
 
 extension ProfileController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let row = indexPath.row
-        if (row == 5) {
-            webService.logOut()
+        switch row {
+        case 0:
+            break
+        case 1:
+            let postParkingController = PostParkingController(nibName: "PostParkingController", bundle: nil)
+            self.navigationController?.pushViewController(postParkingController, animated: true)
+            break
+        case 2:
+            break
+        case 3:
+            break
+        case 4:
+            break
+        case 5:
+            authService.logOut()
             let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
             let loginController = LoginController(nibName: "LoginController", bundle: nil)
             delegate.window?.rootViewController = loginController
             delegate.window?.makeKeyAndVisible()
+            break
+        default:
+            break
         }
+        
     }
 }
 

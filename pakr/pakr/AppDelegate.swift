@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
         
+        setUpStyle()
         setUpParse()
         configureAWS()
         
@@ -39,6 +40,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
    
+    // http://stackoverflow.com/questions/19029833/ios-7-navigation-bar-text-and-arrow-color
+    func setUpStyle() {
+        // setup navigation bar style
+        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().barTintColor = LayoutUtils.UIColorFromRGB(Constants.Color.PrimaryColor)
+        
+        let barAttributes :Dictionary = [NSFontAttributeName: UIFont.boldSystemFontOfSize(18),
+                                      NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().titleTextAttributes = barAttributes
+        
+        // navigation item normal state
+        let itemAttributes :Dictionary = [NSFontAttributeName: UIFont.boldSystemFontOfSize(15),
+                                      NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UIBarButtonItem.appearance().setTitleTextAttributes(itemAttributes, forState: UIControlState.Normal)
+        
+        // tab bar item normal state
+        var tabBarItemAttributes :Dictionary = [NSFontAttributeName: UIFont.boldSystemFontOfSize(11),
+                                                NSForegroundColorAttributeName: LayoutUtils.UIColorFromRGB(0xE0E0E0)]
+        UITabBarItem.appearance().setTitleTextAttributes(tabBarItemAttributes, forState: UIControlState.Normal)
+        
+        // tab bar item select state
+        tabBarItemAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(11),
+                                                NSForegroundColorAttributeName: LayoutUtils.UIColorFromRGB(Constants.Color.PrimaryColor)]
+        UITabBarItem.appearance().setTitleTextAttributes(tabBarItemAttributes, forState: UIControlState.Selected)
+       
+        // icon color when selected
+        UITabBar.appearance().tintColor = LayoutUtils.UIColorFromRGB(Constants.Color.PrimaryColor)
+        
+        UITabBar.appearance().translucent = false
+        UITabBar.appearance().backgroundColor = UIColor.blackColor()
+       
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+    }
+    
     func setUpParse() {
         User.registerSubclass()
         let config = ParseClientConfiguration(block: {

@@ -14,6 +14,7 @@ import Parse
 
 class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate, FBSDKLoginButtonDelegate {
     
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
     var authService: AuthService!
     
@@ -26,6 +27,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
     }
     
     func configureGoogleSignIn() {
+        googleLoginButton.colorScheme = GIDSignInButtonColorScheme.Light
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
@@ -87,7 +89,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
             success: {
                 (user: User) -> Void in
                 print("User has registered")
-                self.mainScreen()
+                self.mainScreen(user)
             },
             // not register yet. start to register
             error: {
@@ -97,7 +99,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
                     success: {
                         Void -> Void in
                         print("register success")
-                        self.mainScreen()
+                        self.mainScreen(user)
                     }, error: {
                         NSError -> Void in
                         print("register fail")
@@ -106,8 +108,9 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
         })
     }
    
-    func mainScreen() {
+    func mainScreen(user: User) {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.currentUser = user
         let rootViewController = PakrTabBarController()
         delegate.window?.rootViewController = rootViewController
         delegate.window?.makeKeyAndVisible()

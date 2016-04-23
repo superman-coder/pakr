@@ -11,4 +11,8 @@ class VerifyController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func postParkingEvent(sender: AnyObject) {
+       // 1. upload all images
+        
+    }
 }

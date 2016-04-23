@@ -30,4 +30,8 @@ class Constants {
         static let S3BucketName = "pakr-s3"
         static let AWS_DOMAIN = "https://s3-ap-southeast-1.amazonaws.com/" + Constants.AWS.S3BucketName + "/"
     }
+    
+    class Color {
+        static let PrimaryColor: UInt = 0xF44336
+    }
 }

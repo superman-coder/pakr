@@ -94,7 +94,6 @@
 		D60598D81CC4A863009C5BEB /* ReviewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */; };
 		D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D31CC4A863009C5BEB /* ReviewViewController.swift */; };
 		D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D41CC4A863009C5BEB /* ReviewViewController.xib */; };
-		D60598DC1CC4E181009C5BEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598DB1CC4E181009C5BEB /* Constants.swift */; };
 		D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598DD1CC4EA64009C5BEB /* Constants.swift */; };
 		D60598EB1CC4FFAF009C5BEB /* TestUploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598EA1CC4FFAF009C5BEB /* TestUploadController.swift */; };
 		D60598ED1CC5001E009C5BEB /* TestUploadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598EC1CC5001E009C5BEB /* TestUploadController.xib */; };
@@ -499,8 +498,6 @@
 			children = (
 				7235529A1CC4D39400090651 /* AddressPicker */,
 				D60598DF1CC4F7AE009C5BEB /* test */,
-				7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */,
-				7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */,
 				B7E6ACF8A9206BE45E4BBF69 /* main */,
 				B7E6A2C6C1C61FE43C6CDC09 /* InfoScreen */,
 				B7E6A013ECD1135877676FCA /* VerifyScreen */,

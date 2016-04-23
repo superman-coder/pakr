@@ -7,41 +7,28 @@ import Foundation
 import UIKit
 
 class PakrTabBarController: UIKit.UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
-          // set up all view controllers for tab bar
-
+        // set up all view controllers for tab bar
+        
         var viewControllers: [UIViewController] = []
-
-//        let navController = UIKit.UINavigationController()
-//        let postController = PostInfoController(nibName: "PostInfoController", bundle: nil)
-//        let postItem = UITabBarItem(title: "Post", image: UIImage(named: "nearby.png"), tag: 0)
-//        postController.tabBarItem = postItem
-//        navController.viewControllers = [postController]
-//        viewControllers.append(navController)
-
+        
         var navController: UINavigationController!
         
-        let pickerController = TestUploadController(nibName: "TestUploadController", bundle: nil)
-        viewControllers.append(pickerController)
+        //        let pickerController = TestUploadController(nibName: "TestUploadController", bundle: nil)
+        //        viewControllers.append(pickerController)
+        //
         
-        navController = UINavigationController()
-        let postController = PostParkingController(nibName: "PostParkingController", bundle: nil)
-        let postItem = UITabBarItem(title: "Post", image: UIImage(named: "nearby.png"), tag: 0)
-        postController.tabBarItem = postItem
-        navController.viewControllers = [postController]
-        viewControllers.append(navController)
-
         let mapController = MapController(nibName: "MapController", bundle: nil)
         let mapItem = UITabBarItem(title: "NearBy", image: UIImage(named: "nearby.png"), tag: 0)
         mapController.tabBarItem = mapItem
         viewControllers.append(mapController)
-
+        
         navController = UINavigationController()
         let listParkingController = ParkingListController(nibName: "ParkingListController", bundle: nil)
         let listItem = UITabBarItem(title: "Search", image: UIImage(named: "search.png"), tag: 1)
@@ -54,10 +41,12 @@ class PakrTabBarController: UIKit.UITabBarController {
         bookmarkController.tabBarItem = bookmarkItem
         viewControllers.append(bookmarkController)
         
+        navController = UINavigationController()
         let profileController = ProfileController(nibName: "ProfileController", bundle: nil)
         let profileItem = UITabBarItem(title: "More", image: UIImage(named: "more.png"), tag: 3)
         profileController.tabBarItem = profileItem
-        viewControllers.append(profileController)
+        navController.viewControllers = [profileController]
+        viewControllers.append(navController)
         
         self.viewControllers = viewControllers
     }
