@@ -55,6 +55,9 @@ class PostInfoController: BaseViewController {
     var arrDayOfWeek: NSArray!
     var arrOpenTime: NSArray!
     var arrCloseTime: NSArray!
+    
+    var currentCellSelect : WorkTimeTableViewCell!
+    var isCloseTimeAction : Bool!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +75,7 @@ class PostInfoController: BaseViewController {
         arrDayOfWeek = ["Monday","Tues","Wed","Thur","Fri","Sat","Sun"]
         arrOpenTime = ["6:00","6:00","6:00","6:00","6:00","6:00","6:00"]
         arrCloseTime = ["24:00","24:00","24:00","24:00","24:00","24:00","24:00"]
+        workTimeTableView.reloadData()
     }
     
     func configTextFields(){
@@ -167,7 +171,20 @@ class PostInfoController: BaseViewController {
             isShowKeyBoard = true
         }
     }
-
+    func showClockView(cell: WorkTimeTableViewCell, isCloseTime: Bool){
+        currentCellSelect = cell
+        isCloseTimeAction = isCloseTime
+        
+        let view = UIView(frame: CGRectMake(0, 0, 320, 500))
+        let rootView = UIApplication.sharedApplication().keyWindow?.rootViewController
+        view.center = rootView!.view.center
+        
+        let clockView = CustomTimePicker(view: view, withDarkTheme: false)
+        clockView.backgroundColor = UIColor.blackColor()
+        clockView.alpha = 0.8
+        clockView.delegate = self
+        rootView!.view .addSubview(clockView)
+    }
 }
 extension PostInfoController: UITextFieldDelegate{
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
@@ -194,7 +211,26 @@ extension PostInfoController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("WorkTimeTableViewCell", forIndexPath: indexPath) as! WorkTimeTableViewCell
+        cell.delegate = self
         cell.disPlay(arrDayOfWeek[indexPath.row] as! String, closeTime:arrCloseTime[indexPath.row] as! String , openTime: arrOpenTime[indexPath.row] as! String)
         return cell
+    }
+}
+extension PostInfoController: CustomTimePickerDelegate{
+    func dismissClockViewWithHours(hours: String!, andMinutes minutes: String!, andTimeMode timeMode: String!) {
+        let text = "\(hours):\(minutes) \(timeMode)"
+        if isCloseTimeAction == true {
+            currentCellSelect.lblCloseTime.text = text
+        }else{
+            currentCellSelect.lblOpenTime.text = text
+        }
+    }
+}
+extension PostInfoController: WorkTimeTableViewCellDelegate{
+    func didSelectOpenTimeAction(cell: WorkTimeTableViewCell) {
+        showClockView(cell,isCloseTime: false)
+    }
+    func didSelectCloseTimeAction(cell: WorkTimeTableViewCell) {
+        showClockView(cell,isCloseTime: true)
     }
 }

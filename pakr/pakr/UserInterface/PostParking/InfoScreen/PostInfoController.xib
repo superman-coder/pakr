@@ -498,7 +498,7 @@
                                             </constraints>
                                             <connections>
                                                 <outlet property="dataSource" destination="-1" id="pqZ-Wl-qUx"/>
-                                                <outlet property="delegate" destination="-1" id="UQS-DR-FmK"/>
+                                                <outlet property="delegate" destination="-1" id="CKh-gs-uzp"/>
                                             </connections>
                                         </tableView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSQ-UW-oTt">

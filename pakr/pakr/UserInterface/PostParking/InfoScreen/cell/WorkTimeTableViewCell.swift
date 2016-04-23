@@ -7,12 +7,18 @@
 //
 
 import UIKit
+protocol WorkTimeTableViewCellDelegate {
+    func didSelectCloseTimeAction(cell: WorkTimeTableViewCell)
+    func didSelectOpenTimeAction(cell: WorkTimeTableViewCell)
+}
 
 class WorkTimeTableViewCell: UITableViewCell {
     @IBOutlet weak var lbldayOfWeek: UILabel!
 
     @IBOutlet weak var lblCloseTime: UILabel!
     @IBOutlet weak var lblOpenTime: UILabel!
+    var delegate: WorkTimeTableViewCellDelegate! = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,10 +29,13 @@ class WorkTimeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func editAction(sender: AnyObject) {
-        print("sdfsd")
+    @IBAction func btnOpenTimeAction(sender: AnyObject) {
+        delegate!.didSelectOpenTimeAction(self)
     }
     
+    @IBAction func btnCloseTimeAction(sender: AnyObject) {
+        delegate!.didSelectCloseTimeAction(self)
+    }
     func disPlay(dayOfWeek: String, closeTime: String, openTime: String){
         lbldayOfWeek.text = dayOfWeek
         lblCloseTime.text = closeTime
