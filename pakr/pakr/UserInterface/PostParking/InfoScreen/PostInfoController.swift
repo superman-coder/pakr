@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 import Material
 import BEMCheckBox
+protocol PostInfoControllerDelegate {
+    func nextStep(parking :Parking)
+}
 
 class PostInfoController: BaseViewController {
     
@@ -53,12 +56,14 @@ class PostInfoController: BaseViewController {
     var currentTextField: UITextField?
     
     var arrDayOfWeek: NSArray!
-    var arrOpenTime: NSArray!
-    var arrCloseTime: NSArray!
+    var arrTimeRange: NSMutableArray!
     
     var currentCellSelect : WorkTimeTableViewCell!
     var isCloseTimeAction : Bool!
+    
+    var delegate: PostInfoControllerDelegate?
 
+    var parking: Parking?
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextFields()
@@ -70,11 +75,40 @@ class PostInfoController: BaseViewController {
         workTimeTableView.registerNib(nib , forCellReuseIdentifier: "WorkTimeTableViewCell")
         initWorkTime()
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        setDataForParking()
+    }
     //MARK - Private method
+    func setDataForParking(){
+        let business = Business(businessName: businessNameTextField.text, businessDescription: businessDescriptionTextField.text, telephone: businessTelephoneTextField.text)
+//        let coordinate = Coordinate(latitude: <#T##Double!#>, longitude: <#T##Double!#>)
+        let vehicleList = NSMutableArray()
+        if carCheckBox.on {
+            let vehic = VehicleDetail(vehicleType: VehicleType.Car, minPrice: carMinPriceTextField.text, maxPrice: carMaxPriceTextField.text, note: "")
+            vehicleList.addObject(vehic)
+        }
+        if bikeCheckBox.on {
+            let vehic = VehicleDetail(vehicleType: VehicleType.Bike, minPrice: bikeMinPriceTextField.text, maxPrice: bikeMaxPriceTextField.text, note: "")
+            vehicleList.addObject(vehic)
+        }
+        if motorCheckBox.on {
+            let vehic = VehicleDetail(vehicleType: VehicleType.Motor, minPrice: motorMinPriceTextField.text, maxPrice: motorMaxPriceTextField.text, note: "")
+            vehicleList.addObject(vehic)
+        }
+        parking = Parking(business: business, parkingName: parkingNameTextField.text, capacity: "", dateCreated: "", addressName: parkingAddressTextField.text!, coordinate: nil, vehicleDetailList: vehicleList.copy() as! [VehicleDetail], schedule: arrTimeRange.copy() as! [TimeRange], region: [])
+        dispatch_async(dispatch_get_main_queue()) { 
+            self.delegate?.nextStep(self.parking!)
+        }
+    }
     func initWorkTime() {
         arrDayOfWeek = ["Monday","Tues","Wed","Thur","Fri","Sat","Sun"]
-        arrOpenTime = ["6:00","6:00","6:00","6:00","6:00","6:00","6:00"]
-        arrCloseTime = ["24:00","24:00","24:00","24:00","24:00","24:00","24:00"]
+        arrTimeRange = NSMutableArray()
+        for var i = 0; i<=6 ; i += 1 {
+            let time = TimeRange(openTime: "6:00", closeTime: "24:00")
+            arrTimeRange.addObject(time)
+        }
         workTimeTableView.reloadData()
     }
     
@@ -212,17 +246,22 @@ extension PostInfoController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("WorkTimeTableViewCell", forIndexPath: indexPath) as! WorkTimeTableViewCell
         cell.delegate = self
-        cell.disPlay(arrDayOfWeek[indexPath.row] as! String, closeTime:arrCloseTime[indexPath.row] as! String , openTime: arrOpenTime[indexPath.row] as! String)
+        let timeRange = arrTimeRange[indexPath.row] as! TimeRange
+        cell.disPlay(arrDayOfWeek[indexPath.row] as! String, closeTime:timeRange.closeTime  , openTime: timeRange.openTime )
         return cell
     }
 }
 extension PostInfoController: CustomTimePickerDelegate{
     func dismissClockViewWithHours(hours: String!, andMinutes minutes: String!, andTimeMode timeMode: String!) {
         let text = "\(hours):\(minutes) \(timeMode)"
+        let indexPath = workTimeTableView.indexPathForCell(currentCellSelect)
+        let timeRange = arrTimeRange[indexPath!.row] as! TimeRange
         if isCloseTimeAction == true {
             currentCellSelect.lblCloseTime.text = text
+            timeRange.closeTime = text
         }else{
             currentCellSelect.lblOpenTime.text = text
+            timeRange.openTime = text
         }
     }
 }

@@ -94,6 +94,7 @@ class AddressPickerController: UIViewController {
     
     @IBAction func buttonDoneDidClick(sender: UIBarButtonItem) {
         delegate?.addressPickerController(self, didFinishPickingLocationWithLatlng: self.selectedLocation!, address: self.selectedAddress)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     private func showSearchResultContainer(show:Bool) {

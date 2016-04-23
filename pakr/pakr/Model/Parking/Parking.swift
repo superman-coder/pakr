@@ -12,9 +12,9 @@ import UIKit
 class Parking: NSObject {
 
     let business: Business!
-    let dateCreated: NSDate?
+    let dateCreated: String?
     let parkingName: String!
-    let capacity: Int!
+    let capacity: String!
     var addressName: String!
     let coordinate: Coordinate!
     var verify: Bool! = false
@@ -24,7 +24,7 @@ class Parking: NSObject {
     var schedule: [TimeRange]!
 
     
-    init(business: Business!, parkingName: String!, capacity: Int!, dateCreated: NSDate!, addressName: String, coordinate: Coordinate!, vehicleDetailList: [VehicleDetail]!, schedule: [TimeRange]!, region: [String]!) {
+    init(business: Business!, parkingName: String!, capacity: String!, dateCreated: String!, addressName: String, coordinate: Coordinate!, vehicleDetailList: [VehicleDetail]!, schedule: [TimeRange]!, region: [String]!) {
         self.business = business
         self.parkingName = parkingName
         self.capacity = capacity
@@ -48,7 +48,7 @@ class Parking: NSObject {
          business = Business(businessName:name, businessDescription: businessDescription , telephone: "")
          dateCreated = nil
          parkingName = name
-         capacity = 0
+         capacity = "0"
         addressName = ""
         if dic["addr"] != nil {
             addressName = dic["addr"] as! String

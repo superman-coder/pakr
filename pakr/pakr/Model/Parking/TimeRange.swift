@@ -9,8 +9,8 @@
 import Foundation
 
 class TimeRange: NSObject {
-    let openTime: String!
-    let closeTime: String!
+    var openTime: String!
+    var closeTime: String!
     
     init(openTime: String!, closeTime: String!) {
         self.openTime = openTime
