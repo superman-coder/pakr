@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063B5BB1CCB541A00D08A33 /* WorkTimeTableViewCell.swift */; };
+		1063B5BE1CCB541A00D08A33 /* WorkTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1063B5BC1CCB541A00D08A33 /* WorkTimeTableViewCell.xib */; };
 		10C3DF391CC5E84100352E2D /* ShowAllCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3DF381CC5E84100352E2D /* ShowAllCommentTableViewController.swift */; };
 		10D1A8AC1CC63282002867BC /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1A8AA1CC63282002867BC /* ReviewTableViewCell.swift */; };
 		10D1A8AD1CC63282002867BC /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D1A8AB1CC63282002867BC /* ReviewTableViewCell.xib */; };
@@ -106,6 +108,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1063B5BB1CCB541A00D08A33 /* WorkTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTimeTableViewCell.swift; sourceTree = "<group>"; };
+		1063B5BC1CCB541A00D08A33 /* WorkTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkTimeTableViewCell.xib; sourceTree = "<group>"; };
 		10C3DF381CC5E84100352E2D /* ShowAllCommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowAllCommentTableViewController.swift; path = Children/Controller/ShowAllCommentTableViewController.swift; sourceTree = "<group>"; };
 		10D1A8AA1CC63282002867BC /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewTableViewCell.swift; path = ../Children/ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		10D1A8AB1CC63282002867BC /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewTableViewCell.xib; path = ../Children/ReviewTableViewCell.xib; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1063B5BA1CCB541A00D08A33 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				1063B5BB1CCB541A00D08A33 /* WorkTimeTableViewCell.swift */,
+				1063B5BC1CCB541A00D08A33 /* WorkTimeTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		10D1A8B01CC647FE002867BC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +373,7 @@
 		B7E6A2C6C1C61FE43C6CDC09 /* InfoScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1063B5BA1CCB541A00D08A33 /* cell */,
 				B7E6A22BC922751D53642CFB /* PostInfoController.xib */,
 				B7E6ACEFDD142635A5538916 /* PostInfoController.swift */,
 			);
@@ -810,6 +824,7 @@
 				10D1A8AD1CC63282002867BC /* ReviewTableViewCell.xib in Resources */,
 				B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */,
 				D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */,
+				1063B5BE1CCB541A00D08A33 /* WorkTimeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +890,7 @@
 				B7E6A60EEBB24D2C771BB096 /* User.swift in Sources */,
 				B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
+				1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */,
 				B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */,
 				B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */,
 				B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */,
