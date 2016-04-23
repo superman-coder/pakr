@@ -17,9 +17,3 @@ class Comment: Post {
         super.init(postId: commentId, userId: userId, dateCreated: dateCreated)
     }
 }
-
-extension Comment: ParseModelProtocol {
-    func toPFObject() -> PFObject {
-        
-    }
-}

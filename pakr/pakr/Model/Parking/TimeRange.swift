@@ -8,12 +8,27 @@
 
 import Foundation
 
-class TimeRange: NSObject {
+class TimeRange: NSObject, ParseNestedObjectProtocol {
     let openTime: String!
     let closeTime: String!
+    
+    let PKScheduleOpenTime = "schedule_open"
+    let PKScheduleCloseTime = "schedule_close"
     
     init(openTime: String!, closeTime: String!) {
         self.openTime = openTime
         self.closeTime = closeTime
+    }
+    
+    required init(dict: NSDictionary) {
+        openTime = dict[PKScheduleOpenTime] as! String
+        closeTime = dict[PKScheduleCloseTime] as! String
+    }
+    
+    func toDictionary() -> NSDictionary {
+        var dict: [String:String] = [:]
+        dict[PKScheduleOpenTime] = openTime
+        dict[PKScheduleCloseTime] = closeTime
+        return dict
     }
 }

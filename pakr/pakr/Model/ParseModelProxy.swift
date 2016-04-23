@@ -10,5 +10,11 @@ import Foundation
 import Parse
 
 protocol ParseModelProtocol {
+    init(pfObject: PFObject)
     func toPFObject() -> PFObject
+}
+
+protocol ParseNestedObjectProtocol {
+    init(dict:NSDictionary)
+    func toDictionary() -> NSDictionary
 }
