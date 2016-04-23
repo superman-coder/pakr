@@ -24,7 +24,7 @@ class Parking: NSObject, ParseModelProtocol {
     let PKSchedule = "schedule"
     
     let business: Business!
-    let dateCreated: NSDate?
+    var dateCreated: NSDate?
     let parkingName: String!
     let capacity: Int!
     var addressName: String!
@@ -36,11 +36,10 @@ class Parking: NSObject, ParseModelProtocol {
     var schedule: [TimeRange]!
 
     
-    init(business: Business!, parkingName: String!, capacity: Int!, dateCreated: NSDate!, addressName: String, coordinate: Coordinate!, vehicleDetailList: [VehicleDetail]!, schedule: [TimeRange]!, region: [String]!) {
+    init(business: Business!, parkingName: String!, capacity: Int!, addressName: String, coordinate: Coordinate!, vehicleDetailList: [VehicleDetail]!, schedule: [TimeRange]!, region: [String]!) {
         self.business = business
         self.parkingName = parkingName
         self.capacity = capacity
-        self.dateCreated = dateCreated
         self.addressName = addressName
         self.coordinate = coordinate
         self.vehicleList = vehicleDetailList

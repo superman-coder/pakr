@@ -9,8 +9,8 @@
 import Foundation
 
 class TimeRange: NSObject, ParseNestedObjectProtocol {
-    let openTime: String!
-    let closeTime: String!
+    var openTime: String!
+    var closeTime: String!
     
     let PKScheduleOpenTime = "schedule_open"
     let PKScheduleCloseTime = "schedule_close"

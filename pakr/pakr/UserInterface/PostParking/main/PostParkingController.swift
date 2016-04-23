@@ -12,7 +12,7 @@ class PostParkingController: BaseViewController {
     
     var pageController: MBXPageViewController!
     var postInfoController: PostInfoController!
-    var mapImageController: BaseViewController!
+    var mapImageController: SelectMapImageController!
     var verifyController: BaseViewController!
     
     @IBOutlet weak var stepViewContainer: UIView!
@@ -46,6 +46,7 @@ class PostParkingController: BaseViewController {
     
     func setUpPageView() {
         postInfoController = PostInfoController(nibName: "PostInfoController", bundle: nil)
+        postInfoController.delegate = self
         mapImageController = SelectMapImageController(nibName: "SelectMapImageController", bundle: nil)
         verifyController = VerifyController(nibName: "VerifyController", bundle: nil)
         
@@ -86,8 +87,6 @@ class PostParkingController: BaseViewController {
     
     @IBAction func onTap(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
-//        print(sender.locationInView(self.containerView))
-//        print(sender.locationInView(self.view))
     }
 }
 
@@ -113,5 +112,11 @@ extension PostParkingController: MBXPageControllerDataDelegate {
             Void -> Void in
             self.stepView.userInteractionEnabled = true
         })
+    }
+}
+
+extension PostParkingController: PostInfoControllerDelegate{
+    func nextStep(parking: Parking) {
+        self.mapImageController.parking = parking
     }
 }

@@ -14,5 +14,6 @@ target 'pakr' do
     pod 'AWSCore'
     pod 'AWSS3'
     pod 'AWSCognito'
+    pod 'BSImagePicker'
 end
 
