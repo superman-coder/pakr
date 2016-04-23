@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		23223FA1AA3AF5DA4D275A26 /* Pods_pakr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9870136ADB30BD79474A430C /* Pods_pakr.framework */; };
+		7274B8D41CC2884B007E4B82 /* PakrImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */; };
+		7274B8DE1CC28E9F007E4B82 /* AddressPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */; };
+		7274B8DF1CC28E9F007E4B82 /* AddressPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */; };
+		7274B8E21CC32CF9007E4B82 /* GMGeocodeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8E11CC32CF9007E4B82 /* GMGeocodeServices.swift */; };
 		7295DE671CC13F030001B852 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7295DE651CC13F030001B852 /* Images.xcassets */; };
 		B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A43E71032DC2B0D1F1CF /* Repository.swift */; };
 		B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A22BC922751D53642CFB /* PostInfoController.xib */; };
@@ -72,6 +76,16 @@
 		B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD0D0E1DCF14A45C5066 /* VehicleType.swift */; };
 		B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE9D42431DC887ADB819 /* SelectMapImageController.swift */; };
 		B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A946454CF4EFFE32706D /* Business.swift */; };
+		D60598B91CC416CB009C5BEB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598B81CC416CB009C5BEB /* AddressBook.framework */; };
+		D60598BB1CC416F2009C5BEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BA1CC416F2009C5BEB /* StoreKit.framework */; };
+		D60598BD1CC41701009C5BEB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */; };
+		D60598D51CC4A863009C5BEB /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */; };
+		D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */; };
+		D60598D71CC4A863009C5BEB /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D11CC4A863009C5BEB /* ReviewDetailViewController.swift */; };
+		D60598D81CC4A863009C5BEB /* ReviewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */; };
+		D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D31CC4A863009C5BEB /* ReviewViewController.swift */; };
+		D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D41CC4A863009C5BEB /* ReviewViewController.xib */; };
+		D60598DC1CC4E181009C5BEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598DB1CC4E181009C5BEB /* Constants.swift */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -90,6 +104,10 @@
 
 /* Begin PBXFileReference section */
 		4FD9FFB8B2A762AE7B807D9E /* Pods-pakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.debug.xcconfig"; sourceTree = "<group>"; };
+		7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrImageUtils.swift; sourceTree = "<group>"; };
+		7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPickerController.swift; sourceTree = "<group>"; };
+		7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressPickerController.xib; sourceTree = "<group>"; };
+		7274B8E11CC32CF9007E4B82 /* GMGeocodeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMGeocodeServices.swift; sourceTree = "<group>"; };
 		7295DE651CC13F030001B852 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		8883172CD0A6C2613E2AB210 /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
 		9870136ADB30BD79474A430C /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +177,16 @@
 		B7E6AED608E5BCC64FD9D5AE /* VehicleDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDetail.swift; sourceTree = "<group>"; };
 		B7E6AFC20BF691E4A0CFE221 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7E6AFEBDE30EC4F495F0F9C /* VerifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyController.swift; sourceTree = "<group>"; };
+		D60598B81CC416CB009C5BEB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D60598BA1CC416F2009C5BEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentTableViewCell.swift; path = Children/Controller/CommentTableViewCell.swift; sourceTree = "<group>"; };
+		D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = Children/Controller/CommentTableViewCell.xib; sourceTree = "<group>"; };
+		D60598D11CC4A863009C5BEB /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewDetailViewController.swift; path = Children/Controller/ReviewDetailViewController.swift; sourceTree = "<group>"; };
+		D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewDetailViewController.xib; path = Children/Controller/ReviewDetailViewController.xib; sourceTree = "<group>"; };
+		D60598D31CC4A863009C5BEB /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewViewController.swift; path = Children/Controller/ReviewViewController.swift; sourceTree = "<group>"; };
+		D60598D41CC4A863009C5BEB /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewViewController.xib; path = Children/Controller/ReviewViewController.xib; sourceTree = "<group>"; };
+		D60598DB1CC4E181009C5BEB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -181,6 +209,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60598BD1CC41701009C5BEB /* SystemConfiguration.framework in Frameworks */,
+				D60598BB1CC416F2009C5BEB /* StoreKit.framework in Frameworks */,
+				D60598B91CC416CB009C5BEB /* AddressBook.framework in Frameworks */,
 				23223FA1AA3AF5DA4D275A26 /* Pods_pakr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,9 +222,20 @@
 		081F5D89FB2D7E4CF7A7BA30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */,
+				D60598BA1CC416F2009C5BEB /* StoreKit.framework */,
+				D60598B81CC416CB009C5BEB /* AddressBook.framework */,
 				9870136ADB30BD79474A430C /* Pods_pakr.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7274B8E01CC32CCD007E4B82 /* Geocode */ = {
+			isa = PBXGroup;
+			children = (
+				7274B8E11CC32CF9007E4B82 /* GMGeocodeServices.swift */,
+			);
+			path = Geocode;
 			sourceTree = "<group>";
 		};
 		8EE95B9CD067AA4023D5833D /* Pods */ = {
@@ -264,6 +306,7 @@
 		B7E6A2ACF500396A05F94F96 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				D60598DB1CC4E181009C5BEB /* Constants.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -354,9 +397,9 @@
 		B7E6A72F93CDF725F9003646 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				B7E6A7B2BD999E62376D4879 /* View */,
-				B7E6AE118A66C51CF9111EFE /* MapController.xib */,
 				B7E6A99549118700A88D2B9C /* MapController.swift */,
+				B7E6AE118A66C51CF9111EFE /* MapController.xib */,
+				B7E6A7B2BD999E62376D4879 /* View */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -385,6 +428,8 @@
 		B7E6A7E1D3E68279C9426F63 /* PostParking */ = {
 			isa = PBXGroup;
 			children = (
+				7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */,
+				7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */,
 				B7E6ACF8A9206BE45E4BBF69 /* main */,
 				B7E6A2C6C1C61FE43C6CDC09 /* InfoScreen */,
 				B7E6A013ECD1135877676FCA /* VerifyScreen */,
@@ -409,6 +454,7 @@
 				B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */,
 				B7E6A3B5CC8A67FAFE783663 /* DataServiceUtils.swift */,
 				B7E6A401D78FD167E1317138 /* JSONUtils.swift */,
+				7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -469,6 +515,7 @@
 		B7E6ABD726F9CFB2E7DE5A84 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
+				7274B8E01CC32CCD007E4B82 /* Geocode */,
 				B7E6AABE785D22BFA1E5B74A /* Address */,
 				B7E6AE579B7C666DEEEEB3F8 /* Authentication */,
 				B7E6A43E71032DC2B0D1F1CF /* Repository.swift */,
@@ -506,6 +553,12 @@
 		B7E6AE0A1EB71547762CC233 /* DetailParking */ = {
 			isa = PBXGroup;
 			children = (
+				D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */,
+				D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */,
+				D60598D11CC4A863009C5BEB /* ReviewDetailViewController.swift */,
+				D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */,
+				D60598D31CC4A863009C5BEB /* ReviewViewController.swift */,
+				D60598D41CC4A863009C5BEB /* ReviewViewController.xib */,
 				B7E6A6D19A75782C1E339414 /* Children */,
 				B7E6AAACA61109CB4F832B73 /* CommentsViewController.xib */,
 				B7E6A2693D20AC447658B4D2 /* DetailParkingController.xib */,
@@ -696,6 +749,7 @@
 				B7E6AC7B78DB97C1857BFF86 /* BookmarkController.xib in Resources */,
 				B7E6A408A7FCECB2B4DFA109 /* SearchController.xib in Resources */,
 				B7E6AAC9E99348518E9B6D21 /* ParkingResultCell.xib in Resources */,
+				7274B8DF1CC28E9F007E4B82 /* AddressPickerController.xib in Resources */,
 				B7E6A23A88726CC0D19CD553 /* ParkingListController.xib in Resources */,
 				B7E6A75B8792F930FC0D46E8 /* PostParkingController.xib in Resources */,
 				B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */,
@@ -704,13 +758,16 @@
 				B7E6A13E90275C7D2181B30E /* ProfileController.xib in Resources */,
 				B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */,
 				D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */,
+				D60598D81CC4A863009C5BEB /* ReviewDetailViewController.xib in Resources */,
 				D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */,
 				B7E6A60E9906C2D10C8F2F70 /* MapDetailViewController.xib in Resources */,
 				B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */,
 				B7E6A345492B0A4212E4D537 /* CommentsViewController.xib in Resources */,
 				7295DE671CC13F030001B852 /* Images.xcassets in Resources */,
+				D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */,
 				B7E6ACB7810CEC161EDDFE54 /* DetailParkingController.xib in Resources */,
 				B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */,
+				D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,11 +828,13 @@
 			files = (
 				B7E6A7598B1D7BE108B42ACA /* Post.swift in Sources */,
 				B7E6A4AACDDABB7130F3DBA7 /* Role.swift in Sources */,
+				7274B8E21CC32CF9007E4B82 /* GMGeocodeServices.swift in Sources */,
 				B7E6A60EEBB24D2C771BB096 /* User.swift in Sources */,
 				B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
 				B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */,
 				B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */,
+				D60598D51CC4A863009C5BEB /* CommentTableViewCell.swift in Sources */,
 				B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */,
 				B7E6AA0432B1309BA5CEC6AD /* TimeRange.swift in Sources */,
 				B7E6A5BC6F196BF0F02FAD3A /* Coordinate.swift in Sources */,
@@ -790,12 +849,15 @@
 				B7E6A36290D6AB8FB4F37590 /* AddressServiceMockImpl.swift in Sources */,
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
+				D60598DC1CC4E181009C5BEB /* Constants.swift in Sources */,
 				D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */,
+				7274B8DE1CC28E9F007E4B82 /* AddressPickerController.swift in Sources */,
 				B7E6AF19EE30F5B4F828B06D /* UserHandler.swift in Sources */,
 				B7E6A0786F719E522F61EE28 /* UserHandlerMockImpl.swift in Sources */,
 				B7E6A490B0661ADCFA1A38FB /* UserHandlerRealmImpl.swift in Sources */,
 				B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
+				D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */,
 				B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */,
 				D654A3851CC369F50095F74D /* AuthService.swift in Sources */,
 				D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */,
@@ -809,6 +871,7 @@
 				B7E6AA8A109EAEBB232F4B13 /* PostInfoController.swift in Sources */,
 				B7E6A5A04B2FA08E0E2D97D5 /* VerifyController.swift in Sources */,
 				B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */,
+				7274B8D41CC2884B007E4B82 /* PakrImageUtils.swift in Sources */,
 				B7E6A1770D75BCAC87B58ED1 /* ProfileController.swift in Sources */,
 				D654A38B1CC36A000095F74D /* GoogleAuth.swift in Sources */,
 				B7E6AA2D5F5E58C520E27A33 /* MoreInfoViewController.swift in Sources */,
@@ -824,6 +887,7 @@
 				B7E6AF0C09C71FD4655C185F /* PakrNavigationController.swift in Sources */,
 				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
 				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,
+				D60598D71CC4A863009C5BEB /* ReviewDetailViewController.swift in Sources */,
 				B7E6A9C2A41FE994DE773C26 /* PakrCLLocationCoordinate2D.swift in Sources */,
 				D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */,
 				B7E6AE1FA3C29FC389132252 /* DataServiceUtils.swift in Sources */,
@@ -926,6 +990,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = pakr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -939,6 +1004,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = pakr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakr;
 				PRODUCT_NAME = "$(TARGET_NAME)";

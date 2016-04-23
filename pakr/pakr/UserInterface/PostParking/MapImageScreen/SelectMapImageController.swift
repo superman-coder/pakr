@@ -25,12 +25,12 @@ class SelectMapImageController: BaseViewController {
         textField.text = text
         
         
-        textField.detailLabel = UILabel()
-        textField.titleLabel!.font = RobotoFont.mediumWithSize(12)
-        textField.titleLabelColor = MaterialColor.grey.base
-        textField.titleLabelActiveColor = MaterialColor.blue.accent3
-        
-        let image = UIImage(named: "ic_close_white")?.imageWithRenderingMode(.AlwaysTemplate)
+//        textField.detailLabel = UILabel()
+//        textField.titleLabel!.font = RobotoFont.mediumWithSize(12)
+//        textField.titleLabelColor = MaterialColor.grey.base
+//        textField.titleLabelActiveColor = MaterialColor.blue.accent3
+//        
+//        let image = UIImage(named: "ic_close_white")?.imageWithRenderingMode(.AlwaysTemplate)
         
         //        let clearButton: FlatButton = FlatButton()
         //        clearButton.pulseColor = MaterialColor.grey.base

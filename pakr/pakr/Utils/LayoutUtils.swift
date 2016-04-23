@@ -17,11 +17,11 @@ class LayoutUtils {
         textField.placeholderTextColor = MaterialColor.grey.darken1
         
         // set up label
-        textField.detailLabel = UILabel()
-        textField.detailLabel!.font = RobotoFont.mediumWithSize(20)
-        textField.detailLabel!.text = suggestionText
-        textField.detailLabelAutoHideEnabled = true
-        
+//        textField.detailLabel = UILabel()
+//        textField.detailLabel!.font = RobotoFont.mediumWithSize(20)
+//        textField.detailLabel!.text = suggestionText
+//        textField.detailLabelAutoHideEnabled = true
+//        
         // user typing text
         textField.font = RobotoFont.regularWithSize(14)
         textField.textColor = MaterialColor.grey.darken1

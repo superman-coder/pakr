@@ -7,22 +7,26 @@
 //
 
 import UIKit
-import Google
 import FBSDKLoginKit
+import Google
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var authenService: AuthService!
+    var currentUser: User!
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window = window
         
+        setUpParse()
+        
         authenService = WebServiceFactory.getAuthService()
         
-        if authenService.isLogin() {
+       if authenService.isLogin() {
             let rootViewController = PakrTabBarController()
             window.rootViewController = rootViewController
         } else {
@@ -34,6 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
    
+    func setUpParse() {
+        User.registerSubclass()
+        let config = ParseClientConfiguration(block: {
+            (ParseMutableClientConfiguration) -> Void in
+            ParseMutableClientConfiguration.applicationId = Constants.Parse.APP_ID
+            ParseMutableClientConfiguration.clientKey = Constants.Parse.MASTER_KEY
+            ParseMutableClientConfiguration.server = Constants.Parse.HOST
+        });
+        
+        Parse.initializeWithConfiguration(config);
+    }
+    
     @available(iOS 9.0, *)
     func application(application: UIApplication, openURL url: NSURL, options: [String: AnyObject]) -> Bool {
         print("step 2 of OAuth2. Url: \(url)")

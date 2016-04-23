@@ -11,7 +11,6 @@ import Foundation
 protocol SocialAuth {
     static func isLogin() -> Bool
     static func signOut()
-    static func getLoginedUser() -> User!
     static func isValidatedWithUrl(url: NSURL) -> Bool
     static func loginSuccess()
 }
