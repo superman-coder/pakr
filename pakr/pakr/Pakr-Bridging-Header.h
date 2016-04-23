@@ -17,4 +17,5 @@
 #import <AWSSNS/AWSSNS.h>
 #import <AWSCognito/AWSCognito.h>
 #import <CommonCrypto/CommonCrypto.h>
+#import "CustomTimePicker.h"
 #endif /* Pakr_Bridging_Header_h */

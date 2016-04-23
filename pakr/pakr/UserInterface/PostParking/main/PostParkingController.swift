@@ -23,15 +23,11 @@ class PostParkingController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
+        setUpStepView()
         setUpPageView()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        setUpStepView()
-        pageController.reloadPagesToCurrentPageIndex(0)
-    }
-    
+//MARK - Private Method
     func setUpNavigationBar() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PostParkingController.onCreateParkingLot))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(PostParkingController.onCancelCreate))
@@ -46,14 +42,6 @@ class PostParkingController: BaseViewController {
         stepView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
         stepView.userInteractionEnabled = true
         stepViewContainer.addSubview(stepView)
-
-        // we use PageViewController. so don't need to add callback manually again  
-//        for i in 0 ..< stepView.stepButtons.count {
-//            let button = stepView.stepButtons[i] as! UIButton
-//            button.tag = i
-//            button.addTarget(self, action: #selector(PostParkingController.onSwitchScreen), forControlEvents: UIControlEvents.TouchUpInside)
-//        }
-//        
     }
     
     func setUpPageView() {
@@ -64,10 +52,17 @@ class PostParkingController: BaseViewController {
         pageController = MBXPageViewController()
         pageController.MBXDataSource = self
         pageController.MBXDataDelegate = self
+        pageController.reloadPages()
+        for view in self.pageController.view.subviews{
+      let scroll = view as! UIScrollView
+            if scroll .isKindOfClass(UIScrollView){
+                scroll.scrollEnabled = false
+            }
+        }
     }
     
     func onSwitchScreen(sender: UIButton) {
-        print("click")
+//        print("click")
         let position = sender.tag
         stepView.updateCurrentStepIndex(UInt(position), completionBlock: {
             Void -> Void in
@@ -89,6 +84,11 @@ class PostParkingController: BaseViewController {
         
     }
     
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+//        print(sender.locationInView(self.containerView))
+//        print(sender.locationInView(self.view))
+    }
 }
 
 extension PostParkingController: MBXPageControllerDataSource {
@@ -107,7 +107,7 @@ extension PostParkingController: MBXPageControllerDataSource {
 
 extension PostParkingController: MBXPageControllerDataDelegate {
     func MBXPageChangedToIndex(index: Int) {
-        print("click \(index)")
+//        print("click \(index)")
         self.stepView.userInteractionEnabled = false
         self.stepView.updateCurrentStepIndex(UInt(index), completionBlock: {
             Void -> Void in

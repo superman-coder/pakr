@@ -17,6 +17,7 @@ class DetailParkingController: UIViewController {
     @IBOutlet weak var infoTableView: UITableView!
     @IBOutlet weak var commentsTableView: UITableView!
     @IBOutlet weak var mapkit: MKMapView!
+    @IBOutlet weak var btnBookMark: UIButton!
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var infoTableHeight: NSLayoutConstraint!
@@ -44,6 +45,11 @@ class DetailParkingController: UIViewController {
         super.viewDidLoad()
         infoTableView.scrollEnabled = false
         commentsTableView.scrollEnabled = false
+        //
+        self.navigationController?.navigationBar.translucent = false
+        if (self.respondsToSelector(Selector("edgesForExtendedLayout"))) {
+            self.edgesForExtendedLayout = UIRectEdge.None
+        }
         //
         let nib = UINib(nibName: "PhotosCollectionViewCell", bundle: nil)
         photoCollectionView.registerNib(nib, forCellWithReuseIdentifier: "PhotosCollectionViewCell")
@@ -74,14 +80,7 @@ class DetailParkingController: UIViewController {
         arrInfo = ["Direction","Call","More Info"]
         arrInfoImage = ["direction","call","more"]
         infoTableView.reloadData()
-        
-//        arrCommentsImage = ["direction","call","more"]
-//        arrCommentUserName = ["Direction","Call","More Info"]
-//        arrCommentsDicriptions = ["aasdsad", "sdfsdfsdf", "sdfsfsfsf"]
-        
-        var row = arrCommentUserName?.count  ?? 0
-        row += 5
-        commentsTableHeight.constant = (CGFloat)((row-1)*120 + 60)
+
         centerMapOnLocation()
     }
     
@@ -131,16 +130,18 @@ class DetailParkingController: UIViewController {
     }
     
     func startReview(){
-        self.presentViewController(ReviewViewController(), animated: true, completion: nil)
+        let reviewCOntroler = ReviewViewController()
+        reviewCOntroler.delegate = self
+        self.navigationController?.pushViewController(reviewCOntroler, animated: true)
     }
-    func showReviewDetail(){
-        self.presentViewController(ReviewDetailViewController(), animated: true, completion: nil)
+    func showAllComments(){
+        self.navigationController?.pushViewController(ShowAllCommentTableViewController(), animated: true)
     }
 // MARK: - IBAction
     @IBAction func didSelectMapView(sender: AnyObject) {
         let mapDetailViewController =  MapDetailViewController()
         mapDetailViewController.initialLocation = CLLocation(latitude: parking.coordinate.latitude, longitude: parking.coordinate.longitude)
-        self.presentViewController(mapDetailViewController, animated: false, completion: nil)
+        self.navigationController?.pushViewController(mapDetailViewController, animated: true)
     }
     @IBAction func showBusinessReview(sender: AnyObject) {
     }
@@ -148,6 +149,12 @@ class DetailParkingController: UIViewController {
         didSelectMapView(sender)
     }
     @IBAction func bookMarkAction(sender: AnyObject) {
+        if  btnBookMark.selected {
+            btnBookMark.selected = false
+        }else{
+            btnBookMark.selected = true
+        }
+        
     }
 }
 // MARK: - Extension
@@ -185,7 +192,7 @@ extension DetailParkingController: UITableViewDataSource, UITableViewDelegate{
                 let cell = CommentTableViewCell.initCommentCellFromNib()
                 return cell
             }else{
-                let cell = CommentTableViewCell.initCommentsCellFromNib()
+                let cell = CommentTableViewCell.initSeeAllComment()
                 return cell
             }
         }
@@ -196,7 +203,7 @@ extension DetailParkingController: UITableViewDataSource, UITableViewDelegate{
             if indexPath.row == 0 {
                 return 60
             }else{
-                return 120
+                return 40
             }
         }else{
             return 45
@@ -224,7 +231,7 @@ extension DetailParkingController: UITableViewDataSource, UITableViewDelegate{
             if indexPath.row == 0 {
                                 startReview()
             }else{
-                                showReviewDetail()
+                                showAllComments()
             }
         }
     }
@@ -268,12 +275,17 @@ extension DetailParkingController: UIImagePickerControllerDelegate, UINavigation
         // Get the image captured by the UIImagePickerController
          let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-        
-        
-        dismissViewControllerAnimated(true, completion: nil)
+                dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+extension DetailParkingController: ReviewViewControllerDelegate{
+    func DidPostReview(rating: Int, title: String, content: String) {
+        print(rating)
+        print(title)
+        print(content)
     }
 }

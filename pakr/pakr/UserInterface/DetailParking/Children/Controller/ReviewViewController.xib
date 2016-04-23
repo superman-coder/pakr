@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewViewController" customModule="pakr" customModuleProvider="target">
             <connections>
+                <outlet property="contenView" destination="Ehd-lf-n3K" id="QsD-Wo-j1M"/>
+                <outlet property="contentMarginBottom" destination="DFW-2Z-UEn" id="xie-P8-jYJ"/>
+                <outlet property="textFeild" destination="5kz-lX-c0l" id="QZA-fH-WPa"/>
+                <outlet property="textView" destination="ch2-gF-zgh" id="ZEp-jc-KJ3"/>
+                <outlet property="textViewMarginBottom" destination="sSU-LC-A33" id="94h-bC-ZbL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,43 +23,79 @@
                     <rect key="frame" x="10" y="10" width="300" height="548"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ws-2z-awY" userLabel="line">
-                            <rect key="frame" x="0.0" y="55" width="300" height="1"/>
+                            <rect key="frame" x="20" y="57" width="260" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="ebF-el-DSe"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvF-qA-iDD" userLabel="rateView">
-                            <rect key="frame" x="50" y="10" width="200" height="35"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYz-nd-2Gd" userLabel="line1">
+                            <rect key="frame" x="20" y="113" width="260" height="1"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="35" id="1wq-23-Aez"/>
-                                <constraint firstAttribute="width" constant="200" id="ehC-Nv-Hau"/>
+                                <constraint firstAttribute="height" constant="0.5" id="s7U-Dd-awA"/>
                             </constraints>
                         </view>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-gF-zgh">
-                            <rect key="frame" x="10" y="64" width="280" height="457"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-gF-zgh">
+                            <rect key="frame" x="10" y="124" width="280" height="424"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="NkO-Rq-DWQ"/>
+                            </connections>
                         </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap a Star to Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuh-P3-iQT">
+                            <rect key="frame" x="92" y="35" width="116" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title Comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-lX-c0l">
+                            <rect key="frame" x="10" y="76" width="280" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="o33-np-kHc"/>
+                            </connections>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvF-qA-iDD" userLabel="rateView" customClass="RatingControl" customModule="pakr" customModuleProvider="target">
+                            <rect key="frame" x="75" y="10" width="150" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="1wq-23-Aez"/>
+                                <constraint firstAttribute="width" constant="150" id="ehC-Nv-Hau"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
                     <constraints>
-                        <constraint firstItem="1ws-2z-awY" firstAttribute="leading" secondItem="Ehd-lf-n3K" secondAttribute="leading" id="9Xa-MZ-0gS"/>
-                        <constraint firstItem="ch2-gF-zgh" firstAttribute="leading" secondItem="Ehd-lf-n3K" secondAttribute="leading" constant="10" id="HIe-Pe-RNs"/>
-                        <constraint firstAttribute="trailing" secondItem="ch2-gF-zgh" secondAttribute="trailing" constant="10" id="N6t-nD-yDw"/>
+                        <constraint firstItem="ch2-gF-zgh" firstAttribute="leading" secondItem="Ehd-lf-n3K" secondAttribute="leading" constant="10" id="2Nu-Ld-tct"/>
+                        <constraint firstAttribute="trailing" secondItem="5kz-lX-c0l" secondAttribute="trailing" constant="10" id="3De-rh-nrE"/>
+                        <constraint firstItem="Nuh-P3-iQT" firstAttribute="top" secondItem="yvF-qA-iDD" secondAttribute="bottom" id="97K-Tp-rfb"/>
+                        <constraint firstItem="1ws-2z-awY" firstAttribute="leading" secondItem="Ehd-lf-n3K" secondAttribute="leading" constant="20" id="9Xa-MZ-0gS"/>
+                        <constraint firstAttribute="trailing" secondItem="QYz-nd-2Gd" secondAttribute="trailing" constant="20" id="AQq-96-ljR"/>
+                        <constraint firstItem="5kz-lX-c0l" firstAttribute="leading" secondItem="Ehd-lf-n3K" secondAttribute="leading" constant="10" id="D3Q-E8-0se"/>
+                        <constraint firstItem="QYz-nd-2Gd" firstAttribute="top" secondItem="5kz-lX-c0l" secondAttribute="bottom" constant="13" id="HzP-G6-zHi"/>
+                        <constraint firstItem="QYz-nd-2Gd" firstAttribute="leading" secondItem="Ehd-lf-n3K" secondAttribute="leading" constant="20" id="JqB-O2-xyk"/>
                         <constraint firstItem="yvF-qA-iDD" firstAttribute="top" secondItem="Ehd-lf-n3K" secondAttribute="top" constant="10" id="NQb-OX-2Ia"/>
-                        <constraint firstAttribute="trailing" secondItem="1ws-2z-awY" secondAttribute="trailing" id="fDy-5f-yde"/>
-                        <constraint firstItem="1ws-2z-awY" firstAttribute="top" secondItem="yvF-qA-iDD" secondAttribute="bottom" constant="10" id="h4E-cR-U4p"/>
-                        <constraint firstItem="ch2-gF-zgh" firstAttribute="top" secondItem="1ws-2z-awY" secondAttribute="bottom" constant="10" id="hUn-3S-bHi"/>
-                        <constraint firstAttribute="bottom" secondItem="ch2-gF-zgh" secondAttribute="bottom" constant="25" id="jj7-rm-85K"/>
+                        <constraint firstItem="1ws-2z-awY" firstAttribute="top" secondItem="Nuh-P3-iQT" secondAttribute="bottom" constant="5" id="Ozg-Y9-xZl"/>
+                        <constraint firstItem="ch2-gF-zgh" firstAttribute="top" secondItem="QYz-nd-2Gd" secondAttribute="bottom" constant="10" id="Vc0-C9-Wjc"/>
+                        <constraint firstItem="QYz-nd-2Gd" firstAttribute="top" secondItem="1ws-2z-awY" secondAttribute="bottom" constant="55" id="X9G-am-Bab"/>
+                        <constraint firstAttribute="trailing" secondItem="1ws-2z-awY" secondAttribute="trailing" constant="20" id="fDy-5f-yde"/>
+                        <constraint firstAttribute="trailing" secondItem="ch2-gF-zgh" secondAttribute="trailing" constant="10" id="fw7-9k-QpS"/>
                         <constraint firstItem="yvF-qA-iDD" firstAttribute="centerX" secondItem="Ehd-lf-n3K" secondAttribute="centerX" id="oui-Zl-BNn"/>
+                        <constraint firstAttribute="bottom" secondItem="ch2-gF-zgh" secondAttribute="bottom" id="sSU-LC-A33"/>
+                        <constraint firstItem="Nuh-P3-iQT" firstAttribute="centerX" secondItem="yvF-qA-iDD" secondAttribute="centerX" id="xvx-zf-yh1"/>
+                        <constraint firstItem="5kz-lX-c0l" firstAttribute="top" secondItem="1ws-2z-awY" secondAttribute="bottom" constant="12" id="zaP-bF-GKW"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ux7-Yx-mIu" appends="YES" id="b79-7n-nBo"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,5 +107,10 @@
             </constraints>
             <point key="canvasLocation" x="319" y="306"/>
         </view>
+        <tapGestureRecognizer id="ux7-Yx-mIu">
+            <connections>
+                <action selector="endEditing:" destination="-1" id="vJx-J0-ABm"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

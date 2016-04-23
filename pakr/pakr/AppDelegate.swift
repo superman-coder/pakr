@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  pakr
 //
@@ -35,7 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let rootViewController = LoginController(nibName: "LoginController", bundle: nil)
             window.rootViewController = rootViewController
         }
-        
+//        let na = UINavigationController(rootViewController: DetailParkingController())
+//        window.rootViewController = na
         window.makeKeyAndVisible()
         return true
     }

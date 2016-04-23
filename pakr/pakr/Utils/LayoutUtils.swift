@@ -27,16 +27,7 @@ class LayoutUtils {
         textField.textColor = MaterialColor.grey.darken1
         textField.titleLabelColor = MaterialColor.grey.base
         textField.titleLabelActiveColor = MaterialColor.blue.accent3
-        
-        let image = UIImage(named: "ic_close_white")?.imageWithRenderingMode(.AlwaysTemplate)
-        
-        var clearButton: FlatButton = FlatButton()
-        clearButton.pulseColor = MaterialColor.grey.base
-        clearButton.pulseScale = false
-        clearButton.tintColor = MaterialColor.grey.base
-        clearButton.setImage(image, forState: .Normal)
-        clearButton.setImage(image, forState: .Highlighted)
-        //textField.clearButton = clearButton
+
         textField.detailLabelActiveColor = MaterialColor.red.accent3
     }
     

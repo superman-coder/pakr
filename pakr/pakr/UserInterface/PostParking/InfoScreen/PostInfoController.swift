@@ -22,15 +22,12 @@ class PostInfoController: BaseViewController {
     @IBOutlet weak var parkingAddressTextField: TextField!
     @IBOutlet weak var parkingDescriptionTextField: TextField!
     
-    @IBOutlet weak var workStartTimeLabel: MaterialLabel!
-    @IBOutlet weak var workEndTimeLabel: MaterialLabel!
-    @IBOutlet weak var weekendStartTimeLabel: MaterialLabel!
-    @IBOutlet weak var weekendEndTimeLabel: MaterialLabel!
-    @IBOutlet weak var capacityTextField: TextField!
-    @IBOutlet weak var priceDescriptionTextField: TextField!
+    @IBOutlet weak var workTimeTableView: UITableView!
+    @IBOutlet weak var noteWorkTime: TextField!
     
-    
+    @IBOutlet weak var contentMarginBottom: NSLayoutConstraint!
     @IBOutlet weak var parkingInfoContainer: UIView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var businessInfoContainer: UIView!
     @IBOutlet weak var bikeDetailContainer: UIView!
     @IBOutlet weak var motorbikeDetailContainer: UIView!
@@ -50,16 +47,38 @@ class PostInfoController: BaseViewController {
     @IBOutlet weak var carMinPriceTextField: TextField!
     @IBOutlet weak var carMaxPriceTextField: TextField!
     @IBOutlet weak var carCheckBox: BEMCheckBox!
-   
+    
+    var isShowKeyBoard = false
+    var keyBoardHeight : CGFloat = 0
+    var currentTextField: UITextField?
+    
+    var arrDayOfWeek: NSArray!
+    var arrOpenTime: NSArray!
+    var arrCloseTime: NSArray!
+    
+    var currentCellSelect : WorkTimeTableViewCell!
+    var isCloseTimeAction : Bool!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PostParkingController.onCreateParkingLot))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(PostParkingController.onCancelCreate))
-        self.navigationItem.title = "Create Parking Lot"
-        self.view.backgroundColor = UIColor.whiteColor()
-        
-        
+        configTextFields()
+        setShowdow()
+        registryNotifyKeyBoard()
+        workTimeTableView.scrollEnabled =  false
+        workTimeTableView.rowHeight = 45
+        let nib = UINib(nibName: "WorkTimeTableViewCell", bundle: nil)
+        workTimeTableView.registerNib(nib , forCellReuseIdentifier: "WorkTimeTableViewCell")
+        initWorkTime()
+    }
+    //MARK - Private method
+    func initWorkTime() {
+        arrDayOfWeek = ["Monday","Tues","Wed","Thur","Fri","Sat","Sun"]
+        arrOpenTime = ["6:00","6:00","6:00","6:00","6:00","6:00","6:00"]
+        arrCloseTime = ["24:00","24:00","24:00","24:00","24:00","24:00","24:00"]
+        workTimeTableView.reloadData()
+    }
+    
+    func configTextFields(){
         LayoutUtils.setUpTextField(businessNameTextField, title: "Company Name", suggestionText: "Please tell us your company name")
         LayoutUtils.setUpTextField(businessDescriptionTextField, title: "Description", suggestionText: "Let us know more about you")
         LayoutUtils.setUpTextField(businessTelephoneTextField, title: "Telephone number", suggestionText: "How can we contact you")
@@ -73,26 +92,145 @@ class PostInfoController: BaseViewController {
         
         LayoutUtils.setUpTextField(motorMinPriceTextField, title: "Min Price", suggestionText: "Let us know more")
         LayoutUtils.setUpTextField(motorMaxPriceTextField, title: "Max Price", suggestionText: "Let us know more")
- 
+        
         LayoutUtils.setUpTextField(carMinPriceTextField, title: "Min Price", suggestionText: "Let us know more")
         LayoutUtils.setUpTextField(carMaxPriceTextField, title: "Max Price", suggestionText: "Let us know more")
+        LayoutUtils.setUpTextField(noteWorkTime, title: "This is notes for workTime", suggestionText: "Let us know more")
         
-        
+        businessNameTextField.delegate = self
+        businessDescriptionTextField.delegate = self
+        businessTelephoneTextField.delegate = self
+        parkingNameTextField.delegate = self
+        parkingAddressTextField.delegate = self
+        parkingDescriptionTextField.delegate = self
+        bikeMinPriceTextField.delegate = self
+        bikeMaxPriceTextField.delegate = self
+        motorMinPriceTextField.delegate = self
+        motorMaxPriceTextField.delegate = self
+        carMinPriceTextField.delegate = self
+        carMaxPriceTextField.delegate = self
+        noteWorkTime.delegate = self
+    }
+    func registryNotifyKeyBoard(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(PostInfoController.keyBoardShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(PostInfoController.keyBoardHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
     }
     
-    override func viewDidLayoutSubviews() {
+    func keyBoardShow(notifycation: NSNotification){
+        if !isShowKeyBoard{
+            isShowKeyBoard = true
+            let dic = notifycation.userInfo
+            let keyboardFrame = dic![UIKeyboardFrameBeginUserInfoKey]?.CGRectValue()
+            if keyBoardHeight == 0.0 {
+                keyBoardHeight = (keyboardFrame?.size.height)!
+            }
+            UIView .animateWithDuration(0.3) {
+                self.contentMarginBottom.constant = (keyboardFrame?.size.height)! - 50
+                self.contentView .layoutIfNeeded()
+            }
+            focusScrollViewWhenShowKeyBoard(currentTextField!)
+        }
+    }
+    func keyBoardHide(notifycation: NSNotification){
+        if isShowKeyBoard{
+            isShowKeyBoard = false
+            UIView .animateWithDuration(0.3) {
+                self.contentMarginBottom.constant = 5
+                self.contentView .layoutIfNeeded()
+            }
+            
+        }
+    }
+
+     func setShowdow() {
         LayoutUtils.dropShadowView(businessInfoContainer)
         LayoutUtils.dropShadowView(parkingInfoContainer)
         LayoutUtils.dropShadowView(bikeDetailContainer)
         LayoutUtils.dropShadowView(motorbikeDetailContainer)
         LayoutUtils.dropShadowView(carDetailContainer)
         LayoutUtils.dropShadowView(parkingDetailContainer)
-//        var contentRect = CGRectZero
-//        for view in self.scrollView.subviews {
-//            print("size: \(view.frame)")
-//            contentRect = CGRectUnion(contentRect, view.frame)
-//        }
-//        self.scrollView.contentSize = contentRect.size
+    }
+    func focusScrollViewWhenShowKeyBoard(textField: UITextField){
+        focusCoordinates(textField)
+    }
+    func focusCoordinates(textField: UITextField){
+        let contentViewVisuableHeight = UIScreen.mainScreen().bounds.size.height - (self.navigationController?.navigationBar.bounds.size.height)! - 20 - keyBoardHeight
+        // 100 is height of stepView config in PostParkingViewController
+        var pointY = textField.bounds.size.height + textField.frame.origin.y + 100
+        var viewSuper = textField.superview
+        while (!viewSuper!.isKindOfClass(UIScrollView)){
+            pointY = pointY + (viewSuper?.frame.origin.y)!
+            viewSuper = viewSuper!.superview
+        }
+        print(pointY)
+        print(contentViewVisuableHeight)
+        print(pointY - scrollView.contentOffset.y)
+        if contentViewVisuableHeight - (pointY - scrollView.contentOffset.y) <= 0 {
+            isShowKeyBoard = false
+             scrollView.contentOffset = CGPointMake(0, pointY - contentViewVisuableHeight + 15)
+            isShowKeyBoard = true
+        }
+    }
+    func showClockView(cell: WorkTimeTableViewCell, isCloseTime: Bool){
+        currentCellSelect = cell
+        isCloseTimeAction = isCloseTime
+        
+        let view = UIView(frame: CGRectMake(0, 0, 320, 500))
+        let rootView = UIApplication.sharedApplication().keyWindow?.rootViewController
+        view.center = rootView!.view.center
+        
+        let clockView = CustomTimePicker(view: view, withDarkTheme: false)
+        clockView.backgroundColor = UIColor.blackColor()
+        clockView.alpha = 0.8
+        clockView.delegate = self
+        rootView!.view .addSubview(clockView)
+    }
+}
+extension PostInfoController: UITextFieldDelegate{
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        currentTextField = textField
+        return true
+    }
+}
+extension PostInfoController: UIScrollViewDelegate{
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if isShowKeyBoard{
+            isShowKeyBoard = false
+            UIView .animateWithDuration(0.3) {
+                self.contentMarginBottom.constant = 5
+                self.contentView.layoutIfNeeded()
+            }
+            self.view.endEditing(true)
+        }
+    }
+}
+extension PostInfoController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
     }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("WorkTimeTableViewCell", forIndexPath: indexPath) as! WorkTimeTableViewCell
+        cell.delegate = self
+        cell.disPlay(arrDayOfWeek[indexPath.row] as! String, closeTime:arrCloseTime[indexPath.row] as! String , openTime: arrOpenTime[indexPath.row] as! String)
+        return cell
+    }
+}
+extension PostInfoController: CustomTimePickerDelegate{
+    func dismissClockViewWithHours(hours: String!, andMinutes minutes: String!, andTimeMode timeMode: String!) {
+        let text = "\(hours):\(minutes) \(timeMode)"
+        if isCloseTimeAction == true {
+            currentCellSelect.lblCloseTime.text = text
+        }else{
+            currentCellSelect.lblOpenTime.text = text
+        }
+    }
+}
+extension PostInfoController: WorkTimeTableViewCellDelegate{
+    func didSelectOpenTimeAction(cell: WorkTimeTableViewCell) {
+        showClockView(cell,isCloseTime: false)
+    }
+    func didSelectCloseTimeAction(cell: WorkTimeTableViewCell) {
+        showClockView(cell,isCloseTime: true)
+    }
 }

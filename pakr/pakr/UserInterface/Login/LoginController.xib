@@ -30,7 +30,7 @@
                         <constraint firstAttribute="height" constant="60" id="dD9-8k-uOZ"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parking" translatesAutoresizingMaskIntoConstraints="NO" id="c9Y-E7-2TD">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parking_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="c9Y-E7-2TD">
                     <rect key="frame" x="0.0" y="131.5" width="600" height="270"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="270" id="oEf-N9-9bm"/>
@@ -68,6 +68,6 @@
         </view>
     </objects>
     <resources>
-        <image name="parking" width="600" height="417"/>
+        <image name="parking_wallpaper" width="600" height="417"/>
     </resources>
 </document>
