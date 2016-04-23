@@ -19,6 +19,7 @@ class Constants {
     class Table {
         static let User = "User"
         static let Post = "Post"
+        static let PARKING = "Parking"
     }
     
     class AWS {
@@ -28,6 +29,5 @@ class Constants {
         static let DefaultServiceRegionType = AWSRegionType.APSoutheast1
         static let S3BucketName = "pakr-s3"
         static let AWS_DOMAIN = "https://s3-ap-southeast-1.amazonaws.com/" + Constants.AWS.S3BucketName + "/"
-      
     }
 }

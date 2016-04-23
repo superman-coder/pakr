@@ -8,9 +8,21 @@
 // 2016
 
 import UIKit
+import Parse
 
-class Parking: NSObject {
+class Parking: NSObject, ParseModelProtocol {
 
+    let PKBusiness = "business"
+    let PKParkingName = "parking_name"
+    let PKCapacity = "capacity"
+    let PKAddressName = "address"
+    let PKCoordinate = "coordinate"
+    let PKVerified = "verified"
+    let PKVehicles = "vehicles"
+    let PKRegions = "regions"
+    let PKImageUrls = "images"
+    let PKSchedule = "schedule"
+    
     let business: Business!
     let dateCreated: NSDate?
     let parkingName: String!
@@ -131,4 +143,61 @@ class Parking: NSObject {
         }
          schedule = scheduls.copy() as! [TimeRange]
     }
+
+    required init(pfObject: PFObject) {
+        parkingName = pfObject[PKParkingName] as! String
+        capacity = pfObject[PKCapacity] as! Int
+        addressName = pfObject[PKAddressName] as! String
+        verify = pfObject[PKVerified] as! Bool
+        region = pfObject[PKRegions] as! [String]
+        imageUrl = pfObject[PKImageUrls] as? [String]
+        
+        business = Business(dict: pfObject[PKBusiness] as! NSDictionary)
+        coordinate = Coordinate(pfObject: pfObject[PKCoordinate] as! PFGeoPoint)
+        
+        let vehicles = pfObject[PKVehicles] as! [NSDictionary]
+        vehicleList = []
+        for dict in vehicles {
+            vehicleList.append(VehicleDetail(dict: dict))
+        }
+        
+        schedule = []
+        let schedules = pfObject[PKSchedule] as! [NSDictionary]
+        for dict in schedules {
+            schedule.append(TimeRange(dict: dict))
+        }
+        
+        dateCreated = pfObject.createdAt
+    }
+    
+    func toPFObject() -> PFObject {
+        let parkingPF = PFObject(className: Constants.Table.PARKING)
+        
+        parkingPF[PKParkingName] = parkingName
+        parkingPF[PKCapacity] = capacity
+        parkingPF[PKAddressName] = addressName
+        parkingPF[PKVerified] = verify
+        parkingPF[PKRegions] = region
+        parkingPF[PKImageUrls] = imageUrl == nil ? NSNull() : imageUrl
+        
+        parkingPF[PKBusiness] = business.toDictionary()
+        
+        parkingPF[PKCoordinate] = coordinate.toGeoPointObject()
+        
+        var vehicles = [NSDictionary]()
+        for v in vehicleList {
+            vehicles.append(v.toDictionary())
+        }
+        parkingPF[PKVehicles] = vehicles
+        
+        var timeRanges = [NSDictionary]()
+        for range in schedule {
+            timeRanges.append(range.toDictionary())
+        }
+        parkingPF[PKSchedule] = timeRanges
+        
+        return parkingPF
+    }
 }
+
+

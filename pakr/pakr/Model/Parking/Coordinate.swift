@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import Parse
 
 @objc class Coordinate: NSObject {
     let latitude: Double!
@@ -12,5 +13,14 @@ import Foundation
     init(latitude: Double!, longitude: Double!) {
         self.latitude = latitude
         self.longitude = longitude
+    }
+    
+    required init(pfObject: PFGeoPoint) {
+        self.latitude = pfObject.latitude
+        self.longitude = pfObject.longitude
+    }
+    
+    func toGeoPointObject() -> PFGeoPoint {
+        return PFGeoPoint(latitude: latitude, longitude: longitude)
     }
 }

@@ -7,6 +7,8 @@ import Foundation
 
 class Comment: Post {
 
+    let PKTopic = "topic"
+    
     let topic: Topic!
     var content: String!
 
