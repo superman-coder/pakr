@@ -53,7 +53,7 @@ PODS:
   - GoogleSymbolUtilities (1.1.0)
   - GoogleUtilities (1.3.0):
     - GoogleSymbolUtilities (~> 1.0)
-  - Material (1.39.13)
+  - Material (1.39.17)
   - MBXPageViewController (1.0.0)
   - Parse (1.13.0):
     - Bolts/Tasks (~> 1.6)
@@ -86,7 +86,7 @@ SPEC CHECKSUMS:
   GoogleSignIn: 3d571172b8603be39dcb1705d8217146bb76fe62
   GoogleSymbolUtilities: eb3965ea12710569c7b80db198a39e39b18613f7
   GoogleUtilities: 5c653f7df2eedf0ce0efdfe5afe4f831f375fd7a
-  Material: 6ff5b84d3247b0ebcc58403be7a64aa0ee88ec65
+  Material: eccc5afdac89e10aa7a635ad34d6c3564387bfd3
   MBXPageViewController: a706073c28deb7b40a0c83269322859a584b9e66
   Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce

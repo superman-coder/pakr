@@ -12,7 +12,19 @@ import Google
 
 class GoogleAuth: SocialAuth {
     
+   class var sharedInstance : GoogleAuth {
+        struct Static {
+            static var token : dispatch_once_t = 0
+            static var instance : GoogleAuth? = nil
+        }
+        dispatch_once(&Static.token) {
+            Static.instance = GoogleAuth()
+        }
+        return Static.instance!
+    }
+    
     static func getInstance() -> GIDSignIn {
+        GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
         return GIDSignIn.sharedInstance()
     }
     
@@ -24,8 +36,9 @@ class GoogleAuth: SocialAuth {
         getInstance().signOut()
     }
     
-    static func getLoginedUser() -> User! {
-        return nil
+    static func getLoginedUser(googler: GIDGoogleUser) -> User! {
+        let user = User(userId: "", role: Role.UserAuth, email: googler.profile.email, dateCreated: NSDate(), name: googler.profile.name, avatarUrl: googler.profile.imageURLWithDimension(120).absoluteString)
+        return user
     }
     
     static func loginSuccess() {

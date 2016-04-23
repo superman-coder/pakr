@@ -15,4 +15,9 @@ class Constants {
         static let MASTER_KEY = "1411993"
         static let DB_URL = "mongodb://pakr_hqthao:adminkdu@ds011231.mlab.com:11231/pakr-database"
     }
+    
+    class Table {
+        static let User = "User"
+        static let Post = "Post"
+    }
 }

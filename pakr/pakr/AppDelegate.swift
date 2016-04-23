@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var authenService: AuthService!
+    var currentUser: User!
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -38,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
    
     func setUpParse() {
+        User.registerSubclass()
         let config = ParseClientConfiguration(block: {
             (ParseMutableClientConfiguration) -> Void in
             ParseMutableClientConfiguration.applicationId = Constants.Parse.APP_ID

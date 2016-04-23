@@ -9,4 +9,7 @@ protocol AuthService {
     func isLogin() -> Bool
     func logOut()
     func getLoginUser() -> User?
+    func isExistUser(emailAddress: String, success: User -> Void, error: Void -> Void)
+    func registerUser(user: User, success: Void -> Void, error: NSError -> Void)
+    func getUserByUserId(userId: String, success: User -> Void, error: Void -> Void)
 }

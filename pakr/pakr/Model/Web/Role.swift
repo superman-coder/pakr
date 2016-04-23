@@ -4,12 +4,13 @@
 //
 
 import Foundation
+import Parse
 
-enum Role {
-    case Admin
-    case BusinessAuth
-    case BusinessNotAuth
-    case UserAuth
-    case UserNotAuth
-    case UserDeleted
+enum Role: String {
+    case Admin = "Admin"
+    case BusinessAuth = "BusinessAuth"
+    case BusinessNotAuth = "BusinessNotAuth"
+    case UserAuth = "UserAuth"
+    case UserNotAuth = "UserNotAuth"
+    case UserDeleted = "UserDeleted"
 }
