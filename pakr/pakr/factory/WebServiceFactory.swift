@@ -7,7 +7,7 @@ import Foundation
 
 class WebServiceFactory {
     static func getAddressService() -> AddressService {
-        return  AddressServiceMockImpl()
+        return  AddressServiceParseImpl()
     }
 
     static func getAuthService() -> AuthService {

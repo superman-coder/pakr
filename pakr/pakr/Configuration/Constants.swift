@@ -19,7 +19,9 @@ class Constants {
     class Table {
         static let User = "User"
         static let Post = "Post"
-        static let PARKING = "Parking"
+        static let Topic = "Topic"
+        static let Parking = "Parking"
+        static let Comment = "Comment"
     }
     
     class AWS {

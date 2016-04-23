@@ -499,8 +499,6 @@
 			children = (
 				7235529A1CC4D39400090651 /* AddressPicker */,
 				D60598DF1CC4F7AE009C5BEB /* test */,
-				7274B8DC1CC28E9F007E4B82 /* AddressPickerController.swift */,
-				7274B8DD1CC28E9F007E4B82 /* AddressPickerController.xib */,
 				B7E6ACF8A9206BE45E4BBF69 /* main */,
 				B7E6A2C6C1C61FE43C6CDC09 /* InfoScreen */,
 				B7E6A013ECD1135877676FCA /* VerifyScreen */,
