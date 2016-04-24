@@ -7,7 +7,7 @@ import Foundation
 
 class Post: NSObject {
 
-    let PKPostUser = "user"
+    static let PKPostUser = "user"
     
     var postId: String?
     var userId: String!

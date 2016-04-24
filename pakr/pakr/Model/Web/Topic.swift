@@ -31,12 +31,18 @@ import Parse
     required init(pfObject: PFObject) {
         let parking = pfObject[Topic.PKParking] as! PFObject
         self.parking = Parking(pfObject: parking)
-        super.init(userId: "0")
+        self.rating = pfObject[Topic.PKRating] as! Int
+        
+        let userId = pfObject[Topic.PKPostUser].objectId
+        
+        super.init(userId: userId)
+        self.dateCreated = pfObject.createdAt
+        self.postId = pfObject.objectId
     }
     
     func toPFObject() -> PFObject {
         let pfObject = PFObject(className: Constants.Table.Topic)
-        pfObject[PKPostUser] = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
+        pfObject[Topic.PKPostUser] = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
         pfObject[Topic.PKRating] = rating
         pfObject[Topic.PKParking] = parking.toPFObject()
         return pfObject

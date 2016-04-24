@@ -31,4 +31,31 @@ public class AddressServiceParseImpl: NSObject, AddressService {
             }
         }
     }
+    
+    func getNearByParkingByAddressName(address: String, radius: Double, success: ([Topic] -> Void), fail: (NSError -> Void)) {
+        GMServices.requestAddressSearchWithAddress(address) { (successGMS, locationGMS) in
+            var coord:Coordinate? = nil
+            
+            if (successGMS) {
+                if locationGMS?.count > 0 {
+                    let firstPlace = locationGMS![0]
+                    print("Search nearby: \(firstPlace.geometry.latitude),\(firstPlace.geometry.longitude)")
+                    coord = Coordinate(latitude: firstPlace.geometry.latitude, longitude: firstPlace.geometry.longitude)
+                }
+            }
+            
+            if let coord = coord {
+                self.getNearByParkingLotByLocation(coord.latitude,
+                                                   longitude: coord.longitude,
+                                                   radius: radius,
+                                                   success: { topic in
+                    success(topic)
+                    }, fail: { error in
+                        fail(error)
+                })
+            } else {
+                fail(NSError(domain: "", code: 0, userInfo: nil))
+            }
+        }
+    }
 }

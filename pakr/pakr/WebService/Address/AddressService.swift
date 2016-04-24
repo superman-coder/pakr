@@ -7,5 +7,7 @@ import Foundation
 
 protocol AddressService {
     func getNearByParkingLotByLocation(latitude: Double!, longitude: Double, radius: Double, success:([Topic] -> Void), fail: (NSError -> Void))
+    
+    func getNearByParkingByAddressName(address: String, radius: Double, success:([Topic] -> Void), fail: (NSError -> Void))
 }
 

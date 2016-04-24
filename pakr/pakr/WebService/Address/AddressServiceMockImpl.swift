@@ -10,4 +10,8 @@ class AddressServiceMockImpl: NSObject, AddressService {
         let res = Repository.TopicRepos
         success(res)
     }
+    
+    func getNearByParkingByAddressName(address: String, radius: Double, success: ([Topic] -> Void), fail: (NSError -> Void)) {
+        
+    }
 }

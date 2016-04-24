@@ -38,7 +38,7 @@ class Comment: Post, ParseModelProtocol {
         
         
         let topic = pfObject[PKTopic] as! PFObject
-        let user = pfObject[PKPostUser] as! PFObject
+        let user = pfObject[Comment.PKPostUser] as! PFObject
         
         content = pfObject[PKContent] as! String
         
@@ -48,7 +48,7 @@ class Comment: Post, ParseModelProtocol {
     func toPFObject() -> PFObject {
         let pfObject = PFObject(className: Constants.Table.Comment)
         pfObject[PKTopic] = PFObject(withoutDataWithClassName: Constants.Table.Topic, objectId: topicId)
-        pfObject[PKPostUser] = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
+        pfObject[Comment.PKPostUser] = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
         pfObject[PKContent] = content
         
         return pfObject
