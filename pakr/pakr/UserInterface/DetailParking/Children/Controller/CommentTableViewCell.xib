@@ -49,6 +49,10 @@
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="D5d-q7-IRh" secondAttribute="trailing" constant="10" id="xdI-o0-gtJ"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imgUserCm" destination="q6b-Wc-U4e" id="PNa-dl-TOZ"/>
+                <outlet property="lblUserNameCm" destination="D5d-q7-IRh" id="AGC-4G-L7O"/>
+            </connections>
             <point key="canvasLocation" x="310" y="198.5"/>
         </tableViewCell>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="commentCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="134" id="l4q-KQ-Y7u" customClass="CommentTableViewCell" customModule="pakr" customModuleProvider="target">

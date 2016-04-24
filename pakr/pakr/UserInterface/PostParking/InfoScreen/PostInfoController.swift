@@ -52,10 +52,13 @@ class PostInfoController: BaseViewController {
     @IBOutlet weak var carMaxPriceTextField: TextField!
     @IBOutlet weak var carCheckBox: BEMCheckBox!
     
+    let value: Int = 1
+    
     var isShowKeyBoard = false
     var keyBoardHeight : CGFloat = 0
     var currentTextField: UITextField?
-    
+    var message: String!
+
     var arrDayOfWeek: NSArray!
     var arrTimeRange: NSMutableArray!
     
@@ -82,6 +85,84 @@ class PostInfoController: BaseViewController {
         setDataForParking()
     }
     //MARK - Private method
+    func isNextStep() -> Bool {
+        let mutableArray = NSMutableArray()
+        mutableArray.addObject(businessNameTextField)
+        mutableArray.addObject(businessDescriptionTextField)
+        mutableArray.addObject(businessTelephoneTextField)
+        
+        mutableArray.addObject(parkingNameTextField)
+        mutableArray.addObject(parkingAddressTextField)
+        mutableArray.addObject(parkingDescriptionTextField)
+        
+        mutableArray.addObject(capacityTextField)
+        
+        if bikeCheckBox.on {
+            mutableArray.addObject(bikeMinPriceTextField)
+            mutableArray.addObject(bikeMaxPriceTextField)
+        }
+        if motorCheckBox.on {
+            mutableArray.addObject(motorMinPriceTextField)
+            mutableArray.addObject(motorMaxPriceTextField)
+        }
+        if carCheckBox.on {
+            mutableArray.addObject(carMinPriceTextField)
+            mutableArray.addObject(carMaxPriceTextField)
+        }
+        
+        for textField in mutableArray {
+            let string  = (textField as! TextField).text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            if (string == "") {
+                showMessage(textField as! TextField)
+                return false
+            }
+        }
+        return true
+    }
+    
+    func showMessage(textField: TextField){
+        switch textField {
+        case businessNameTextField:
+            message = "Please Insert Company Name"
+        case businessDescriptionTextField:
+            message = "Please Insert Company Decription"
+        case businessTelephoneTextField:
+            message = "Please Insert Company TelePhone"
+        case parkingNameTextField:
+            message = "Please Insert Parking Name"
+        case parkingAddressTextField:
+            message = "Please Insert Parking Address"
+        case parkingDescriptionTextField:
+            message = "Please Insert Parking Decription"
+        case capacityTextField:
+            message = "Please Insert Parking  Capacity"
+        case bikeMinPriceTextField:
+            message = "Please Insert Bike Min Price"
+        case bikeMaxPriceTextField:
+            message = "Please Insert Bike Max Price"
+        case motorMinPriceTextField:
+            message = "Please Insert Motor Min Price"
+        case motorMaxPriceTextField:
+            message = "Please Insert Motor Max Price"
+        case carMinPriceTextField:
+            message = "Please Insert Car Min Price"
+        case carMaxPriceTextField:
+            message = "Please Insert Car Max Price"
+            break
+        default:
+            break
+        }
+        
+        let alert = UIAlertController(title: "Lack of information", message: message, preferredStyle: .Alert)
+        let okAction  = UIAlertAction(title:"OK", style: .Default) { (action: UIAlertAction) in
+            self.dismissViewControllerAnimated(true, completion: {
+                
+            })
+        }
+        alert.addAction(okAction)
+        presentViewController(alert, animated: true, completion: nil)
+
+    }
     func setDataForParking(){
         let business = Business(businessName: businessNameTextField.text, businessDescription: businessDescriptionTextField.text, telephone: businessTelephoneTextField.text)
 //        let coordinate = Coordinate(latitude: <#T##Double!#>, longitude: <#T##Double!#>)
@@ -120,7 +201,7 @@ class PostInfoController: BaseViewController {
         
         LayoutUtils.setUpTextField(parkingNameTextField, title: "Parking Name", suggestionText: "make customer easily know parking lot")
         LayoutUtils.setUpTextField(parkingAddressTextField, title: "Parking Address", suggestionText: "How can we find your parking lot")
-        LayoutUtils.setUpTextField(parkingDescriptionTextField, title: "Parking Detail", suggestionText: "Let us know more")
+        LayoutUtils.setUpTextField(parkingDescriptionTextField, title: "Parking Description", suggestionText: "Let us know more")
         
         LayoutUtils.setUpTextField(bikeMinPriceTextField, title: "Min Price", suggestionText: "Let us know more")
         LayoutUtils.setUpTextField(bikeMaxPriceTextField, title: "Max Price", suggestionText: "Let us know more")

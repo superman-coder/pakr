@@ -20,6 +20,7 @@ class SelectMapImageController: BaseViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var lblParkingName: UILabel!
     
+    let value = 2
     var parking: Parking!
     var parkingLocation:CLLocationCoordinate2D?
     
@@ -49,7 +50,29 @@ class SelectMapImageController: BaseViewController {
         lblParkingName.text = parking.parkingName
     }
 
-    
+    func isNextStep() -> Bool {
+        if imageCover == nil {
+            showMessage("Please Select ImageCover")
+            return false
+        }else if parkingLocation == nil {
+            showMessage("Please Click in Map Select Location")
+            return false
+        }else if arrImageParking?.count < 2{
+            showMessage("List image Parking must > 1, Please")
+            return false
+        }
+        return true
+    }
+    func showMessage(message: String){
+        let alert = UIAlertController(title: "Lack of information", message: message, preferredStyle: .Alert)
+        let okAction  = UIAlertAction(title:"OK", style: .Default) { (action: UIAlertAction) in
+            self.dismissViewControllerAnimated(true, completion: {
+                
+            })
+        }
+        alert.addAction(okAction)
+        presentViewController(alert, animated: true, completion: nil)
+    }
     func showImagePicker(numberOfSelect: Int, complete:((images: [UIImage]) -> Void) ) {
         let vc = BSImagePickerViewController()
         vc.maxNumberOfSelections = numberOfSelect
@@ -64,12 +87,12 @@ class SelectMapImageController: BaseViewController {
             }, finish: { (assets: [PHAsset]) -> Void in
                 print("Finish: \(assets)")
                 let manager = PHImageManager.defaultManager()
-                let scale = UIScreen.mainScreen().scale
-                let targetSize = CGSizeMake(80*scale, 80*scale)
+                let targetSize = CGSizeMake(3000, 3000)
                 
                 let requestOptions = PHImageRequestOptions()
                 requestOptions.resizeMode   = .Exact
                 requestOptions.deliveryMode = .HighQualityFormat
+                requestOptions.version = .Current
                 
                 var i = 0
                 let arrImage = NSMutableArray()

@@ -40,7 +40,6 @@ class DetailParkingController: UIViewController {
     var arrCommentsDicriptions: NSArray?
     var arrUrlImageParking: NSArray?
     
-    var numberImage: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         infoTableView.scrollEnabled = false
@@ -56,6 +55,8 @@ class DetailParkingController: UIViewController {
         let nibComment = UINib(nibName: "CommentTableViewCell", bundle: nil)
         commentsTableView.registerNib(nibComment, forCellReuseIdentifier: "CommentTableViewCell")
         setData()
+        
+        self.title = parking.parkingName
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,11 +65,8 @@ class DetailParkingController: UIViewController {
     
 // MARK: - Private Method
 
-    func setData(){
-        parking = JSONUtils.dummyParkingList.first
-        
+    func setData(){        
         arrUrlImageParking = parking.imageUrl
-        numberImage = (arrUrlImageParking?.count)! + 1 ?? 1
         
         lblOpenTime.text = "\(parking.schedule.first!.openTime)"
         lblCloseTime.text = "\(parking.schedule.first!.closeTime)"
@@ -90,15 +88,6 @@ class DetailParkingController: UIViewController {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapkit.setRegion(coordinateRegion, animated: true)
-    }
-
-    
-    func showCamera(){
-        let vc = UIImagePickerController()
-        vc.delegate = self
-        vc.allowsEditing = true
-        vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(vc, animated: true, completion: nil)
     }
 
     
@@ -190,6 +179,11 @@ extension DetailParkingController: UITableViewDataSource, UITableViewDelegate{
         }else{
             if indexPath.row == 0 {
                 let cell = CommentTableViewCell.initCommentCellFromNib()
+               let  authenService = WebServiceFactory.getAuthService()
+                let user = authenService.getLoginUser()
+                if user != nil{
+                    cell.disPlay((user?.avatarUrl)!, name: (user?.name)!)
+                }
                 return cell
             }else{
                 let cell = CommentTableViewCell.initSeeAllComment()
@@ -239,19 +233,12 @@ extension DetailParkingController: UITableViewDataSource, UITableViewDelegate{
 
 extension DetailParkingController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberImage
+        return (arrUrlImageParking?.count)!
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        if indexPath.row == numberImage - 1{
-                   let cell: PhotosCollectionViewCell = collectionView .dequeueReusableCellWithReuseIdentifier("PhotosCollectionViewCell", forIndexPath: indexPath) as! PhotosCollectionViewCell
-            cell.imageView.image = UIImage(named: "Camera")
-            return cell
-        }else{
             let cell: PhotosCollectionViewCell = collectionView .dequeueReusableCellWithReuseIdentifier("PhotosCollectionViewCell", forIndexPath: indexPath) as! PhotosCollectionViewCell
             cell.imageView.setImageWithURL(NSURL(fileURLWithPath: arrUrlImageParking![indexPath.row] as! String), placeholderImage:UIImage(named:"parkingLot"))
             return cell
-        }
-
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
@@ -260,28 +247,11 @@ extension DetailParkingController: UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == numberImage - 1 {
-            showCamera()
-        }else{
-            
-        }
     }
     
 }
 
-extension DetailParkingController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        // Get the image captured by the UIImagePickerController
-         let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-                dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-}
+
 extension DetailParkingController: ReviewViewControllerDelegate{
     func DidPostReview(rating: Int, title: String, content: String) {
         print(rating)
