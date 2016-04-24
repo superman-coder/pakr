@@ -14,4 +14,8 @@ extension CLLocationCoordinate2D {
     func CLLocationPoint() -> CLLocation {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
+    
+    func coordinate() -> Coordinate {
+        return Coordinate(latitude: latitude, longitude: longitude)
+    }
 }

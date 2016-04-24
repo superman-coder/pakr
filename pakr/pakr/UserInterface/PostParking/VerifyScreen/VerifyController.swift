@@ -16,6 +16,8 @@ class VerifyController: BaseViewController {
     
     @IBOutlet weak var controlButton: UIButton!
     
+    var awsClient = AWSClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -28,13 +30,7 @@ class VerifyController: BaseViewController {
         // this version doesn't allow user cancel uploading
         controlButton.enabled = false
         
-        // 1. upload cover images
-        
-        // 2. upload all images
-        
-        // 3. upload all datas
-    
-        // 4. back to normal state
+       // 4. back to normal state
         controlButton.enabled = true
         uploadStatusTextView.text = "Finish"
     }

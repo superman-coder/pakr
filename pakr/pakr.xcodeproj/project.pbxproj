@@ -93,7 +93,6 @@
 		D60598C71CC42136009C5BEB /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C61CC42136009C5BEB /* AWSCognito.framework */; };
 		D60598C91CC421A3009C5BEB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C81CC421A3009C5BEB /* libsqlite3.tbd */; };
 		D60598CB1CC421AC009C5BEB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598CA1CC421AC009C5BEB /* libz.tbd */; };
-		D60598D51CC4A863009C5BEB /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */; };
 		D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */; };
 		D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D31CC4A863009C5BEB /* ReviewViewController.swift */; };
 		D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D41CC4A863009C5BEB /* ReviewViewController.xib */; };
@@ -186,7 +185,7 @@
 		B7E6AB0F139FACFD90203504 /* SearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		B7E6AB3FEFBC936273E16A5B /* CustomTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimePicker.m; sourceTree = "<group>"; };
 		B7E6AC26C7397ACAC46579E1 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
-		B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrCLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PakrCLLocationCoordinate2D.swift; path = Utils/PakrCLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		B7E6AC6D92106C69A930C5BE /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		B7E6ACEFDD142635A5538916 /* PostInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInfoController.swift; sourceTree = "<group>"; };
 		B7E6ACFA00B87FBB2B3A50D1 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
@@ -212,10 +211,6 @@
 		D60598C61CC42136009C5BEB /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = pakr/Sdk/Aws/extras/AWSCognito.framework; sourceTree = "<group>"; };
 		D60598C81CC421A3009C5BEB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D60598CA1CC421AC009C5BEB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentTableViewCell.swift; path = Children/Controller/CommentTableViewCell.swift; sourceTree = "<group>"; };
-		D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = Children/Controller/CommentTableViewCell.xib; sourceTree = "<group>"; };
-		D60598D11CC4A863009C5BEB /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewDetailViewController.swift; path = Children/Controller/ReviewDetailViewController.swift; sourceTree = "<group>"; };
-		D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewDetailViewController.xib; path = Children/Controller/ReviewDetailViewController.xib; sourceTree = "<group>"; };
 		D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = ../Children/Controller/CommentTableViewCell.xib; sourceTree = "<group>"; };
 		D60598D31CC4A863009C5BEB /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewViewController.swift; path = Children/Controller/ReviewViewController.swift; sourceTree = "<group>"; };
 		D60598D41CC4A863009C5BEB /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewViewController.xib; path = Children/Controller/ReviewViewController.xib; sourceTree = "<group>"; };
@@ -549,7 +544,6 @@
 			isa = PBXGroup;
 			children = (
 				B7E6A091AAB6F9843BAE5107 /* LayoutUtils.swift */,
-				B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */,
 				B7E6A3B5CC8A67FAFE783663 /* DataServiceUtils.swift */,
 				B7E6A401D78FD167E1317138 /* JSONUtils.swift */,
 				7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */,
@@ -795,6 +789,7 @@
 		D6A14E611CC2CD5A00BC6A64 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */,
 				D60598EE1CC963F7009C5BEB /* UIImage+Resize.swift */,
 				D60598F51CC9E79E009C5BEB /* MD5.swift */,
 			);
