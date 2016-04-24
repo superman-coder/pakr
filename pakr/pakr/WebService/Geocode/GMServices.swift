@@ -51,7 +51,8 @@ class GMServices: NSObject {
         
         // Encode the address
         let components = address.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        let encodedAddress = components.joinWithSeparator("+")
+        let nonspaceAddress = components.joinWithSeparator("+")
+        let encodedAddress = nonspaceAddress.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         // Create request
         let apiUrl = String(format: GM_PLACES_API, encodedAddress, GM_SERVER_API_KEY)
