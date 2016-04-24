@@ -101,6 +101,8 @@
 		D60598F21CC9E0DC009C5BEB /* AWSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F11CC9E0DC009C5BEB /* AWSClient.swift */; };
 		D60598F61CC9E79E009C5BEB /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F51CC9E79E009C5BEB /* MD5.swift */; };
 		D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F71CCA19BB009C5BEB /* FileUtils.swift */; };
+		D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */; };
+		D60598FE1CCCDFB2009C5BEB /* EventSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598FD1CCCDFB2009C5BEB /* EventSignal.swift */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -108,6 +110,7 @@
 		D654A38A1CC36A000095F74D /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3871CC36A000095F74D /* FacebookAuth.swift */; };
 		D654A38B1CC36A000095F74D /* GoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3881CC36A000095F74D /* GoogleAuth.swift */; };
 		D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A38D1CC36A6C0095F74D /* SocialAuth.swift */; };
+		D66128771CCCEFBA00B435A8 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66128761CCCEFBA00B435A8 /* DownloadManager.swift */; };
 		D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */; };
 		D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */; };
 		D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */; };
@@ -179,8 +182,6 @@
 		B7E6A946454CF4EFFE32706D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		B7E6A99549118700A88D2B9C /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		B7E6AA27BF66F1D94F9CEBEB /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingResultCell.swift; sourceTree = "<group>"; };
-		B7E6AB0F139FACFD90203504 /* SearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
-		B7E6AAACA61109CB4F832B73 /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
 		B7E6AB3FEFBC936273E16A5B /* CustomTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimePicker.m; sourceTree = "<group>"; };
 		B7E6AC26C7397ACAC46579E1 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
 		B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PakrCLLocationCoordinate2D.swift; path = Utils/PakrCLLocationCoordinate2D.swift; sourceTree = "<group>"; };
@@ -219,6 +220,8 @@
 		D60598F11CC9E0DC009C5BEB /* AWSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSClient.swift; sourceTree = "<group>"; };
 		D60598F51CC9E79E009C5BEB /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Extensions/MD5.swift; sourceTree = "<group>"; };
 		D60598F71CCA19BB009C5BEB /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWSPromiseClient.swift; path = AWS/AWSPromiseClient.swift; sourceTree = "<group>"; };
+		D60598FD1CCCDFB2009C5BEB /* EventSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSignal.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 		D654A3871CC36A000095F74D /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookAuth.swift; path = Manager/FacebookAuth.swift; sourceTree = "<group>"; };
 		D654A3881CC36A000095F74D /* GoogleAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAuth.swift; path = Manager/GoogleAuth.swift; sourceTree = "<group>"; };
 		D654A38D1CC36A6C0095F74D /* SocialAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialAuth.swift; path = Manager/SocialAuth.swift; sourceTree = "<group>"; };
+		D66128761CCCEFBA00B435A8 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadManager.swift; path = DataManager/DownloadManager.swift; sourceTree = "<group>"; };
 		D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Login/LoginController.swift; sourceTree = "<group>"; };
 		D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/LoginController.xib; sourceTree = "<group>"; };
@@ -398,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				D60598DD1CC4EA64009C5BEB /* Constants.swift */,
+				D60598FD1CCCDFB2009C5BEB /* EventSignal.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -519,6 +524,7 @@
 		B7E6A7E1D3E68279C9426F63 /* PostParking */ = {
 			isa = PBXGroup;
 			children = (
+				D66128751CCCEF9200B435A8 /* DataManager */,
 				7235529A1CC4D39400090651 /* AddressPicker */,
 				D60598DF1CC4F7AE009C5BEB /* test */,
 				B7E6ACF8A9206BE45E4BBF69 /* main */,
@@ -691,6 +697,7 @@
 			isa = PBXGroup;
 			children = (
 				D60598F11CC9E0DC009C5BEB /* AWSClient.swift */,
+				D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */,
 			);
 			name = AWS;
 			sourceTree = "<group>";
@@ -739,6 +746,14 @@
 				D654A3881CC36A000095F74D /* GoogleAuth.swift */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		D66128751CCCEF9200B435A8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				D66128761CCCEFBA00B435A8 /* DownloadManager.swift */,
+			);
+			name = DataManager;
 			sourceTree = "<group>";
 		};
 		D6A14E4C1CC26CD600BC6A64 /* Login */ = {
@@ -943,6 +958,7 @@
 				B7E6AA0432B1309BA5CEC6AD /* TimeRange.swift in Sources */,
 				B7E6A5BC6F196BF0F02FAD3A /* Coordinate.swift in Sources */,
 				B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */,
+				D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */,
 				10C3DF391CC5E84100352E2D /* ShowAllCommentTableViewController.swift in Sources */,
 				B7E6A90D275DCF191BE990E9 /* VehicleDetail.swift in Sources */,
 				B7E6A110E741A4C75C5D7F35 /* LayoutUtils.swift in Sources */,
@@ -995,6 +1011,7 @@
 				B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */,
 				D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */,
 				B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */,
+				D66128771CCCEFBA00B435A8 /* DownloadManager.swift in Sources */,
 				B7E6AF0C09C71FD4655C185F /* PakrNavigationController.swift in Sources */,
 				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
 				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,
@@ -1002,6 +1019,7 @@
 				D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */,
 				D60598EF1CC963F7009C5BEB /* UIImage+Resize.swift in Sources */,
 				B7E6AE1FA3C29FC389132252 /* DataServiceUtils.swift in Sources */,
+				D60598FE1CCCDFB2009C5BEB /* EventSignal.swift in Sources */,
 				10D1A8AC1CC63282002867BC /* ReviewTableViewCell.swift in Sources */,
 				B7E6A25A2B4DCA5610E27897 /* JSONUtils.swift in Sources */,
 			);

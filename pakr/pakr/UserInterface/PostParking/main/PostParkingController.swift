@@ -7,15 +7,19 @@ import Foundation
 import UIKit
 import AYStepperView
 import MBXPageViewController
+import Bolts
+import Parse
+import PromiseKit
 
 class PostParkingController: BaseViewController {
     
     var pageController: MBXPageViewController!
     var postInfoController: PostInfoController!
     var mapImageController: SelectMapImageController!
-    var verifyController: BaseViewController!
+    var verifyController: VerifyController!
     
     var authService: AuthService!
+    var awsClient: AWSClient!
     
     @IBOutlet weak var stepViewContainer: UIView!
     var stepView: AYStepperView!
@@ -25,13 +29,15 @@ class PostParkingController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         authService = WebServiceFactory.getAuthService()
+        awsClient = AWSClient()
         
         setUpNavigationBar()
         setUpStepView()
         setUpPageView()
+        setUpListener()
     }
     
-//MARK - Private Method
+    //MARK - Private Method
     func setUpNavigationBar() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PostParkingController.onCreateParkingLot))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(PostParkingController.onCancelCreate))
@@ -54,6 +60,7 @@ class PostParkingController: BaseViewController {
         mapImageController = SelectMapImageController(nibName: "SelectMapImageController", bundle: nil)
         mapImageController.postParkingController = self
         verifyController = VerifyController(nibName: "VerifyController", bundle: nil)
+        verifyController.postParkingController = self
         
         pageController = MBXPageViewController()
         pageController.MBXDataSource = self
@@ -64,6 +71,35 @@ class PostParkingController: BaseViewController {
             if scroll .isKindOfClass(UIScrollView){
                 scroll.scrollEnabled = false
             }
+        }
+    }
+    
+    var count = 0
+    var arrImages: [UIImage]!
+    
+    func setUpListener() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.startEvent(_:)), name: EventSignal.UploadStartEvent, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.progressEvent(_:)), name: EventSignal.UploadProgressEvent, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.doneEvent(_:)), name: EventSignal.UploadDoneEvent, object: nil)
+    }
+    
+    func startEvent(notification: NSNotification) {
+        
+    }
+    
+    func progressEvent(notification: NSNotification) {
+        print("hahaha")
+        let progress = notification.valueForKey(EventSignal.UploadProgressEvent)
+        print("hahaha. \(progress)")
+    }
+    
+    func doneEvent(notification: NSNotification) {
+        count = count + 1
+        if count < arrImages.count {
+            print("start to download image \(count)")
+            awsClient.uploadImage(authService.getLoginUser()?.email, image: arrImages[count], success: nil, error: nil, progress: nil)
+        } else {
+            print("Download all finish :D")
         }
     }
     
@@ -95,7 +131,12 @@ class PostParkingController: BaseViewController {
         // currently unimplement
         
         // 2. upload all images
-        let arrImages = mapImageController.arrImageParking?.copy() as! [UIImage]
+        arrImages = mapImageController.arrImageParking?.copy() as! [UIImage]
+        
+//        if arrImages.count > 0 {
+//           awsClient.uploadImage(authService.getLoginUser()?.email, image: arrImages[0], success: nil, error: nil, progress: nil)
+//        }
+        
         
         // 3. upload all datas
         
@@ -125,9 +166,11 @@ class PostParkingController: BaseViewController {
         
         let parking = Parking(business: business, parkingName: postInfoController.parkingNameTextField.text, capacity: 20, addressName: postInfoController.parkingAddressTextField.text!, coordinate: mapImageController.parkingLocation!.coordinate(), vehicleDetailList: vehicleDetails, schedule: timeRange, region: [])
         
-        let topic = Topic(userId: authService.getLoginUser()?.userId, date: NSDate(), parking: parking, rating: 0)
-        
+        let topic = Topic(userId: authService.getLoginUser()?.userId, parking: parking, rating: 0)
+  
+        let a  = 3
     }
+  
     
     
     @IBAction func onTap(sender: UITapGestureRecognizer) {
@@ -165,3 +208,8 @@ extension PostParkingController: PostInfoControllerDelegate{
         self.mapImageController.parking = parking
     }
 }
+
+//delegate PostParkingDelegate {
+//    func startUploadImage(imageUrl: String)
+//    func uploadImageProgress(progress: Int)
+//}

@@ -16,6 +16,8 @@ class VerifyController: BaseViewController {
     
     @IBOutlet weak var controlButton: UIButton!
     
+    var postParkingController : PostParkingController!
+   
     var awsClient = AWSClient()
     
     override func viewDidLoad() {
@@ -29,7 +31,7 @@ class VerifyController: BaseViewController {
     @IBAction func postParkingEvent(sender: AnyObject) {
         // this version doesn't allow user cancel uploading
         controlButton.enabled = false
-        
+        postParkingController.upLoadParking()
        // 4. back to normal state
         controlButton.enabled = true
         uploadStatusTextView.text = "Finish"

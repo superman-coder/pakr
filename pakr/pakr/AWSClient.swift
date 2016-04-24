@@ -22,11 +22,10 @@ class AWSClient {
         FileUtils.createTemporaryDirectoryWithName("download")
     }
     
-    // MARK: upload image to Amazon S3 service
-    func uploadImage(user: String!, image: UIImage, success: String -> Void, error: Void -> Void, progress: Int -> Void) {
-        
+    // MARK: prepare for upload image.
+    func prepareUploadImage(user: String!, image: UIImage) -> (AWSS3TransferManagerUploadRequest, NSURL){
         // get data and compress from image
-        let imageData = UIImageJPEGRepresentation(image, 0.9);
+        let imageData = UIImageJPEGRepresentation(image, 0.5);
         
         // get file. and write to file. we just can send to amazon when having file url
         // let fileName = NSProcessInfo.processInfo().globallyUniqueString.stringByAppendingString(".jpeg")
@@ -45,15 +44,30 @@ class AWSClient {
         uploadRequest.contentType = "image/jpeg"
         uploadRequest.key = user + "/" + fileName!
         uploadRequest.bucket = Constants.AWS.S3BucketName
-        
+       
+        return (uploadRequest, fileURL)
+    }
+
+    // MARK: upload image to Amazon S3 service
+    func uploadImage(user: String!, image: UIImage, success: (String -> Void)?, error: (Void -> Void)?, progress: (Int -> Void)?) {
+        let (uploadRequest, fileURL) = prepareUploadImage(user, image: image)
         // upload this request
         upload(uploadRequest, success: success, error: error, progress: progress)
     }
+   
+    // MARK: add image request to queue for later download
+    func prepareImageRequest(user: String!, image: UIImage) {
+        let (uploadRequest, fileURL) = prepareUploadImage(user, image: image)
+        uploadRequests.append(uploadRequest)
+        uploadFileURLs.append(fileURL)
+    }
     
     // MARK: upload a single request to Amazon S3 service
-    func upload(uploadRequest: AWSS3TransferManagerUploadRequest, success: String -> Void, error: Void -> Void, progress: Int -> Void) {
+    func upload(uploadRequest: AWSS3TransferManagerUploadRequest, success: (String -> Void)?, error: (Void -> Void)?, progress: (Int -> Void)?) {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
-       
+        
+        // NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UploadStartEvent, object:
+        
         // set upload request progress callback
         uploadRequest.uploadProgress = {
             (bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) -> Void in
@@ -63,8 +77,9 @@ class AWSClient {
                         print("Upload finish")
                     } else {
                         let percent = Int(Double(totalBytesSent) / Double(totalBytesExpectedToSend) * 100)
+                        NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UploadProgressEvent, object: percent)
                         print (percent)
-                        progress(percent)
+                        progress?(percent)
                     }
                 }
             })
@@ -103,7 +118,8 @@ class AWSClient {
                 dispatch_async(dispatch_get_main_queue(), {
                     () -> Void in
                     let url = Constants.AWS.AWS_DOMAIN + uploadRequest.key!
-                    success(url)
+                    NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UploadDoneEvent, object: url)
+                    success?(url)
                 })
             }
             
@@ -143,7 +159,7 @@ class AWSClient {
             break
         }
     }
-    
+   
     // MARK: Download all files
     func downloadAll(success: Void -> Void, error: Void -> Void) {
         for (_, value) in self.downloadRequests.enumerate() {
@@ -154,6 +170,26 @@ class AWSClient {
             }
         }
     }
+    
+    // MARK: Upload all files
+    func uploadAll() {
+        for (index, value) in self.uploadRequests.enumerate() {
+            if let uploadRequest = value {
+                if uploadRequest.state == .NotStarted || uploadRequest.state == .Paused {
+                    self.upload(uploadRequest,
+                        success: { (fileUrl) in
+                            self.uploadFileURLs[index] = nil
+                            self.uploadRequests[index] = nil
+                        }, error: { (Void) in
+                            // currently do nothing here
+                        }, progress: { (progress) in
+                            // currently do nothing here
+                    })
+                }
+            }
+        }
+    }
+    
     
     func cancelAllUploads() {
         for (_, uploadRequest) in self.uploadRequests.enumerate() {
