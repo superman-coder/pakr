@@ -27,7 +27,7 @@ class PakrTabBarController: UIKit.UITabBarController {
         viewControllers.append(mapController)
         
         navController = UINavigationController()
-        let listParkingController = ParkingListController(nibName: "ParkingListController", bundle: nil)
+        let listParkingController = SearchController(nibName: "SearchController", bundle: nil)
         let listItem = UITabBarItem(title: "Search", image: UIImage(named: "search.png"), tag: 1)
         listParkingController.tabBarItem = listItem
         navController.viewControllers = [listParkingController]

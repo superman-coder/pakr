@@ -7,14 +7,14 @@ import Foundation
 
 class Post: NSObject {
 
-    let postId: String!
-    let userId: String!
-    var user: User?
-    let dateCreated: NSDate!
+    static let PKPostUser = "user"
     
-    init(postId: String!, userId: String!, dateCreated: NSDate!) {
-        self.postId = postId
+    var postId: String?
+    var userId: String!
+    var user: User?
+    var dateCreated: NSDate!
+    
+    init(userId: String!) {
         self.userId = userId
-        self.dateCreated = dateCreated
     }
 }

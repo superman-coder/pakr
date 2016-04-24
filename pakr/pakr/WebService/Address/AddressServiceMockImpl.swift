@@ -6,8 +6,12 @@
 import Foundation
 
 class AddressServiceMockImpl: NSObject, AddressService {
-    func getNearByParkingLotByLocation(location location: Coordinate,  radius: Float, success:([Topic] -> Void), fail: (NSError -> Void)) {
+    func getNearByParkingLotByLocation(latitude: Double!, longitude: Double,  radius: Double, success:([Topic] -> Void), fail: (NSError -> Void)) {
         let res = Repository.TopicRepos
         success(res)
+    }
+    
+    func getNearByParkingByAddressName(address: String, radius: Double, success: ([Topic] -> Void), fail: (NSError -> Void)) {
+        
     }
 }

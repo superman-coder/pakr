@@ -35,7 +35,7 @@ class DataServiceUtils: NSObject {
         let lastCLLocation = lastLocation.CLLocationPoint()
         let newCLLocation = newLocation.CLLocationPoint()
         let distance = newCLLocation.distanceFromLocation(lastCLLocation)
-        print("Distance from \(lastLocation) to \(newLocation) is \(distance)")
+//        print("Distance from \(lastLocation) to \(newLocation) is \(distance)")
         return distance > (lastDataLoadingRadius * 2/3);
     }
 }

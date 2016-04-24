@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingListController" customModule="pakr" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchController" customModule="pakr" customModuleProvider="target">
             <connections>
                 <outlet property="parkingTableView" destination="Vwa-0m-Gjv" id="HbC-et-Qbg"/>
                 <outlet property="view" destination="Bvj-3T-POh" id="7yq-kJ-YHk"/>

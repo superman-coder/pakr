@@ -6,16 +6,20 @@
 import Foundation
 import UIKit
 
-class ParkingListController: UIViewController {
+class SearchController: UIViewController {
     
     @IBOutlet weak var parkingTableView: UITableView!
-    var parkSearchResult: [Topic]! = JSONUtils.dummyTopicList
+    var parkSearchResult: [Topic]! = []
     
-    internal var addressService: AddressService!
+    var searchTriggerTimer:NSTimer?
+    
+    internal var addressService = WebServiceFactory.getAddressService()
+    let searchBar = UISearchBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
+        initSearchBar()
     }
     
     func initTableView() {
@@ -27,11 +31,19 @@ class ParkingListController: UIViewController {
         parkingTableView.delegate = self
         parkingTableView.dataSource = self
     }
+    
+    func initSearchBar() {
+        searchBar.delegate = self
+        self.navigationItem.titleView = searchBar
+    }
+    
+    
 }
 
-extension ParkingListController: UITableViewDataSource, UITableViewDelegate {
+extension SearchController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ParkingResultCell") as! ParkingResultCell
+        cell.configWithTopic(parkSearchResult[indexPath.row])
         return cell
     }
     
@@ -67,3 +79,29 @@ extension ParkingListController: UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.pushViewController(detailVc, animated: true)
     }
 }
+
+extension SearchController: UISearchBarDelegate {
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.characters.count == 0 {
+            parkSearchResult.removeAll()
+            parkingTableView.reloadData()
+            return
+        }
+        
+        searchTriggerTimer?.invalidate()
+        searchTriggerTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(SearchController.requestSearchPlaces(_:)), userInfo: searchText, repeats: false)
+    }
+    
+    func requestSearchPlaces(sender:NSTimer) {
+        let searchText = sender.userInfo as! String
+        addressService.getNearByParkingByAddressName(searchText, radius: 800, success: { topics in
+            self.parkSearchResult.removeAll()
+            self.parkSearchResult.appendContentsOf(topics)
+            self.parkingTableView.reloadData()
+            }) { error in
+                
+        }
+    }
+    
+}
+
