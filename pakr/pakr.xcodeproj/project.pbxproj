@@ -110,7 +110,7 @@
 		D654A38A1CC36A000095F74D /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3871CC36A000095F74D /* FacebookAuth.swift */; };
 		D654A38B1CC36A000095F74D /* GoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3881CC36A000095F74D /* GoogleAuth.swift */; };
 		D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A38D1CC36A6C0095F74D /* SocialAuth.swift */; };
-		D66128771CCCEFBA00B435A8 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66128761CCCEFBA00B435A8 /* DownloadManager.swift */; };
+		D66128791CCCF8FD00B435A8 /* UploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66128781CCCF8FD00B435A8 /* UploadManager.swift */; };
 		D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */; };
 		D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */; };
 		D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */; };
@@ -230,7 +230,7 @@
 		D654A3871CC36A000095F74D /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookAuth.swift; path = Manager/FacebookAuth.swift; sourceTree = "<group>"; };
 		D654A3881CC36A000095F74D /* GoogleAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAuth.swift; path = Manager/GoogleAuth.swift; sourceTree = "<group>"; };
 		D654A38D1CC36A6C0095F74D /* SocialAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialAuth.swift; path = Manager/SocialAuth.swift; sourceTree = "<group>"; };
-		D66128761CCCEFBA00B435A8 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadManager.swift; path = DataManager/DownloadManager.swift; sourceTree = "<group>"; };
+		D66128781CCCF8FD00B435A8 /* UploadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadManager.swift; path = DataManager/UploadManager.swift; sourceTree = "<group>"; };
 		D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Login/LoginController.swift; sourceTree = "<group>"; };
 		D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/LoginController.xib; sourceTree = "<group>"; };
@@ -751,7 +751,7 @@
 		D66128751CCCEF9200B435A8 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				D66128761CCCEFBA00B435A8 /* DownloadManager.swift */,
+				D66128781CCCF8FD00B435A8 /* UploadManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -952,6 +952,7 @@
 				B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
 				1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */,
+				D66128791CCCF8FD00B435A8 /* UploadManager.swift in Sources */,
 				B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */,
 				B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */,
 				B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */,
@@ -1011,7 +1012,6 @@
 				B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */,
 				D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */,
 				B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */,
-				D66128771CCCEFBA00B435A8 /* DownloadManager.swift in Sources */,
 				B7E6AF0C09C71FD4655C185F /* PakrNavigationController.swift in Sources */,
 				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
 				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,

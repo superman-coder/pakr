@@ -8,16 +8,17 @@
 
 import Foundation
 
-class DownloadManager {
+class UploadManager {
     
     var count = 0
     var arrImages: [UIImage]
     let  awsClient: AWSClient
     let  authService: AuthService
     var topic: Topic!
+    var arrImages: [UIImage]
     
-    init(arrImages: [UIImage]) {
-        self.arrImages = arrImages
+    init(topic: Topic) {
+        self.topic = topic
         awsClient = AWSClient()
         authService = WebServiceFactory.getAuthService()
         
@@ -30,9 +31,7 @@ class DownloadManager {
     }
     
     func progressEvent(notification: NSNotification) {
-        print("hahaha")
         let progress = notification.valueForKey(EventSignal.UploadProgressEvent)
-        print("hahaha. \(progress)")
     }
     
     func doneEvent(notification: NSNotification) {
@@ -45,7 +44,17 @@ class DownloadManager {
         }
     }
     
-    func startDownload(topic: Topic) {
-        self.topic = topic
+    func startUpload() {
+    }
+    
+    func uploadTopic() {
+        
+    }
+    
+    func updateUI2(serverUrl: String, index: Int) {
+        
+    }
+    func updateUI(progress: Int) {
+        
     }
 }
