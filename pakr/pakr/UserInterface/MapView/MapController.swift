@@ -6,6 +6,7 @@
 import Foundation
 import UIKit
 import MapKit
+import Parse
 
 let MAP_DEFAULT_RADIUS:CLLocationDistance = 800
 
@@ -100,21 +101,26 @@ class MapController: UIViewController {
         
         let distance = bottomrightLocation.distanceFromLocation(topleftLocation)
         let radius = (distance > 0 ? distance : -distance) / 2
-        print("Radius of data load \(radius)")
+//        print("Radius of data load \(radius)")
         
         return radius
     }
     
     func loadDataWithCenter(latitude:Double, longitude:Double, radius:Double) {
-        print("Load data with center: (\(latitude),\(longitude)) radius: \(radius)")
-        parkingList = JSONUtils.dummyTopicList
-        reload()
+//        print("Load data with center: (\(latitude),\(longitude)) radius: \(radius)")
+        WebServiceFactory.getAddressService().getNearByParkingLotByLocation(latitude, longitude: longitude, radius: radius, success: { topics in
+            self.parkingList = topics
+                self.reload()
+            }) { error in
+                
+        }
+//        parkingList = JSONUtils.dummyTopicList
+        
     }
 }
 
 extension MapController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        print("UPDATE")
         currentCenterLocation = mapView.region.center
         
         let mapViewRadius = self.mapViewRadius()

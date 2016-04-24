@@ -12,16 +12,18 @@ import Parse
 
 class Parking: NSObject, ParseModelProtocol {
 
-    let PKBusiness = "business"
-    let PKParkingName = "parking_name"
-    let PKCapacity = "capacity"
-    let PKAddressName = "address"
-    let PKCoordinate = "coordinate"
-    let PKVerified = "verified"
-    let PKVehicles = "vehicles"
-    let PKRegions = "regions"
-    let PKImageUrls = "images"
-    let PKSchedule = "schedule"
+    static let PKBusiness = "business"
+    static let PKParkingName = "parking_name"
+    static let PKCapacity = "capacity"
+    static let PKAddressName = "address"
+    static let PKCoordinate = "coordinate"
+    static let PKVerified = "verified"
+    static let PKVehicles = "vehicles"
+    static let PKRegions = "regions"
+    static let PKImageUrls = "images"
+    static let PKSchedule = "schedule"
+    
+    var parkingId: String?
     
     let business: Business!
     var dateCreated: NSDate?
@@ -144,24 +146,26 @@ class Parking: NSObject, ParseModelProtocol {
     }
 
     required init(pfObject: PFObject) {
-        parkingName = pfObject[PKParkingName] as! String
-        capacity = pfObject[PKCapacity] as! Int
-        addressName = pfObject[PKAddressName] as! String
-        verify = pfObject[PKVerified] as! Bool
-        region = pfObject[PKRegions] as! [String]
-        imageUrl = pfObject[PKImageUrls] as? [String]
+        parkingId = pfObject.objectId
         
-        business = Business(dict: pfObject[PKBusiness] as! NSDictionary)
-        coordinate = Coordinate(pfObject: pfObject[PKCoordinate] as! PFGeoPoint)
+        parkingName = pfObject[Parking.PKParkingName] as! String
+        capacity = pfObject[Parking.PKCapacity] as! Int
+        addressName = pfObject[Parking.PKAddressName] as! String
+        verify = pfObject[Parking.PKVerified] as! Bool
+        region = pfObject[Parking.PKRegions] as! [String]
+        imageUrl = pfObject[Parking.PKImageUrls] as? [String]
         
-        let vehicles = pfObject[PKVehicles] as! [NSDictionary]
+        business = Business(dict: pfObject[Parking.PKBusiness] as! NSDictionary)
+        coordinate = Coordinate(pfObject: pfObject[Parking.PKCoordinate] as! PFGeoPoint)
+        
+        let vehicles = pfObject[Parking.PKVehicles] as! [NSDictionary]
         vehicleList = []
         for dict in vehicles {
             vehicleList.append(VehicleDetail(dict: dict))
         }
         
         schedule = []
-        let schedules = pfObject[PKSchedule] as! [NSDictionary]
+        let schedules = pfObject[Parking.PKSchedule] as! [NSDictionary]
         for dict in schedules {
             schedule.append(TimeRange(dict: dict))
         }
@@ -170,30 +174,30 @@ class Parking: NSObject, ParseModelProtocol {
     }
     
     func toPFObject() -> PFObject {
-        let parkingPF = PFObject(className: Constants.Table.PARKING)
+        let parkingPF = PFObject(className: Constants.Table.Parking)
         
-        parkingPF[PKParkingName] = parkingName
-        parkingPF[PKCapacity] = capacity
-        parkingPF[PKAddressName] = addressName
-        parkingPF[PKVerified] = verify
-        parkingPF[PKRegions] = region
-        parkingPF[PKImageUrls] = imageUrl == nil ? NSNull() : imageUrl
+        parkingPF[Parking.PKParkingName] = parkingName
+        parkingPF[Parking.PKCapacity] = capacity
+        parkingPF[Parking.PKAddressName] = addressName
+        parkingPF[Parking.PKVerified] = verify
+        parkingPF[Parking.PKRegions] = region
+        parkingPF[Parking.PKImageUrls] = imageUrl == nil ? NSNull() : imageUrl
         
-        parkingPF[PKBusiness] = business.toDictionary()
+        parkingPF[Parking.PKBusiness] = business.toDictionary()
         
-        parkingPF[PKCoordinate] = coordinate.toGeoPointObject()
+        parkingPF[Parking.PKCoordinate] = coordinate.toGeoPointObject()
         
         var vehicles = [NSDictionary]()
         for v in vehicleList {
             vehicles.append(v.toDictionary())
         }
-        parkingPF[PKVehicles] = vehicles
+        parkingPF[Parking.PKVehicles] = vehicles
         
         var timeRanges = [NSDictionary]()
         for range in schedule {
             timeRanges.append(range.toDictionary())
         }
-        parkingPF[PKSchedule] = timeRanges
+        parkingPF[Parking.PKSchedule] = timeRanges
         
         return parkingPF
     }

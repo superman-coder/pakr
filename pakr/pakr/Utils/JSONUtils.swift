@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class JSONUtils: NSObject {
 
@@ -29,9 +30,20 @@ class JSONUtils: NSObject {
         var topics:[Topic] = []
         for dic in jsonObj{
             let parking = Parking(dic: dic as! NSDictionary)
-            let topic = Topic(topicId: "0", userId: "0", date: NSDate(), parking: parking, rating: 0)
-            topics.append(topic)
+//            let topic = Topic(topicId: "0", userId: "0", date: NSDate(), parking: parking, rating: 0)
+//            topics.append(topic)
         }
         return topics
+    }
+    
+    class func saveParkingList() {
+        let parkinglist = dummyParkingList
+        let user = WebServiceFactory.getAuthService().getLoginUser()
+        var objects = [PFObject]()
+        for parking in parkinglist {
+            let topic = Topic(userId: user?.userId, parking: parking, rating: 0)
+            objects.append(topic.toPFObject())
+        }
+        PFObject.saveAllInBackground(objects)
     }
 }
