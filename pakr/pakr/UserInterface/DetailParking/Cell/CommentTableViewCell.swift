@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class CommentTableViewCell: UITableViewCell {
+    @IBOutlet weak var imgUserCm: UIImageView!
+    @IBOutlet weak var lblUserNameCm: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +29,11 @@ class CommentTableViewCell: UITableViewCell {
     class func initCommentCellFromNib () ->CommentTableViewCell {
         return UINib(nibName: "CommentTableViewCell", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as!CommentTableViewCell
     }
+    func disPlay(urlAvata: String, name: String){
+        lblUserNameCm.text = name
+        self.imgUserCm.setImageWithURL(NSURL(string: urlAvata)!, placeholderImage: nil)
+    }
+    
     class func initSeeAllComment() ->CommentTableViewCell {
         return UINib(nibName: "CommentTableViewCell", bundle: nil).instantiateWithOwner(nil, options: nil)[2] as!CommentTableViewCell
     }

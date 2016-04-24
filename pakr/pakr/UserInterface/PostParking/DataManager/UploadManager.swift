@@ -29,9 +29,9 @@ class UploadManager: NSObject {
         
         super.init()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.startEvent(_:)), name: EventSignal.UploadStartEvent, object: self)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.progressEvent(_:)), name: EventSignal.UploadProgressEvent, object: self)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.doneEvent(_:)), name: EventSignal.UploadDoneEvent, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(UploadManager.startEvent(_:)), name: EventSignal.UploadStartEvent, object: self)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(UploadManager.progressEvent(_:)), name: EventSignal.UploadProgressEvent, object: self)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(UploadManager.doneEvent(_:)), name: EventSignal.UploadDoneEvent, object: nil)
     }
     
     func startEvent(notification: NSNotification) {

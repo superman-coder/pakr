@@ -19,9 +19,13 @@ class PostParkingController: BaseViewController {
     
     var authService: AuthService!
     var awsClient: AWSClient!
+    var uploadManager: UploadManager!
     
     @IBOutlet weak var stepViewContainer: UIView!
     var stepView: AYStepperView!
+    
+    var arrStepButton: NSArray!
+    var currentIndex: Int = 0
     
     @IBOutlet weak var containerView: UIView!
     
@@ -35,7 +39,7 @@ class PostParkingController: BaseViewController {
         setUpPageView()
     }
     
-    //MARK - Private Method
+    
     func setUpNavigationBar() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PostParkingController.onCreateParkingLot))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(PostParkingController.onCancelCreate))
@@ -46,12 +50,65 @@ class PostParkingController: BaseViewController {
     func setUpStepView() {
         stepView = AYStepperView(
             frame: stepViewContainer.bounds,
-            titles: ["Step 1", "Step 2", "Step 3"])
+            titles: ["Step 1", "Step 2", "Step 3", ""])
         stepView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
         stepView.userInteractionEnabled = true
         stepViewContainer.addSubview(stepView)
+        arrStepButton = self.stepView.stepButtons
+        
+        for button in arrStepButton {
+            let  buttonStep =  button as! UIButton
+            buttonStep.tag = arrStepButton.indexOfObject(button)
+            buttonStep.addTarget(self, action: #selector(PostParkingController.touchUpInSideStepButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        }
     }
     
+    func touchUpInSideStepButton(sender: UIButton){
+        if sender.tag < currentIndex {
+            updateData(sender.tag)
+        }else if sender.tag > currentIndex {
+            switch sender.tag {
+            case postInfoController.value:
+                if postInfoController.isNextStep() == true {
+                    updateData(sender.tag)
+                }
+                break
+            case mapImageController.value:
+                if mapImageController.isNextStep() == true {
+                    updateData(sender.tag)
+                }
+                break
+            default:
+                break
+            }
+        }
+    }
+    
+    func updateData(index: Int){
+        currentIndex = index
+        updateStepViewToIndex(index)
+        updatePageControl(index)
+    }
+    
+    func updateStepViewToIndex(index: Int) {
+        if index ==  2 {
+            self.stepView.userInteractionEnabled = false
+            self.stepView.updateCurrentStepIndex(3, completionBlock: {
+                Void -> Void in
+                self.stepView.userInteractionEnabled = true
+            })
+        }else{
+            self.stepView.userInteractionEnabled = false
+            self.stepView.updateCurrentStepIndex(UInt(index), completionBlock: {
+                Void -> Void in
+                self.stepView.userInteractionEnabled = true
+            })
+        }
+    }
+    
+    func updatePageControl(index: Int){
+        pageController.reloadPagesToCurrentPageIndex(index)
+    }
     func setUpPageView() {
         postInfoController = PostInfoController(nibName: "PostInfoController", bundle: nil)
         postInfoController.delegate = self
@@ -62,46 +119,23 @@ class PostParkingController: BaseViewController {
         
         pageController = MBXPageViewController()
         pageController.MBXDataSource = self
-        pageController.MBXDataDelegate = self
         pageController.reloadPages()
         for view in self.pageController.view.subviews{
-      let scroll = view as! UIScrollView
+            let scroll = view as! UIScrollView
             if scroll .isKindOfClass(UIScrollView){
                 scroll.scrollEnabled = false
             }
         }
     }
     
-    var count = 0
-    var arrImages: [UIImage]!
-    
-    func startEvent(notification: NSNotification) {
-        
-    }
-    
-    func progressEvent(notification: NSNotification) {
-        print("hahaha")
-        let progress = notification.valueForKey(EventSignal.UploadProgressEvent)
-        print("hahaha. \(progress)")
-    }
-    
-    func doneEvent(notification: NSNotification) {
-        count = count + 1
-        if count < arrImages.count {
-            print("start to download image \(count)")
-            awsClient.uploadImage(authService.getLoginUser()?.email, image: arrImages[count], success: nil, error: nil, progress: nil)
-        } else {
-            print("Download all finish :D")
-        }
-    }
-    
     func onSwitchScreen(sender: UIButton) {
-//        print("click")
+        //        print("click")
         let position = sender.tag
         stepView.updateCurrentStepIndex(UInt(position), completionBlock: {
             Void -> Void in
         })
     }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -111,14 +145,12 @@ class PostParkingController: BaseViewController {
     }
     
     func onCancelCreate(sender: AnyObject) {
-       navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewControllerAnimated(true)
     }
     
     func uploadAllImages() {
         
     }
-   
-    var uploadManager: UploadManager!
     
     func upLoadParking() {
         var arrImages : [UIImage] = []
@@ -150,19 +182,19 @@ class PostParkingController: BaseViewController {
             let carDetail = VehicleDetail(vehicleType: VehicleType.Car, minPrice: postInfoController.carMinPriceTextField.text, maxPrice: postInfoController.carMaxPriceTextField.text, note: "")
             vehicleDetails.append(carDetail)
         }
-
+        
         // create time range
         let timeRange = postInfoController.arrTimeRange.copy() as! [TimeRange]
         
         let parking = Parking(business: business, parkingName: postInfoController.parkingNameTextField.text, capacity: 20, addressName: postInfoController.parkingAddressTextField.text!, coordinate: mapImageController.parkingLocation!.coordinate(), vehicleDetailList: vehicleDetails, schedule: timeRange, region: [])
         
         let topic = Topic(userId: authService.getLoginUser()?.userId, parking: parking, rating: 0)
-  
+        
         // start uploading data
         uploadManager = UploadManager(topic: topic, arrImages: arrImages, delegate: verifyController)
         uploadManager.startUpload()
     }
-  
+    
     
     
     @IBAction func onTap(sender: UITapGestureRecognizer) {
@@ -172,7 +204,7 @@ class PostParkingController: BaseViewController {
 
 extension PostParkingController: MBXPageControllerDataSource {
     func MBXPageButtons() -> [AnyObject]! {
-        return self.stepView.stepButtons as NSArray as [AnyObject]
+        return [UIButton()]
     }
     
     func MBXPageControllers() -> [AnyObject]! {
@@ -184,24 +216,9 @@ extension PostParkingController: MBXPageControllerDataSource {
     }
 }
 
-extension PostParkingController: MBXPageControllerDataDelegate {
-    func MBXPageChangedToIndex(index: Int) {
-//        print("click \(index)")
-        self.stepView.userInteractionEnabled = false
-        self.stepView.updateCurrentStepIndex(UInt(index), completionBlock: {
-            Void -> Void in
-            self.stepView.userInteractionEnabled = true
-        })
-    }
-}
 
 extension PostParkingController: PostInfoControllerDelegate{
     func nextStep(parking: Parking) {
         self.mapImageController.parking = parking
     }
 }
-
-//delegate PostParkingDelegate {
-//    func startUploadImage(imageUrl: String)
-//    func uploadImageProgress(progress: Int)
-//}
