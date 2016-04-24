@@ -48,6 +48,7 @@ class PostParkingController: BaseViewController {
         postInfoController = PostInfoController(nibName: "PostInfoController", bundle: nil)
         postInfoController.delegate = self
         mapImageController = SelectMapImageController(nibName: "SelectMapImageController", bundle: nil)
+        mapImageController.postParkingController = self
         verifyController = VerifyController(nibName: "VerifyController", bundle: nil)
         
         pageController = MBXPageViewController()
