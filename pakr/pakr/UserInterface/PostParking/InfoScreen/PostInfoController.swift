@@ -27,6 +27,7 @@ class PostInfoController: BaseViewController {
     
     @IBOutlet weak var workTimeTableView: UITableView!
     @IBOutlet weak var noteWorkTime: TextField!
+    @IBOutlet weak var capacityTextField: TextField!
     
     @IBOutlet weak var contentMarginBottom: NSLayoutConstraint!
     @IBOutlet weak var parkingInfoContainer: UIView!
@@ -130,6 +131,7 @@ class PostInfoController: BaseViewController {
         LayoutUtils.setUpTextField(carMinPriceTextField, title: "Min Price", suggestionText: "Let us know more")
         LayoutUtils.setUpTextField(carMaxPriceTextField, title: "Max Price", suggestionText: "Let us know more")
         LayoutUtils.setUpTextField(noteWorkTime, title: "This is notes for workTime", suggestionText: "Let us know more")
+        LayoutUtils.setUpTextField(capacityTextField, title: "This is capacity", suggestionText: "Let us know more")
         
         businessNameTextField.delegate = self
         businessDescriptionTextField.delegate = self
@@ -144,6 +146,7 @@ class PostInfoController: BaseViewController {
         carMinPriceTextField.delegate = self
         carMaxPriceTextField.delegate = self
         noteWorkTime.delegate = self
+        capacityTextField.delegate = self
     }
     func registryNotifyKeyBoard(){
         NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(PostInfoController.keyBoardShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
