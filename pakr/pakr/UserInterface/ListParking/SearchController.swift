@@ -8,9 +8,17 @@ import UIKit
 
 class SearchController: UIViewController {
     
-    @IBOutlet weak var parkingTableView: UITableView!
-    var parkSearchResult: [Topic]! = []
+    @IBOutlet weak var emptyView: UIView!
+    // Inside status view (empty view)
+    @IBOutlet weak var statusImageView: UIImageView!
+    @IBOutlet weak var statusLabel: UILabel!
     
+    
+    @IBOutlet weak var parkingTableView: UITableView!
+    
+    @IBOutlet weak var tableBottomToSuperViewConstraint: NSLayoutConstraint!
+    
+    var parkSearchResult: [Topic]! = []
     var searchTriggerTimer:NSTimer?
     
     internal var addressService = WebServiceFactory.getAddressService()
@@ -20,6 +28,18 @@ class SearchController: UIViewController {
         super.viewDidLoad()
         initTableView()
         initSearchBar()
+        
+        showWelcomeInStatusView()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SearchController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SearchController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self, forKeyPath: UIKeyboardWillShowNotification)
+        NSNotificationCenter.defaultCenter().removeObserver(self, forKeyPath: UIKeyboardWillHideNotification)
     }
     
     func initTableView() {
@@ -35,9 +55,49 @@ class SearchController: UIViewController {
     func initSearchBar() {
         searchBar.delegate = self
         self.navigationItem.titleView = searchBar
+        searchBar.tintColor = UIColor.primaryColor()
+        searchBar.autocorrectionType = .No
     }
     
+    func reloadData() {
+        parkingTableView.reloadData()
+    }
     
+    func keyboardWillShow(notification:NSNotification) {
+        let userInfo = notification.userInfo! as NSDictionary
+        let keyboardSizeValue = userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue
+        let keyboardSize = keyboardSizeValue.CGRectValue().size
+        let animDurationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
+        let animCurveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        
+        self.view.layoutIfNeeded()
+        UIView.animateWithDuration(animDurationValue.doubleValue,
+                                   delay: 0,
+                                   options: UIViewAnimationOptions(rawValue: UInt(animCurveValue.integerValue << 16)),
+                                   animations: {
+                                    self.tableBottomToSuperViewConstraint.constant = keyboardSize.height
+                                    self.view.layoutIfNeeded()
+            },
+                                   completion: nil
+        )
+    }
+    
+    func keyboardWillHide(notification:NSNotification) {
+        let userInfo = notification.userInfo! as NSDictionary
+        let animDurationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
+        let animCurveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        
+        self.view.layoutIfNeeded()
+        UIView.animateWithDuration(animDurationValue.doubleValue,
+                                   delay: 0,
+                                   options: UIViewAnimationOptions(rawValue: UInt(animCurveValue.integerValue << 16)),
+                                   animations: {
+                                    self.tableBottomToSuperViewConstraint.constant = 0
+                                    self.view.layoutIfNeeded()
+            },
+                                   completion: nil
+        )
+    }
 }
 
 extension SearchController: UITableViewDataSource, UITableViewDelegate {
@@ -81,10 +141,15 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension SearchController: UISearchBarDelegate {
+    
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        searchBar.setShowsCancelButton(true, animated: true)
+        return true
+    }
+    
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.characters.count == 0 {
-            parkSearchResult.removeAll()
-            parkingTableView.reloadData()
+            handleSearchResult(nil, error: nil)
             return
         }
         
@@ -95,13 +160,52 @@ extension SearchController: UISearchBarDelegate {
     func requestSearchPlaces(sender:NSTimer) {
         let searchText = sender.userInfo as! String
         addressService.getNearByParkingByAddressName(searchText, radius: 800, success: { topics in
-            self.parkSearchResult.removeAll()
-            self.parkSearchResult.appendContentsOf(topics)
-            self.parkingTableView.reloadData()
+            self.handleSearchResult(topics, error: nil)
             }) { error in
-                
+               self.handleSearchResult(nil, error: error)
         }
     }
     
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+        self.searchBar(searchBar, textDidChange: "")
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
+    func handleSearchResult(topics:[Topic]?, error:NSError?) {
+        if let error = error {
+            showStatusErrorInStatusView(error)
+        }
+        
+        self.parkSearchResult.removeAll()
+        if let topics = topics {
+            self.parkSearchResult.appendContentsOf(topics)
+        }
+        
+        if self.parkSearchResult.count > 0 {
+            parkingTableView.hidden = false
+            emptyView.hidden = true
+        } else {
+            parkingTableView.hidden = true
+            emptyView.hidden = false
+        }
+        reloadData()
+    }
+    
+    func showStatusErrorInStatusView(error:NSError) {
+        statusImageView.image = UIImage(named: "angry")
+        statusLabel.text = "Oops, something went wrong!"
+    }
+    
+    func showWelcomeInStatusView() {
+        statusImageView.image = UIImage(named: "troll")
+        statusLabel.text = "Let's search for parking lots"
+    }
+    
+    func showNoDataStatusInStatusView() {
+        statusImageView.image = UIImage(named: "troll")
+        statusLabel.text = "No data there"
+    }
 }
 

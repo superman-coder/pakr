@@ -24,6 +24,7 @@
 		7274B8D41CC2884B007E4B82 /* PakrImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */; };
 		7274B8E21CC32CF9007E4B82 /* GMServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274B8E11CC32CF9007E4B82 /* GMServices.swift */; };
 		7295DE671CC13F030001B852 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7295DE651CC13F030001B852 /* Images.xcassets */; };
+		72E678121CCCBC630045CB00 /* UIColor+Pakr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E678111CCCBC630045CB00 /* UIColor+Pakr.swift */; };
 		B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A43E71032DC2B0D1F1CF /* Repository.swift */; };
 		B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A22BC922751D53642CFB /* PostInfoController.xib */; };
 		B7E6A0786F719E522F61EE28 /* UserHandlerMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A21D1C8EEE8A1850D968 /* UserHandlerMockImpl.swift */; };
@@ -91,7 +92,6 @@
 		D60598C71CC42136009C5BEB /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C61CC42136009C5BEB /* AWSCognito.framework */; };
 		D60598C91CC421A3009C5BEB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598C81CC421A3009C5BEB /* libsqlite3.tbd */; };
 		D60598CB1CC421AC009C5BEB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D60598CA1CC421AC009C5BEB /* libz.tbd */; };
-		D60598D51CC4A863009C5BEB /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */; };
 		D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */; };
 		D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598D31CC4A863009C5BEB /* ReviewViewController.swift */; };
 		D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D41CC4A863009C5BEB /* ReviewViewController.xib */; };
@@ -136,6 +136,7 @@
 		7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrImageUtils.swift; sourceTree = "<group>"; };
 		7274B8E11CC32CF9007E4B82 /* GMServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMServices.swift; sourceTree = "<group>"; };
 		7295DE651CC13F030001B852 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		72E678111CCCBC630045CB00 /* UIColor+Pakr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Pakr.swift"; path = "Extensions/UIColor+Pakr.swift"; sourceTree = "<group>"; };
 		8883172CD0A6C2613E2AB210 /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
 		9870136ADB30BD79474A430C /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E6A032DDDCAB9FB073B82B /* WebServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceFactory.swift; sourceTree = "<group>"; };
@@ -180,11 +181,9 @@
 		B7E6A946454CF4EFFE32706D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		B7E6A99549118700A88D2B9C /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		B7E6AA27BF66F1D94F9CEBEB /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingResultCell.swift; sourceTree = "<group>"; };
-		B7E6AB0F139FACFD90203504 /* SearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
-		B7E6AAACA61109CB4F832B73 /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
 		B7E6AB3FEFBC936273E16A5B /* CustomTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimePicker.m; sourceTree = "<group>"; };
 		B7E6AC26C7397ACAC46579E1 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
-		B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrCLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PakrCLLocationCoordinate2D.swift; path = Utils/PakrCLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		B7E6AC6D92106C69A930C5BE /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		B7E6ACEFDD142635A5538916 /* PostInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInfoController.swift; sourceTree = "<group>"; };
 		B7E6ACFA00B87FBB2B3A50D1 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
@@ -210,10 +209,6 @@
 		D60598C61CC42136009C5BEB /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = pakr/Sdk/Aws/extras/AWSCognito.framework; sourceTree = "<group>"; };
 		D60598C81CC421A3009C5BEB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D60598CA1CC421AC009C5BEB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		D60598CF1CC4A863009C5BEB /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentTableViewCell.swift; path = Children/Controller/CommentTableViewCell.swift; sourceTree = "<group>"; };
-		D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = Children/Controller/CommentTableViewCell.xib; sourceTree = "<group>"; };
-		D60598D11CC4A863009C5BEB /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewDetailViewController.swift; path = Children/Controller/ReviewDetailViewController.swift; sourceTree = "<group>"; };
-		D60598D21CC4A863009C5BEB /* ReviewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewDetailViewController.xib; path = Children/Controller/ReviewDetailViewController.xib; sourceTree = "<group>"; };
 		D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = ../Children/Controller/CommentTableViewCell.xib; sourceTree = "<group>"; };
 		D60598D31CC4A863009C5BEB /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewViewController.swift; path = Children/Controller/ReviewViewController.swift; sourceTree = "<group>"; };
 		D60598D41CC4A863009C5BEB /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewViewController.xib; path = Children/Controller/ReviewViewController.xib; sourceTree = "<group>"; };
@@ -538,7 +533,6 @@
 			isa = PBXGroup;
 			children = (
 				B7E6A091AAB6F9843BAE5107 /* LayoutUtils.swift */,
-				B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */,
 				B7E6A3B5CC8A67FAFE783663 /* DataServiceUtils.swift */,
 				B7E6A401D78FD167E1317138 /* JSONUtils.swift */,
 				7274B8D31CC2884B007E4B82 /* PakrImageUtils.swift */,
@@ -784,8 +778,10 @@
 		D6A14E611CC2CD5A00BC6A64 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */,
 				D60598EE1CC963F7009C5BEB /* UIImage+Resize.swift */,
 				D60598F51CC9E79E009C5BEB /* MD5.swift */,
+				72E678111CCCBC630045CB00 /* UIColor+Pakr.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -989,6 +985,7 @@
 				10D1A8B21CC64B29002867BC /* CommentTableViewCell.swift in Sources */,
 				B7E6A1770D75BCAC87B58ED1 /* ProfileController.swift in Sources */,
 				D654A38B1CC36A000095F74D /* GoogleAuth.swift in Sources */,
+				72E678121CCCBC630045CB00 /* UIColor+Pakr.swift in Sources */,
 				B7E6AA2D5F5E58C520E27A33 /* MoreInfoViewController.swift in Sources */,
 				B7E6A5C323135FB8258548DA /* MapDetailViewController.swift in Sources */,
 				D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */,

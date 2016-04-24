@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // setup navigation bar style
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().barTintColor = LayoutUtils.UIColorFromRGB(Constants.Color.PrimaryColor)
+        UINavigationBar.appearance().barTintColor = UIColor.primaryColor()
         
         let barAttributes :Dictionary = [NSFontAttributeName: UIFont.boldSystemFontOfSize(18),
                                       NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -59,16 +59,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // tab bar item normal state
         var tabBarItemAttributes :Dictionary = [NSFontAttributeName: UIFont.boldSystemFontOfSize(11),
-                                                NSForegroundColorAttributeName: LayoutUtils.UIColorFromRGB(0xE0E0E0)]
+                                                NSForegroundColorAttributeName: UIColor.UIColorFromRGB(0xE0E0E0)]
         UITabBarItem.appearance().setTitleTextAttributes(tabBarItemAttributes, forState: UIControlState.Normal)
         
         // tab bar item select state
         tabBarItemAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(11),
-                                                NSForegroundColorAttributeName: LayoutUtils.UIColorFromRGB(Constants.Color.PrimaryColor)]
+                                                NSForegroundColorAttributeName: UIColor.UIColorFromRGB(Constants.Color.PrimaryColor)]
         UITabBarItem.appearance().setTitleTextAttributes(tabBarItemAttributes, forState: UIControlState.Selected)
        
         // icon color when selected
-        UITabBar.appearance().tintColor = LayoutUtils.UIColorFromRGB(Constants.Color.PrimaryColor)
+        UITabBar.appearance().tintColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor)
         
         UITabBar.appearance().translucent = false
         UITabBar.appearance().backgroundColor = UIColor.blackColor()
