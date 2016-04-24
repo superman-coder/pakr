@@ -89,7 +89,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
             success: {
                 (user: User) -> Void in
                 print("User has registered")
-                self.mainScreen(user)
+                self.mainScreen()
             },
             // not register yet. start to register
             error: {
@@ -99,7 +99,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
                     success: {
                         Void -> Void in
                         print("register success")
-                        self.mainScreen(user)
+                        self.mainScreen()
                     }, error: {
                         NSError -> Void in
                         print("register fail")
@@ -108,9 +108,8 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
         })
     }
    
-    func mainScreen(user: User) {
+    func mainScreen() {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        delegate.currentUser = user
         let rootViewController = PakrTabBarController()
         delegate.window?.rootViewController = rootViewController
         delegate.window?.makeKeyAndVisible()

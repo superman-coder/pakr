@@ -38,8 +38,8 @@ class SearchController: UIViewController {
     }
     
     override func viewDidDisappear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().removeObserver(self, forKeyPath: UIKeyboardWillShowNotification)
-        NSNotificationCenter.defaultCenter().removeObserver(self, forKeyPath: UIKeyboardWillHideNotification)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func initTableView() {
@@ -187,6 +187,7 @@ extension SearchController: UISearchBarDelegate {
             parkingTableView.hidden = false
             emptyView.hidden = true
         } else {
+            showNoDataStatusInStatusView()
             parkingTableView.hidden = true
             emptyView.hidden = false
         }
