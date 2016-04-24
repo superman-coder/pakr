@@ -108,8 +108,7 @@ class SelectMapImageController: BaseViewController {
         let addressPicker = AddressPickerController()
         addressPicker.delegate = self
 //        self.navigationController?.pushViewController(addressPicker, animated: true)
-        self.postParkingController!.navigationController?.presentViewController(addressPicker, animated: true, completion: nil)
-        self.postParkingController!.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        presentViewController(addressPicker, animated: true, completion: nil)
     }
 }
 extension SelectMapImageController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -150,7 +149,7 @@ extension SelectMapImageController: AddressPickerDelegate {
         parkingLocation = latlng
         let region = MKCoordinateRegionMakeWithDistance(latlng, MAP_DEFAULT_RADIUS, MAP_DEFAULT_RADIUS)
         mapView.setRegion(region, animated: true)
-        //self.postParkingController!.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func addressPickerControllerDidCancel(addressPicker:AddressPickerController){

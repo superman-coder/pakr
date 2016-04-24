@@ -8,11 +8,34 @@ import UIKit
 
 class VerifyController: BaseViewController {
 
+    @IBOutlet weak var uploadStatusTextView: UILabel!
+    
+    @IBOutlet weak var progressStatusTextView: UILabel!
+    
+    @IBOutlet weak var imageStatusTextView: UIImageView!
+    
+    @IBOutlet weak var controlButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        progressStatusTextView.text = "0%"
+        progressStatusTextView.hidden = true
+        uploadStatusTextView.text = "Upload your parking to the world"
     }
+    
     @IBAction func postParkingEvent(sender: AnyObject) {
-       // 1. upload all images
+        // this version doesn't allow user cancel uploading
+        controlButton.enabled = false
         
+        // 1. upload cover images
+        
+        // 2. upload all images
+        
+        // 3. upload all datas
+    
+        // 4. back to normal state
+        controlButton.enabled = true
+        uploadStatusTextView.text = "Finish"
     }
 }

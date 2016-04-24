@@ -11,10 +11,6 @@ class PakrTabBarController: UIKit.UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
         // set up all view controllers for tab bar
         
         var viewControllers: [UIViewController] = []
@@ -50,6 +46,10 @@ class PakrTabBarController: UIKit.UITabBarController {
         viewControllers.append(navController)
         
         self.viewControllers = viewControllers
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
     }
 }
 
