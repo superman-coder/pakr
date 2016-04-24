@@ -29,15 +29,36 @@ class VerifyController: BaseViewController {
     }
     
     @IBAction func postParkingEvent(sender: AnyObject) {
-        // this version doesn't allow user cancel uploading
         controlButton.enabled = false
         postParkingController.upLoadParking()
-       // 4. back to normal state
-        controlButton.enabled = true
-        uploadStatusTextView.text = "Finish"
     }
 }
 
 extension VerifyController: UploadManagerDelegate {
     
+    func startUpload(order: Int) {
+        switch order {
+        // start upload topic
+        case -1:
+            uploadStatusTextView.text = "Saving parking ..."
+            break
+        // start upload cover
+        case 0:
+            uploadStatusTextView.text = "Saving cover photos ..."
+            break
+        // all sub images
+        default:
+           uploadStatusTextView.text = "Saving photos ...."
+            break
+        }
+    }
+    
+    func uploadProgress(order: Int, progress: Int) {
+        
+    }
+    
+    func doneUploadTopic(topic: Topic) {
+       uploadStatusTextView.text = "Finish :D :D :D"
+        controlButton.enabled = true
+    }
 }

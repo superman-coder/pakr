@@ -29,8 +29,8 @@ class UploadManager: NSObject {
         
         super.init()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.startEvent(_:)), name: EventSignal.UploadStartEvent, object: self)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.progressEvent(_:)), name: EventSignal.UploadProgressEvent, object: self)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.startEvent(_:)), name: EventSignal.UploadStartEvent, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.progressEvent(_:)), name: EventSignal.UploadProgressEvent, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.doneEvent(_:)), name: EventSignal.UploadDoneEvent, object: nil)
     }
     
@@ -38,8 +38,8 @@ class UploadManager: NSObject {
     }
     
     func progressEvent(notification: NSNotification) {
-        //let progress = notification.valueForKey(EventSignal.UploadProgressEvent)
-        
+        let progress = notification.userInfo!["percent"] as! Int
+        delegate.uploadProgress(count, progress: progress)
     }
     
     func doneEvent(notification: NSNotification) {
@@ -48,16 +48,19 @@ class UploadManager: NSObject {
         
         count = count + 1
         if count < arrImages.count {
-            print("start to download image \(count)")
+            print("start to upload image \(count)")
+            delegate.startUpload(count)
             awsClient.uploadImage(authService.getLoginUser()?.email, image: arrImages[count], success: nil, error: nil, progress: nil)
         } else {
-            print("Download all finish :D")
+            print("Upload all images finish :D")
             
             // continue to download topic
+            delegate.startUpload(-1)
             topic.parking.imageUrl = serverImageUrls
             topic.toPFObject().saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {
+                    delegate.doneUploadTopic()
                     print("UPLOAD ALL FINISH")
                 } else {
                     print("\(error!.localizedDescription)")
@@ -68,9 +71,10 @@ class UploadManager: NSObject {
     
     func startUpload() {
         if (arrImages.count > 0) {
+            delegate.startUpload(count)
             awsClient.uploadImage(authService.getLoginUser()?.email, image: arrImages[0], success: nil, error: nil, progress: nil)
         } else {
-            print("Upload without image :-O")
+            print("Upload without image. Maybe for testing only :-O")
             topic.toPFObject().saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {
@@ -96,4 +100,7 @@ class UploadManager: NSObject {
 }
 
 protocol UploadManagerDelegate {
+    func startUpload(order: Int)
+    func uploadProgress(order: Int, progress: Int)
+    func doneUploadTopic(topic: Topic)
 }

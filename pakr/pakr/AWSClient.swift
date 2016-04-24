@@ -77,8 +77,8 @@ class AWSClient {
                         print("Upload finish")
                     } else {
                         let percent = Int(Double(totalBytesSent) / Double(totalBytesExpectedToSend) * 100)
-                        NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UploadProgressEvent, object: percent)
-                        print (percent)
+                        let userInfo : [String:Int] = ["percent": percent]
+                        NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UploadProgressEvent, object: nil, userInfo: userInfo)
                         progress?(percent)
                     }
                 }
