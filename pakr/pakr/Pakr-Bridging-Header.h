@@ -10,6 +10,7 @@
 #define Pakr_Bridging_Header_h
 
 #import <Google/SignIn.h>
+#import <Bolts/Bolts.h>
 #import <AWSCore/AWSCore.h>
 #import <AWSS3/AWSS3.h>
 #import <AWSCognito/AWSCognito.h>
