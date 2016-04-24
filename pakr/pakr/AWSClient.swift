@@ -118,9 +118,12 @@ class AWSClient {
                 dispatch_async(dispatch_get_main_queue(), {
                     () -> Void in
                     let url = Constants.AWS.AWS_DOMAIN + uploadRequest.key!
-                    NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UploadDoneEvent, object: url)
+                    let userInfo : [String:String] = ["server_url": url]
+                    NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UploadDoneEvent, object: nil, userInfo: userInfo)
                     success?(url)
                 })
+            } else {
+                print("shit")
             }
             
             return nil

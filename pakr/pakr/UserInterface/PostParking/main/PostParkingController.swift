@@ -117,6 +117,8 @@ class PostParkingController: BaseViewController {
     func uploadAllImages() {
         
     }
+   
+    var uploadManager: UploadManager!
     
     func upLoadParking() {
         var arrImages : [UIImage] = []
@@ -157,7 +159,7 @@ class PostParkingController: BaseViewController {
         let topic = Topic(userId: authService.getLoginUser()?.userId, parking: parking, rating: 0)
   
         // start uploading data
-        let uploadManager = UploadManager(topic: topic, arrImages: arrImages, delegate: verifyController)
+        uploadManager = UploadManager(topic: topic, arrImages: arrImages, delegate: verifyController)
         uploadManager.startUpload()
     }
   

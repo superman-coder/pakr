@@ -9,26 +9,28 @@
 import Foundation
 import Parse
 
-class UploadManager {
+class UploadManager: NSObject {
     
     var count = 0
     var arrImages: [UIImage]!
     var serverImageUrls: [String] = []
-    let  awsClient: AWSClient
+    var  awsClient: AWSClient
     let  authService: AuthService
     var topic: Topic!
     var delegate: UploadManagerDelegate!
     
     init(topic: Topic, arrImages: [UIImage], delegate: UploadManagerDelegate) {
+        awsClient = AWSClient()
+        authService = WebServiceFactory.getAuthService()
+        
         self.topic = topic
         self.arrImages = arrImages
         self.delegate = delegate
         
-        awsClient = AWSClient()
-        authService = WebServiceFactory.getAuthService()
+        super.init()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.startEvent(_:)), name: EventSignal.UploadStartEvent, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.progressEvent(_:)), name: EventSignal.UploadProgressEvent, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.startEvent(_:)), name: EventSignal.UploadStartEvent, object: self)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.progressEvent(_:)), name: EventSignal.UploadProgressEvent, object: self)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.doneEvent(_:)), name: EventSignal.UploadDoneEvent, object: nil)
     }
     
@@ -41,9 +43,8 @@ class UploadManager {
     }
     
     func doneEvent(notification: NSNotification) {
-        let b = 5
-        let imagUrl = notification.valueForKey(EventSignal.UploadDoneEvent) as! String
-        serverImageUrls.append(imagUrl)
+        let imageUrl = notification.userInfo!["server_url"] as! String
+        serverImageUrls.append(imageUrl)
         
         count = count + 1
         if count < arrImages.count {
@@ -57,10 +58,9 @@ class UploadManager {
             topic.toPFObject().saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {
-                    print("\(error!.localizedDescription)")
-                    // There was a problem, check error.description
                     print("UPLOAD ALL FINISH")
                 } else {
+                    print("\(error!.localizedDescription)")
                 }
             }
         }
@@ -77,7 +77,6 @@ class UploadManager {
                     print("UPLOAD ALL FINISH")
                 } else {
                     print("\(error!.localizedDescription)")
-                    // There was a problem, check error.description
                 }
             }
         }
