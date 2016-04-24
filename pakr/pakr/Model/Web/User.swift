@@ -51,7 +51,7 @@ class User: PFObject {
         
         role = Role(rawValue: dict["role"] as! String)
         email = dict["email"] as! String
-        dateCreated = dict["created"] as! NSDate
+        dateCreated = NSDate(timeIntervalSince1970: NSTimeInterval(dict["created"] as! Int))
         name = dict["name"] as! String
         avatarUrl = dict["avatar"] as? String
         userId = dict["uid"] as! String
@@ -69,7 +69,7 @@ class User: PFObject {
          */
         dict["role"] = role.rawValue
         dict["email"] = email
-        dict["created"] = dateCreated
+        dict["created"] = dateCreated.timeIntervalSince1970;
         dict["name"] = name
         if let avatar = avatarUrl {
             dict["avatar"] = avatar
