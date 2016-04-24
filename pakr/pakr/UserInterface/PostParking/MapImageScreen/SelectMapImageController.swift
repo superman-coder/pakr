@@ -14,20 +14,25 @@ class SelectMapImageController: BaseViewController {
     
     weak var postParkingController: PostParkingController?
     
+    @IBOutlet weak var imageViewCover: UIImageView!
     @IBOutlet weak var collectionVIew: UICollectionView!
+    @IBOutlet weak var btnCover: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var lblParkingName: UILabel!
-    @IBOutlet weak var testTextField: TextField!
     
     var parking: Parking!
     var parkingLocation:CLLocationCoordinate2D?
     
     var arrImageParking: NSMutableArray?
+    var imageCover:UIImage!
     var numberImage: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateTextField(testTextField, placeHolder: "Hello", text: "World")
+        LayoutUtils.dropShadowView(imageViewCover)
+        LayoutUtils.dropShadowView(mapView)
+        LayoutUtils.dropShadowView(collectionVIew)
+        
         let nib = UINib(nibName: "PhotosCollectionViewCell", bundle: nil)
         collectionVIew.registerNib(nib, forCellWithReuseIdentifier: "PhotosCollectionViewCell")
         
@@ -43,36 +48,11 @@ class SelectMapImageController: BaseViewController {
         super.viewDidAppear(animated)
         lblParkingName.text = parking.parkingName
     }
-    func updateTextField(textField: TextField!, placeHolder: String!, text: String!) {
-        //        textField.placeholder = placeHolder
-        //        textField.placeholderTextColor = MaterialColor.grey.base
-        //        textField.font = RobotoFont.regularWithSize(12)
-        //        textField.textColor = MaterialColor.black
-        //        textField.text = text
-        //
-        //
-        //        textField.detailLabel = UILabel()
-        //        textField.titleLabel!.font = RobotoFont.mediumWithSize(12)
-        //        textField.titleLabelColor = MaterialColor.grey.base
-        //        textField.titleLabelActiveColor = MaterialColor.blue.accent3
-        //
-        //        let image = UIImage(named: "ic_close_white")?.imageWithRenderingMode(.AlwaysTemplate)
-        
-        //        let clearButton: FlatButton = FlatButton()
-        //        clearButton.pulseColor = MaterialColor.grey.base
-        //        clearButton.pulseScale = false
-        //        clearButton.tintColor = MaterialColor.grey.base
-        //        clearButton.setImage(image, forState: .Normal)
-        //        clearButton.setImage(image, forState: .Highlighted)
-        //
-        //        textField.clearButton = clearButton
-        
-        //textField.detailLabelActiveColor = MaterialColor.red.accent3
-    }
+
     
-    func showImagePicker( ) {
+    func showImagePicker(numberOfSelect: Int, complete:((images: [UIImage]) -> Void) ) {
         let vc = BSImagePickerViewController()
-        vc.maxNumberOfSelections = 6
+        vc.maxNumberOfSelections = numberOfSelect
         
         bs_presentImagePickerController(vc, animated: true,
                                         select: { (asset: PHAsset) -> Void in
@@ -91,12 +71,16 @@ class SelectMapImageController: BaseViewController {
                 requestOptions.resizeMode   = .Exact
                 requestOptions.deliveryMode = .HighQualityFormat
                 
+                var i = 0
+                let arrImage = NSMutableArray()
                 for asset in assets {
                     manager.requestImageForAsset(asset, targetSize: targetSize, contentMode: .AspectFit
                         , options: requestOptions, resultHandler: { (image: UIImage?, dic: [NSObject : AnyObject]?) in
-                            self.arrImageParking?.addObject(image!)
-                            self.numberImage = self.numberImage + 1
-                            self.collectionVIew.insertItemsAtIndexPaths([NSIndexPath(forItem: (self.arrImageParking?.count)! - 1 , inSection: 0)])
+                            i = i + 1
+                            arrImage.addObject(image!)
+                            if i == assets.count {
+                                complete(images: arrImage.copy() as! [UIImage])
+                            }
                     })
                 }
                 
@@ -104,10 +88,18 @@ class SelectMapImageController: BaseViewController {
         })
         
     }
+    @IBAction func getImageCover(sender: AnyObject) {
+        showImagePicker(1) { (images) in
+            self.imageCover = images.first
+            self.imageViewCover.image = self.imageCover
+            if images.first != nil {
+                self.btnCover.selected = true
+            }
+        }
+    }
     @IBAction func onTapInMapView(sender: AnyObject) {
         let addressPicker = AddressPickerController()
         addressPicker.delegate = self
-//        self.navigationController?.pushViewController(addressPicker, animated: true)
         presentViewController(addressPicker, animated: true, completion: nil)
     }
 }
@@ -137,7 +129,11 @@ extension SelectMapImageController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == numberImage - 1 {
-            showImagePicker()
+            showImagePicker(20, complete: { (images) in
+                self.arrImageParking?.addObjectsFromArray(images)
+                self.numberImage = self.arrImageParking!.count + 1
+                self.collectionVIew.reloadData()
+            })
         }else{
             
         }
@@ -153,6 +149,6 @@ extension SelectMapImageController: AddressPickerDelegate {
     }
     
     func addressPickerControllerDidCancel(addressPicker:AddressPickerController){
-        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

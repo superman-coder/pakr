@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectMapImageController" customModule="pakr" customModuleProvider="target">
             <connections>
+                <outlet property="btnCover" destination="mim-Js-DR8" id="sXn-T7-FRO"/>
                 <outlet property="collectionVIew" destination="YtK-7H-sw5" id="maa-K0-1pn"/>
+                <outlet property="imageViewCover" destination="Vk2-OI-4v1" id="L99-Fe-Lw3"/>
                 <outlet property="lblParkingName" destination="xod-wO-kfw" id="Uos-mz-UH4"/>
                 <outlet property="mapView" destination="r5f-Hi-YmM" id="fk4-eB-VOe"/>
                 <outlet property="view" destination="4gB-GW-Im0" id="jR3-pp-MOL"/>
@@ -21,23 +23,23 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="578"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="648"/>
                             <subviews>
                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r5f-Hi-YmM">
-                                    <rect key="frame" x="0.0" y="150" width="320" height="300"/>
+                                    <rect key="frame" x="10" y="220" width="300" height="280"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="300" id="8Db-d8-vGV"/>
+                                        <constraint firstAttribute="height" constant="280" id="8Db-d8-vGV"/>
                                     </constraints>
                                 </mapView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vk2-OI-4v1">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
-                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vk2-OI-4v1">
+                                    <rect key="frame" x="10" y="10" width="300" height="200"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="150" id="R6y-dC-X8W"/>
+                                        <constraint firstAttribute="height" constant="200" id="R6y-dC-X8W"/>
                                     </constraints>
                                 </imageView>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YtK-7H-sw5">
-                                    <rect key="frame" x="0.0" y="450" width="320" height="128"/>
+                                    <rect key="frame" x="10" y="510" width="300" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="128" id="WaV-fA-MGM"/>
@@ -53,35 +55,62 @@
                                         <outlet property="delegate" destination="-1" id="u3m-Tp-sdv"/>
                                     </connections>
                                 </collectionView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nga 4 Hang Xanh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xod-wO-kfw">
-                                    <rect key="frame" x="93" y="10" width="135" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nga 4 Hang Xanh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xod-wO-kfw">
+                                    <rect key="frame" x="91" y="181" width="139" height="24"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-XD-IBP">
-                                    <rect key="frame" x="0.0" y="150" width="320" height="300"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-XD-IBP" userLabel="mapAction">
+                                    <rect key="frame" x="10" y="220" width="300" height="280"/>
                                     <connections>
                                         <action selector="onTapInMapView:" destination="-1" eventType="touchUpInside" id="Ipu-85-vxT"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8V-4u-UsG">
+                                    <rect key="frame" x="153" y="350" width="15" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="YfF-tE-6Fc"/>
+                                        <constraint firstAttribute="width" constant="15" id="j8H-Cc-hya"/>
+                                    </constraints>
+                                    <state key="normal" image="pin-orange"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mim-Js-DR8" userLabel="getImageCover">
+                                    <rect key="frame" x="29" y="93" width="263" height="34"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Touch here: Update image cover"/>
+                                    <state key="selected">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="getImageCover:" destination="-1" eventType="touchUpInside" id="jpj-8T-7Jv"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="5VT-XD-IBP" firstAttribute="leading" secondItem="r5f-Hi-YmM" secondAttribute="leading" id="054-b6-FLM"/>
+                                <constraint firstItem="mim-Js-DR8" firstAttribute="top" secondItem="Vk2-OI-4v1" secondAttribute="top" id="1FG-NG-3Wv"/>
                                 <constraint firstItem="5VT-XD-IBP" firstAttribute="top" secondItem="r5f-Hi-YmM" secondAttribute="top" id="4Zc-LU-9Gl"/>
-                                <constraint firstAttribute="trailing" secondItem="YtK-7H-sw5" secondAttribute="trailing" id="AgZ-Oo-POH"/>
-                                <constraint firstItem="Vk2-OI-4v1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ezm-yX-uan"/>
-                                <constraint firstItem="YtK-7H-sw5" firstAttribute="top" secondItem="5VT-XD-IBP" secondAttribute="bottom" id="F5X-E7-vpP"/>
+                                <constraint firstAttribute="trailing" secondItem="YtK-7H-sw5" secondAttribute="trailing" constant="10" id="AgZ-Oo-POH"/>
+                                <constraint firstItem="Vk2-OI-4v1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Ezm-yX-uan"/>
+                                <constraint firstItem="YtK-7H-sw5" firstAttribute="top" secondItem="5VT-XD-IBP" secondAttribute="bottom" constant="10" id="F5X-E7-vpP"/>
                                 <constraint firstItem="5VT-XD-IBP" firstAttribute="trailing" secondItem="r5f-Hi-YmM" secondAttribute="trailing" id="JeK-If-mtP"/>
-                                <constraint firstAttribute="bottom" secondItem="YtK-7H-sw5" secondAttribute="bottom" id="Qb8-Hq-KiC"/>
-                                <constraint firstItem="Vk2-OI-4v1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wih-Mh-WQw"/>
-                                <constraint firstAttribute="trailing" secondItem="r5f-Hi-YmM" secondAttribute="trailing" id="ZMY-0y-wlZ"/>
-                                <constraint firstAttribute="trailing" secondItem="Vk2-OI-4v1" secondAttribute="trailing" id="hZR-en-taa"/>
-                                <constraint firstItem="r5f-Hi-YmM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l9F-XP-ojv"/>
-                                <constraint firstItem="YtK-7H-sw5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lF5-z3-bnK"/>
+                                <constraint firstAttribute="bottom" secondItem="YtK-7H-sw5" secondAttribute="bottom" constant="10" id="Qb8-Hq-KiC"/>
+                                <constraint firstItem="Vk2-OI-4v1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Wih-Mh-WQw"/>
+                                <constraint firstAttribute="trailing" secondItem="r5f-Hi-YmM" secondAttribute="trailing" constant="10" id="ZMY-0y-wlZ"/>
+                                <constraint firstItem="mim-Js-DR8" firstAttribute="bottom" secondItem="Vk2-OI-4v1" secondAttribute="bottom" id="bYp-8O-j45"/>
+                                <constraint firstAttribute="trailing" secondItem="Vk2-OI-4v1" secondAttribute="trailing" constant="10" id="hZR-en-taa"/>
+                                <constraint firstItem="e8V-4u-UsG" firstAttribute="centerY" secondItem="r5f-Hi-YmM" secondAttribute="centerY" id="iaw-mN-cqk"/>
+                                <constraint firstItem="xod-wO-kfw" firstAttribute="bottom" secondItem="Vk2-OI-4v1" secondAttribute="bottom" constant="-5" id="khP-rk-tmT"/>
+                                <constraint firstItem="r5f-Hi-YmM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="l9F-XP-ojv"/>
+                                <constraint firstItem="YtK-7H-sw5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="lF5-z3-bnK"/>
+                                <constraint firstItem="mim-Js-DR8" firstAttribute="trailing" secondItem="Vk2-OI-4v1" secondAttribute="trailing" id="oKl-yu-I6z"/>
+                                <constraint firstItem="mim-Js-DR8" firstAttribute="leading" secondItem="Vk2-OI-4v1" secondAttribute="leading" id="pMF-e5-m6d"/>
+                                <constraint firstItem="e8V-4u-UsG" firstAttribute="centerX" secondItem="r5f-Hi-YmM" secondAttribute="centerX" id="ucP-My-hZP"/>
                                 <constraint firstItem="5VT-XD-IBP" firstAttribute="bottom" secondItem="r5f-Hi-YmM" secondAttribute="bottom" id="vPh-yc-N4v"/>
-                                <constraint firstItem="r5f-Hi-YmM" firstAttribute="top" secondItem="Vk2-OI-4v1" secondAttribute="bottom" id="zpE-Px-6bN"/>
+                                <constraint firstItem="xod-wO-kfw" firstAttribute="centerX" secondItem="Vk2-OI-4v1" secondAttribute="centerX" id="xo5-lT-MN3"/>
+                                <constraint firstItem="r5f-Hi-YmM" firstAttribute="top" secondItem="Vk2-OI-4v1" secondAttribute="bottom" constant="10" id="zpE-Px-6bN"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -103,4 +132,7 @@
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="pin-orange" width="64" height="86"/>
+    </resources>
 </document>
