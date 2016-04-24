@@ -37,3 +37,7 @@ class VerifyController: BaseViewController {
         uploadStatusTextView.text = "Finish"
     }
 }
+
+extension VerifyController: UploadManagerDelegate {
+    
+}

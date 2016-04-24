@@ -12,4 +12,5 @@ protocol AuthService {
     func isExistUser(emailAddress: String, success: User -> Void, error: Void -> Void)
     func registerUser(user: User, success: Void -> Void, error: NSError -> Void)
     func getUserByUserId(userId: String, success: User -> Void, error: Void -> Void)
+    func authenticateParse(user: User, success: User -> Void, error: NSError -> Void)
 }

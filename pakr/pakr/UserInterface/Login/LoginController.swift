@@ -50,7 +50,14 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
             print (user.avatarUrl)
             print(user.email)
             print(user.name)
-            authenticateParse(user)
+            self.authService.authenticateParse(user,
+                success: {
+                    User -> Void in
+                    self.mainScreen()
+                    },
+                error: {
+                    NSError -> Void in
+            })
         } else {
             print("\(error.localizedDescription)")
         }
@@ -71,7 +78,14 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
                     let name = data.objectForKey("name") as? String
                     let avatarUrl = data.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String
                     let user = User(userId: "", role: Role.UserAuth, email: email, dateCreated: NSDate(), name: name, avatarUrl: avatarUrl)
-                    self.authenticateParse(user)
+                    self.authService.authenticateParse(user,
+                        success: {
+                            User -> Void in
+                            self.mainScreen()
+                        },
+                        error: {
+                            NSError -> Void in
+                    })
                 }
             })
         } else {
@@ -83,30 +97,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
         
     }
     
-    func authenticateParse(user: User) {
-       authService.isExistUser(user.email,
-            // this user has already registered
-            success: {
-                (user: User) -> Void in
-                print("User has registered")
-                self.mainScreen()
-            },
-            // not register yet. start to register
-            error: {
-                () -> () in
-                print("not register yet")
-                self.authService.registerUser(user,
-                    success: {
-                        Void -> Void in
-                        print("register success")
-                        self.mainScreen()
-                    }, error: {
-                        NSError -> Void in
-                        print("register fail")
-                    }
-                )
-        })
-    }
+  
    
     func mainScreen() {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate

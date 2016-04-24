@@ -34,7 +34,6 @@ class PostParkingController: BaseViewController {
         setUpNavigationBar()
         setUpStepView()
         setUpPageView()
-        setUpListener()
     }
     
     //MARK - Private Method
@@ -76,12 +75,6 @@ class PostParkingController: BaseViewController {
     
     var count = 0
     var arrImages: [UIImage]!
-    
-    func setUpListener() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.startEvent(_:)), name: EventSignal.UploadStartEvent, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.progressEvent(_:)), name: EventSignal.UploadProgressEvent, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostParkingController.doneEvent(_:)), name: EventSignal.UploadDoneEvent, object: nil)
-    }
     
     func startEvent(notification: NSNotification) {
         
@@ -127,18 +120,14 @@ class PostParkingController: BaseViewController {
     }
     
     func upLoadParking() {
+        var arrImages : [UIImage] = []
+        
         // 1. upload cover images
-        // currently unimplement
+        arrImages.append(mapImageController.imageCover)
         
         // 2. upload all images
-        arrImages = mapImageController.arrImageParking?.copy() as! [UIImage]
+        arrImages.appendContentsOf(mapImageController.arrImageParking?.copy() as! [UIImage])
         
-//        if arrImages.count > 0 {
-//           awsClient.uploadImage(authService.getLoginUser()?.email, image: arrImages[0], success: nil, error: nil, progress: nil)
-//        }
-        
-        
-        // 3. upload all datas
         
         // --- create a parking ---
         
@@ -168,7 +157,9 @@ class PostParkingController: BaseViewController {
         
         let topic = Topic(userId: authService.getLoginUser()?.userId, parking: parking, rating: 0)
   
-        let a  = 3
+        // start uploading data
+        let uploadManager = UploadManager(topic: topic, arrImages: arrImages, delegate: verifyController)
+        uploadManager.startUpload()
     }
   
     

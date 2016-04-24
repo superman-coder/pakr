@@ -55,6 +55,7 @@ func authenticateParse(user: User, success: User -> Void, error: NSError -> Void
         success: {
             (user: User) -> Void in
             print("User has registered")
+            print("zzz user: \(user.name)")
             NSUserDefaults.standardUserDefaults().saveCurrentUser(user)
             success(user)
         },
@@ -65,7 +66,7 @@ func authenticateParse(user: User, success: User -> Void, error: NSError -> Void
             self.registerUser(user,
                 success: {
                     Void -> Void in
-                    print("register success")
+                    print("register success AAAAAAAAAAAAAAAAAAAAA")
                     NSUserDefaults.standardUserDefaults().saveCurrentUser(user)
                     success(user)
                 }, error: {
