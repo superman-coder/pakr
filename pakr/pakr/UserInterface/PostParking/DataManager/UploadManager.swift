@@ -36,11 +36,12 @@ class UploadManager {
     }
     
     func progressEvent(notification: NSNotification) {
-        let progress = notification.valueForKey(EventSignal.UploadProgressEvent)
+        //let progress = notification.valueForKey(EventSignal.UploadProgressEvent)
         
     }
     
     func doneEvent(notification: NSNotification) {
+        let b = 5
         let imagUrl = notification.valueForKey(EventSignal.UploadDoneEvent) as! String
         serverImageUrls.append(imagUrl)
         
@@ -56,6 +57,8 @@ class UploadManager {
             topic.toPFObject().saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {
+                    print("\(error!.localizedDescription)")
+                    // There was a problem, check error.description
                     print("UPLOAD ALL FINISH")
                 } else {
                 }
@@ -73,6 +76,7 @@ class UploadManager {
                 if (success) {
                     print("UPLOAD ALL FINISH")
                 } else {
+                    print("\(error!.localizedDescription)")
                     // There was a problem, check error.description
                 }
             }

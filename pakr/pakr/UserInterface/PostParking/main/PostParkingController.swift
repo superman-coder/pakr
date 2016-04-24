@@ -9,7 +9,6 @@ import AYStepperView
 import MBXPageViewController
 import Bolts
 import Parse
-import PromiseKit
 
 class PostParkingController: BaseViewController {
     
