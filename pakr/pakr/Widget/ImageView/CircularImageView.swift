@@ -18,6 +18,6 @@ class CircularImageView: UIImageView {
         self.layer.cornerRadius = self.frame.size.width / 2;
         self.clipsToBounds = true;
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = LayoutUtils.UIColorFromRGB(Constants.Color.PrimaryColor).CGColor
+        self.layer.borderColor = UIColor.primaryColor().CGColor
     }
 }

@@ -46,6 +46,38 @@ class User: PFObject {
         self.userId = userId
     }
     
+    init(dict: NSDictionary) {
+        super.init()
+        
+        role = Role(rawValue: dict["role"] as! String)
+        email = dict["email"] as! String
+        dateCreated = dict["created"] as! NSDate
+        name = dict["name"] as! String
+        avatarUrl = dict["avatar"] as? String
+        userId = dict["uid"] as! String
+    }
+    
+    func toDictionary() -> NSDictionary {
+        var dict:[String:AnyObject] = [:]
+        /*
+         self.role = role
+         self.email = email
+         self.dateCreated = dateCreated
+         self.name = name
+         self.avatarUrl = avatarUrl
+         self.userId = userId
+         */
+        dict["role"] = role.rawValue
+        dict["email"] = email
+        dict["created"] = dateCreated
+        dict["name"] = name
+        if let avatar = avatarUrl {
+            dict["avatar"] = avatar
+        }
+        dict["uid"] = userId
+        
+        return dict
+    }
 }
 
 extension User: PFSubclassing {

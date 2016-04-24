@@ -11,6 +11,6 @@ class WebServiceFactory {
     }
 
     static func getAuthService() -> AuthService {
-        return AuthServiceImpl()
+        return AuthServiceImpl.sharedInstance
     }
 }

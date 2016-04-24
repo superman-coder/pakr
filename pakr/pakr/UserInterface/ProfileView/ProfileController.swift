@@ -18,8 +18,14 @@ class ProfileController: BaseViewController {
         super.viewDidLoad()
         
         authService = WebServiceFactory.getAuthService()
+        let currentUser = authService.getLoginUser()
+        if let currentUser = currentUser {
+            if let avatar = currentUser.avatarUrl {
+               self.profileImageView.setImageWithURL(NSURL(string: avatar)!, placeholderImage: nil)
+            }
+        }
         
-        profileImageView.setImageWithURL(NSURL(string: (authService.getLoginUser()?.avatarUrl)!)!, placeholderImage: nil)
+        
         userNameTextView.text = authService.getLoginUser()?.email
         fullNameTextView.text = authService.getLoginUser()?.name
        
