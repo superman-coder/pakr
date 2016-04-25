@@ -23,9 +23,15 @@ class VerifyController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        controlButton.layer.cornerRadius = 20
+        controlButton.layer.cornerRadius = 5
         controlButton.layer.borderColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor).CGColor
         controlButton.layer.borderWidth=2.0;
+        controlButton.setTitleColor(UIColor.UIColorFromRGB(Constants.Color.PrimaryColor), forState: UIControlState.Normal)
+        controlButton.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
+
+        
+        imageStatusView.layer.borderWidth = 3
+        imageStatusView.layer.borderColor = (UIColor(patternImage: UIImage(named: "dot")!)).CGColor
         
         progressStatusTextView.text = "0%"
         progressStatusTextView.hidden = true
@@ -34,7 +40,7 @@ class VerifyController: BaseViewController {
     }
     
     @IBAction func postParkingEvent(sender: AnyObject) {
-        //controlButton.enabled = false
+        controlButton.enabled = false
         postParkingController.upLoadParking()
     }
 }
@@ -72,13 +78,19 @@ extension VerifyController: UploadManagerDelegate {
     func doneUploadTopic(topic: Topic) {
         uploadStatusTextView.text = "Finish :D :D :D"
         
-        // move to detail screen
-        let detailViewController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
-        detailViewController.parking = topic.parking
-        
-        var controllers = self.navigationController?.viewControllers
-        controllers?.removeLast()
-        controllers?.append(detailViewController)
-        navigationController?.setViewControllers(controllers!, animated: true)
+        let alert = UIAlertController(title: "Upload Finish", message: "Your parking lot is ready", preferredStyle: .Alert)
+        let okAction  = UIAlertAction(title:"OK", style: .Default) {
+            (action: UIAlertAction) in
+            // move to detail screen
+            let detailViewController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
+            detailViewController.parking = topic.parking
+            
+            var controllers = self.navigationController?.viewControllers
+            controllers?.removeLast()
+            controllers?.append(detailViewController)
+            self.navigationController?.setViewControllers(controllers!, animated: true)
+        }
+        alert.addAction(okAction)
+        presentViewController(alert, animated: true, completion: nil)
     }
 }
