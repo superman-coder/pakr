@@ -29,7 +29,6 @@
 		72E678121CCCBC630045CB00 /* UIColor+Pakr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E678111CCCBC630045CB00 /* UIColor+Pakr.swift */; };
 		B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A43E71032DC2B0D1F1CF /* Repository.swift */; };
 		B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A22BC922751D53642CFB /* PostInfoController.xib */; };
-		B7E6A0786F719E522F61EE28 /* UserHandlerMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A21D1C8EEE8A1850D968 /* UserHandlerMockImpl.swift */; };
 		B7E6A1037EA58D7A02BD6B2B /* VerifyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A40C0FC253C1AFE78D7B /* VerifyController.xib */; };
 		B7E6A110E741A4C75C5D7F35 /* LayoutUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A091AAB6F9843BAE5107 /* LayoutUtils.swift */; };
 		B7E6A13E90275C7D2181B30E /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A331D58A2E2A1A82F0AC /* ProfileController.xib */; };
@@ -38,7 +37,6 @@
 		B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A145EF2DF7DDD58149AD /* Parking.swift */; };
 		B7E6A23A88726CC0D19CD553 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A122699477C5E67ECE5E /* SearchController.xib */; };
 		B7E6A25A2B4DCA5610E27897 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A401D78FD167E1317138 /* JSONUtils.swift */; };
-		B7E6A490B0661ADCFA1A38FB /* UserHandlerRealmImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD886507C567CEEE6A5A /* UserHandlerRealmImpl.swift */; };
 		B7E6A4AACDDABB7130F3DBA7 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A62B148D4FB6723C6476 /* Role.swift */; };
 		B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACFA00B87FBB2B3A50D1 /* Topic.swift */; };
 		B7E6A5A04B2FA08E0E2D97D5 /* VerifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AFEBDE30EC4F495F0F9C /* VerifyController.swift */; };
@@ -80,8 +78,6 @@
 		B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A3C93DAA63FED816EBDC /* Comment.swift */; };
 		B7E6AE1FA3C29FC389132252 /* DataServiceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A3B5CC8A67FAFE783663 /* DataServiceUtils.swift */; };
 		B7E6AEF2228BC974A36C5467 /* SelectMapImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A2DE0DDA440D80998929 /* SelectMapImageController.xib */; };
-		B7E6AF0C09C71FD4655C185F /* PakrNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE091FCDC84EAF29B9C1 /* PakrNavigationController.swift */; };
-		B7E6AF19EE30F5B4F828B06D /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AC26C7397ACAC46579E1 /* UserHandler.swift */; };
 		B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD0D0E1DCF14A45C5066 /* VehicleType.swift */; };
 		B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE9D42431DC887ADB819 /* SelectMapImageController.swift */; };
 		B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A946454CF4EFFE32706D /* Business.swift */; };
@@ -151,7 +147,6 @@
 		B7E6A0FCBFCFE1378FBCFF93 /* MoreInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreInfoViewController.xib; sourceTree = "<group>"; };
 		B7E6A122699477C5E67ECE5E /* SearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		B7E6A145EF2DF7DDD58149AD /* Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
-		B7E6A21D1C8EEE8A1850D968 /* UserHandlerMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerMockImpl.swift; sourceTree = "<group>"; };
 		B7E6A22BC922751D53642CFB /* PostInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostInfoController.xib; sourceTree = "<group>"; };
 		B7E6A23B81B68BFA49FF4D68 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B7E6A24A8DBFC8C0007805D2 /* ModifiedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifiedTextField.swift; sourceTree = "<group>"; };
@@ -187,7 +182,6 @@
 		B7E6A99549118700A88D2B9C /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		B7E6AA27BF66F1D94F9CEBEB /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingResultCell.swift; sourceTree = "<group>"; };
 		B7E6AB3FEFBC936273E16A5B /* CustomTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimePicker.m; sourceTree = "<group>"; };
-		B7E6AC26C7397ACAC46579E1 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
 		B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PakrCLLocationCoordinate2D.swift; path = Utils/PakrCLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		B7E6AC6D92106C69A930C5BE /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		B7E6ACEFDD142635A5538916 /* PostInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInfoController.swift; sourceTree = "<group>"; };
@@ -196,10 +190,8 @@
 		B7E6AD4CA630E87E2BDDBB76 /* BookmarkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkController.swift; sourceTree = "<group>"; };
 		B7E6AD6CB8156C69D362F482 /* ParkAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkAnnotation.swift; sourceTree = "<group>"; };
 		B7E6AD7C28278C80D4106921 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
-		B7E6AD886507C567CEEE6A5A /* UserHandlerRealmImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandlerRealmImpl.swift; sourceTree = "<group>"; };
 		B7E6ADBCC16F1F1310FEF0B3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B7E6ADE1860F36823A0CBF02 /* PostParkingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostParkingController.xib; sourceTree = "<group>"; };
-		B7E6AE091FCDC84EAF29B9C1 /* PakrNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrNavigationController.swift; sourceTree = "<group>"; };
 		B7E6AE118A66C51CF9111EFE /* MapController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapController.xib; sourceTree = "<group>"; };
 		B7E6AE23F891252FC6A10BA5 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosCollectionViewCell.swift; path = ../Children/PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7E6AE9D42431DC887ADB819 /* SelectMapImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMapImageController.swift; sourceTree = "<group>"; };
@@ -357,14 +349,6 @@
 			path = VerifyScreen;
 			sourceTree = "<group>";
 		};
-		B7E6A03F5FF785EEB1D8FCEC /* DataHandler */ = {
-			isa = PBXGroup;
-			children = (
-				B7E6AE2E0B4B400318DC5644 /* User */,
-			);
-			path = DataHandler;
-			sourceTree = "<group>";
-		};
 		B7E6A0B8F1F7E1D22FD0CC00 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,7 +459,6 @@
 				B7E6A60F652838103C34834E /* Widget */,
 				B7E6AA32FCBAAC31E8CF365E /* factory */,
 				B7E6ABD726F9CFB2E7DE5A84 /* WebService */,
-				B7E6A03F5FF785EEB1D8FCEC /* DataHandler */,
 				B7E6A2ACF500396A05F94F96 /* Configuration */,
 				B7E6A0B8F1F7E1D22FD0CC00 /* UserInterface */,
 				B7E6AEA2FD426EE1E39640E6 /* CustomController */,
@@ -660,16 +643,6 @@
 			path = DetailParking;
 			sourceTree = "<group>";
 		};
-		B7E6AE2E0B4B400318DC5644 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				B7E6AC26C7397ACAC46579E1 /* UserHandler.swift */,
-				B7E6A21D1C8EEE8A1850D968 /* UserHandlerMockImpl.swift */,
-				B7E6AD886507C567CEEE6A5A /* UserHandlerRealmImpl.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 		B7E6AE579B7C666DEEEEB3F8 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,7 +657,6 @@
 			children = (
 				B7E6ADBCC16F1F1310FEF0B3 /* BaseViewController.swift */,
 				B7E6A7DADD4E069C9FDC1205 /* PakrTabBarController.swift */,
-				B7E6AE091FCDC84EAF29B9C1 /* PakrNavigationController.swift */,
 			);
 			path = CustomController;
 			sourceTree = "<group>";
@@ -980,10 +952,7 @@
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
 				D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */,
 				D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */,
-				B7E6AF19EE30F5B4F828B06D /* UserHandler.swift in Sources */,
 				10D1A8AF1CC64649002867BC /* RatingControl.swift in Sources */,
-				B7E6A0786F719E522F61EE28 /* UserHandlerMockImpl.swift in Sources */,
-				B7E6A490B0661ADCFA1A38FB /* UserHandlerRealmImpl.swift in Sources */,
 				B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */,
 				723552A21CC4D3DB00090651 /* GMPlaceCell.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
@@ -1019,7 +988,6 @@
 				B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */,
 				D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */,
 				B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */,
-				B7E6AF0C09C71FD4655C185F /* PakrNavigationController.swift in Sources */,
 				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
 				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,
 				B7E6A9C2A41FE994DE773C26 /* PakrCLLocationCoordinate2D.swift in Sources */,

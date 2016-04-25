@@ -7,7 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyController" customModule="pakr" customModuleProvider="target">
             <connections>
                 <outlet property="controlButton" destination="9Is-2B-YbI" id="SZ8-0R-rwC"/>
-                <outlet property="imageStatusTextView" destination="oFi-mA-ExW" id="5nM-MB-o3j"/>
+                <outlet property="imageStatusView" destination="oFi-mA-ExW" id="huq-M8-b0Y"/>
+                <outlet property="progressBar" destination="vyt-Wc-GdF" id="5gf-0o-BVu"/>
                 <outlet property="progressStatusTextView" destination="cIp-Rx-kPL" id="b3g-E3-Reb"/>
                 <outlet property="uploadStatusTextView" destination="f3s-5U-fRm" id="pV0-E0-9OO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="UBJ-ub-e7K"/>
@@ -18,13 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Is-2B-YbI">
-                    <rect key="frame" x="212.5" y="297" width="175" height="30"/>
-                    <state key="normal" title="Share your parking now :)"/>
-                    <connections>
-                        <action selector="postParkingEvent:" destination="-1" eventType="touchUpInside" id="VTu-jc-ijg"/>
-                    </connections>
-                </button>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vyt-Wc-GdF">
                     <rect key="frame" x="10" y="108" width="580" height="3"/>
                     <constraints>
@@ -32,11 +26,18 @@
                     </constraints>
                 </progressView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFi-mA-ExW">
-                    <rect key="frame" x="245" y="147" width="110" height="110"/>
+                    <rect key="frame" x="10" y="136" width="580" height="354"/>
+                    <color key="backgroundColor" red="0.72836552619999995" green="1" blue="0.39658179739999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="110" id="SMX-BS-Ll9"/>
                         <constraint firstAttribute="width" constant="110" id="WlB-rm-0ct"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="SMX-BS-Ll9"/>
+                            <exclude reference="WlB-rm-0ct"/>
+                        </mask>
+                    </variation>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uploading image view ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3s-5U-fRm">
                     <rect key="frame" x="207" y="30" width="186.5" height="21"/>
@@ -45,26 +46,44 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIp-Rx-kPL">
-                    <rect key="frame" x="283.5" y="81" width="33" height="21"/>
+                    <rect key="frame" x="283" y="81" width="33" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Is-2B-YbI">
+                    <rect key="frame" x="174" y="530" width="252" height="30"/>
+                    <state key="normal" title="Share your parking to the world now "/>
+                    <connections>
+                        <action selector="postParkingEvent:" destination="-1" eventType="touchUpInside" id="VTu-jc-ijg"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="9Is-2B-YbI" firstAttribute="top" secondItem="oFi-mA-ExW" secondAttribute="bottom" constant="40" id="BmY-Fv-yaV"/>
                 <constraint firstAttribute="trailing" secondItem="vyt-Wc-GdF" secondAttribute="trailing" constant="10" id="C8D-62-utr"/>
                 <constraint firstItem="vyt-Wc-GdF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="F6z-Zh-nSY"/>
+                <constraint firstAttribute="trailing" secondItem="oFi-mA-ExW" secondAttribute="trailing" constant="10" id="LDc-ad-pha"/>
+                <constraint firstAttribute="bottom" secondItem="9Is-2B-YbI" secondAttribute="bottom" constant="40" id="P6e-Oh-96T"/>
                 <constraint firstItem="9Is-2B-YbI" firstAttribute="top" secondItem="oFi-mA-ExW" secondAttribute="bottom" constant="40" id="P8H-0I-I9H"/>
                 <constraint firstItem="cIp-Rx-kPL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q5k-9J-9az"/>
                 <constraint firstItem="9Is-2B-YbI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QIY-Jg-prl"/>
+                <constraint firstItem="oFi-mA-ExW" firstAttribute="top" secondItem="vyt-Wc-GdF" secondAttribute="bottom" constant="25" id="TLd-Ky-Ush"/>
                 <constraint firstItem="f3s-5U-fRm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Uwd-IV-Jcm"/>
                 <constraint firstItem="oFi-mA-ExW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZJ5-pH-iUt"/>
                 <constraint firstItem="oFi-mA-ExW" firstAttribute="top" secondItem="cIp-Rx-kPL" secondAttribute="bottom" constant="45" id="eEy-r0-EMX"/>
                 <constraint firstItem="vyt-Wc-GdF" firstAttribute="top" secondItem="cIp-Rx-kPL" secondAttribute="bottom" constant="6" id="emf-sL-e5Q"/>
                 <constraint firstItem="cIp-Rx-kPL" firstAttribute="top" secondItem="f3s-5U-fRm" secondAttribute="bottom" constant="30" id="nSL-4K-Jax"/>
                 <constraint firstItem="f3s-5U-fRm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="qCD-Y6-5wR"/>
+                <constraint firstItem="oFi-mA-ExW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="xBr-DR-GDq"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="eEy-r0-EMX"/>
+                    <exclude reference="P8H-0I-I9H"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

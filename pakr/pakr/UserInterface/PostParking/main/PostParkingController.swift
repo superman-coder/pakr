@@ -18,7 +18,6 @@ class PostParkingController: BaseViewController {
     var verifyController: VerifyController!
     
     var authService: AuthService!
-    var awsClient: AWSClient!
     var uploadManager: UploadManager!
     
     @IBOutlet weak var stepViewContainer: UIView!
@@ -32,13 +31,11 @@ class PostParkingController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         authService = WebServiceFactory.getAuthService()
-        awsClient = AWSClient()
         
         setUpNavigationBar()
         setUpStepView()
         setUpPageView()
     }
-    
     
     func setUpNavigationBar() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PostParkingController.onCreateParkingLot))
@@ -51,6 +48,8 @@ class PostParkingController: BaseViewController {
         stepView = AYStepperView(
             frame: stepViewContainer.bounds,
             titles: ["Step 1", "Step 2", "Step 3", ""])
+        stepView.tintColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor)
+        stepView.backgroundColor = UIColor.UIColorFromRGB(0xE0E0E0)
         stepView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
         stepView.userInteractionEnabled = true
         stepViewContainer.addSubview(stepView)
@@ -195,10 +194,16 @@ class PostParkingController: BaseViewController {
         uploadManager.startUpload()
     }
     
-    
-    
     @IBAction func onTap(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
+    }
+    
+    func getImageByOrder(order: Int) -> UIImage {
+        if order == 0 {
+            return mapImageController.imageCover
+        } else {
+            return mapImageController.arrImageParking![order - 1] as! UIImage
+        }
     }
 }
 

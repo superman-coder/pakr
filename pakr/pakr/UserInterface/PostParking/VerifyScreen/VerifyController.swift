@@ -12,24 +12,29 @@ class VerifyController: BaseViewController {
     
     @IBOutlet weak var progressStatusTextView: UILabel!
     
-    @IBOutlet weak var imageStatusTextView: UIImageView!
-    
     @IBOutlet weak var controlButton: UIButton!
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    @IBOutlet weak var imageStatusView: UIImageView!
     
     var postParkingController : PostParkingController!
    
-    var awsClient = AWSClient()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        controlButton.layer.cornerRadius = 20
+        controlButton.layer.borderColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor).CGColor
+        controlButton.layer.borderWidth=2.0;
+        
         progressStatusTextView.text = "0%"
         progressStatusTextView.hidden = true
+        progressBar.progress = 0
         uploadStatusTextView.text = "Upload your parking to the world"
     }
     
     @IBAction func postParkingEvent(sender: AnyObject) {
-        controlButton.enabled = false
+        //controlButton.enabled = false
         postParkingController.upLoadParking()
     }
 }
@@ -45,20 +50,25 @@ extension VerifyController: UploadManagerDelegate {
         // start upload cover
         case 0:
             uploadStatusTextView.text = "Saving cover photos ..."
+            imageStatusView.image = postParkingController.getImageByOrder(order)
             break
         // all sub images
         default:
            uploadStatusTextView.text = "Saving photos ...."
+           imageStatusView.image = postParkingController.getImageByOrder(order)
             break
         }
     }
     
-    func uploadProgress(order: Int, progress: Int) {
-        
+    func uploadProgress(order: Int, progress: Int, progressAll: Int) {
+        if imageStatusView.image != nil {
+            imageStatusView.alpha = CGFloat(progress / 100)
+        }
+        progressBar.progress = Float( progressAll / 100)
+        progressStatusTextView.text = "\(progressAll) %"
     }
     
     func doneUploadTopic(topic: Topic) {
-       uploadStatusTextView.text = "Finish :D :D :D"
-        controlButton.enabled = true
+        uploadStatusTextView.text = "Finish :D :D :D"
     }
 }

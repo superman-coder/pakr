@@ -26,8 +26,9 @@ class LayoutUtils {
         textField.font = RobotoFont.regularWithSize(14)
         textField.textColor = MaterialColor.grey.darken1
         textField.titleLabelColor = MaterialColor.grey.base
-        textField.titleLabelActiveColor = MaterialColor.blue.accent3
-
+        textField.titleLabelActiveColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor)
+        textField.lineLayerActiveColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor)
+        
         textField.detailLabelActiveColor = MaterialColor.red.accent3
     }
     

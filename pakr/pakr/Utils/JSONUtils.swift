@@ -27,9 +27,9 @@ class JSONUtils: NSObject {
         let path = NSBundle.mainBundle().pathForResource("parkings", ofType: "json")
         let data = try! NSData(contentsOfURL: NSURL(fileURLWithPath: path!), options:NSDataReadingOptions.DataReadingMappedIfSafe)
         let jsonObj =  try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSArray
-        var topics:[Topic] = []
+        let topics:[Topic] = []
         for dic in jsonObj{
-            let parking = Parking(dic: dic as! NSDictionary)
+            _ = Parking(dic: dic as! NSDictionary)
 //            let topic = Topic(topicId: "0", userId: "0", date: NSDate(), parking: parking, rating: 0)
 //            topics.append(topic)
         }

@@ -17,10 +17,6 @@ class PakrTabBarController: UIKit.UITabBarController {
         
         var navController: UINavigationController!
         
-        //        let pickerController = TestUploadController(nibName: "TestUploadController", bundle: nil)
-        //        viewControllers.append(pickerController)
-        //
-        
         let mapController = MapController(nibName: "MapController", bundle: nil)
         let mapItem = UITabBarItem(title: "NearBy", image: UIImage(named: "nearby.png"), tag: 0)
         mapController.tabBarItem = mapItem
@@ -49,7 +45,7 @@ class PakrTabBarController: UIKit.UITabBarController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        super.viewWillAppear(animated)
     }
 }
 

@@ -70,6 +70,10 @@ class PostInfoController: BaseViewController {
     var parking: Parking?
     override func viewDidLoad() {
         super.viewDidLoad()
+        carCheckBox.tintColor = UIColor.redColor()
+       carCheckBox.onCheckColor = UIColor.redColor()
+       // carCheckBox.onFillColor = UIColor.redColor()
+        
         configTextFields()
         setShowdow()
         registryNotifyKeyBoard()
@@ -84,6 +88,7 @@ class PostInfoController: BaseViewController {
         super.viewWillDisappear(animated)
         setDataForParking()
     }
+    
     //MARK - Private method
     func isNextStep() -> Bool {
         let mutableArray = NSMutableArray()

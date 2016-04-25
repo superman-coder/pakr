@@ -37,8 +37,8 @@ class Comment: Post, ParseModelProtocol {
         userId = "0"
         
         
-        let topic = pfObject[PKTopic] as! PFObject
-        let user = pfObject[Comment.PKPostUser] as! PFObject
+        _ = pfObject[PKTopic] as! PFObject
+        _ = pfObject[Comment.PKPostUser] as! PFObject
         
         content = pfObject[PKContent] as! String
         
