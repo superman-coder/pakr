@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setUpStyle()
         setUpParse()
-        configureAWS()
+        setUpAWS()
         
         authenService = WebServiceFactory.getAuthService()
         
@@ -34,8 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let rootViewController = LoginController(nibName: "LoginController", bundle: nil)
             window.rootViewController = rootViewController
         }
-//        let na = UINavigationController(rootViewController: DetailParkingController())
-//        window.rootViewController = na
+        
         window.makeKeyAndVisible()
         return true
     }
@@ -71,8 +70,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().translucent = false
         UITabBar.appearance().backgroundColor = UIColor.blackColor()
-       
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
     }
     
     func setUpParse() {
@@ -87,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initializeWithConfiguration(config);
     }
     
-    func configureAWS() {
+    func setUpAWS() {
         let credentialsProvider = AWSCognitoCredentialsProvider(
                 regionType: Constants.AWS.CognitoRegionType,
                 identityPoolId: Constants.AWS.CognitoIdentityPoolId)

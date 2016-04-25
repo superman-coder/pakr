@@ -31,7 +31,6 @@ extension NSUserDefaults {
     
     func saveCurrentUser(user:User?) {
         if let user = user {
-            let d = user.toDictionary()
             let data = try! NSJSONSerialization.dataWithJSONObject(user.toDictionary(), options: [])
             self.setObject(data, forKey: kUserDataKey)
         } else {
