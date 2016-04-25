@@ -37,7 +37,6 @@ class PostParkingController: BaseViewController {
         setUpPageView()
     }
     
-    
     func setUpNavigationBar() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PostParkingController.onCreateParkingLot))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(PostParkingController.onCancelCreate))
@@ -49,6 +48,8 @@ class PostParkingController: BaseViewController {
         stepView = AYStepperView(
             frame: stepViewContainer.bounds,
             titles: ["Step 1", "Step 2", "Step 3", ""])
+        stepView.tintColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor)
+        stepView.backgroundColor = UIColor.UIColorFromRGB(0xE0E0E0)
         stepView.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
         stepView.userInteractionEnabled = true
         stepViewContainer.addSubview(stepView)

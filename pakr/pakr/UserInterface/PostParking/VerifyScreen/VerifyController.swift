@@ -14,6 +14,8 @@ class VerifyController: BaseViewController {
     
     @IBOutlet weak var controlButton: UIButton!
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     @IBOutlet weak var imageStatusView: UIImageView!
     
     var postParkingController : PostParkingController!
@@ -21,13 +23,18 @@ class VerifyController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        controlButton.layer.cornerRadius = 20
+        controlButton.layer.borderColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor).CGColor
+        controlButton.layer.borderWidth=2.0;
+        
         progressStatusTextView.text = "0%"
         progressStatusTextView.hidden = true
+        progressBar.progress = 0
         uploadStatusTextView.text = "Upload your parking to the world"
     }
     
     @IBAction func postParkingEvent(sender: AnyObject) {
-        controlButton.enabled = false
+        //controlButton.enabled = false
         postParkingController.upLoadParking()
     }
 }
@@ -55,8 +62,9 @@ extension VerifyController: UploadManagerDelegate {
     
     func uploadProgress(order: Int, progress: Int, progressAll: Int) {
         if imageStatusView.image != nil {
-           
+            imageStatusView.alpha = CGFloat(progress / 100)
         }
+        progressBar.progress = Float( progressAll / 100)
         progressStatusTextView.text = "\(progressAll) %"
     }
     
