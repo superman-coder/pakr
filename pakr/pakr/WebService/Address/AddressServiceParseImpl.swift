@@ -58,4 +58,29 @@ public class AddressServiceParseImpl: NSObject, AddressService {
             }
         }
     }
+    
+    func getAllParkingByUser(userId: String, success:([Topic] -> Void), failure:(NSError -> Void)) {
+        let query = PFQuery(className: Constants.Table.Topic)
+        query.includeKey(Topic.PKParking)
+        
+        let user = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
+        query.whereKey(Topic.PKPostUser, equalTo: user)
+        
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            print("User count: \(objects?.count)")
+            print("Error: \(error)")
+            
+            if let error = error {
+                failure(error)
+            } else if let objs = objects {
+                var topics = [Topic]()
+                for pfobj in objs {
+                    let topic = Topic(pfObject: pfobj)
+                    topics.append(topic)
+                }
+                success(topics)
+            }
+        }
+
+    }
 }
