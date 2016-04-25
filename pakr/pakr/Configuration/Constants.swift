@@ -36,4 +36,6 @@ class Constants {
     class Color {
         static let PrimaryColor: UInt = 0xF44336
     }
+    
+    static let DemoMode = true
 }

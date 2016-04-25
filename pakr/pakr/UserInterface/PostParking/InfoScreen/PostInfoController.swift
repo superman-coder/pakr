@@ -52,13 +52,33 @@ class PostInfoController: BaseViewController {
     @IBOutlet weak var carMaxPriceTextField: TextField!
     @IBOutlet weak var carCheckBox: BEMCheckBox!
     
+    func initDemoData() {
+        businessNameTextField.text = "Pakr Company"
+        businessDescriptionTextField.text = "We are superman. We can keep safe your vehicle. Anytime, anywhere"
+        businessTelephoneTextField.text = "08-03-01676029814"
+        parkingNameTextField.text = "Bãi giữ xe Hồ Con Rùa"
+        parkingAddressTextField.text = "138 Hai Bà Trưng"
+        parkingDescriptionTextField.text = "Đội ngũ giữ xe chuyên nghiệp thành phố"
+        capacityTextField.text = "200"
+        noteWorkTime.text = "Chúng tôi làm việc cả ngày nghỉ cuối tuần"
+        bikeMinPriceTextField.text = "2000"
+        bikeMaxPriceTextField.text = "2000"
+        motorMinPriceTextField.text = "3000"
+        motorMaxPriceTextField.text = "10000"
+        carMinPriceTextField.text = "30000"
+        carMaxPriceTextField.text = "80000"
+        carCheckBox.on = true
+        motorCheckBox.on = true
+        bikeCheckBox.on = true
+    }
+    
     let value: Int = 1
     
     var isShowKeyBoard = false
     var keyBoardHeight : CGFloat = 0
     var currentTextField: UITextField?
     var message: String!
-
+    
     var arrDayOfWeek: NSArray!
     var arrTimeRange: NSMutableArray!
     
@@ -66,13 +86,13 @@ class PostInfoController: BaseViewController {
     var isCloseTimeAction : Bool!
     
     var delegate: PostInfoControllerDelegate?
-
+    
     var parking: Parking?
     override func viewDidLoad() {
         super.viewDidLoad()
         carCheckBox.tintColor = UIColor.redColor()
-       carCheckBox.onCheckColor = UIColor.redColor()
-       // carCheckBox.onFillColor = UIColor.redColor()
+        carCheckBox.onCheckColor = UIColor.redColor()
+        // carCheckBox.onFillColor = UIColor.redColor()
         
         configTextFields()
         setShowdow()
@@ -82,6 +102,9 @@ class PostInfoController: BaseViewController {
         let nib = UINib(nibName: "WorkTimeTableViewCell", bundle: nil)
         workTimeTableView.registerNib(nib , forCellReuseIdentifier: "WorkTimeTableViewCell")
         initWorkTime()
+        
+        // init data for demo.
+        initDemoData()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -166,11 +189,11 @@ class PostInfoController: BaseViewController {
         }
         alert.addAction(okAction)
         presentViewController(alert, animated: true, completion: nil)
-
+        
     }
     func setDataForParking(){
         let business = Business(businessName: businessNameTextField.text, businessDescription: businessDescriptionTextField.text, telephone: businessTelephoneTextField.text)
-//        let coordinate = Coordinate(latitude: <#T##Double!#>, longitude: <#T##Double!#>)
+        //        let coordinate = Coordinate(latitude: <#T##Double!#>, longitude: <#T##Double!#>)
         let vehicleList = NSMutableArray()
         if carCheckBox.on {
             let vehic = VehicleDetail(vehicleType: VehicleType.Car, minPrice: carMinPriceTextField.text, maxPrice: carMaxPriceTextField.text, note: "")
@@ -264,8 +287,8 @@ class PostInfoController: BaseViewController {
             
         }
     }
-
-     func setShowdow() {
+    
+    func setShowdow() {
         LayoutUtils.dropShadowView(businessInfoContainer)
         LayoutUtils.dropShadowView(parkingInfoContainer)
         LayoutUtils.dropShadowView(bikeDetailContainer)
@@ -290,7 +313,7 @@ class PostInfoController: BaseViewController {
         print(pointY - scrollView.contentOffset.y)
         if contentViewVisuableHeight - (pointY - scrollView.contentOffset.y) <= 0 {
             isShowKeyBoard = false
-             scrollView.contentOffset = CGPointMake(0, pointY - contentViewVisuableHeight + 15)
+            scrollView.contentOffset = CGPointMake(0, pointY - contentViewVisuableHeight + 15)
             isShowKeyBoard = true
         }
     }
