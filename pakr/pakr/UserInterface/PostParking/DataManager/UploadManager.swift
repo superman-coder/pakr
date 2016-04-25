@@ -39,7 +39,13 @@ class UploadManager: NSObject {
     
     func progressEvent(notification: NSNotification) {
         let progress = notification.userInfo!["percent"] as! Int
-        delegate.uploadProgress(count, progress: progress)
+        delegate.uploadProgress(count, progress: progress,
+                                progressAll: calcProgressAll(progress, order: count))
+    }
+    
+    func calcProgressAll(progress: Int, order: Int) -> Int {
+        let totalPart = arrImages.count + 1
+        return  progress / totalPart + (order / totalPart) * 100
     }
     
     func doneEvent(notification: NSNotification) {
@@ -85,22 +91,10 @@ class UploadManager: NSObject {
             }
         }
     }
-    
-    func uploadTopic() {
-        
-    }
-    
-    func updateUI2(serverUrl: String, index: Int) {
-        
-    }
-    func updateUI(progress: Int) {
-        
-    }
-    
 }
 
 protocol UploadManagerDelegate {
     func startUpload(order: Int)
-    func uploadProgress(order: Int, progress: Int)
+    func uploadProgress(order: Int, progress: Int, progressAll: Int)
     func doneUploadTopic(topic: Topic)
 }

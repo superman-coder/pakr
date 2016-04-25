@@ -18,7 +18,6 @@ class PostParkingController: BaseViewController {
     var verifyController: VerifyController!
     
     var authService: AuthService!
-    var awsClient: AWSClient!
     var uploadManager: UploadManager!
     
     @IBOutlet weak var stepViewContainer: UIView!
@@ -32,7 +31,6 @@ class PostParkingController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         authService = WebServiceFactory.getAuthService()
-        awsClient = AWSClient()
         
         setUpNavigationBar()
         setUpStepView()
@@ -195,10 +193,16 @@ class PostParkingController: BaseViewController {
         uploadManager.startUpload()
     }
     
-    
-    
     @IBAction func onTap(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
+    }
+    
+    func getImageByOrder(order: Int) -> UIImage {
+        if order == 0 {
+            return mapImageController.imageCover
+        } else {
+            return mapImageController.arrImageParking![order - 1] as! UIImage
+        }
     }
 }
 

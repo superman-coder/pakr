@@ -12,14 +12,12 @@ class VerifyController: BaseViewController {
     
     @IBOutlet weak var progressStatusTextView: UILabel!
     
-    @IBOutlet weak var imageStatusTextView: UIImageView!
-    
     @IBOutlet weak var controlButton: UIButton!
+    
+    @IBOutlet weak var imageStatusView: UIImageView!
     
     var postParkingController : PostParkingController!
    
-    var awsClient = AWSClient()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -45,20 +43,24 @@ extension VerifyController: UploadManagerDelegate {
         // start upload cover
         case 0:
             uploadStatusTextView.text = "Saving cover photos ..."
+            imageStatusView.image = postParkingController.getImageByOrder(order)
             break
         // all sub images
         default:
            uploadStatusTextView.text = "Saving photos ...."
+           imageStatusView.image = postParkingController.getImageByOrder(order)
             break
         }
     }
     
-    func uploadProgress(order: Int, progress: Int) {
-        
+    func uploadProgress(order: Int, progress: Int, progressAll: Int) {
+        if imageStatusView.image != nil {
+           
+        }
+        progressStatusTextView.text = "\(progressAll) %"
     }
     
     func doneUploadTopic(topic: Topic) {
-       uploadStatusTextView.text = "Finish :D :D :D"
-        controlButton.enabled = true
+        uploadStatusTextView.text = "Finish :D :D :D"
     }
 }
