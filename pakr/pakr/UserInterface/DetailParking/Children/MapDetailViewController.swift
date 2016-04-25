@@ -29,8 +29,4 @@ class MapDetailViewController: UIViewController {
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapVIew.setRegion(coordinateRegion, animated: true)
     }
-
-    @IBAction func dismissSelf(sender: AnyObject) {
-        self.dismissViewControllerAnimated(false, completion: nil)
-    }
 }

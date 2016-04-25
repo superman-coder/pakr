@@ -15,6 +15,8 @@ protocol WorkTimeTableViewCellDelegate {
 class WorkTimeTableViewCell: UITableViewCell {
     @IBOutlet weak var lbldayOfWeek: UILabel!
 
+    @IBOutlet weak var btnCloseTIme: UIButton!
+    @IBOutlet weak var btnOpenTime: UIButton!
     @IBOutlet weak var lblCloseTime: UILabel!
     @IBOutlet weak var lblOpenTime: UILabel!
     var delegate: WorkTimeTableViewCellDelegate! = nil
@@ -40,6 +42,13 @@ class WorkTimeTableViewCell: UITableViewCell {
         lbldayOfWeek.text = dayOfWeek
         lblCloseTime.text = closeTime
         lblOpenTime.text = openTime
+    }
+    func disPlay1(dayOfWeek: String, closeTime: String, openTime: String){
+        lbldayOfWeek.text = dayOfWeek
+        lblCloseTime.text = closeTime
+        lblOpenTime.text = openTime
+        btnOpenTime.enabled = false
+        btnCloseTIme.enabled = false
     }
     
 }

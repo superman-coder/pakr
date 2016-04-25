@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10519FBB1CCE1DDC0006F5E7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10519FB91CCE1DDC0006F5E7 /* PriceTableViewCell.swift */; };
+		10519FBC1CCE1DDC0006F5E7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10519FBA1CCE1DDC0006F5E7 /* PriceTableViewCell.xib */; };
 		1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063B5BB1CCB541A00D08A33 /* WorkTimeTableViewCell.swift */; };
 		1063B5BE1CCB541A00D08A33 /* WorkTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1063B5BC1CCB541A00D08A33 /* WorkTimeTableViewCell.xib */; };
 		10C3DF391CC5E84100352E2D /* ShowAllCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3DF381CC5E84100352E2D /* ShowAllCommentTableViewController.swift */; };
@@ -122,6 +124,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10519FB91CCE1DDC0006F5E7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
+		10519FBA1CCE1DDC0006F5E7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		1063B5BB1CCB541A00D08A33 /* WorkTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTimeTableViewCell.swift; sourceTree = "<group>"; };
 		1063B5BC1CCB541A00D08A33 /* WorkTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkTimeTableViewCell.xib; sourceTree = "<group>"; };
 		10C3DF381CC5E84100352E2D /* ShowAllCommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowAllCommentTableViewController.swift; path = Children/Controller/ShowAllCommentTableViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				B7E6A732F76F5BB71877755C /* PhotosCollectionViewCell.xib */,
 				D60598D01CC4A863009C5BEB /* CommentTableViewCell.xib */,
 				10D1A8B11CC64B29002867BC /* CommentTableViewCell.swift */,
+				10519FB91CCE1DDC0006F5E7 /* PriceTableViewCell.swift */,
+				10519FBA1CCE1DDC0006F5E7 /* PriceTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -865,6 +871,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10519FBC1CCE1DDC0006F5E7 /* PriceTableViewCell.xib in Resources */,
 				B7E6AC35E4C87F435C2D14EE /* MapController.xib in Resources */,
 				B7E6AC7B78DB97C1857BFF86 /* BookmarkController.xib in Resources */,
 				B7E6AAC9E99348518E9B6D21 /* ParkingResultCell.xib in Resources */,
@@ -1020,6 +1027,7 @@
 				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
 				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,
 				B7E6A9C2A41FE994DE773C26 /* PakrCLLocationCoordinate2D.swift in Sources */,
+				10519FBB1CCE1DDC0006F5E7 /* PriceTableViewCell.swift in Sources */,
 				D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */,
 				D60598EF1CC963F7009C5BEB /* UIImage+Resize.swift in Sources */,
 				B7E6AE1FA3C29FC389132252 /* DataServiceUtils.swift in Sources */,

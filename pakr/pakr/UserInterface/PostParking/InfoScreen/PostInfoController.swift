@@ -176,7 +176,7 @@ class PostInfoController: BaseViewController {
             vehicleList.addObject(vehic)
         }
         if motorCheckBox.on {
-            let vehic = VehicleDetail(vehicleType: VehicleType.Motor, minPrice: motorMinPriceTextField.text, maxPrice: motorMaxPriceTextField.text, note: "")
+            let vehic = VehicleDetail(vehicleType: VehicleType.Motor, minPrice: motorMinPriceTextField.text, maxPrice: motorMaxPriceTextField.text, note: noteWorkTime.text)
             vehicleList.addObject(vehic)
         }
         parking = Parking(business: business, parkingName: parkingNameTextField.text, capacity: 0, addressName: parkingAddressTextField.text!, coordinate: nil, vehicleDetailList: vehicleList.copy() as! [VehicleDetail], schedule: arrTimeRange.copy() as! [TimeRange], region: [])

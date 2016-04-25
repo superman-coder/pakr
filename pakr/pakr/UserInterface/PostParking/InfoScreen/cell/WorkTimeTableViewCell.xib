@@ -20,13 +20,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGh-bA-B3X">
-                        <rect key="frame" x="130" y="7" width="30" height="30"/>
+                        <rect key="frame" x="140" y="7" width="30" height="30"/>
                         <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5R-qG-sga" userLabel="line">
-                        <rect key="frame" x="180" y="21" width="20" height="2"/>
+                        <rect key="frame" x="190" y="21" width="20" height="2"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="2hV-zT-lGG"/>
@@ -34,19 +34,19 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHn-n6-CaF">
-                        <rect key="frame" x="220" y="7" width="30" height="30"/>
+                        <rect key="frame" x="230" y="7" width="30" height="30"/>
                         <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRy-ea-oEc">
-                        <rect key="frame" x="130" y="7" width="30" height="30"/>
+                        <rect key="frame" x="140" y="7" width="30" height="30"/>
                         <connections>
                             <action selector="btnOpenTimeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TYO-0m-Dnj"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejx-Xr-MaZ">
-                        <rect key="frame" x="220" y="7" width="30" height="30"/>
+                        <rect key="frame" x="230" y="7" width="30" height="30"/>
                         <connections>
                             <action selector="btnCloseTimeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sNU-65-qeg"/>
                         </connections>
@@ -61,7 +61,7 @@
                     <constraint firstItem="Ejx-Xr-MaZ" firstAttribute="top" secondItem="jHn-n6-CaF" secondAttribute="top" id="Ot3-Mt-waO"/>
                     <constraint firstItem="iRy-ea-oEc" firstAttribute="bottom" secondItem="cGh-bA-B3X" secondAttribute="bottom" id="QfU-Ih-8cg"/>
                     <constraint firstItem="Ejx-Xr-MaZ" firstAttribute="trailing" secondItem="jHn-n6-CaF" secondAttribute="trailing" id="RSZ-3H-c2a"/>
-                    <constraint firstItem="G5R-qG-sga" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="30" id="UXK-Cq-EGg"/>
+                    <constraint firstItem="G5R-qG-sga" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="40" id="UXK-Cq-EGg"/>
                     <constraint firstItem="jHn-n6-CaF" firstAttribute="centerY" secondItem="G5R-qG-sga" secondAttribute="centerY" id="WIA-TQ-tes"/>
                     <constraint firstItem="Ejx-Xr-MaZ" firstAttribute="leading" secondItem="jHn-n6-CaF" secondAttribute="leading" id="ax2-aM-M5m"/>
                     <constraint firstItem="iRy-ea-oEc" firstAttribute="top" secondItem="cGh-bA-B3X" secondAttribute="top" id="jdy-lE-hTS"/>
@@ -72,6 +72,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnCloseTIme" destination="Ejx-Xr-MaZ" id="nfe-3a-Lnk"/>
+                <outlet property="btnOpenTime" destination="iRy-ea-oEc" id="hsn-y6-uCE"/>
                 <outlet property="lblCloseTime" destination="jHn-n6-CaF" id="oas-Rm-qIw"/>
                 <outlet property="lblOpenTime" destination="cGh-bA-B3X" id="ZgS-Cb-cDu"/>
                 <outlet property="lbldayOfWeek" destination="1Mt-6V-Fs8" id="3gc-Ph-JCc"/>

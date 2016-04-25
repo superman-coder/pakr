@@ -21,17 +21,17 @@ class DetailParkingController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var infoTableHeight: NSLayoutConstraint!
-    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet weak var commentsTableHeight: NSLayoutConstraint!
 
     @IBOutlet weak var imageChitBottom: UIImageView!
     @IBOutlet weak var imgParkingTop: UIImageView!
     @IBOutlet weak var imgPackingOpaciti: UIImageView!
     
-    @IBOutlet weak var lblOpenTime: UILabel!
-    @IBOutlet weak var lblCloseTime: UILabel!
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblBusinessReview: UILabel!
+    @IBOutlet weak var rating: RatingControl!
+    @IBOutlet weak var hoursToday: UILabel!
+    @IBOutlet weak var numReviews: UILabel!
     
     var arrInfo: NSArray?
     var arrInfoImage: NSArray?
@@ -67,19 +67,37 @@ class DetailParkingController: UIViewController {
 
     func setData(){        
         arrUrlImageParking = parking.imageUrl
-        
-        lblOpenTime.text = "\(parking.schedule.first!.openTime)"
-        lblCloseTime.text = "\(parking.schedule.first!.closeTime)"
         lblAddress.text = parking.addressName
         lblBusinessReview.text = parking.business.businessDescription
+
+        var dayOfWeek = getDayOfWeek()
+        if dayOfWeek == 1 {
+            dayOfWeek = 6
+        }else{
+            dayOfWeek = dayOfWeek - 2
+        }
+        if parking.schedule.count >= 6 {
+            let closeTime = "\(parking.schedule[dayOfWeek].closeTime)"
+            let openTime = "\(parking.schedule[dayOfWeek].openTime)"
+            hoursToday.text = "Hours ToDay: \(openTime) - \(closeTime)"
+        }
+        rating.rating = 3
+        numReviews.text = "197 Reviews"
         
         let url  = NSURL(string:(parking.imageUrl?.first)!)!
-        imgParkingTop.setImageWithURL(url, placeholderImage: UIImage(named: "parkingLot"))
+        imgParkingTop.setImageWithURL(url, placeholderImage: UIImage(named: "parking"))
         arrInfo = ["Direction","Call","More Info"]
         arrInfoImage = ["direction","call","more"]
         infoTableView.reloadData()
 
         centerMapOnLocation()
+    }
+    func getDayOfWeek()->Int {
+        let today = NSDate()
+        let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let myComponents = myCalendar.components(.Weekday, fromDate: today)
+        let weekDay = myComponents.weekday
+        return weekDay
     }
     
     func centerMapOnLocation(){
@@ -100,7 +118,7 @@ class DetailParkingController: UIViewController {
     func showMoreInfo(){
         let info = MoreInfoViewController()
         info.parking = parking
-        presentViewController(info, animated: true, completion: nil)
+        self.navigationController?.pushViewController(info, animated: true)
     }
     func openMapForPlace() {
         let latitute:CLLocationDegrees =   parking.coordinate.latitude

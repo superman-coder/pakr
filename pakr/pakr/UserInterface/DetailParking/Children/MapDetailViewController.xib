@@ -18,13 +18,6 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N9a-ED-gEY">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </mapView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9T-6Q-TIZ">
-                    <rect key="frame" x="26" y="12" width="21" height="22"/>
-                    <state key="normal" image="closeButton"/>
-                    <connections>
-                        <action selector="dismissSelf:" destination="-1" eventType="touchUpInside" id="Vey-st-9Oz"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -35,7 +28,4 @@
             </constraints>
         </view>
     </objects>
-    <resources>
-        <image name="closeButton" width="42" height="42"/>
-    </resources>
 </document>
