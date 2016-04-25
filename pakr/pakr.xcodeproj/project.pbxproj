@@ -38,7 +38,6 @@
 		B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A145EF2DF7DDD58149AD /* Parking.swift */; };
 		B7E6A23A88726CC0D19CD553 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A122699477C5E67ECE5E /* SearchController.xib */; };
 		B7E6A25A2B4DCA5610E27897 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A401D78FD167E1317138 /* JSONUtils.swift */; };
-		B7E6A36290D6AB8FB4F37590 /* AddressServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A472F7C0783489C722A9 /* AddressServiceMockImpl.swift */; };
 		B7E6A490B0661ADCFA1A38FB /* UserHandlerRealmImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD886507C567CEEE6A5A /* UserHandlerRealmImpl.swift */; };
 		B7E6A4AACDDABB7130F3DBA7 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A62B148D4FB6723C6476 /* Role.swift */; };
 		B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACFA00B87FBB2B3A50D1 /* Topic.swift */; };
@@ -168,7 +167,6 @@
 		B7E6A40C0FC253C1AFE78D7B /* VerifyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyController.xib; sourceTree = "<group>"; };
 		B7E6A43E71032DC2B0D1F1CF /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B7E6A472B3B61BB6955C8474 /* AddressServiceParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceParseImpl.swift; sourceTree = "<group>"; };
-		B7E6A472F7C0783489C722A9 /* AddressServiceMockImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceMockImpl.swift; sourceTree = "<group>"; };
 		B7E6A4C179A35653DB255FA2 /* TimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeRange.swift; sourceTree = "<group>"; };
 		B7E6A4FF18220112CA540A35 /* AddressService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
 		B7E6A51ACE4DE755F7FFD0B0 /* ParkingResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingResultCell.xib; sourceTree = "<group>"; };
@@ -594,7 +592,6 @@
 			isa = PBXGroup;
 			children = (
 				B7E6A4FF18220112CA540A35 /* AddressService.swift */,
-				B7E6A472F7C0783489C722A9 /* AddressServiceMockImpl.swift */,
 				B7E6A472B3B61BB6955C8474 /* AddressServiceParseImpl.swift */,
 			);
 			path = Address;
@@ -979,7 +976,6 @@
 				723E739D1CC995F3008C527C /* ModelProxy.swift in Sources */,
 				B7E6A9544AAB2F696EC945AA /* AddressService.swift in Sources */,
 				D6A14E591CC27DFB00BC6A64 /* ProfileDataManager.swift in Sources */,
-				B7E6A36290D6AB8FB4F37590 /* AddressServiceMockImpl.swift in Sources */,
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
 				D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */,
