@@ -25,7 +25,7 @@ class AWSClient {
     // MARK: prepare for upload image.
     func prepareUploadImage(user: String!, image: UIImage) -> (AWSS3TransferManagerUploadRequest, NSURL){
         // get data and compress from image
-        let imageData = UIImageJPEGRepresentation(image, 0.5);
+        let imageData = UIImageJPEGRepresentation(image, 0.8);
         
         // get file. and write to file. we just can send to amazon when having file url
         // let fileName = NSProcessInfo.processInfo().globallyUniqueString.stringByAppendingString(".jpeg")
@@ -50,7 +50,7 @@ class AWSClient {
 
     // MARK: upload image to Amazon S3 service
     func uploadImage(user: String!, image: UIImage, success: (String -> Void)?, error: (Void -> Void)?, progress: (Int -> Void)?) {
-        let (uploadRequest, fileURL) = prepareUploadImage(user, image: image)
+        let (uploadRequest, _) = prepareUploadImage(user, image: image)
         // upload this request
         upload(uploadRequest, success: success, error: error, progress: progress)
     }

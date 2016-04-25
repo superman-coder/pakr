@@ -63,6 +63,7 @@ extension VerifyController: UploadManagerDelegate {
     func uploadProgress(order: Int, progress: Int, progressAll: Int) {
         if imageStatusView.image != nil {
             imageStatusView.alpha = CGFloat(progress / 100)
+            print("debug: \(CGFloat(progress / 100))")
         }
         progressBar.progress = Float( progressAll / 100)
         progressStatusTextView.text = "\(progressAll) %"
@@ -70,5 +71,14 @@ extension VerifyController: UploadManagerDelegate {
     
     func doneUploadTopic(topic: Topic) {
         uploadStatusTextView.text = "Finish :D :D :D"
+        
+        // move to detail screen
+        let detailViewController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
+        detailViewController.parking = topic.parking
+        
+        var controllers = self.navigationController?.viewControllers
+        controllers?.removeLast()
+        controllers?.append(detailViewController)
+        navigationController?.setViewControllers(controllers!, animated: true)
     }
 }
