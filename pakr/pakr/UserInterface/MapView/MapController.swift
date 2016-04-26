@@ -19,6 +19,8 @@ class MapController: UIViewController {
     var parkingList: [Topic]! = []
     var parkingDataLoadingRadius:Double = 0
     
+    var serviceAvailable = false
+    
     // Rarely modified.
 //    let centerPinLayer = CALayer()
     var pinImage: UIImage?
@@ -57,6 +59,21 @@ class MapController: UIViewController {
             parkMapView.setRegion(region, animated: true)
         }
         
+        let button = UIButton(type: .Custom)
+        button.backgroundColor = UIColor.whiteColor()
+        button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(MapController.buttonMyLocationDidClick(_:)), forControlEvents: .TouchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "current-location")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
+        button.tintColor = UIColor.primaryColor()
+        
+        button.imageView?.contentMode = .ScaleAspectFit
+        
+        let views = ["button":button]
+        self.parkMapView.addSubview(button)
+        self.parkMapView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[button(48)]-(8)-|", options: [], metrics: nil, views: views))
+        self.parkMapView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[button(48)]-(8)-|", options: [], metrics: nil, views: views))
+        
 /* Realize that no need to add center pin - TIEN
         centerPinLayer.contents = UIImage(named: "pin-orange")?.CGImage
         centerPinLayer.bounds = CGRectMake(0, 0, 29, 42)
@@ -65,6 +82,13 @@ class MapController: UIViewController {
         centerPinLayer.anchorPoint = CGPointMake(0.5, 1)
         parkMapView.layer.addSublayer(centerPinLayer)
  */
+    }
+    
+    func buttonMyLocationDidClick(sender:UIButton) {
+        if let myLocation = self.currentUserLocation {
+            let region = MKCoordinateRegionMakeWithDistance(myLocation, MAP_DEFAULT_RADIUS, MAP_DEFAULT_RADIUS)
+            parkMapView.setRegion(region, animated: true)
+        }
     }
     
     func reload() {
@@ -143,14 +167,18 @@ extension MapController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         self.currentUserLocation = userLocation.coordinate
         
-        if currentCenterLocation == nil || !CLLocationCoordinate2DIsValid(currentCenterLocation!) {
-            currentCenterLocation = userLocation.coordinate
-        } else {
-            
+        if (!serviceAvailable) {
+            let region = MKCoordinateRegionMakeWithDistance(currentUserLocation!, MAP_DEFAULT_RADIUS, MAP_DEFAULT_RADIUS)
+            parkMapView.setRegion(region, animated: true)
+            serviceAvailable = true
         }
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if(annotation.isKindOfClass(MKUserLocation)) {
+            return nil;
+        }
+        
         let reuseIdentifier = "pakr_annotation"
         var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseIdentifier)
         if (annotationView == nil) {
