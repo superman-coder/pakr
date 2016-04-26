@@ -45,7 +45,7 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WOV-Bo-FYq" customClass="CircularImageView" customModule="pakr" customModuleProvider="target">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WOV-Bo-FYq" customClass="CircularImageView" customModule="pakr" customModuleProvider="target">
                             <rect key="frame" x="20" y="19" width="70" height="70"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
