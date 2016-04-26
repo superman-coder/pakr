@@ -57,6 +57,7 @@ class SearchController: UIViewController {
         self.navigationItem.titleView = searchBar
         searchBar.tintColor = UIColor.primaryColor()
         searchBar.autocorrectionType = .No
+        searchBar.placeholder = "Type an address..."
     }
     
     func reloadData() {
