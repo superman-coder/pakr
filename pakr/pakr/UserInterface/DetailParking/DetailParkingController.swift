@@ -13,6 +13,8 @@ import MapKit
 class DetailParkingController: UIViewController {
     var parking : Parking!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var fromBusinessView: UIControl!
+    @IBOutlet weak var addressView: UIControl!
     @IBOutlet weak var photoCollectionView: UICollectionView!
     @IBOutlet weak var infoTableView: UITableView!
     @IBOutlet weak var commentsTableView: UITableView!
@@ -57,6 +59,7 @@ class DetailParkingController: UIViewController {
         setData()
         
         self.title = parking.parkingName
+        setShadow()
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,6 +68,16 @@ class DetailParkingController: UIViewController {
     
 // MARK: - Private Method
 
+    func setShadow(){
+        LayoutUtils.dropShadowView(photoCollectionView)
+        LayoutUtils.dropShadowView(infoTableView)
+        LayoutUtils.dropShadowView(commentsTableView)
+        LayoutUtils.dropShadowView(mapkit)
+        LayoutUtils.dropShadowView(imgParkingTop)
+        LayoutUtils.dropShadowView(imageChitBottom)
+        LayoutUtils.dropShadowView(addressView)
+        LayoutUtils.dropShadowView(fromBusinessView)
+    }
     func setData(){        
         arrUrlImageParking = parking.imageUrl
         lblAddress.text = parking.addressName
@@ -264,8 +277,9 @@ extension DetailParkingController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         return CGSizeMake(120 , 120)
     }
-    
-    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets{
+        return UIEdgeInsetsMake(5, 5, 5, 5)
+    }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     }
     

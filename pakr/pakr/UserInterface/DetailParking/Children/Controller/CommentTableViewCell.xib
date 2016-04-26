@@ -23,6 +23,10 @@
                             <constraint firstAttribute="width" constant="30" id="MyD-EC-dgp"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ccl-At-U68"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyen Trung Q" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5d-q7-IRh">
                         <rect key="frame" x="46" y="8" width="109" height="16"/>
