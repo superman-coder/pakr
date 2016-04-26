@@ -134,6 +134,10 @@ extension SelectMapImageController: UICollectionViewDelegate, UICollectionViewDa
         if indexPath.row == numberImage - 1{
             let cell: PhotosCollectionViewCell = collectionView .dequeueReusableCellWithReuseIdentifier("PhotosCollectionViewCell", forIndexPath: indexPath) as! PhotosCollectionViewCell
             cell.imageView.image = UIImage(named: "Camera")
+            // cell.imageView.layer.borderColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor).CGColor
+            //cell.imageView.layer.borderWidth = 3
+            //cell.imageView.bounds = CGRectInset(cell.imageView.frame, 2, 2);
+
             return cell
         }else{
             let cell: PhotosCollectionViewCell = collectionView .dequeueReusableCellWithReuseIdentifier("PhotosCollectionViewCell", forIndexPath: indexPath) as! PhotosCollectionViewCell

@@ -11,6 +11,7 @@ class ProfileController: BaseViewController {
     @IBOutlet weak var fullNameTextView: UILabel!
     @IBOutlet weak var userNameTextView: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileHeaderView: UIView!
     
     var authService: AuthService!
     
@@ -18,6 +19,8 @@ class ProfileController: BaseViewController {
         super.viewDidLoad()
         
         self.title = "MORE"
+        self.view.backgroundColor = UIColor.UIColorFromRGB(0xE0E0E0)
+        
         authService = WebServiceFactory.getAuthService()
         let currentUser = authService.getLoginUser()
         if let currentUser = currentUser {
@@ -26,6 +29,7 @@ class ProfileController: BaseViewController {
             }
         }
         
+        LayoutUtils.dropShadowView(profileHeaderView)
         
         userNameTextView.text = authService.getLoginUser()?.email
         fullNameTextView.text = authService.getLoginUser()?.name
@@ -41,6 +45,7 @@ extension ProfileController: UITableViewDelegate {
         let row = indexPath.row
         switch row {
         case 0:
+            self.navigationController?.pushViewController(AllPostParkingTableViewController(), animated: true)
             break
         case 1:
             let postParkingController = PostParkingController(nibName: "PostParkingController", bundle: nil)
@@ -58,9 +63,6 @@ extension ProfileController: UITableViewDelegate {
             let loginController = LoginController(nibName: "LoginController", bundle: nil)
             delegate.window?.rootViewController = loginController
             delegate.window?.makeKeyAndVisible()
-            break
-        case 6:
-            self.navigationController?.pushViewController(AllPostParkingTableViewController(), animated: true)
             break
         default:
             break
