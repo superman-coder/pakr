@@ -38,6 +38,7 @@ class MapController: UIViewController {
     // MARK: - Init controller
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Map"
         
         setupLocationManager()
         initMapView()
@@ -102,12 +103,15 @@ class MapController: UIViewController {
     
     func createAnnotationList(parkingList:[Topic]!) -> [ParkAnnotation] {
         var listAnnotation:[ParkAnnotation] = []
-        for topic in parkingList {
+
+        for i in 0..<parkingList.count {
+            let topic = parkingList[i];
             let parking = topic.parking
             
-            let annotation = ParkAnnotation(title: parking.parkingName, subtitle: nil, coordinate: CLLocationCoordinate2DMake(parking.coordinate.latitude, parking.coordinate.longitude))
+            let annotation = ParkAnnotation(title: parking.parkingName, subtitle: nil, coordinate: CLLocationCoordinate2DMake(parking.coordinate.latitude, parking.coordinate.longitude), tag: i)
             listAnnotation.append(annotation)
         }
+        
         return listAnnotation
     }
     
@@ -187,10 +191,25 @@ extension MapController: MKMapViewDelegate {
         if pinImage == nil {
             pinImage = PakrImageUtils.resizeImage(UIImage(named: "pin-orange")!, toSize: CGSizeMake(29, 42))
         }
+        
+        if let pakrAnnotation = annotation as? ParkAnnotation {
+            annotationView?.tag = pakrAnnotation.tag
+        }
         annotationView?.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
         annotationView?.canShowCallout = true
         annotationView?.image = pinImage
         return annotationView
+    }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let tag = view.tag
+        let topic = self.parkingList[tag];
+        let parking = topic.parking
+        
+        let detailVc = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
+        detailVc.parking = parking
+        
+        self.navigationController?.pushViewController(detailVc, animated: true)
     }
 }
 
