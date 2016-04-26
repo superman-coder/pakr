@@ -100,10 +100,10 @@ class PostInfoController: BaseViewController {
         registryNotifyKeyBoard()
         workTimeTableView.scrollEnabled =  false
         workTimeTableView.rowHeight = 45
+        self.contentView.backgroundColor = UIColor.UIColorFromRGB(0xE0E0E0)
         let nib = UINib(nibName: "WorkTimeTableViewCell", bundle: nil)
         workTimeTableView.registerNib(nib , forCellReuseIdentifier: "WorkTimeTableViewCell")
         initWorkTime()
-        
         // init data for demo.
         initDemoData()
     }
