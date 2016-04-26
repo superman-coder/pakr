@@ -13,6 +13,8 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageView.layer.cornerRadius = 8
+        imageView.layer.masksToBounds = true
         // Initialization code
     }
 

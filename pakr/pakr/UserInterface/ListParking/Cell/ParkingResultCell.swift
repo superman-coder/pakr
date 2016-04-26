@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking
 
 class ParkingResultCell: UITableViewCell {
 
@@ -54,6 +55,13 @@ class ParkingResultCell: UITableViewCell {
         // Setup schedule 
         let todaySchedule = getTodaySchedule(parking)
         scheduleLabel.text = "\(todaySchedule.open) - \(todaySchedule.close)"
+        var url :NSURL
+        if parking.imageUrl?.count > 0 {
+            url = NSURL(string: (parking.imageUrl?.first)!)!
+        }else{
+            url = NSURL(string:"")!
+        }
+        avatarImageView.setImageWithURL(url, placeholderImage: UIImage(named: "parkingLot"))
     }
     
     func getTodaySchedule(parking:Parking) -> (open: String, close: String) {
