@@ -27,8 +27,6 @@ class VerifyController: BaseViewController {
         controlButton.layer.borderColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor).CGColor
         controlButton.layer.borderWidth=2.0;
         controlButton.setTitleColor(UIColor.UIColorFromRGB(Constants.Color.PrimaryColor), forState: UIControlState.Normal)
-        controlButton.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
-
         
         imageStatusView.layer.borderWidth = 3
         imageStatusView.layer.borderColor = (UIColor(patternImage: UIImage(named: "dot")!)).CGColor
@@ -40,7 +38,7 @@ class VerifyController: BaseViewController {
     }
     
     @IBAction func postParkingEvent(sender: AnyObject) {
-        controlButton.enabled = false
+        //controlButton.enabled = false
         postParkingController.upLoadParking()
     }
 }
