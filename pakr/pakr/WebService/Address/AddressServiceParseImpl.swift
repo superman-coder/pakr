@@ -6,6 +6,7 @@
 import Foundation
 import Parse
 
+let DemoMode = true
 public class AddressServiceParseImpl: NSObject, AddressService {
     func getNearByParkingLotByLocation(latitude: Double!, longitude: Double, radius: Double, success: ([Topic] -> Void), fail: (NSError -> Void)) {
         let query = PFQuery(className: Constants.Table.Topic)
@@ -33,6 +34,27 @@ public class AddressServiceParseImpl: NSObject, AddressService {
     }
     
     func getNearByParkingByAddressName(address: String, radius: Double, success: ([Topic] -> Void), fail: (NSError -> Void)) {
+        if (DemoMode) {
+            let lowerAddress = address.lowercaseString
+            if (lowerAddress.containsString("ho con rua")
+                || lowerAddress.containsString("con rua")
+                || lowerAddress.containsString("ho rua")
+                || lowerAddress.containsString("con rùa")
+                || lowerAddress.containsString("hồ con rùa")
+                || lowerAddress.containsString("hồ rùa")) {
+               let coord = Coordinate(latitude: 10.782661, longitude: 106.695915)
+                self.getNearByParkingLotByLocation(coord.latitude,
+                                                   longitude: coord.longitude,
+                                                   radius: radius,
+                                                   success: { topic in
+                                                    success(topic)
+                    }, fail: { error in
+                        fail(error)
+                })
+                return
+            }
+        }
+        
         GMServices.requestAddressSearchWithAddress(address) { (successGMS, locationGMS) in
             var coord:Coordinate? = nil
             
