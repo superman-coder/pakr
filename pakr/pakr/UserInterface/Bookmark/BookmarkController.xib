@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
@@ -14,8 +13,24 @@
         <view contentMode="scaleToFill" id="Wv0-Nc-7n0">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forever_alone" translatesAutoresizingMaskIntoConstraints="NO" id="lMX-1S-CIc">
+                    <rect key="frame" x="235" y="235" width="130" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="eRY-2j-MKh"/>
+                        <constraint firstAttribute="width" constant="130" id="iWU-VI-gmm"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lMX-1S-CIc" firstAttribute="centerX" secondItem="Wv0-Nc-7n0" secondAttribute="centerX" id="MDZ-eJ-ig4"/>
+                <constraint firstItem="lMX-1S-CIc" firstAttribute="centerY" secondItem="Wv0-Nc-7n0" secondAttribute="centerY" id="s3b-di-fnm"/>
+            </constraints>
             <point key="canvasLocation" x="424" y="182"/>
         </view>
     </objects>
+    <resources>
+        <image name="forever_alone" width="226" height="223"/>
+    </resources>
 </document>

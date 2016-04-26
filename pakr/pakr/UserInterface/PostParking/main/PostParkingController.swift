@@ -189,7 +189,8 @@ class PostParkingController: BaseViewController {
         
         let parking = Parking(business: business, parkingName: postInfoController.parkingNameTextField.text, capacity: 20, addressName: postInfoController.parkingAddressTextField.text!, coordinate: mapImageController.parkingLocation!.coordinate(), vehicleDetailList: vehicleDetails, schedule: timeRange, region: [])
         
-        let topic = Topic(userId: authService.getLoginUser()?.userId, parking: parking, rating: 0)
+        let topic = Topic(userId: authService.getLoginUser()?.objectId, parking: parking, rating: 0)
+        print(authService.getLoginUser()?.objectId)
         
         // start uploading data
         uploadManager = UploadManager(topic: topic, arrImages: arrImages, delegate: verifyController)

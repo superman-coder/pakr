@@ -36,6 +36,8 @@ class AuthServiceImpl: AuthService {
         
         // set again all attribute to none
         pref.setLoginMechanism(LoginMechanism.NONE)
+        NSUserDefaults.standardUserDefaults().saveCurrentUser(nil)
+        currentUser = nil
     }
     
     func getLoginUser() -> User? {
@@ -86,6 +88,7 @@ func isExistUser(emailAddress: String, success: User -> Void, error: Void -> Voi
         if errorMessage == nil && objects?.count > 0 {
             // we always know this is unique result
             let user = objects![0] as! User
+            user.userId = user.objectId
             success(user)
         } else {
             error()
@@ -114,6 +117,7 @@ func getUserByUserId(userId: String, success: User -> Void, error: Void -> Void)
         if errorMessage == nil && objects?.count > 0 {
             // we always know this is unique result
             let user = objects![0] as! User
+            user.userId = user.objectId
             success(user)
         } else {
             error()

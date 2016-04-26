@@ -62,7 +62,7 @@ class PostInfoController: BaseViewController {
         capacityTextField.text = "200"
         noteWorkTime.text = "Chúng tôi làm việc cả ngày nghỉ cuối tuần"
         bikeMinPriceTextField.text = "2000"
-        bikeMaxPriceTextField.text = "2000"
+        bikeMaxPriceTextField.text = "4000"
         motorMinPriceTextField.text = "3000"
         motorMaxPriceTextField.text = "10000"
         carMinPriceTextField.text = "30000"

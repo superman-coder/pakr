@@ -6,7 +6,7 @@
 import Foundation
 import UIKit
 
-class BookmarkController: UIViewController {
+class BookmarkController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

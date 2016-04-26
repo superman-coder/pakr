@@ -47,6 +47,7 @@ extension NSUserDefaults {
             let json = try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
             user = User(dict: json)
         }
+        user?.objectId = user?.userId
         return user
     }
 }
