@@ -15,7 +15,9 @@ class ParkingResultCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var priceCar: UILabel!
+    @IBOutlet weak var priceBike: UILabel!
+    @IBOutlet weak var priceMotobike: UILabel!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var ratingCountLabel: UILabel!
     @IBOutlet weak var scheduleLabel: UILabel!
@@ -49,8 +51,34 @@ class ParkingResultCell: UITableViewCell {
         addressLabel.text = parking.addressName
         ratingCountLabel.text = "\(topic.rating)"
         
+        var bikeSet = false, carSet = false, motorSet = false
         // Setup price
-        priceLabel.text = "\(parking.vehicleList[0].minPrice) - \(parking.vehicleList[0].maxPrice)"
+        for vehicle in parking.vehicleList {
+            var label: UILabel? = nil
+            if vehicle.vehicleType == .Bike {
+                label = priceBike
+                bikeSet = true
+            } else if vehicle.vehicleType == .Car {
+               label = priceCar
+                carSet = true
+            } else if vehicle.vehicleType == .Motor {
+                label = priceMotobike
+                motorSet = true
+            }
+            
+            if label != nil {
+                label!.text = "\(vehicle.minPrice) - \(vehicle.maxPrice)"
+            }
+            if !bikeSet {
+                priceBike.text = "N/A"
+            }
+            if !carSet {
+                priceCar.text = "N/A"
+            }
+            if !motorSet {
+                priceMotobike.text = "N/A"
+            }
+        }
         
         // Setup schedule 
         let todaySchedule = getTodaySchedule(parking)
