@@ -5,7 +5,7 @@
 
 import Foundation
 import UIKit
-
+import AFNetworking
 class ProfileController: BaseViewController {
     @IBOutlet weak var profileImageView: CircularImageView!
     @IBOutlet weak var fullNameTextView: UILabel!
@@ -17,6 +17,7 @@ class ProfileController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "MORE"
         authService = WebServiceFactory.getAuthService()
         let currentUser = authService.getLoginUser()
         if let currentUser = currentUser {
@@ -57,6 +58,9 @@ extension ProfileController: UITableViewDelegate {
             let loginController = LoginController(nibName: "LoginController", bundle: nil)
             delegate.window?.rootViewController = loginController
             delegate.window?.makeKeyAndVisible()
+            break
+        case 6:
+            self.navigationController?.pushViewController(AllPostParkingTableViewController(), animated: true)
             break
         default:
             break
