@@ -45,8 +45,10 @@ class PostParkingController: BaseViewController {
     }
     
     func setUpStepView() {
+        var frame = stepViewContainer.bounds
+        frame.size.width = UIScreen.mainScreen().bounds.size.width * 4 / 3
         stepView = AYStepperView(
-            frame: stepViewContainer.bounds,
+            frame: frame,
             titles: ["Step 1", "Step 2", "Step 3", ""])
         stepView.tintColor = UIColor.UIColorFromRGB(Constants.Color.PrimaryColor)
         stepView.backgroundColor = UIColor.UIColorFromRGB(0xE0E0E0)

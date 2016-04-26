@@ -84,8 +84,10 @@ class DetailParkingController: UIViewController {
         rating.rating = 3
         numReviews.text = "197 Reviews"
         
-        let url  = NSURL(string:(parking.imageUrl?.first)!)!
-        imgParkingTop.setImageWithURL(url, placeholderImage: UIImage(named: "parking"))
+        if parking.imageUrl != nil {
+            let url  = NSURL(string:(parking.imageUrl?.first)!)!
+            imgParkingTop.setImageWithURL(url, placeholderImage: nil)
+        }
         arrInfo = ["Direction","Call","More Info"]
         arrInfoImage = ["direction","call","more"]
         infoTableView.reloadData()
@@ -251,12 +253,12 @@ extension DetailParkingController: UITableViewDataSource, UITableViewDelegate{
 
 extension DetailParkingController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (arrUrlImageParking?.count)!
+        return arrUrlImageParking?.count ?? 0
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-            let cell: PhotosCollectionViewCell = collectionView .dequeueReusableCellWithReuseIdentifier("PhotosCollectionViewCell", forIndexPath: indexPath) as! PhotosCollectionViewCell
-            cell.imageView.setImageWithURL(NSURL(fileURLWithPath: arrUrlImageParking![indexPath.row] as! String), placeholderImage:UIImage(named:"parkingLot"))
-            return cell
+        let cell: PhotosCollectionViewCell = collectionView .dequeueReusableCellWithReuseIdentifier("PhotosCollectionViewCell", forIndexPath: indexPath) as! PhotosCollectionViewCell
+        cell.disPlay(arrUrlImageParking![indexPath.row] as! String)
+        return cell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{

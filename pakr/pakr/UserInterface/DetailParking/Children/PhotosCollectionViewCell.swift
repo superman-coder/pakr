@@ -16,4 +16,9 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func disPlay(string: String){
+        let url = NSURL(string: string)
+        imageView.setImageWithURL(url!, placeholderImage: nil)
+    }
+    
 }

@@ -15,5 +15,6 @@ target 'pakr' do
     pod 'AWSS3'
     pod 'AWSCognito'
     pod 'BSImagePicker'
+    pod 'MBProgressHUD'
 end
 

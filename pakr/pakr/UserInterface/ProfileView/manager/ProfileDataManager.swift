@@ -15,6 +15,7 @@ class ProfileDataManager {
         "Bookmark",
         "Comments",
         "Settings",
-        "Log Out"
+        "Log Out",
+        "All Post Parking"
     ]
 }

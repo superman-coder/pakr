@@ -86,7 +86,8 @@ class PostInfoController: BaseViewController {
     var isCloseTimeAction : Bool!
     
     var delegate: PostInfoControllerDelegate?
-    
+    var isSelfShow: Bool = true
+
     var parking: Parking?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,8 +111,12 @@ class PostInfoController: BaseViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         setDataForParking()
+        isSelfShow = true
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        isSelfShow = false
+    }
     //MARK - Private method
     func isNextStep() -> Bool {
         let mutableArray = NSMutableArray()
@@ -263,6 +268,9 @@ class PostInfoController: BaseViewController {
     }
     
     func keyBoardShow(notifycation: NSNotification){
+        if isSelfShow == false {
+            return
+        }
         if !isShowKeyBoard{
             isShowKeyBoard = true
             let dic = notifycation.userInfo
@@ -274,10 +282,15 @@ class PostInfoController: BaseViewController {
                 self.contentMarginBottom.constant = (keyboardFrame?.size.height)! - 50
                 self.contentView .layoutIfNeeded()
             }
-            focusScrollViewWhenShowKeyBoard(currentTextField!)
+            if currentTextField != nil {
+                focusScrollViewWhenShowKeyBoard(currentTextField!)
+            }
         }
     }
     func keyBoardHide(notifycation: NSNotification){
+        if isSelfShow == false {
+            return
+        }
         if isShowKeyBoard{
             isShowKeyBoard = false
             UIView .animateWithDuration(0.3) {

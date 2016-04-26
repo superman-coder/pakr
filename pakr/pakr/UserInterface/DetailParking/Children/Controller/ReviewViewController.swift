@@ -28,6 +28,7 @@ class ReviewViewController: UIViewController {
         if (self.respondsToSelector(Selector("edgesForExtendedLayout"))) {
             self.edgesForExtendedLayout = UIRectEdge.None
         }
+        LayoutUtils.dropShadowView(contenView)
         registryNotifyShowKeyBoard()
         createBarRightButton()
        

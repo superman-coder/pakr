@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10519FBB1CCE1DDC0006F5E7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10519FB91CCE1DDC0006F5E7 /* PriceTableViewCell.swift */; };
 		10519FBC1CCE1DDC0006F5E7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10519FBA1CCE1DDC0006F5E7 /* PriceTableViewCell.xib */; };
+		105548051CCF514700A9DD8B /* AllPostParkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105548041CCF514700A9DD8B /* AllPostParkingTableViewController.swift */; };
 		1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063B5BB1CCB541A00D08A33 /* WorkTimeTableViewCell.swift */; };
 		1063B5BE1CCB541A00D08A33 /* WorkTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1063B5BC1CCB541A00D08A33 /* WorkTimeTableViewCell.xib */; };
 		10C3DF391CC5E84100352E2D /* ShowAllCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3DF381CC5E84100352E2D /* ShowAllCommentTableViewController.swift */; };
@@ -121,6 +122,7 @@
 /* Begin PBXFileReference section */
 		10519FB91CCE1DDC0006F5E7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		10519FBA1CCE1DDC0006F5E7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
+		105548041CCF514700A9DD8B /* AllPostParkingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostParkingTableViewController.swift; sourceTree = "<group>"; };
 		1063B5BB1CCB541A00D08A33 /* WorkTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTimeTableViewCell.swift; sourceTree = "<group>"; };
 		1063B5BC1CCB541A00D08A33 /* WorkTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkTimeTableViewCell.xib; sourceTree = "<group>"; };
 		10C3DF381CC5E84100352E2D /* ShowAllCommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowAllCommentTableViewController.swift; path = Children/Controller/ShowAllCommentTableViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +272,14 @@
 				9870136ADB30BD79474A430C /* Pods_pakr.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		105548031CCF512B00A9DD8B /* AllPostParking */ = {
+			isa = PBXGroup;
+			children = (
+				105548041CCF514700A9DD8B /* AllPostParkingTableViewController.swift */,
+			);
+			path = AllPostParking;
 			sourceTree = "<group>";
 		};
 		1063B5BA1CCB541A00D08A33 /* cell */ = {
@@ -539,6 +549,7 @@
 		B7E6A96A0627345E65331F41 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				105548031CCF512B00A9DD8B /* AllPostParking */,
 				D6A14E571CC27DE100BC6A64 /* manager */,
 				B7E6A331D58A2E2A1A82F0AC /* ProfileController.xib */,
 				B7E6A5F90F4B6CED9046691F /* ProfileController.swift */,
@@ -931,6 +942,7 @@
 				B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
 				1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */,
+				105548051CCF514700A9DD8B /* AllPostParkingTableViewController.swift in Sources */,
 				D66128791CCCF8FD00B435A8 /* UploadManager.swift in Sources */,
 				B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */,
 				B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */,

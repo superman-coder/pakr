@@ -134,7 +134,9 @@
                 <subviews>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWk-L4-dZH">
                         <rect key="frame" x="8" y="8" width="304" height="27"/>
-                        <state key="normal" title="See All Comments"/>
+                        <state key="normal" title="See All Comments">
+                            <color key="titleColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                     </button>
                 </subviews>
                 <constraints>

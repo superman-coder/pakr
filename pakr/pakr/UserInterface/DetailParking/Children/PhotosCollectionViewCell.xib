@@ -12,7 +12,7 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oHe-Yi-dqy">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkingLot" translatesAutoresizingMaskIntoConstraints="NO" id="oHe-Yi-dqy">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
                 </subviews>
@@ -30,4 +30,7 @@
             <point key="canvasLocation" x="189" y="58"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="parkingLot" width="170" height="170"/>
+    </resources>
 </document>
