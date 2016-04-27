@@ -5,6 +5,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class SearchController: UIViewController {
     
@@ -61,6 +62,8 @@ class SearchController: UIViewController {
     }
     
     func reloadData() {
+        MBProgressHUD.hideHUDForView(self.view, animated: true)
+        searchBar.resignFirstResponder()
         parkingTableView.reloadData()
     }
     
@@ -99,6 +102,9 @@ class SearchController: UIViewController {
                                    completion: nil
         )
     }
+    @IBAction func onTapView(sender: AnyObject) {
+        self.view.endEditing(false)
+    }
 }
 
 extension SearchController: UITableViewDataSource, UITableViewDelegate {
@@ -109,10 +115,6 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return parkSearchResult.count
     }
     
@@ -131,7 +133,7 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let topic = self.parkSearchResult[indexPath.section];
+        let topic = self.parkSearchResult[indexPath.row];
         let parking = topic.parking
         
         let detailVc = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
@@ -159,6 +161,7 @@ extension SearchController: UISearchBarDelegate {
     }
     
     func requestSearchPlaces(sender:NSTimer) {
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         let searchText = sender.userInfo as! String
         addressService.getNearByParkingByAddressName(searchText, radius: 800, success: { topics in
             self.handleSearchResult(topics, error: nil)
@@ -166,7 +169,9 @@ extension SearchController: UISearchBarDelegate {
                self.handleSearchResult(nil, error: error)
         }
     }
-    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar){
+        searchBar.resignFirstResponder()
+    }
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.text = ""
