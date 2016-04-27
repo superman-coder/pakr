@@ -25,7 +25,7 @@ class AWSClient {
     // MARK: prepare for upload image.
     func prepareUploadImage(user: String!, image: UIImage) -> (AWSS3TransferManagerUploadRequest, NSURL){
         // get data and compress from image
-        let imageData = UIImageJPEGRepresentation(image, 0.8);
+        let imageData = UIImageJPEGRepresentation(image, 0.9);
         
         // get file. and write to file. we just can send to amazon when having file url
         // let fileName = NSProcessInfo.processInfo().globallyUniqueString.stringByAppendingString(".jpeg")
@@ -129,7 +129,7 @@ class AWSClient {
             return nil
         }
     }
-    
+   
     // MARK: Download single request
     func download(downloadRequest: AWSS3TransferManagerDownloadRequest, success: Void -> Void, error: Void -> Void) {
         switch (downloadRequest.state) {
