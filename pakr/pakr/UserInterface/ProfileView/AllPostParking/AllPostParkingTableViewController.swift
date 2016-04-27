@@ -20,7 +20,7 @@ class AllPostParkingTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 10
         
-        
+        self.tableView.tableFooterView = UIView()
         let  authenService = WebServiceFactory.getAuthService()
         let user = authenService.getLoginUser()
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -53,12 +53,7 @@ class AllPostParkingTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailViewController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
         detailViewController.parking = parkSearchResult[indexPath.row].parking
-        
-        var controllers = self.navigationController?.viewControllers
-        controllers?.removeLast()
-        controllers?.append(detailViewController)
-        self.navigationController?.setViewControllers(controllers!, animated: true)
-        
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 
 }

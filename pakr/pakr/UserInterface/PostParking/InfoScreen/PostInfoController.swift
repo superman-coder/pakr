@@ -108,6 +108,10 @@ class PostInfoController: BaseViewController {
         initDemoData()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        isSelfShow = true
+    }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         setDataForParking()
