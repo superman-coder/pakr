@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100C66661CD08EE200B5D2A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100C66651CD08EE200B5D2A9 /* LaunchScreen.storyboard */; };
 		10519FBB1CCE1DDC0006F5E7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10519FB91CCE1DDC0006F5E7 /* PriceTableViewCell.swift */; };
 		10519FBC1CCE1DDC0006F5E7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10519FBA1CCE1DDC0006F5E7 /* PriceTableViewCell.xib */; };
 		105548051CCF514700A9DD8B /* AllPostParkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105548041CCF514700A9DD8B /* AllPostParkingTableViewController.swift */; };
@@ -120,6 +121,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100C66651CD08EE200B5D2A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10519FB91CCE1DDC0006F5E7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		10519FBA1CCE1DDC0006F5E7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		105548041CCF514700A9DD8B /* AllPostParkingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostParkingTableViewController.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				B7E6A8EE7F3988A5CD7DEDA7 /* Info.plist */,
 				7295DE651CC13F030001B852 /* Images.xcassets */,
 				B7E6A386378DAACA4E24F7D5 /* parkings.json */,
+				100C66651CD08EE200B5D2A9 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				B7E6A23A88726CC0D19CD553 /* SearchController.xib in Resources */,
 				B7E6A75B8792F930FC0D46E8 /* PostParkingController.xib in Resources */,
 				723552A31CC4D3DB00090651 /* GMPlaceCell.xib in Resources */,
+				100C66661CD08EE200B5D2A9 /* LaunchScreen.storyboard in Resources */,
 				B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */,
 				B7E6A1037EA58D7A02BD6B2B /* VerifyController.xib in Resources */,
 				B7E6AEF2228BC974A36C5467 /* SelectMapImageController.xib in Resources */,

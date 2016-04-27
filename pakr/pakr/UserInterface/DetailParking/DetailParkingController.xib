@@ -164,13 +164,22 @@
                                                 <action selector="didSelectMapView:" destination="-1" eventType="touchUpInside" id="GBH-8M-7ib"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin-orange" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-g1-tte">
+                                            <rect key="frame" x="175" y="65" width="15" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="BUG-ZF-CrJ"/>
+                                                <constraint firstAttribute="height" constant="20" id="WIb-Vo-2CL"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstItem="bpL-g1-tte" firstAttribute="centerX" secondItem="dlo-Cp-xca" secondAttribute="centerX" id="9kN-a3-Siz"/>
                                         <constraint firstItem="egW-Cd-D0N" firstAttribute="top" secondItem="dlo-Cp-xca" secondAttribute="top" id="V6y-Qg-xf1"/>
                                         <constraint firstAttribute="bottom" secondItem="egW-Cd-D0N" secondAttribute="bottom" id="VIp-66-W9f"/>
                                         <constraint firstAttribute="trailing" secondItem="egW-Cd-D0N" secondAttribute="trailing" id="YO5-nO-BdO"/>
                                         <constraint firstItem="bq2-Ol-MfW" firstAttribute="leading" secondItem="dlo-Cp-xca" secondAttribute="leading" id="aop-eG-yvV"/>
+                                        <constraint firstItem="bpL-g1-tte" firstAttribute="centerY" secondItem="dlo-Cp-xca" secondAttribute="centerY" id="gDc-r9-rlf"/>
                                         <constraint firstAttribute="trailing" secondItem="bq2-Ol-MfW" secondAttribute="trailing" id="hbt-GX-qbS"/>
                                         <constraint firstItem="bq2-Ol-MfW" firstAttribute="top" secondItem="dlo-Cp-xca" secondAttribute="top" id="jkP-u3-agx"/>
                                         <constraint firstItem="egW-Cd-D0N" firstAttribute="leading" secondItem="dlo-Cp-xca" secondAttribute="leading" id="pFX-aU-qIv"/>
@@ -223,7 +232,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours Today: 7 - 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egj-Qa-ycj">
                                     <rect key="frame" x="8" y="73" width="122" height="16"/>
                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GH6-ft-zpj">
@@ -329,6 +338,7 @@
     </objects>
     <resources>
         <image name="parking" width="275" height="183"/>
+        <image name="pin-orange" width="64" height="86"/>
         <image name="rate" width="42" height="42"/>
         <image name="rated" width="42" height="42"/>
     </resources>

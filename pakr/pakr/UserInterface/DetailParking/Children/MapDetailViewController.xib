@@ -18,14 +18,26 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N9a-ED-gEY">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </mapView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin-orange" translatesAutoresizingMaskIntoConstraints="NO" id="tQX-xR-Dz9">
+                    <rect key="frame" x="290" y="285" width="20" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="WVE-dH-NT4"/>
+                        <constraint firstAttribute="width" constant="20" id="ZCR-8T-JcT"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="N9a-ED-gEY" secondAttribute="trailing" id="3mW-be-p05"/>
+                <constraint firstItem="tQX-xR-Dz9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EEk-sb-ehh"/>
                 <constraint firstAttribute="bottom" secondItem="N9a-ED-gEY" secondAttribute="bottom" id="cwd-ZC-ZQX"/>
                 <constraint firstItem="N9a-ED-gEY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iUA-JR-IdS"/>
+                <constraint firstItem="tQX-xR-Dz9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mOW-kM-ypv"/>
                 <constraint firstItem="N9a-ED-gEY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sFt-mi-Dt1"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="pin-orange" width="64" height="86"/>
+    </resources>
 </document>
