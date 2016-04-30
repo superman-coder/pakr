@@ -16,7 +16,7 @@ class ProfileRouterImpl: NSObject, ProfileRouter {
        self.screen = screen
         super.init()
     }
-    
+
     func goToPostScreen() {
         let postParkingController = PostParkingController(nibName: "PostParkingController", bundle: nil)
         screen.navigationController?.pushViewController(postParkingController, animated: true)

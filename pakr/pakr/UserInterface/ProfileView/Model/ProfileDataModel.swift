@@ -10,4 +10,6 @@ import Foundation
 
 protocol ProfileDataModel: class{
     func getHeaderUser() -> User
+    func getTotalItems() -> Int
+    func getItemWithOrder(order: Int) -> ProfileItem
 }

@@ -23,7 +23,7 @@ class LoginController: UIViewController, LoginView, GIDSignInUIDelegate {
         super.viewDidLoad()
         
         let loginDataManager = LoginDataManagerImpl()
-        let loginTracker = LoginTracker()
+        let loginTracker = LoginTrackerImpl()
         let router = LoginRouterImpl()
         presenter = LoginPresenterImpl(view: self, manager: loginDataManager, router: router, tracker: loginTracker)
         presenter.initViews()

@@ -9,7 +9,7 @@
 import Foundation
 import FBSDKLoginKit
 
-protocol LoginView {
+protocol LoginView: class{
    func initViews()
     func getFacebookLoginButton() -> FBSDKLoginButton
 }

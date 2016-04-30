@@ -12,7 +12,7 @@ import FBSDKLoginKit
 class LoginPresenterImpl: LoginPresenter, LoginListener {
 
     let loginManager: LoginDataManager
-    let loginView: LoginView
+    weak var loginView: LoginView!
     let router: LoginRouter
     let tracker: LoginTracker
     

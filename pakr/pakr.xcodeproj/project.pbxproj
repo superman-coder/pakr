@@ -122,7 +122,6 @@
 		D60D17AF1CD50693004B1182 /* ProfileDataModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17AD1CD50693004B1182 /* ProfileDataModelImpl.swift */; };
 		D60D17B21CD50F8F004B1182 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17B11CD50F8F004B1182 /* ProfileRouter.swift */; };
 		D60D17B51CD50FB4004B1182 /* ProfileRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17B41CD50FB4004B1182 /* ProfileRouterImpl.swift */; };
-		D60D17B71CD51659004B1182 /* ProfileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17B61CD51659004B1182 /* ProfileAdapter.swift */; };
 		D60D17BA1CD51C6D004B1182 /* TrackerDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17B91CD51C6D004B1182 /* TrackerDelegator.swift */; };
 		D60D17BD1CD51C9C004B1182 /* GATracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17BC1CD51C9C004B1182 /* GATracker.swift */; };
 		D60D17C11CD52BA8004B1182 /* GATrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17C01CD52BA8004B1182 /* GATrackerImpl.swift */; };
@@ -132,6 +131,9 @@
 		D60D17CA1CD52C86004B1182 /* LoginTrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17C91CD52C86004B1182 /* LoginTrackerImpl.swift */; };
 		D60D17CD1CD52D1E004B1182 /* ProfileTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17CC1CD52D1E004B1182 /* ProfileTracker.swift */; };
 		D60D17CF1CD52D39004B1182 /* ProfileTrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17CE1CD52D39004B1182 /* ProfileTrackerImpl.swift */; };
+		D60D17D11CD53228004B1182 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D01CD53228004B1182 /* ProfileItem.swift */; };
+		D60D17D31CD53FCB004B1182 /* ProfileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D21CD53FCB004B1182 /* ProfileAdapter.swift */; };
+		D60D17D51CD53FF8004B1182 /* ProfileAdapterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D41CD53FF8004B1182 /* ProfileAdapterImpl.swift */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -279,7 +281,6 @@
 		D60D17AD1CD50693004B1182 /* ProfileDataModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDataModelImpl.swift; path = Model/ProfileDataModelImpl.swift; sourceTree = "<group>"; };
 		D60D17B11CD50F8F004B1182 /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileRouter.swift; path = router/ProfileRouter.swift; sourceTree = "<group>"; };
 		D60D17B41CD50FB4004B1182 /* ProfileRouterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileRouterImpl.swift; path = router/ProfileRouterImpl.swift; sourceTree = "<group>"; };
-		D60D17B61CD51659004B1182 /* ProfileAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdapter.swift; path = View/ProfileAdapter.swift; sourceTree = "<group>"; };
 		D60D17B91CD51C6D004B1182 /* TrackerDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackerDelegator.swift; path = Tracker/TrackerDelegator.swift; sourceTree = "<group>"; };
 		D60D17BC1CD51C9C004B1182 /* GATracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GATracker.swift; path = Tracker/GoogleAnalytic/GATracker.swift; sourceTree = "<group>"; };
 		D60D17C01CD52BA8004B1182 /* GATrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GATrackerImpl.swift; path = Tracker/GoogleAnalytic/GATrackerImpl.swift; sourceTree = "<group>"; };
@@ -289,6 +290,9 @@
 		D60D17C91CD52C86004B1182 /* LoginTrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTrackerImpl.swift; path = Login/tracker/LoginTrackerImpl.swift; sourceTree = "<group>"; };
 		D60D17CC1CD52D1E004B1182 /* ProfileTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTracker.swift; path = Tracker/ProfileTracker.swift; sourceTree = "<group>"; };
 		D60D17CE1CD52D39004B1182 /* ProfileTrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTrackerImpl.swift; path = Tracker/ProfileTrackerImpl.swift; sourceTree = "<group>"; };
+		D60D17D01CD53228004B1182 /* ProfileItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileItem.swift; path = Model/ProfileItem.swift; sourceTree = "<group>"; };
+		D60D17D21CD53FCB004B1182 /* ProfileAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdapter.swift; path = View/ProfileAdapter.swift; sourceTree = "<group>"; };
+		D60D17D41CD53FF8004B1182 /* ProfileAdapterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdapterImpl.swift; path = View/ProfileAdapterImpl.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -818,10 +822,11 @@
 		D60D179C1CD4C844004B1182 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D60D17D41CD53FF8004B1182 /* ProfileAdapterImpl.swift */,
 				D60D179D1CD4C878004B1182 /* ProfileController.swift */,
 				D60D179E1CD4C878004B1182 /* ProfileController.xib */,
 				D60D17A91CD4CADB004B1182 /* ProfileView.swift */,
-				D60D17B61CD51659004B1182 /* ProfileAdapter.swift */,
+				D60D17D21CD53FCB004B1182 /* ProfileAdapter.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -840,6 +845,7 @@
 			children = (
 				D60D17AC1CD50693004B1182 /* ProfileDataModel.swift */,
 				D60D17AD1CD50693004B1182 /* ProfileDataModelImpl.swift */,
+				D60D17D01CD53228004B1182 /* ProfileItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1191,6 +1197,7 @@
 				D60D17931CD4ADD8004B1182 /* LoginDataManagerImpl.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
 				1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */,
+				D60D17D11CD53228004B1182 /* ProfileItem.swift in Sources */,
 				105548051CCF514700A9DD8B /* AllPostParkingTableViewController.swift in Sources */,
 				D60D17AF1CD50693004B1182 /* ProfileDataModelImpl.swift in Sources */,
 				D66128791CCCF8FD00B435A8 /* UploadManager.swift in Sources */,
@@ -1203,7 +1210,6 @@
 				D60D17951CD4B0FB004B1182 /* LoginListener.swift in Sources */,
 				D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */,
 				10C3DF391CC5E84100352E2D /* ShowAllCommentTableViewController.swift in Sources */,
-				D60D17B71CD51659004B1182 /* ProfileAdapter.swift in Sources */,
 				B7E6A90D275DCF191BE990E9 /* VehicleDetail.swift in Sources */,
 				B7E6A110E741A4C75C5D7F35 /* LayoutUtils.swift in Sources */,
 				B7E6ABD3A10AC65DB81E05D6 /* ModifiedTextField.swift in Sources */,
@@ -1213,6 +1219,7 @@
 				B7E6A9544AAB2F696EC945AA /* AddressService.swift in Sources */,
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
+				D60D17D51CD53FF8004B1182 /* ProfileAdapterImpl.swift in Sources */,
 				D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */,
 				D60D177B1CD2369A004B1182 /* LoginController.swift in Sources */,
 				D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */,
@@ -1254,6 +1261,7 @@
 				D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */,
 				D60D179B1CD4BC37004B1182 /* LoginRouterImpl.swift in Sources */,
 				B7E6A70D6A02D6E611445818 /* PhotosCollectionViewCell.swift in Sources */,
+				D60D17D31CD53FCB004B1182 /* ProfileAdapter.swift in Sources */,
 				B7E6AC10C6333F9CB1A58377 /* DetailParkingController.swift in Sources */,
 				D60D17B21CD50F8F004B1182 /* ProfileRouter.swift in Sources */,
 				D60D17BA1CD51C6D004B1182 /* TrackerDelegator.swift in Sources */,

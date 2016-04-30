@@ -9,7 +9,7 @@
 import Foundation
 
 class ProfileDataModelImpl: NSObject, ProfileDataModel {
-    static let ProfileItems: [String] = [
+    let profileItemStr: [String] = [
         "All Parking Post",
         "Post new Lot",
         "Bookmark",
@@ -20,16 +20,18 @@ class ProfileDataModelImpl: NSObject, ProfileDataModel {
     
     let authService: AuthService!
     var currentUser: User!
+    let profileItems: [ProfileItem]!
     
     override init() {
         authService = WebServiceFactory.getAuthService()
-        let currentUser = authService.getLoginUser()
-//        if let currentUser = currentUser {
-//            if let avatar = currentUser.avatarUrl {
-//                self.profileImageView.setImageWithURL(NSURL(string: avatar)!, placeholderImage: nil)
-//            }
-//        }
-//        super.init()
+        currentUser = authService.getLoginUser()
+        
+        profileItems = []
+        for (order, item) in profileItemStr.enumerate() {
+            let item = ProfileItem(order: order, name: item)
+            profileItems.append(item)
+        }
+        
         super.init()
     }
     
@@ -37,4 +39,11 @@ class ProfileDataModelImpl: NSObject, ProfileDataModel {
         return currentUser
     }
 
+    func getTotalItems() -> Int {
+        return profileItems.count
+    }
+    
+    func getItemWithOrder(order: Int) -> ProfileItem {
+        return profileItems[order]
+    }
 }

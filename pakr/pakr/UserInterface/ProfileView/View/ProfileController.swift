@@ -15,21 +15,19 @@ class ProfileController: BaseViewController, ProfileView {
     
    var presenter: ProfilePresenter!
     
-    var authService: AuthService!
+   var authService: AuthService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let model = ProfileDataModelImpl()
         let router = ProfileRouterImpl(screen: self)
-        let tracker = ProfileTrackerImpl
-        presenter = ProfilePresenterImpl(view: self, model: model, router: router, tracker: tracker)
-       
+        let tracker = ProfileTrackerImpl()
+        let profileAdapter = ProfileAdapterImpl(tableView: tableView, model: model)
+        presenter = ProfilePresenterImpl(view: self, model: model,
+                                         router: router, tracker: tracker, adapter: profileAdapter)
         
         presenter.initView()
-       
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
     func initView() {
@@ -41,7 +39,6 @@ class ProfileController: BaseViewController, ProfileView {
         userNameTextView.text = presenter.getHeaderUser().email
         fullNameTextView.text = presenter.getHeaderUser().name
         profileImageView.setImageWithURL(NSURL(string: presenter.getHeaderUser().avatarUrl!)!)
-        let profileAdapter = profileAdapter(tableView)
     }
 }
 
