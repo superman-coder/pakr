@@ -16,5 +16,7 @@ target 'pakr' do
     pod 'AWSCognito'
     pod 'BSImagePicker'
     pod 'MBProgressHUD'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
