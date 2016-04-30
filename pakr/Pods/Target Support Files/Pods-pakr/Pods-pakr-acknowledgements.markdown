@@ -235,6 +235,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Copyright 2015 Google Inc.
 
+## GoogleAnalytics
+
+Copyright 2015 Google Inc.
+
 ## GoogleAppUtilities
 
 Copyright 2015 Google Inc.
@@ -256,6 +260,10 @@ Copyright 2015 Google Inc.
 Copyright 2015 Google Inc. All Rights Reserved.
 
 ## GoogleSymbolUtilities
+
+Copyright 2015 Google Inc.
+
+## GoogleTagManager
 
 Copyright 2015 Google Inc.
 

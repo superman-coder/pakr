@@ -31,6 +31,10 @@ The following **required** functionality is completed:
     - [ ] User can unbookmarked
 
 The following **optional** features are implemented:
+- [x] Analytics: get all user behavior for improving app in future
+    - [ ] Crash Analytics
+    - [x] Google Analytics
+    - [x] Google Tag Manager
 - [x] User can sign up, login using Facebook (P3)
 - [ ] Implement Profile page:
     - Profile page includes following things:

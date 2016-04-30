@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpStyle()
         setUpParse()
         setUpAWS()
+        setUpGoogleAnalytic()
         
         authenService = WebServiceFactory.getAuthService()
         
@@ -70,6 +71,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().translucent = false
         UITabBar.appearance().backgroundColor = UIColor.blackColor()
+    }
+    
+    func setUpGoogleAnalytic() {
+        // Configure tracker from GoogleService-Info.plist.
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
+        // Optional: configure GAI options.
+        let gai = GAI.sharedInstance()
+        gai.trackUncaughtExceptions = true  // report uncaught exceptions
+        gai.logger.logLevel = GAILogLevel.Verbose  // remove before app release
     }
     
     func setUpParse() {

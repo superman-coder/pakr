@@ -13,4 +13,12 @@ class WebServiceFactory {
     static func getAuthService() -> AuthService {
         return AuthServiceImpl.sharedInstance
     }
+    
+    static func getGATracker() -> GATracker {
+        return GATrackerImpl()
+    }
+    
+    static func getGTMTracker() -> GTMTracker {
+        return GTMTrackerImpl()
+    }
 }

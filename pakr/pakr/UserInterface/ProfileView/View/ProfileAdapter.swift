@@ -1,45 +1,26 @@
 //
-// Created by Huynh Quang Thao on 4/9/16.
-// Copyright (c) 2016 Pakr. All rights reserved.
+//  ProfileAdapter.swift
+//  pakr
+//
+//  Created by Huynh Quang Thao on 4/30/16.
+//  Copyright © 2016 Pakr. All rights reserved.
 //
 
 import Foundation
-import UIKit
-import AFNetworking
-class ProfileController: BaseViewController {
-    @IBOutlet weak var profileImageView: CircularImageView!
-    @IBOutlet weak var fullNameTextView: UILabel!
-    @IBOutlet weak var userNameTextView: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var profileHeaderView: UIView!
+
+class ProfileAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     
-    var authService: AuthService!
+    let tableView: UITableView
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.title = "MORE"
-        self.view.backgroundColor = UIColor.UIColorFromRGB(0xE0E0E0)
-        
-        authService = WebServiceFactory.getAuthService()
-        let currentUser = authService.getLoginUser()
-        if let currentUser = currentUser {
-            if let avatar = currentUser.avatarUrl {
-               self.profileImageView.setImageWithURL(NSURL(string: avatar)!, placeholderImage: nil)
-            }
-        }
-        
-        LayoutUtils.dropShadowView(profileHeaderView)
-        
-        userNameTextView.text = authService.getLoginUser()?.email
-        fullNameTextView.text = authService.getLoginUser()?.name
-       
-        tableView.delegate = self
-        tableView.dataSource = self
+    init(tableView: UITableView) {
+        self.tableView = tableView
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        super.init()
     }
 }
 
-extension ProfileController: UITableViewDelegate {
+extension ProfileAdapter: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let row = indexPath.row
@@ -72,14 +53,14 @@ extension ProfileController: UITableViewDelegate {
 }
 
 
-extension ProfileController: UITableViewDataSource {
+extension ProfileAdapter: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ProfileDataManager.ProfileItems.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-       let cell = UITableViewCell()
+        let cell = UITableViewCell()
         let row = indexPath.row
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         cell.textLabel?.text = ProfileDataManager.ProfileItems[row]

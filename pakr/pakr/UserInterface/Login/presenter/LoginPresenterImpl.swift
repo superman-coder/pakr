@@ -14,11 +14,13 @@ class LoginPresenterImpl: LoginPresenter, LoginListener {
     let loginManager: LoginDataManager
     let loginView: LoginView
     let router: LoginRouter
+    let tracker: LoginTracker
     
-    init(view: LoginView, manager: LoginDataManager, router: LoginRouter) {
+    init(view: LoginView, manager: LoginDataManager, router: LoginRouter, tracker: LoginTracker) {
         self.loginView = view
         self.loginManager = manager
         self.router = router
+        self.tracker = tracker
     }
     
     func initViews() {

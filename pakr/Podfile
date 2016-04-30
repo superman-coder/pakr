@@ -4,6 +4,8 @@ use_frameworks!
 target 'pakr' do
     pod 'FBSDKLoginKit'
     pod 'Google/SignIn'
+    pod 'Google/Analytics'
+    pod 'GoogleTagManager'
     pod 'Parse'
     pod 'AFNetworking'
     pod 'Alamofire', '~> 3.3'
