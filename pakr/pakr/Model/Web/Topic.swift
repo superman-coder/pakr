@@ -20,7 +20,7 @@ import Parse
     
     let parking: Parking!
     var comments: [Comment]?
-    var rating: Int!
+    var rating: Int = 0
 
     init(userId: String!, parking: Parking!, rating: Int!) {
         self.rating = rating

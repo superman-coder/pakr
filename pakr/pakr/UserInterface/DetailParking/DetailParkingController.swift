@@ -11,6 +11,7 @@ import AFNetworking
 import MapKit
 
 class DetailParkingController: UIViewController {
+    var topic: Topic!
     var parking : Parking!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fromBusinessView: UIControl!
@@ -78,7 +79,8 @@ class DetailParkingController: UIViewController {
         LayoutUtils.dropShadowView(addressView)
         LayoutUtils.dropShadowView(fromBusinessView)
     }
-    func setData(){        
+    func setData(){
+        parking = topic.parking
         arrUrlImageParking = parking.imageUrl
         lblAddress.text = parking.addressName
         lblBusinessReview.text = parking.business.businessDescription
@@ -94,7 +96,7 @@ class DetailParkingController: UIViewController {
             let openTime = "\(parking.schedule[dayOfWeek].openTime)"
             hoursToday.text = "Hours ToDay: \(openTime) - \(closeTime)"
         }
-        rating.rating = 3
+        rating.rating = topic.rating
         numReviews.text = "197 Reviews"
         
         if parking.imageUrl != nil {

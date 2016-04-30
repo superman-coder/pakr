@@ -52,7 +52,7 @@ class AllPostParkingTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailViewController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
-        detailViewController.parking = parkSearchResult[indexPath.row].parking
+        detailViewController.topic = parkSearchResult[indexPath.row]
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 
