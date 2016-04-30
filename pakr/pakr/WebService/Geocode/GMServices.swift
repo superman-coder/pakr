@@ -12,7 +12,7 @@ import Alamofire
 let GM_API_KEY = "AIzaSyBihgw_0XW2AFbcrYgG98IV5XqlaIM3lfo"
 let GM_SERVER_API_KEY = "AIzaSyBlV0OEJafgSSwFS96u-zpkBdQ4MbZqTwA"
 let GM_REVERSE_GEOCODE_API = "https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&key=%@"
-let GM_PLACES_API = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=%@&key=%@"
+let GM_PLACES_API = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=%@&key=%@&language=vn"
 
 class GMServices: NSObject {
 
@@ -48,7 +48,6 @@ class GMServices: NSObject {
     }
     
     class func requestAddressSearchWithAddress(address:String, completion:(success:Bool, location:[GMPlace]?)->()) {
-        
         // Encode the address
         let components = address.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         let nonspaceAddress = components.joinWithSeparator("+")

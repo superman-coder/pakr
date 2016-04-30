@@ -17,7 +17,12 @@ class SelectMapImageController: BaseViewController {
     @IBOutlet weak var imageViewCover: UIImageView!
     @IBOutlet weak var collectionVIew: UICollectionView!
     @IBOutlet weak var btnCover: UIButton!
-    @IBOutlet weak var mapView: MKMapView!
+//    @IBOutlet weak var mapView: MKMapView!
+    
+    @IBOutlet weak var mapSnapshotButton: UIButton!
+    
+//    @IBOutlet weak var mapImageView: UIImageView!
+    
     @IBOutlet weak var lblParkingName: UILabel!
     
     let value = 2
@@ -29,9 +34,9 @@ class SelectMapImageController: BaseViewController {
     var numberImage: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mapSnapshotButton.imageView?.contentMode = .ScaleAspectFill
         LayoutUtils.dropShadowView(imageViewCover)
-        LayoutUtils.dropShadowView(mapView)
+        LayoutUtils.dropShadowView(mapSnapshotButton)
         LayoutUtils.dropShadowView(collectionVIew)
         
         let nib = UINib(nibName: "PhotosCollectionViewCell", bundle: nil)
@@ -122,6 +127,7 @@ class SelectMapImageController: BaseViewController {
     }
     @IBAction func onTapInMapView(sender: AnyObject) {
         let addressPicker = AddressPickerController()
+        addressPicker.selectedLocation = parkingLocation
         addressPicker.delegate = self
         presentViewController(addressPicker, animated: true, completion: nil)
     }
@@ -168,10 +174,12 @@ extension SelectMapImageController: UICollectionViewDelegate, UICollectionViewDa
     
 }
 extension SelectMapImageController: AddressPickerDelegate {
-    func addressPickerController(addressPicker:AddressPickerController, didFinishPickingLocationWithLatlng latlng:CLLocationCoordinate2D!, address:String?) {
+    func addressPickerController(addressPicker:AddressPickerController, didFinishPickingLocationWithLatlng latlng:CLLocationCoordinate2D!, address:String?, image:UIImage?) {
         parkingLocation = latlng
-        let region = MKCoordinateRegionMakeWithDistance(latlng, MAP_DEFAULT_RADIUS, MAP_DEFAULT_RADIUS)
-        mapView.setRegion(region, animated: true)
+//        let region = MKCoordinateRegionMakeWithDistance(latlng, MAP_DEFAULT_RADIUS, MAP_DEFAULT_RADIUS)
+//        mapView.setRegion(region, animated: true)
+//        mapImageView.image = image
+        mapSnapshotButton.setImage(image, forState: .Normal)
         dismissViewControllerAnimated(true, completion: nil)
     }
     

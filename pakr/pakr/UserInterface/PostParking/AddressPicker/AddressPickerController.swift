@@ -12,7 +12,7 @@ import CoreLocation
 
 protocol AddressPickerDelegate {
     func addressPickerControllerDidCancel(addressPicker:AddressPickerController);
-    func addressPickerController(addressPicker:AddressPickerController, didFinishPickingLocationWithLatlng latlng:CLLocationCoordinate2D!, address:String?)
+    func addressPickerController(addressPicker:AddressPickerController, didFinishPickingLocationWithLatlng latlng:CLLocationCoordinate2D!, address:String?, image:UIImage?)
 }
 
 let searchCellReuseId = "GMPlaceCell"
@@ -29,6 +29,9 @@ class AddressPickerController: UIViewController {
     @IBOutlet weak var bottomBarView: UIView!
     
     var delegate: AddressPickerDelegate?
+    var isQuerying = false
+    var currentSearchQuery:String?
+    var latestSearchQuery:String?
     
     var selectedLocation:CLLocationCoordinate2D?
     var selectedAddress:String?
@@ -71,7 +74,7 @@ class AddressPickerController: UIViewController {
     private func initSearchController() {
         LayoutUtils.dropShadowView(searchControllerView)
         searchTextField.delegate = self
-        
+        searchTextField.placeholder = "Search nearby address"
         searchResultTableView.registerNib(UINib(nibName: "GMPlaceCell", bundle: nil), forCellReuseIdentifier: searchCellReuseId)
         searchResultTableView.dataSource = self
         searchResultTableView.delegate = self
@@ -93,7 +96,9 @@ class AddressPickerController: UIViewController {
     }
     
     @IBAction func buttonDoneDidClick(sender: UIBarButtonItem) {
-        delegate?.addressPickerController(self, didFinishPickingLocationWithLatlng: self.selectedLocation!, address: self.selectedAddress)
+        snapshotMapViewWithComplete { (snapshot, error) in
+            self.delegate?.addressPickerController(self, didFinishPickingLocationWithLatlng: self.selectedLocation!, address: self.selectedAddress, image: snapshot)
+        }
     }
     
     private func showSearchResultContainer(show:Bool) {
@@ -114,7 +119,7 @@ class AddressPickerController: UIViewController {
             self.searchTextField.resignFirstResponder()
         }
         
-        self.searchTextField.text = nil
+//        self.searchTextField.text = nil
         self.searchResult.removeAll()
         self.searchResultTableView.reloadData()
         
@@ -134,24 +139,32 @@ class AddressPickerController: UIViewController {
     }
     
     @IBAction func searchTextFieldTextChanged(sender: UITextField) {
+        latestSearchQuery = sender.text
+        
         if sender.text == nil || sender.text!.characters.count == 0 {
             searchResult.removeAll()
             searchResultTableView.reloadData()
             return
         }
         
-        placeSearchRequestTimer?.invalidate()
         let searchText = sender.text!
-        placeSearchRequestTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(AddressPickerController.requestSearchPlaces(_:)), userInfo: searchText, repeats: false)
+        if (!isQuerying) {
+            requestSearchPlaces(searchText);
+        }
     }
     
     @IBAction func searchControllerBackButtonDidClick(sender: UIButton) {
         self.showSearchResultContainer(false)
     }
     
-    func requestSearchPlaces(sender:NSTimer) {
-        let searchText = sender.userInfo as! String
+    func requestSearchPlaces(searchText: String) {
+        isQuerying = true
+        currentSearchQuery = searchText
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         GMServices.requestAddressSearchWithAddress(searchText) { (success, location) in
+            self.isQuerying = false
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            self.onQueryFinished()
             self.handleSearchResult(success, locations: location)
         }
     }
@@ -166,9 +179,46 @@ class AddressPickerController: UIViewController {
         self.searchResultTableView.reloadData()
     }
     
+    private func onQueryFinished() {
+        if currentSearchQuery != nil && latestSearchQuery != nil && currentSearchQuery != latestSearchQuery {
+            requestSearchPlaces(latestSearchQuery!)
+        }
+    }
+    
     private func centerMapToCoordinate(latlng:CLLocationCoordinate2D) {
         let region = MKCoordinateRegionMakeWithDistance(latlng, MAP_DEFAULT_RADIUS, MAP_DEFAULT_RADIUS)
         mapView.setRegion(region, animated: true)
+    }
+    
+    private func snapshotMapViewWithComplete(completion:(snapshot:UIImage?, error:NSError?)->()) {
+        let snapshotOption = MKMapSnapshotOptions()
+        snapshotOption.region = mapView.region
+        snapshotOption.size = CGSizeMake(mapView.frame.size.width, mapView.frame.size.height / 2)
+        snapshotOption.scale = UIScreen.mainScreen().scale
+        let snapshoter = MKMapSnapshotter(options: snapshotOption)
+        snapshoter.startWithQueue(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { (snapshot:MKMapSnapshot?, error:NSError?) in
+            
+            guard let snapshot = snapshot else {
+                completion(snapshot: nil, error: error)
+                return
+            }
+            
+            let pin = MKPinAnnotationView(annotation: nil, reuseIdentifier: nil)
+            let mapImage = snapshot.image
+            UIGraphicsBeginImageContextWithOptions(mapImage.size, true, mapImage.scale)
+            mapImage.drawAtPoint(CGPoint.zero)
+            var point = snapshot.pointForCoordinate(self.selectedLocation!)
+            point.x = point.x + pin.centerOffset.x - (pin.bounds.size.width / 2)
+            point.y = point.y + pin.centerOffset.y - (pin.bounds.size.height / 2)
+            pin.image?.drawAtPoint(point)
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            dispatch_async(dispatch_get_main_queue(), { 
+                completion(snapshot: image, error: nil)
+            })
+        }
     }
 }
 
@@ -206,6 +256,7 @@ extension AddressPickerController: UITextFieldDelegate {
 
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         self.shouldSearch = true
+        textField.text = ""
         self.showSearchResultContainer(true)
         return true
     }
@@ -227,7 +278,7 @@ extension AddressPickerController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-    
+   
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResult.count
     }
@@ -247,6 +298,7 @@ extension AddressPickerController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let gmPlace = searchResult[indexPath.row]
+        searchTextField.text = gmPlace.name
         centerMapToCoordinate(CLLocationCoordinate2D(latitude: gmPlace.geometry.latitude, longitude: gmPlace.geometry.longitude))
         self.showSearchResultContainer(false)
     }

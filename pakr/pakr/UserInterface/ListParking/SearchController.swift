@@ -19,6 +19,9 @@ class SearchController: UIViewController {
     
     @IBOutlet weak var tableBottomToSuperViewConstraint: NSLayoutConstraint!
     
+    var isQuering = false
+    var currentSearchText:String? = nil
+    var latestSearchText:String? = nil
     var parkSearchResult: [Topic]! = []
     var searchTriggerTimer:NSTimer?
     
@@ -62,8 +65,6 @@ class SearchController: UIViewController {
     }
     
     func reloadData() {
-        MBProgressHUD.hideHUDForView(self.view, animated: true)
-        searchBar.resignFirstResponder()
         parkingTableView.reloadData()
     }
     
@@ -110,11 +111,15 @@ class SearchController: UIViewController {
 extension SearchController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ParkingResultCell") as! ParkingResultCell
-        cell.configWithTopic(parkSearchResult[indexPath.row])
+        cell.configWithTopic(parkSearchResult[indexPath.section])
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return parkSearchResult.count
     }
     
@@ -128,12 +133,12 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 8
+        return 16
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let topic = self.parkSearchResult[indexPath.row];
+        let topic = self.parkSearchResult[indexPath.section];
         let parking = topic.parking
         
         let detailVc = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
@@ -151,27 +156,42 @@ extension SearchController: UISearchBarDelegate {
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        latestSearchText = searchText
         if searchText.characters.count == 0 {
             handleSearchResult(nil, error: nil)
             return
         }
-        
-        searchTriggerTimer?.invalidate()
-        searchTriggerTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(SearchController.requestSearchPlaces(_:)), userInfo: searchText, repeats: false)
+        if (!isQuering) {
+            requestSearchPlaces(searchText)
+        }
     }
     
-    func requestSearchPlaces(sender:NSTimer) {
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        let searchText = sender.userInfo as! String
+    func requestSearchPlaces(searchText: String) {
+        isQuering = true
+        self.currentSearchText = searchText
+//        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         addressService.getNearByParkingByAddressName(searchText, radius: 800, success: { topics in
+            self.isQuering = false
+            self.handleSearchFinished()
             self.handleSearchResult(topics, error: nil)
             }) { error in
+                self.isQuering = false
+                self.handleSearchFinished()
                self.handleSearchResult(nil, error: error)
         }
     }
+    
+    func handleSearchFinished() {
+        if latestSearchText != nil && currentSearchText != nil && currentSearchText != latestSearchText {
+            currentSearchText = latestSearchText
+            requestSearchPlaces(currentSearchText!)
+        }
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar){
         searchBar.resignFirstResponder()
     }
+    
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.text = ""
