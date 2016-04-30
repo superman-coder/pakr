@@ -29,6 +29,10 @@ class LoginController: UIViewController, LoginView, GIDSignInUIDelegate {
         presenter.initViews()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        presenter.presentView()
+    }
+    
     func getFacebookLoginButton() -> FBSDKLoginButton {
         return facebookLoginButton
     }

@@ -11,4 +11,5 @@ import FBSDKLoginKit
 
 protocol LoginPresenter {
     func initViews()
+    func presentView()
 }

@@ -1,5 +1,5 @@
 //
-//  GATrackerImpl.swift
+//  TrackerDelegatorImpl.swift
 //  pakr
 //
 //  Created by Huynh Quang Thao on 5/1/16.
@@ -7,11 +7,16 @@
 //
 
 import Foundation
-import Google
 
-class GATrackerImpl: GATracker {
+class TrackerDelegatorImpl: TrackerDelegator {
     
-    let kGAScreenName = "Google_Analytic_Screen"
+    let gtmTracker: GTMTracker
+    let gaTracker: GATracker
+    
+    init() {
+        gtmTracker = WebServiceFactory.getGTMTracker()
+        gaTracker = WebServiceFactory.getGATracker()
+    }
     
     func trackLoginFail(loginType: String) {
         
@@ -26,11 +31,7 @@ class GATrackerImpl: GATracker {
     }
     
     func trackScreen(screen: String) {
-        let tracker = GAI.sharedInstance().defaultTracker
-        tracker.set(kGAScreenName, value: screen)
-        
-        let builder = GAIDictionaryBuilder.createScreenView()
-        tracker.send(builder.build() as [NSObject : AnyObject])
+        print("track screen")
+        gaTracker.trackScreen(screen)
     }
 }
-

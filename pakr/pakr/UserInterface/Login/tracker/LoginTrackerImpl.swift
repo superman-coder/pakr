@@ -10,4 +10,13 @@ import Foundation
 
 class LoginTrackerImpl: LoginTracker {
     
+    let tracker: TrackerDelegator
+    
+    init() {
+        tracker = WebServiceFactory.getTrackerDelegator()
+    }
+    
+    func trackScreen() {
+       tracker.trackScreen("Login Screen")
+    }
 }

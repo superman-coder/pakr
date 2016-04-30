@@ -14,6 +14,10 @@ class WebServiceFactory {
         return AuthServiceImpl.sharedInstance
     }
     
+    static func getTrackerDelegator() -> TrackerDelegator {
+        return TrackerDelegatorImpl()
+    }
+    
     static func getGATracker() -> GATracker {
         return GATrackerImpl()
     }

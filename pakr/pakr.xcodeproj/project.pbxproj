@@ -134,6 +134,7 @@
 		D60D17D11CD53228004B1182 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D01CD53228004B1182 /* ProfileItem.swift */; };
 		D60D17D31CD53FCB004B1182 /* ProfileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D21CD53FCB004B1182 /* ProfileAdapter.swift */; };
 		D60D17D51CD53FF8004B1182 /* ProfileAdapterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D41CD53FF8004B1182 /* ProfileAdapterImpl.swift */; };
+		D60D17D71CD5480C004B1182 /* TrackerDelegatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D61CD5480C004B1182 /* TrackerDelegatorImpl.swift */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -293,6 +294,7 @@
 		D60D17D01CD53228004B1182 /* ProfileItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileItem.swift; path = Model/ProfileItem.swift; sourceTree = "<group>"; };
 		D60D17D21CD53FCB004B1182 /* ProfileAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdapter.swift; path = View/ProfileAdapter.swift; sourceTree = "<group>"; };
 		D60D17D41CD53FF8004B1182 /* ProfileAdapterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdapterImpl.swift; path = View/ProfileAdapterImpl.swift; sourceTree = "<group>"; };
+		D60D17D61CD5480C004B1182 /* TrackerDelegatorImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackerDelegatorImpl.swift; path = Tracker/TrackerDelegatorImpl.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -865,6 +867,7 @@
 				D60D17BE1CD52B6A004B1182 /* GoogleTagManager */,
 				D60D17BB1CD51C73004B1182 /* GoogleAnalytic */,
 				D60D17B91CD51C6D004B1182 /* TrackerDelegator.swift */,
+				D60D17D61CD5480C004B1182 /* TrackerDelegatorImpl.swift */,
 			);
 			name = Tracker;
 			sourceTree = "<group>";
@@ -1208,6 +1211,7 @@
 				B7E6A5BC6F196BF0F02FAD3A /* Coordinate.swift in Sources */,
 				B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */,
 				D60D17951CD4B0FB004B1182 /* LoginListener.swift in Sources */,
+				D60D17D71CD5480C004B1182 /* TrackerDelegatorImpl.swift in Sources */,
 				D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */,
 				10C3DF391CC5E84100352E2D /* ShowAllCommentTableViewController.swift in Sources */,
 				B7E6A90D275DCF191BE990E9 /* VehicleDetail.swift in Sources */,
@@ -1310,6 +1314,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakrTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pakr/Pakr-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pakr.app/pakr";
 			};
 			name = Debug;
@@ -1322,6 +1327,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakrTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pakr/Pakr-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pakr.app/pakr";
 			};
 			name = Release;

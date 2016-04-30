@@ -28,6 +28,10 @@ class LoginPresenterImpl: LoginPresenter, LoginListener {
         loginManager.setLoginListener(self)
         loginManager.initSocialLogin(loginView.getFacebookLoginButton())
     }
+    
+    func presentView() {
+        tracker.trackScreen()
+    }
    
     func loginSuccess() {
         router.gotoMainScreen()

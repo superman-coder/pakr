@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol TrackerDelegator {
+    func trackLoginFail(loginType: String)
+    func trackLoginSuccess(loginType: String, user: String)
+    func trackLogout(user: String)
+    func trackScreen(screen: String)
+}
