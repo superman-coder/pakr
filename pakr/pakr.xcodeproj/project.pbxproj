@@ -103,6 +103,18 @@
 		D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F71CCA19BB009C5BEB /* FileUtils.swift */; };
 		D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */; };
 		D60598FE1CCCDFB2009C5BEB /* EventSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598FD1CCCDFB2009C5BEB /* EventSignal.swift */; };
+		D60D17701CD23437004B1182 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D176F1CD23437004B1182 /* LoginPresenter.swift */; };
+		D60D17721CD2344B004B1182 /* LoginPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17711CD2344B004B1182 /* LoginPresenterImpl.swift */; };
+		D60D177B1CD2369A004B1182 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17791CD2369A004B1182 /* LoginController.swift */; };
+		D60D177C1CD2369A004B1182 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60D177A1CD2369A004B1182 /* LoginController.xib */; };
+		D60D17841CD3FC8A004B1182 /* pakrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17831CD3FC8A004B1182 /* pakrTests.swift */; };
+		D60D178C1CD3FD2A004B1182 /* MD5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D178B1CD3FD2A004B1182 /* MD5Tests.swift */; };
+		D60D178E1CD4AB36004B1182 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D178D1CD4AB36004B1182 /* LoginView.swift */; };
+		D60D17921CD4ADD8004B1182 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17901CD4ADD7004B1182 /* LoginDataManager.swift */; };
+		D60D17931CD4ADD8004B1182 /* LoginDataManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17911CD4ADD8004B1182 /* LoginDataManagerImpl.swift */; };
+		D60D17951CD4B0FB004B1182 /* LoginListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17941CD4B0FB004B1182 /* LoginListener.swift */; };
+		D60D17991CD4BC29004B1182 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17981CD4BC29004B1182 /* LoginRouter.swift */; };
+		D60D179B1CD4BC37004B1182 /* LoginRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D179A1CD4BC37004B1182 /* LoginRouterImpl.swift */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -112,13 +124,21 @@
 		D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A38D1CC36A6C0095F74D /* SocialAuth.swift */; };
 		D66128791CCCF8FD00B435A8 /* UploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66128781CCCF8FD00B435A8 /* UploadManager.swift */; };
 		D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */; };
-		D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */; };
-		D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */; };
 		D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E521CC2798000BC6A64 /* CircularImageView.swift */; };
 		D6A14E591CC27DFB00BC6A64 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E581CC27DFB00BC6A64 /* ProfileDataManager.swift */; };
 		D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */; };
 		D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D60D17861CD3FC8A004B1182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6490D301CBFF85700016AA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6490D371CBFF85700016AA6;
+			remoteInfo = pakr;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		100C66651CD08EE200B5D2A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -222,6 +242,20 @@
 		D60598F71CCA19BB009C5BEB /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWSPromiseClient.swift; path = AWS/AWSPromiseClient.swift; sourceTree = "<group>"; };
 		D60598FD1CCCDFB2009C5BEB /* EventSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSignal.swift; sourceTree = "<group>"; };
+		D60D176F1CD23437004B1182 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Login/presenter/LoginPresenter.swift; sourceTree = "<group>"; };
+		D60D17711CD2344B004B1182 /* LoginPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenterImpl.swift; path = Login/presenter/LoginPresenterImpl.swift; sourceTree = "<group>"; };
+		D60D17791CD2369A004B1182 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Login/view/LoginController.swift; sourceTree = "<group>"; };
+		D60D177A1CD2369A004B1182 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/view/LoginController.xib; sourceTree = "<group>"; };
+		D60D17811CD3FC8A004B1182 /* pakrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pakrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60D17831CD3FC8A004B1182 /* pakrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pakrTests.swift; sourceTree = "<group>"; };
+		D60D17851CD3FC8A004B1182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D60D178B1CD3FD2A004B1182 /* MD5Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MD5Tests.swift; path = UnitTest/MD5Tests.swift; sourceTree = "<group>"; };
+		D60D178D1CD4AB36004B1182 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Login/view/LoginView.swift; sourceTree = "<group>"; };
+		D60D17901CD4ADD7004B1182 /* LoginDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginDataManager.swift; path = Login/manager/LoginDataManager.swift; sourceTree = "<group>"; };
+		D60D17911CD4ADD8004B1182 /* LoginDataManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginDataManagerImpl.swift; path = Login/manager/LoginDataManagerImpl.swift; sourceTree = "<group>"; };
+		D60D17941CD4B0FB004B1182 /* LoginListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginListener.swift; path = Login/manager/LoginListener.swift; sourceTree = "<group>"; };
+		D60D17981CD4BC29004B1182 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRouter.swift; path = Login/router/LoginRouter.swift; sourceTree = "<group>"; };
+		D60D179A1CD4BC37004B1182 /* LoginRouterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterImpl.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -232,8 +266,6 @@
 		D654A38D1CC36A6C0095F74D /* SocialAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialAuth.swift; path = Manager/SocialAuth.swift; sourceTree = "<group>"; };
 		D66128781CCCF8FD00B435A8 /* UploadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadManager.swift; path = DataManager/UploadManager.swift; sourceTree = "<group>"; };
 		D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Login/LoginController.swift; sourceTree = "<group>"; };
-		D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/LoginController.xib; sourceTree = "<group>"; };
 		D6A14E521CC2798000BC6A64 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularImageView.swift; path = ImageView/CircularImageView.swift; sourceTree = "<group>"; };
 		D6A14E581CC27DFB00BC6A64 /* ProfileDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDataManager.swift; path = manager/ProfileDataManager.swift; sourceTree = "<group>"; };
 		D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundCornerImageView.swift; path = ImageView/RoundCornerImageView.swift; sourceTree = "<group>"; };
@@ -241,6 +273,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D60D177E1CD3FC8A004B1182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6490D351CBFF85700016AA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -693,10 +732,59 @@
 			name = AWS;
 			sourceTree = "<group>";
 		};
+		D60D176D1CD23405004B1182 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D60D176F1CD23437004B1182 /* LoginPresenter.swift */,
+				D60D17711CD2344B004B1182 /* LoginPresenterImpl.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		D60D17731CD234EE004B1182 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17791CD2369A004B1182 /* LoginController.swift */,
+				D60D177A1CD2369A004B1182 /* LoginController.xib */,
+				D60D178D1CD4AB36004B1182 /* LoginView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D60D17821CD3FC8A004B1182 /* pakrTests */ = {
+			isa = PBXGroup;
+			children = (
+				D60D178B1CD3FD2A004B1182 /* MD5Tests.swift */,
+				D60D17831CD3FC8A004B1182 /* pakrTests.swift */,
+				D60D17851CD3FC8A004B1182 /* Info.plist */,
+			);
+			path = pakrTests;
+			sourceTree = "<group>";
+		};
+		D60D178F1CD4ADC3004B1182 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17901CD4ADD7004B1182 /* LoginDataManager.swift */,
+				D60D17911CD4ADD8004B1182 /* LoginDataManagerImpl.swift */,
+				D60D17941CD4B0FB004B1182 /* LoginListener.swift */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
+		D60D17971CD4BC13004B1182 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17981CD4BC29004B1182 /* LoginRouter.swift */,
+				D60D179A1CD4BC37004B1182 /* LoginRouterImpl.swift */,
+			);
+			name = router;
+			sourceTree = "<group>";
+		};
 		D6490D2F1CBFF85700016AA6 = {
 			isa = PBXGroup;
 			children = (
 				B7E6A617C69724D814D342E6 /* pakr */,
+				D60D17821CD3FC8A004B1182 /* pakrTests */,
 				D6490D391CBFF85700016AA6 /* Products */,
 				8EE95B9CD067AA4023D5833D /* Pods */,
 				081F5D89FB2D7E4CF7A7BA30 /* Frameworks */,
@@ -707,6 +795,7 @@
 			isa = PBXGroup;
 			children = (
 				D6490D381CBFF85700016AA6 /* pakr.app */,
+				D60D17811CD3FC8A004B1182 /* pakrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -750,8 +839,10 @@
 		D6A14E4C1CC26CD600BC6A64 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */,
-				D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */,
+				D60D17971CD4BC13004B1182 /* router */,
+				D60D178F1CD4ADC3004B1182 /* manager */,
+				D60D17731CD234EE004B1182 /* view */,
+				D60D176D1CD23405004B1182 /* presenter */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -795,6 +886,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D60D17801CD3FC8A004B1182 /* pakrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60D17881CD3FC8A004B1182 /* Build configuration list for PBXNativeTarget "pakrTests" */;
+			buildPhases = (
+				D60D177D1CD3FC8A004B1182 /* Sources */,
+				D60D177E1CD3FC8A004B1182 /* Frameworks */,
+				D60D177F1CD3FC8A004B1182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D60D17871CD3FC8A004B1182 /* PBXTargetDependency */,
+			);
+			name = pakrTests;
+			productName = pakrTests;
+			productReference = D60D17811CD3FC8A004B1182 /* pakrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D6490D371CBFF85700016AA6 /* pakr */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6490D4A1CBFF85700016AA6 /* Build configuration list for PBXNativeTarget "pakr" */;
@@ -825,6 +934,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Pakr;
 				TargetAttributes = {
+					D60D17801CD3FC8A004B1182 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D6490D371CBFF85700016AA6;
+					};
 					D6490D371CBFF85700016AA6 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = V5BCKD2C56;
@@ -845,11 +958,19 @@
 			projectRoot = "";
 			targets = (
 				D6490D371CBFF85700016AA6 /* pakr */,
+				D60D17801CD3FC8A004B1182 /* pakrTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D60D177F1CD3FC8A004B1182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6490D361CBFF85700016AA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -868,7 +989,6 @@
 				D60598ED1CC5001E009C5BEB /* TestUploadController.xib in Resources */,
 				B7E6A13E90275C7D2181B30E /* ProfileController.xib in Resources */,
 				B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */,
-				D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */,
 				D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */,
 				B7E6A60E9906C2D10C8F2F70 /* MapDetailViewController.xib in Resources */,
 				B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */,
@@ -880,6 +1000,7 @@
 				B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */,
 				D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */,
 				1063B5BE1CCB541A00D08A33 /* WorkTimeTableViewCell.xib in Resources */,
+				D60D177C1CD2369A004B1182 /* LoginController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,16 +1055,27 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D60D177D1CD3FC8A004B1182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60D178C1CD3FD2A004B1182 /* MD5Tests.swift in Sources */,
+				D60D17841CD3FC8A004B1182 /* pakrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6490D341CBFF85700016AA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60D17991CD4BC29004B1182 /* LoginRouter.swift in Sources */,
 				B7E6A7598B1D7BE108B42ACA /* Post.swift in Sources */,
 				B7E6A4AACDDABB7130F3DBA7 /* Role.swift in Sources */,
 				7274B8E21CC32CF9007E4B82 /* GMServices.swift in Sources */,
 				723552991CC4CD8400090651 /* GMPlace.swift in Sources */,
 				B7E6A60EEBB24D2C771BB096 /* User.swift in Sources */,
 				B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */,
+				D60D17931CD4ADD8004B1182 /* LoginDataManagerImpl.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
 				1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */,
 				105548051CCF514700A9DD8B /* AllPostParkingTableViewController.swift in Sources */,
@@ -954,6 +1086,7 @@
 				B7E6AA0432B1309BA5CEC6AD /* TimeRange.swift in Sources */,
 				B7E6A5BC6F196BF0F02FAD3A /* Coordinate.swift in Sources */,
 				B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */,
+				D60D17951CD4B0FB004B1182 /* LoginListener.swift in Sources */,
 				D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */,
 				10C3DF391CC5E84100352E2D /* ShowAllCommentTableViewController.swift in Sources */,
 				B7E6A90D275DCF191BE990E9 /* VehicleDetail.swift in Sources */,
@@ -967,22 +1100,25 @@
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
 				D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */,
+				D60D177B1CD2369A004B1182 /* LoginController.swift in Sources */,
 				D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */,
 				10D1A8AF1CC64649002867BC /* RatingControl.swift in Sources */,
 				B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */,
+				D60D17721CD2344B004B1182 /* LoginPresenterImpl.swift in Sources */,
 				723552A21CC4D3DB00090651 /* GMPlaceCell.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
 				D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */,
 				B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */,
 				D654A3851CC369F50095F74D /* AuthService.swift in Sources */,
+				D60D17701CD23437004B1182 /* LoginPresenter.swift in Sources */,
 				D60598F61CC9E79E009C5BEB /* MD5.swift in Sources */,
 				D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */,
 				D654A3861CC369F50095F74D /* AuthServiceImpl.swift in Sources */,
-				D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */,
 				B7E6AC26951ACD27B35085B9 /* BookmarkController.swift in Sources */,
 				D60598EB1CC4FFAF009C5BEB /* TestUploadController.swift in Sources */,
 				B7E6AC842CC3B34A20172827 /* ParkingResultCell.swift in Sources */,
 				B7E6ABFA04ECC1111B378897 /* SearchController.swift in Sources */,
+				D60D178E1CD4AB36004B1182 /* LoginView.swift in Sources */,
 				B7E6A949DC4DD496BB0052B3 /* PostParkingController.swift in Sources */,
 				7235529D1CC4D39400090651 /* AddressPickerController.swift in Sources */,
 				B7E6AA8A109EAEBB232F4B13 /* PostInfoController.swift in Sources */,
@@ -996,8 +1132,10 @@
 				B7E6AA2D5F5E58C520E27A33 /* MoreInfoViewController.swift in Sources */,
 				B7E6A5C323135FB8258548DA /* MapDetailViewController.swift in Sources */,
 				D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */,
+				D60D179B1CD4BC37004B1182 /* LoginRouterImpl.swift in Sources */,
 				B7E6A70D6A02D6E611445818 /* PhotosCollectionViewCell.swift in Sources */,
 				B7E6AC10C6333F9CB1A58377 /* DetailParkingController.swift in Sources */,
+				D60D17921CD4ADD8004B1182 /* LoginDataManager.swift in Sources */,
 				D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */,
 				D654A38A1CC36A000095F74D /* FacebookAuth.swift in Sources */,
 				D60598F21CC9E0DC009C5BEB /* AWSClient.swift in Sources */,
@@ -1019,7 +1157,39 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D60D17871CD3FC8A004B1182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6490D371CBFF85700016AA6 /* pakr */;
+			targetProxy = D60D17861CD3FC8A004B1182 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D60D17891CD3FC8A004B1182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = pakrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pakr.app/pakr";
+			};
+			name = Debug;
+		};
+		D60D178A1CD3FC8A004B1182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = pakrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pakr.app/pakr";
+			};
+			name = Release;
+		};
 		D6490D481CBFF85700016AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1168,6 +1338,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D60D17881CD3FC8A004B1182 /* Build configuration list for PBXNativeTarget "pakrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60D17891CD3FC8A004B1182 /* Debug */,
+				D60D178A1CD3FC8A004B1182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D6490D331CBFF85700016AA6 /* Build configuration list for PBXProject "pakr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

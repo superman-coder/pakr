@@ -1,43 +1,43 @@
 //
-//  LoginController.swift
+//  LoginDataModelImpl.swift
 //  pakr
 //
-//  Created by Huynh Quang Thao on 4/16/16.
+//  Created by Huynh Quang Thao on 4/28/16.
 //  Copyright © 2016 Pakr. All rights reserved.
 //
 
 import Foundation
-import UIKit
-import FBSDKLoginKit
 import Google
 import Parse
+import FBSDKLoginKit
 
-class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate, FBSDKLoginButtonDelegate {
+class LoginDataManagerImpl: NSObject, LoginDataManager, GIDSignInDelegate, FBSDKLoginButtonDelegate  {
     
-    @IBOutlet weak var googleLoginButton: GIDSignInButton!
-    @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
-    var authService: AuthService!
+    var authService: AuthService
+     var listener: LoginListener!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init() {
         authService = WebServiceFactory.getAuthService()
-        
-        configureGoogleSignIn()
-        configureFacebookLogin()
+        super.init()
+    }
+   
+    func setLoginListener(listener: LoginListener) {
+        self.listener = listener
+    }
+
+    func initSocialLogin(facebookLoginButton: FBSDKLoginButton) {
+        initGoogleLogin()
+        initFacebookLogin(facebookLoginButton)
     }
     
-    func configureGoogleSignIn() {
-        googleLoginButton.colorScheme = GIDSignInButtonColorScheme.Light
+    func initGoogleLogin() {
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
-        
-        // we move this delegate to Login Screen. So we can control screen transition of Google and Facebook both on this class
         GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
-    func configureFacebookLogin() {
+    func initFacebookLogin(facebookLoginButton: FBSDKLoginButton) {
         facebookLoginButton.readPermissions = ["public_profile", "email"]
         facebookLoginButton.delegate = self
     }
@@ -51,10 +51,10 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
             print(user.email)
             print(user.name)
             self.authService.authenticateParse(user,
-                success: {
+                 success: {
                     User -> Void in
-                    self.mainScreen()
-                    },
+                    self.listener.loginSuccess()
+                },
                 error: {
                     NSError -> Void in
             })
@@ -81,7 +81,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
                     self.authService.authenticateParse(user,
                         success: {
                             User -> Void in
-                            self.mainScreen()
+                            self.listener.loginSuccess()
                         },
                         error: {
                             NSError -> Void in
@@ -97,13 +97,4 @@ class LoginController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate,
         
     }
     
-  
-   
-    func mainScreen() {
-        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let rootViewController = PakrTabBarController()
-        delegate.window?.rootViewController = rootViewController
-        delegate.window?.makeKeyAndVisible()
-        
-    }
 }
