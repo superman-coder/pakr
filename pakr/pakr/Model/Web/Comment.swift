@@ -15,42 +15,46 @@ class Comment: Post, ParseModelProtocol {
      let dateCreated: NSDate!
      */
     
-    let PKTopic = "topic"
     let PKContent = "content"
+    let PKTitle = "title"
+    let PKRating = "rating"
+    let PKTopicId = "topicId"
+    static let PKTopic = "topic"
     
-    let topicId:String!
-    
-    var topic: Topic?
+    var topic: Topic!
+    var topicId: String!
     var content: String!
+    var title: String!
+    var rating: Int = 0
 
-    init(userId: String!, topicId: String, content: String!) {
+    init(userId: String!, topicId: String, content: String!, title: String, rating: Int!) {
+        super.init(userId: userId)
         self.topicId = topicId
         self.content = content
-        super.init(userId: userId)
+        self.title = title
+        self.rating = rating
     }
     
     required init(pfObject: PFObject) {
-        topicId = "0"
-        super.init(userId: "0")
+        let userId = pfObject[Comment.PKPostUser].objectId
+        super.init(userId: userId)
         postId = pfObject.objectId
+        topicId = pfObject[PKTopicId] as! String
         dateCreated = pfObject.createdAt
-        userId = "0"
-        
-        
-        _ = pfObject[PKTopic] as! PFObject
-        _ = pfObject[Comment.PKPostUser] as! PFObject
-        
         content = pfObject[PKContent] as! String
-        
-        
+        title  = pfObject[PKTitle] as! String
+        rating = pfObject[PKRating] as! Int
     }
     
     func toPFObject() -> PFObject {
         let pfObject = PFObject(className: Constants.Table.Comment)
-        pfObject[PKTopic] = PFObject(withoutDataWithClassName: Constants.Table.Topic, objectId: topicId)
+        pfObject[Comment.PKTopic] = PFObject(withoutDataWithClassName: Constants.Table.Topic, objectId: topicId)
         pfObject[Comment.PKPostUser] = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
         pfObject[PKContent] = content
-        
+        pfObject[PKTitle] = title
+        pfObject[PKRating] = rating
+        pfObject[PKTopicId] = topicId
         return pfObject
     }
+    
 }

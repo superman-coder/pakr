@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="contenView" destination="Ehd-lf-n3K" id="QsD-Wo-j1M"/>
                 <outlet property="contentMarginBottom" destination="DFW-2Z-UEn" id="xie-P8-jYJ"/>
+                <outlet property="rating" destination="yvF-qA-iDD" id="KVa-3g-QUI"/>
                 <outlet property="textFeild" destination="5kz-lX-c0l" id="QZA-fH-WPa"/>
                 <outlet property="textView" destination="ch2-gF-zgh" id="ZEp-jc-KJ3"/>
                 <outlet property="textViewMarginBottom" destination="sSU-LC-A33" id="94h-bC-ZbL"/>

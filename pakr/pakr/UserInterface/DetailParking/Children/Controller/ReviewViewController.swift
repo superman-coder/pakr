@@ -17,8 +17,10 @@ class ReviewViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewMarginBottom: NSLayoutConstraint!
     @IBOutlet weak var contentMarginBottom: NSLayoutConstraint!
+    @IBOutlet weak var rating: RatingControl!
     @IBOutlet weak var textFeild: UITextField!
     
+    var topic: Topic!
     var delegate: ReviewViewControllerDelegate?
     var isShowKeyBoard: Bool = false
     
@@ -46,10 +48,19 @@ class ReviewViewController: UIViewController {
     }
     
     func rightBarButtonAction(){
-        if let delegate = self.delegate {
-            delegate.DidPostReview(1, title: textFeild.text!, content: textView.text)
+//            delegate.DidPostReview(rating.rating, title: textFeild.text!, content: textView.text)
+            print(rating.rating)
+            print(textFeild.text!)
+            print(textView.text)
+        let comment = Comment(userId: topic.userId, topicId: topic.postId!, content: textView.text, title: textFeild.text!, rating: rating.rating)
+        WebServiceFactory.getAddressService().postComment(comment) { (success, error) in
+            if success {
+                print("Post COmment Success")
+            }else{
+                print("Post Faild")
+            }
+            self.navigationController?.popViewControllerAnimated(true)
         }
-        self.navigationController?.popViewControllerAnimated(true)
     }
     func registryNotifyShowKeyBoard(){
          NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(ReviewViewController.keyBoardShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
@@ -61,7 +72,7 @@ class ReviewViewController: UIViewController {
             let dic = notifycation.userInfo
             let keyboardFrame = dic![UIKeyboardFrameBeginUserInfoKey]?.CGRectValue()
             UIView .animateWithDuration(0.3) {
-                self.contentMarginBottom.constant = (keyboardFrame?.size.height)! + 1
+                self.contentMarginBottom.constant = (keyboardFrame?.size.height)! + 10 - (self.tabBarController?.tabBar.frame.size.height)!
                 self.contenView .layoutIfNeeded()
             }
             

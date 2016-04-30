@@ -105,4 +105,33 @@ public class AddressServiceParseImpl: NSObject, AddressService {
         }
 
     }
+// MARK: API comment
+    func postComment(comment: Comment, complete:(success: Bool, error: NSError?) -> Void){
+        comment.toPFObject().saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
+                complete(success: success, error: error)
+        }
+        
+    }
+    func getAllCommentsByTopic(topicId: String, success:([Comment] -> Void), failure:(NSError -> Void)){
+        let query = PFQuery(className: Constants.Table.Comment)
+        query.includeKey(".")
+        
+        let topic = PFObject(withoutDataWithClassName: Constants.Table.Topic, objectId: topicId)
+        query.whereKey(Comment.PKTopic, equalTo: topic)
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            print("User count: \(objects?.count)")
+            print("Error: \(error)")
+            
+            if let error = error {
+                failure(error)
+            } else if let objs = objects {
+                var comments = [Comment]()
+                for pfobj in objs {
+                    let comment = Comment(pfObject: pfobj)
+                    comments.append(comment)
+                }
+                success(comments)
+            }
+        }
+    }
 }

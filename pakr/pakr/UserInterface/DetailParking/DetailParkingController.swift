@@ -155,10 +155,15 @@ class DetailParkingController: UIViewController {
     
     func startReview(){
         let reviewCOntroler = ReviewViewController()
-        reviewCOntroler.delegate = self
+        reviewCOntroler.topic = topic
         self.navigationController?.pushViewController(reviewCOntroler, animated: true)
     }
     func showAllComments(){
+        WebServiceFactory.getAddressService().getAllCommentsByTopic(topic.postId!, success: { (comments) in
+            
+            }) { (error) in
+                
+        }
         self.navigationController?.pushViewController(ShowAllCommentTableViewController(), animated: true)
     }
 // MARK: - IBAction
@@ -287,11 +292,3 @@ extension DetailParkingController: UICollectionViewDelegate, UICollectionViewDat
     
 }
 
-
-extension DetailParkingController: ReviewViewControllerDelegate{
-    func DidPostReview(rating: Int, title: String, content: String) {
-        print(rating)
-        print(title)
-        print(content)
-    }
-}

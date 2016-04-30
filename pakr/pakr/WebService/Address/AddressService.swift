@@ -11,5 +11,8 @@ protocol AddressService {
     func getNearByParkingByAddressName(address: String, radius: Double, success:([Topic] -> Void), fail: (NSError -> Void))
     
     func getAllParkingByUser(userId: String, success:([Topic] -> Void), failure:(NSError -> Void))
+    
+    func postComment(comment: Comment, complete:(success: Bool, error: NSError?) -> Void)
+    func getAllCommentsByTopic(topicId: String, success:([Comment] -> Void), failure:(NSError -> Void))
 }
 
