@@ -10,7 +10,7 @@ import Foundation
 
 class ProfileRouterImpl: NSObject, ProfileRouter {
    
-    let screen: ProfileController
+    weak var screen: ProfileController!
     
    init(screen: ProfileController) {
        self.screen = screen
