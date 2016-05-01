@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookmarkController" customModule="pakr" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="lMX-1S-CIc" id="kd3-r1-ICw"/>
+                <outlet property="tableView" destination="rnf-4T-rDo" id="J59-Zo-T38"/>
                 <outlet property="view" destination="Wv0-Nc-7n0" id="SLq-tK-nUp"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Wv0-Nc-7n0">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rnf-4T-rDo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="GOn-hE-t6e"/>
+                        <outlet property="delegate" destination="-1" id="TMD-Fu-b2d"/>
+                    </connections>
+                </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forever_alone" translatesAutoresizingMaskIntoConstraints="NO" id="lMX-1S-CIc">
-                    <rect key="frame" x="235" y="235" width="130" height="130"/>
+                    <rect key="frame" x="95" y="219" width="130" height="130"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="eRY-2j-MKh"/>
                         <constraint firstAttribute="width" constant="130" id="iWU-VI-gmm"/>
@@ -24,8 +34,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="rnf-4T-rDo" secondAttribute="trailing" id="LE0-Px-fKt"/>
+                <constraint firstItem="rnf-4T-rDo" firstAttribute="leading" secondItem="Wv0-Nc-7n0" secondAttribute="leading" id="LfO-LA-3j5"/>
                 <constraint firstItem="lMX-1S-CIc" firstAttribute="centerX" secondItem="Wv0-Nc-7n0" secondAttribute="centerX" id="MDZ-eJ-ig4"/>
+                <constraint firstAttribute="bottom" secondItem="rnf-4T-rDo" secondAttribute="bottom" id="g8I-bI-otB"/>
                 <constraint firstItem="lMX-1S-CIc" firstAttribute="centerY" secondItem="Wv0-Nc-7n0" secondAttribute="centerY" id="s3b-di-fnm"/>
+                <constraint firstItem="rnf-4T-rDo" firstAttribute="top" secondItem="Wv0-Nc-7n0" secondAttribute="top" id="zEt-02-D02"/>
             </constraints>
             <point key="canvasLocation" x="424" y="182"/>
         </view>

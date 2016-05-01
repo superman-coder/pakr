@@ -19,7 +19,8 @@ class AllPostRouterImpl: NSObject, AllPostRouter {
     
     func gotoDetailParkingScreen(topic: Topic) {
         let detailViewController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
-        detailViewController.parking = topic.parking
+        // detailViewController.parking = topic.parking
+        detailViewController.topic = topic
         controller.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 protocol ReviewViewControllerDelegate {
-    func DidPostReview(rating: Int, title: String, content: String)
+    func DidPostReview(comment: Comment)
 }
 class ReviewViewController: UIViewController {
 
@@ -17,8 +18,10 @@ class ReviewViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewMarginBottom: NSLayoutConstraint!
     @IBOutlet weak var contentMarginBottom: NSLayoutConstraint!
+    @IBOutlet weak var rating: RatingControl!
     @IBOutlet weak var textFeild: UITextField!
     
+    var topic: Topic!
     var delegate: ReviewViewControllerDelegate?
     var isShowKeyBoard: Bool = false
     
@@ -46,10 +49,34 @@ class ReviewViewController: UIViewController {
     }
     
     func rightBarButtonAction(){
-        if let delegate = self.delegate {
-            delegate.DidPostReview(1, title: textFeild.text!, content: textView.text)
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        let comment = Comment(userId: topic.userId, topicId: topic.postId!, content: textView.text, title: textFeild.text!, rating: rating.rating)
+        WebServiceFactory.getAddressService().postComment(comment) { (comment, error) in
+            if error == nil {
+                if let delegate = self.delegate {
+                    delegate.DidPostReview(comment!)
+                }
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                self.showMessage("Post Complete!", completion: { 
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+            }else{
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                self.showMessage("Post Faild!", completion:  {
+                    
+                })
+            }
+
         }
-        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func showMessage(message: String,completion: (() -> Void)?) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "OK", style: .Default) { (okAction: UIAlertAction) in
+            completion!()
+        }
+        alert.addAction(okAction)
+        presentViewController(alert, animated: true, completion: nil)
     }
     func registryNotifyShowKeyBoard(){
          NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(ReviewViewController.keyBoardShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
@@ -61,7 +88,7 @@ class ReviewViewController: UIViewController {
             let dic = notifycation.userInfo
             let keyboardFrame = dic![UIKeyboardFrameBeginUserInfoKey]?.CGRectValue()
             UIView .animateWithDuration(0.3) {
-                self.contentMarginBottom.constant = (keyboardFrame?.size.height)! + 1
+                self.contentMarginBottom.constant = (keyboardFrame?.size.height)! + 10 - (self.tabBarController?.tabBar.frame.size.height)!
                 self.contenView .layoutIfNeeded()
             }
             

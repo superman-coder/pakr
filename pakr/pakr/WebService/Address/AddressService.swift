@@ -11,5 +11,15 @@ protocol AddressService {
     func getNearByParkingByAddressName(address: String, radius: Double, success:([Topic] -> Void), fail: (NSError -> Void))
     
     func getAllParkingByUser(userId: String, success:([Topic] -> Void), failure:(NSError -> Void))
+    
+    func postComment(comment: Comment, complete:(comment: Comment?, error: NSError?) -> Void)
+    func getAllCommentsByTopic(topicId: String, success:([Comment] -> Void), failure:(NSError -> Void))
+    
+    func getUserById(userId: String, complete:(success: User?,  error: NSError?) -> Void)
+    
+    func postBookMark(bookMark: Bookmark, complete:(bookMark: Bookmark?, error: NSError?) -> Void)
+    func getAllBookMarksByUser(userId: String, complete:(bookMarks: [Bookmark]?, error: NSError?) -> Void)
+    
+    func checkIsBookMarkTopicByUser(userId: String, topicId: String, complete:(isBookMark: Bool) -> Void)
 }
 

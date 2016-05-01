@@ -12,4 +12,5 @@ class EventSignal {
     static let UploadStartEvent = "kUploadStartEvent"
     static let UploadProgressEvent = "kUploadProgressEvent"
     static let UploadDoneEvent = "kUploadDoneEvent"
+    static let UpLoadBookMarkDone = "UpLoadBookMarkDone"
 }

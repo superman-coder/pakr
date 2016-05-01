@@ -105,4 +105,123 @@ public class AddressServiceParseImpl: NSObject, AddressService {
         }
 
     }
+// MARK: API comment
+    func postComment(comment: Comment, complete:(comment: Comment?, error: NSError?) -> Void){
+        comment.toPFObject().saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
+            if success {
+                let query = PFQuery(className: Constants.Table.Comment)
+                query.orderByDescending("createdAt")
+                query.limit = 1
+                query.findObjectsInBackgroundWithBlock({ (comments, error) in
+                    if let error = error {
+                        complete(comment: nil, error: error)
+                    } else if let comments = comments {
+                            let comment = Comment(pfObject: comments.first!)
+                        complete(comment: comment, error: nil)
+                    }
+                })
+            }else{
+                complete(comment: nil, error: error)
+            }
+        }
+        
+    }
+    func getAllCommentsByTopic(topicId: String, success:([Comment] -> Void), failure:(NSError -> Void)){
+        let query = PFQuery(className: Constants.Table.Comment)
+        query.includeKey(".")
+        query.orderByDescending("createdAt")
+        let topic = PFObject(withoutDataWithClassName: Constants.Table.Topic, objectId: topicId)
+        query.whereKey(Comment.PKTopic, equalTo: topic)
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if let error = error {
+                failure(error)
+            } else if let objs = objects {
+                var comments = [Comment]()
+                for pfobj in objs {
+                    let comment = Comment(pfObject: pfobj)
+                    comments.append(comment)
+                }
+                success(comments)
+            }
+        }
+    }
+    
+    func getUserById(userId: String, complete:(success: User?,  error: NSError?) -> Void){
+        let query = PFQuery(className: Constants.Table.User)
+        query.findObjectsInBackgroundWithBlock { (users, error) in
+            if let error = error {
+                complete(success:nil, error: error)
+            }else{
+                if let users = users {
+                    for pfUser in users {
+                        if (pfUser.objectId == userId){
+                            complete(success: pfUser as? User, error: error)
+                            return
+                        }
+                    }
+                    complete(success:nil, error: NSError(domain: "", code: -1, userInfo: nil))
+                }
+            }
+        }
+    }
+    func postBookMark(bookMark: Bookmark, complete:(bookMark: Bookmark?, error: NSError?) -> Void){
+        bookMark.toPFObject().saveInBackgroundWithBlock { (success, error) in
+            if success{
+                let query = PFQuery(className: Constants.Table.Bookmark)
+                query.orderByDescending("createdAt")
+                query.limit = 1
+                query.findObjectsInBackgroundWithBlock({ (bookMarks, error) in
+                    if let error = error {
+                        complete(bookMark: nil, error: error)
+                    } else if let bookMarks = bookMarks {
+                        let bookMark = Bookmark(pfObject: bookMarks.first!)
+                        complete(bookMark: bookMark, error: error)
+                    }
+                })
+            }else{
+                complete(bookMark: nil, error: error)
+            }
+        }
+    }
+    func getAllBookMarksByUser(userId: String, complete:(bookMarks: [Bookmark]?, error: NSError?) -> Void){
+        let query = PFQuery(className: Constants.Table.Bookmark)
+        query.orderByDescending("createdAt")
+        let user = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
+        query.whereKey(Bookmark.PKPostUser, equalTo: user)
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if let error = error {
+                complete(bookMarks: nil, error: error)
+            } else if let objects = objects {
+                var bookmarks = [Bookmark]()
+                for object in objects {
+                    let  bookMark = Bookmark(pfObject: object)
+                        bookmarks.append(bookMark)
+                }
+                complete(bookMarks: bookmarks, error: nil)
+            }
+        }
+    }
+    func checkIsBookMarkTopicByUser(userId: String, topicId: String, complete:(isBookMark: Bool) -> Void){
+        let query = PFQuery(className: Constants.Table.Bookmark)
+        let user = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
+        query.whereKey(Bookmark.PKPostUser, equalTo: user)
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if error != nil {
+                complete(isBookMark: false)
+            }else{
+                if let objects = objects {
+                    for obj in objects {
+                    let bookMark = Bookmark(pfObject: obj) 
+                        if bookMark.topicId == topicId {
+                         complete(isBookMark: true)
+                            return
+                        }
+                    }
+                    complete(isBookMark: false)
+                }else{
+                    complete(isBookMark: false)
+                }
+            }
+        }
+    }
 }
