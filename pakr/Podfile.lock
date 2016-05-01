@@ -15,11 +15,11 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Alamofire (3.3.1)
-  - AWSCognito (2.4.0):
-    - AWSCore (= 2.4.0)
-  - AWSCore (2.4.0)
-  - AWSS3 (2.4.0):
-    - AWSCore (= 2.4.0)
+  - AWSCognito (2.4.1):
+    - AWSCore (= 2.4.1)
+  - AWSCore (2.4.1)
+  - AWSS3 (2.4.1):
+    - AWSCore (= 2.4.1)
   - AYStepperView (0.1.0):
     - pop (~> 1.0)
   - BEMCheckBox (1.2.1)
@@ -40,6 +40,9 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.11.0):
     - FBSDKCoreKit
+  - Google/Analytics (2.0.4):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
   - Google/Core (2.0.4):
     - GoogleInterchangeUtilities (~> 1.0)
     - GoogleNetworkingUtilities (~> 1.0)
@@ -48,6 +51,7 @@ PODS:
   - Google/SignIn (2.0.4):
     - Google/Core
     - GoogleSignIn (~> 3.0)
+  - GoogleAnalytics (3.14.0)
   - GoogleAppUtilities (1.1.0):
     - GoogleSymbolUtilities (~> 1.0)
   - GoogleAuthUtilities (2.0.0):
@@ -63,6 +67,8 @@ PODS:
     - GoogleNetworkingUtilities (~> 1.0)
     - GoogleUtilities (~> 1.0)
   - GoogleSymbolUtilities (1.1.0)
+  - GoogleTagManager (3.15.0):
+    - GoogleAnalytics (= 3.14.0)
   - GoogleUtilities (1.3.0):
     - GoogleSymbolUtilities (~> 1.0)
   - Material (1.39.17)
@@ -85,7 +91,9 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - FBSDKLoginKit
+  - Google/Analytics
   - Google/SignIn
+  - GoogleTagManager
   - Material (~> 1.0)
   - MBProgressHUD
   - MBXPageViewController
@@ -94,9 +102,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  AWSCognito: 1d96bd3ccda48918b00862895561dcb2a6080acf
-  AWSCore: 7e0da755786280a76ed4ab4ed8c1d38ced09b460
-  AWSS3: dc00e788fb6733853ecd615a45f9d7dd6ce25823
+  AWSCognito: a57173a82505161bd1a9c8cfe393cea9b5b1f6bb
+  AWSCore: 9bfd632f04aaf12053e639d2a9120372844beb0d
+  AWSS3: d7a3a694ffc4010e90b14755b5b9dbf70989c117
   AYStepperView: 6bc5399dae562b2d221c47cbd540db438454ecf9
   BEMCheckBox: 264b8b72aa92adbfefa265cc58a0cdb86b207b9f
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
@@ -107,12 +115,14 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 686ac982723a14ec9ddb85e2f81235d7706c891b
   FBSDKLoginKit: bade9fc78277764149ccc5bfaadbf13c83175c6a
   Google: d0932824c5b97c96be489aa6f4e8cd6c294d637d
+  GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
   GoogleAppUtilities: 974598e8ed618c74ead33541d9caffbc3d144266
   GoogleAuthUtilities: 79e4143c77a08081a480b08df27a066cc8944f43
   GoogleInterchangeUtilities: 427382e42d8a340038bec37c6fdfd316e14b5fa2
   GoogleNetworkingUtilities: ec1e9911aca811eb18b7144394fee6168b607785
   GoogleSignIn: 3d571172b8603be39dcb1705d8217146bb76fe62
   GoogleSymbolUtilities: eb3965ea12710569c7b80db198a39e39b18613f7
+  GoogleTagManager: 39e4af1e9250e7817d328f690768e26afe560da0
   GoogleUtilities: 5c653f7df2eedf0ce0efdfe5afe4f831f375fd7a
   Material: eccc5afdac89e10aa7a635ad34d6c3564387bfd3
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1

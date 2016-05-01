@@ -33,8 +33,6 @@
 		B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A22BC922751D53642CFB /* PostInfoController.xib */; };
 		B7E6A1037EA58D7A02BD6B2B /* VerifyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A40C0FC253C1AFE78D7B /* VerifyController.xib */; };
 		B7E6A110E741A4C75C5D7F35 /* LayoutUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A091AAB6F9843BAE5107 /* LayoutUtils.swift */; };
-		B7E6A13E90275C7D2181B30E /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A331D58A2E2A1A82F0AC /* ProfileController.xib */; };
-		B7E6A1770D75BCAC87B58ED1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A5F90F4B6CED9046691F /* ProfileController.swift */; };
 		B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AC6D92106C69A930C5BE /* Bookmark.swift */; };
 		B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A145EF2DF7DDD58149AD /* Parking.swift */; };
 		B7E6A23A88726CC0D19CD553 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A122699477C5E67ECE5E /* SearchController.xib */; };
@@ -103,6 +101,40 @@
 		D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F71CCA19BB009C5BEB /* FileUtils.swift */; };
 		D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */; };
 		D60598FE1CCCDFB2009C5BEB /* EventSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598FD1CCCDFB2009C5BEB /* EventSignal.swift */; };
+		D60D17701CD23437004B1182 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D176F1CD23437004B1182 /* LoginPresenter.swift */; };
+		D60D17721CD2344B004B1182 /* LoginPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17711CD2344B004B1182 /* LoginPresenterImpl.swift */; };
+		D60D177B1CD2369A004B1182 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17791CD2369A004B1182 /* LoginController.swift */; };
+		D60D177C1CD2369A004B1182 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60D177A1CD2369A004B1182 /* LoginController.xib */; };
+		D60D17841CD3FC8A004B1182 /* pakrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17831CD3FC8A004B1182 /* pakrTests.swift */; };
+		D60D178C1CD3FD2A004B1182 /* MD5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D178B1CD3FD2A004B1182 /* MD5Tests.swift */; };
+		D60D178E1CD4AB36004B1182 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D178D1CD4AB36004B1182 /* LoginView.swift */; };
+		D60D17921CD4ADD8004B1182 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17901CD4ADD7004B1182 /* LoginDataManager.swift */; };
+		D60D17931CD4ADD8004B1182 /* LoginDataManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17911CD4ADD8004B1182 /* LoginDataManagerImpl.swift */; };
+		D60D17951CD4B0FB004B1182 /* LoginListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17941CD4B0FB004B1182 /* LoginListener.swift */; };
+		D60D17991CD4BC29004B1182 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17981CD4BC29004B1182 /* LoginRouter.swift */; };
+		D60D179B1CD4BC37004B1182 /* LoginRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D179A1CD4BC37004B1182 /* LoginRouterImpl.swift */; };
+		D60D179F1CD4C878004B1182 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D179D1CD4C878004B1182 /* ProfileController.swift */; };
+		D60D17A01CD4C878004B1182 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60D179E1CD4C878004B1182 /* ProfileController.xib */; };
+		D60D17A31CD4C89E004B1182 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17A21CD4C89E004B1182 /* ProfilePresenter.swift */; };
+		D60D17A61CD4C8C4004B1182 /* ProfilePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17A51CD4C8C4004B1182 /* ProfilePresenterImpl.swift */; };
+		D60D17AA1CD4CADB004B1182 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17A91CD4CADB004B1182 /* ProfileView.swift */; };
+		D60D17AE1CD50693004B1182 /* ProfileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17AC1CD50693004B1182 /* ProfileDataModel.swift */; };
+		D60D17AF1CD50693004B1182 /* ProfileDataModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17AD1CD50693004B1182 /* ProfileDataModelImpl.swift */; };
+		D60D17B21CD50F8F004B1182 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17B11CD50F8F004B1182 /* ProfileRouter.swift */; };
+		D60D17B51CD50FB4004B1182 /* ProfileRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17B41CD50FB4004B1182 /* ProfileRouterImpl.swift */; };
+		D60D17BA1CD51C6D004B1182 /* TrackerDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17B91CD51C6D004B1182 /* TrackerDelegator.swift */; };
+		D60D17BD1CD51C9C004B1182 /* GATracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17BC1CD51C9C004B1182 /* GATracker.swift */; };
+		D60D17C11CD52BA8004B1182 /* GATrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17C01CD52BA8004B1182 /* GATrackerImpl.swift */; };
+		D60D17C31CD52BD6004B1182 /* GTMTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17C21CD52BD6004B1182 /* GTMTracker.swift */; };
+		D60D17C51CD52BE9004B1182 /* GTMTrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17C41CD52BE9004B1182 /* GTMTrackerImpl.swift */; };
+		D60D17C81CD52C75004B1182 /* LoginTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17C71CD52C75004B1182 /* LoginTracker.swift */; };
+		D60D17CA1CD52C86004B1182 /* LoginTrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17C91CD52C86004B1182 /* LoginTrackerImpl.swift */; };
+		D60D17CD1CD52D1E004B1182 /* ProfileTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17CC1CD52D1E004B1182 /* ProfileTracker.swift */; };
+		D60D17CF1CD52D39004B1182 /* ProfileTrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17CE1CD52D39004B1182 /* ProfileTrackerImpl.swift */; };
+		D60D17D11CD53228004B1182 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D01CD53228004B1182 /* ProfileItem.swift */; };
+		D60D17D31CD53FCB004B1182 /* ProfileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D21CD53FCB004B1182 /* ProfileAdapter.swift */; };
+		D60D17D51CD53FF8004B1182 /* ProfileAdapterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D41CD53FF8004B1182 /* ProfileAdapterImpl.swift */; };
+		D60D17D71CD5480C004B1182 /* TrackerDelegatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17D61CD5480C004B1182 /* TrackerDelegatorImpl.swift */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -112,13 +144,20 @@
 		D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A38D1CC36A6C0095F74D /* SocialAuth.swift */; };
 		D66128791CCCF8FD00B435A8 /* UploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66128781CCCF8FD00B435A8 /* UploadManager.swift */; };
 		D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */; };
-		D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */; };
-		D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */; };
 		D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E521CC2798000BC6A64 /* CircularImageView.swift */; };
-		D6A14E591CC27DFB00BC6A64 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E581CC27DFB00BC6A64 /* ProfileDataManager.swift */; };
 		D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */; };
 		D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D60D17861CD3FC8A004B1182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6490D301CBFF85700016AA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6490D371CBFF85700016AA6;
+			remoteInfo = pakr;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		100C66651CD08EE200B5D2A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,7 +196,6 @@
 		B7E6A2693D20AC447658B4D2 /* DetailParkingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailParkingController.xib; sourceTree = "<group>"; };
 		B7E6A280C6A3B7D99D404FB7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B7E6A2DE0DDA440D80998929 /* SelectMapImageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMapImageController.xib; sourceTree = "<group>"; };
-		B7E6A331D58A2E2A1A82F0AC /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		B7E6A386378DAACA4E24F7D5 /* parkings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parkings.json; sourceTree = "<group>"; };
 		B7E6A3B5CC8A67FAFE783663 /* DataServiceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServiceUtils.swift; sourceTree = "<group>"; };
 		B7E6A3C93DAA63FED816EBDC /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -171,7 +209,6 @@
 		B7E6A51ACE4DE755F7FFD0B0 /* ParkingResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingResultCell.xib; sourceTree = "<group>"; };
 		B7E6A543093BE10B2149A1B1 /* CustomTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTimePicker.h; sourceTree = "<group>"; };
 		B7E6A55C48C62A83F2312ECA /* BookmarkController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkController.xib; sourceTree = "<group>"; };
-		B7E6A5F90F4B6CED9046691F /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		B7E6A60D20B035896508B0E8 /* MapDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapDetailViewController.xib; sourceTree = "<group>"; };
 		B7E6A62B148D4FB6723C6476 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		B7E6A63481B334288580DA83 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +259,42 @@
 		D60598F71CCA19BB009C5BEB /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWSPromiseClient.swift; path = AWS/AWSPromiseClient.swift; sourceTree = "<group>"; };
 		D60598FD1CCCDFB2009C5BEB /* EventSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSignal.swift; sourceTree = "<group>"; };
+		D60D176F1CD23437004B1182 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Login/presenter/LoginPresenter.swift; sourceTree = "<group>"; };
+		D60D17711CD2344B004B1182 /* LoginPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenterImpl.swift; path = Login/presenter/LoginPresenterImpl.swift; sourceTree = "<group>"; };
+		D60D17791CD2369A004B1182 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Login/view/LoginController.swift; sourceTree = "<group>"; };
+		D60D177A1CD2369A004B1182 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/view/LoginController.xib; sourceTree = "<group>"; };
+		D60D17811CD3FC8A004B1182 /* pakrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pakrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60D17831CD3FC8A004B1182 /* pakrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pakrTests.swift; sourceTree = "<group>"; };
+		D60D17851CD3FC8A004B1182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D60D178B1CD3FD2A004B1182 /* MD5Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MD5Tests.swift; path = UnitTest/MD5Tests.swift; sourceTree = "<group>"; };
+		D60D178D1CD4AB36004B1182 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Login/view/LoginView.swift; sourceTree = "<group>"; };
+		D60D17901CD4ADD7004B1182 /* LoginDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginDataManager.swift; path = Login/manager/LoginDataManager.swift; sourceTree = "<group>"; };
+		D60D17911CD4ADD8004B1182 /* LoginDataManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginDataManagerImpl.swift; path = Login/manager/LoginDataManagerImpl.swift; sourceTree = "<group>"; };
+		D60D17941CD4B0FB004B1182 /* LoginListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginListener.swift; path = Login/manager/LoginListener.swift; sourceTree = "<group>"; };
+		D60D17981CD4BC29004B1182 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRouter.swift; path = Login/router/LoginRouter.swift; sourceTree = "<group>"; };
+		D60D179A1CD4BC37004B1182 /* LoginRouterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterImpl.swift; sourceTree = "<group>"; };
+		D60D179D1CD4C878004B1182 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileController.swift; path = View/ProfileController.swift; sourceTree = "<group>"; };
+		D60D179E1CD4C878004B1182 /* ProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileController.xib; path = View/ProfileController.xib; sourceTree = "<group>"; };
+		D60D17A21CD4C89E004B1182 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePresenter.swift; path = Presenter/ProfilePresenter.swift; sourceTree = "<group>"; };
+		D60D17A51CD4C8C4004B1182 /* ProfilePresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePresenterImpl.swift; path = Presenter/ProfilePresenterImpl.swift; sourceTree = "<group>"; };
+		D60D17A91CD4CADB004B1182 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = View/ProfileView.swift; sourceTree = "<group>"; };
+		D60D17AC1CD50693004B1182 /* ProfileDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDataModel.swift; path = Model/ProfileDataModel.swift; sourceTree = "<group>"; };
+		D60D17AD1CD50693004B1182 /* ProfileDataModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDataModelImpl.swift; path = Model/ProfileDataModelImpl.swift; sourceTree = "<group>"; };
+		D60D17B11CD50F8F004B1182 /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileRouter.swift; path = router/ProfileRouter.swift; sourceTree = "<group>"; };
+		D60D17B41CD50FB4004B1182 /* ProfileRouterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileRouterImpl.swift; path = router/ProfileRouterImpl.swift; sourceTree = "<group>"; };
+		D60D17B91CD51C6D004B1182 /* TrackerDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackerDelegator.swift; path = Tracker/TrackerDelegator.swift; sourceTree = "<group>"; };
+		D60D17BC1CD51C9C004B1182 /* GATracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GATracker.swift; path = Tracker/GoogleAnalytic/GATracker.swift; sourceTree = "<group>"; };
+		D60D17C01CD52BA8004B1182 /* GATrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GATrackerImpl.swift; path = Tracker/GoogleAnalytic/GATrackerImpl.swift; sourceTree = "<group>"; };
+		D60D17C21CD52BD6004B1182 /* GTMTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTMTracker.swift; path = Tracker/GoogleTagManager/GTMTracker.swift; sourceTree = "<group>"; };
+		D60D17C41CD52BE9004B1182 /* GTMTrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTMTrackerImpl.swift; path = Tracker/GoogleTagManager/GTMTrackerImpl.swift; sourceTree = "<group>"; };
+		D60D17C71CD52C75004B1182 /* LoginTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTracker.swift; path = Login/tracker/LoginTracker.swift; sourceTree = "<group>"; };
+		D60D17C91CD52C86004B1182 /* LoginTrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTrackerImpl.swift; path = Login/tracker/LoginTrackerImpl.swift; sourceTree = "<group>"; };
+		D60D17CC1CD52D1E004B1182 /* ProfileTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTracker.swift; path = Tracker/ProfileTracker.swift; sourceTree = "<group>"; };
+		D60D17CE1CD52D39004B1182 /* ProfileTrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTrackerImpl.swift; path = Tracker/ProfileTrackerImpl.swift; sourceTree = "<group>"; };
+		D60D17D01CD53228004B1182 /* ProfileItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileItem.swift; path = Model/ProfileItem.swift; sourceTree = "<group>"; };
+		D60D17D21CD53FCB004B1182 /* ProfileAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdapter.swift; path = View/ProfileAdapter.swift; sourceTree = "<group>"; };
+		D60D17D41CD53FF8004B1182 /* ProfileAdapterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdapterImpl.swift; path = View/ProfileAdapterImpl.swift; sourceTree = "<group>"; };
+		D60D17D61CD5480C004B1182 /* TrackerDelegatorImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackerDelegatorImpl.swift; path = Tracker/TrackerDelegatorImpl.swift; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -232,15 +305,19 @@
 		D654A38D1CC36A6C0095F74D /* SocialAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialAuth.swift; path = Manager/SocialAuth.swift; sourceTree = "<group>"; };
 		D66128781CCCF8FD00B435A8 /* UploadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadManager.swift; path = DataManager/UploadManager.swift; sourceTree = "<group>"; };
 		D6A14E4A1CC26AF600BC6A64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Login/LoginController.swift; sourceTree = "<group>"; };
-		D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/LoginController.xib; sourceTree = "<group>"; };
 		D6A14E521CC2798000BC6A64 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularImageView.swift; path = ImageView/CircularImageView.swift; sourceTree = "<group>"; };
-		D6A14E581CC27DFB00BC6A64 /* ProfileDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDataManager.swift; path = manager/ProfileDataManager.swift; sourceTree = "<group>"; };
 		D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundCornerImageView.swift; path = ImageView/RoundCornerImageView.swift; sourceTree = "<group>"; };
 		D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtendedCell.swift; path = Cell/ExtendedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D60D177E1CD3FC8A004B1182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6490D351CBFF85700016AA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +541,7 @@
 		B7E6A617C69724D814D342E6 /* pakr */ = {
 			isa = PBXGroup;
 			children = (
+				D60D17B81CD51C51004B1182 /* Tracker */,
 				D60598F01CC9D9BB009C5BEB /* AWS */,
 				D654A3761CC2D2E50095F74D /* Preferences */,
 				D6A14E611CC2CD5A00BC6A64 /* Extensions */,
@@ -552,10 +630,12 @@
 		B7E6A96A0627345E65331F41 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				D60D17CB1CD52D00004B1182 /* tracker */,
+				D60D17B01CD50F7A004B1182 /* router */,
+				D60D17AB1CD5067F004B1182 /* Model */,
+				D60D17A11CD4C887004B1182 /* Presenter */,
+				D60D179C1CD4C844004B1182 /* View */,
 				105548031CCF512B00A9DD8B /* AllPostParking */,
-				D6A14E571CC27DE100BC6A64 /* manager */,
-				B7E6A331D58A2E2A1A82F0AC /* ProfileController.xib */,
-				B7E6A5F90F4B6CED9046691F /* ProfileController.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -693,10 +773,146 @@
 			name = AWS;
 			sourceTree = "<group>";
 		};
+		D60D176D1CD23405004B1182 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D60D176F1CD23437004B1182 /* LoginPresenter.swift */,
+				D60D17711CD2344B004B1182 /* LoginPresenterImpl.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		D60D17731CD234EE004B1182 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17791CD2369A004B1182 /* LoginController.swift */,
+				D60D177A1CD2369A004B1182 /* LoginController.xib */,
+				D60D178D1CD4AB36004B1182 /* LoginView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D60D17821CD3FC8A004B1182 /* pakrTests */ = {
+			isa = PBXGroup;
+			children = (
+				D60D178B1CD3FD2A004B1182 /* MD5Tests.swift */,
+				D60D17831CD3FC8A004B1182 /* pakrTests.swift */,
+				D60D17851CD3FC8A004B1182 /* Info.plist */,
+			);
+			path = pakrTests;
+			sourceTree = "<group>";
+		};
+		D60D178F1CD4ADC3004B1182 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17901CD4ADD7004B1182 /* LoginDataManager.swift */,
+				D60D17911CD4ADD8004B1182 /* LoginDataManagerImpl.swift */,
+				D60D17941CD4B0FB004B1182 /* LoginListener.swift */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
+		D60D17971CD4BC13004B1182 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17981CD4BC29004B1182 /* LoginRouter.swift */,
+				D60D179A1CD4BC37004B1182 /* LoginRouterImpl.swift */,
+			);
+			name = router;
+			sourceTree = "<group>";
+		};
+		D60D179C1CD4C844004B1182 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17D41CD53FF8004B1182 /* ProfileAdapterImpl.swift */,
+				D60D179D1CD4C878004B1182 /* ProfileController.swift */,
+				D60D179E1CD4C878004B1182 /* ProfileController.xib */,
+				D60D17A91CD4CADB004B1182 /* ProfileView.swift */,
+				D60D17D21CD53FCB004B1182 /* ProfileAdapter.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D60D17A11CD4C887004B1182 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17A21CD4C89E004B1182 /* ProfilePresenter.swift */,
+				D60D17A51CD4C8C4004B1182 /* ProfilePresenterImpl.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		D60D17AB1CD5067F004B1182 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17AC1CD50693004B1182 /* ProfileDataModel.swift */,
+				D60D17AD1CD50693004B1182 /* ProfileDataModelImpl.swift */,
+				D60D17D01CD53228004B1182 /* ProfileItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D60D17B01CD50F7A004B1182 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17B11CD50F8F004B1182 /* ProfileRouter.swift */,
+				D60D17B41CD50FB4004B1182 /* ProfileRouterImpl.swift */,
+			);
+			name = router;
+			sourceTree = "<group>";
+		};
+		D60D17B81CD51C51004B1182 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17BE1CD52B6A004B1182 /* GoogleTagManager */,
+				D60D17BB1CD51C73004B1182 /* GoogleAnalytic */,
+				D60D17B91CD51C6D004B1182 /* TrackerDelegator.swift */,
+				D60D17D61CD5480C004B1182 /* TrackerDelegatorImpl.swift */,
+			);
+			name = Tracker;
+			sourceTree = "<group>";
+		};
+		D60D17BB1CD51C73004B1182 /* GoogleAnalytic */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17BC1CD51C9C004B1182 /* GATracker.swift */,
+				D60D17C01CD52BA8004B1182 /* GATrackerImpl.swift */,
+			);
+			name = GoogleAnalytic;
+			sourceTree = "<group>";
+		};
+		D60D17BE1CD52B6A004B1182 /* GoogleTagManager */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17C21CD52BD6004B1182 /* GTMTracker.swift */,
+				D60D17C41CD52BE9004B1182 /* GTMTrackerImpl.swift */,
+			);
+			name = GoogleTagManager;
+			sourceTree = "<group>";
+		};
+		D60D17C61CD52C5D004B1182 /* tracker */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17C71CD52C75004B1182 /* LoginTracker.swift */,
+				D60D17C91CD52C86004B1182 /* LoginTrackerImpl.swift */,
+			);
+			name = tracker;
+			sourceTree = "<group>";
+		};
+		D60D17CB1CD52D00004B1182 /* tracker */ = {
+			isa = PBXGroup;
+			children = (
+				D60D17CC1CD52D1E004B1182 /* ProfileTracker.swift */,
+				D60D17CE1CD52D39004B1182 /* ProfileTrackerImpl.swift */,
+			);
+			name = tracker;
+			sourceTree = "<group>";
+		};
 		D6490D2F1CBFF85700016AA6 = {
 			isa = PBXGroup;
 			children = (
 				B7E6A617C69724D814D342E6 /* pakr */,
+				D60D17821CD3FC8A004B1182 /* pakrTests */,
 				D6490D391CBFF85700016AA6 /* Products */,
 				8EE95B9CD067AA4023D5833D /* Pods */,
 				081F5D89FB2D7E4CF7A7BA30 /* Frameworks */,
@@ -707,6 +923,7 @@
 			isa = PBXGroup;
 			children = (
 				D6490D381CBFF85700016AA6 /* pakr.app */,
+				D60D17811CD3FC8A004B1182 /* pakrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -750,8 +967,11 @@
 		D6A14E4C1CC26CD600BC6A64 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				D6A14E4D1CC26CF300BC6A64 /* LoginController.swift */,
-				D6A14E4F1CC26D2600BC6A64 /* LoginController.xib */,
+				D60D17C61CD52C5D004B1182 /* tracker */,
+				D60D17971CD4BC13004B1182 /* router */,
+				D60D178F1CD4ADC3004B1182 /* manager */,
+				D60D17731CD234EE004B1182 /* view */,
+				D60D176D1CD23405004B1182 /* presenter */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -763,14 +983,6 @@
 				D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */,
 			);
 			name = ImageView;
-			sourceTree = "<group>";
-		};
-		D6A14E571CC27DE100BC6A64 /* manager */ = {
-			isa = PBXGroup;
-			children = (
-				D6A14E581CC27DFB00BC6A64 /* ProfileDataManager.swift */,
-			);
-			name = manager;
 			sourceTree = "<group>";
 		};
 		D6A14E5E1CC2A43500BC6A64 /* Cell */ = {
@@ -795,6 +1007,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D60D17801CD3FC8A004B1182 /* pakrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60D17881CD3FC8A004B1182 /* Build configuration list for PBXNativeTarget "pakrTests" */;
+			buildPhases = (
+				D60D177D1CD3FC8A004B1182 /* Sources */,
+				D60D177E1CD3FC8A004B1182 /* Frameworks */,
+				D60D177F1CD3FC8A004B1182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D60D17871CD3FC8A004B1182 /* PBXTargetDependency */,
+			);
+			name = pakrTests;
+			productName = pakrTests;
+			productReference = D60D17811CD3FC8A004B1182 /* pakrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D6490D371CBFF85700016AA6 /* pakr */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6490D4A1CBFF85700016AA6 /* Build configuration list for PBXNativeTarget "pakr" */;
@@ -826,6 +1056,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Pakr;
 				TargetAttributes = {
+					D60D17801CD3FC8A004B1182 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D6490D371CBFF85700016AA6;
+					};
 					D6490D371CBFF85700016AA6 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = V5BCKD2C56;
@@ -846,16 +1080,25 @@
 			projectRoot = "";
 			targets = (
 				D6490D371CBFF85700016AA6 /* pakr */,
+				D60D17801CD3FC8A004B1182 /* pakrTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D60D177F1CD3FC8A004B1182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6490D361CBFF85700016AA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				10519FBC1CCE1DDC0006F5E7 /* PriceTableViewCell.xib in Resources */,
+				D60D17A01CD4C878004B1182 /* ProfileController.xib in Resources */,
 				B7E6AC35E4C87F435C2D14EE /* MapController.xib in Resources */,
 				B7E6AC7B78DB97C1857BFF86 /* BookmarkController.xib in Resources */,
 				B7E6AAC9E99348518E9B6D21 /* ParkingResultCell.xib in Resources */,
@@ -867,9 +1110,7 @@
 				B7E6A1037EA58D7A02BD6B2B /* VerifyController.xib in Resources */,
 				B7E6AEF2228BC974A36C5467 /* SelectMapImageController.xib in Resources */,
 				D60598ED1CC5001E009C5BEB /* TestUploadController.xib in Resources */,
-				B7E6A13E90275C7D2181B30E /* ProfileController.xib in Resources */,
 				B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */,
-				D6A14E501CC26D2600BC6A64 /* LoginController.xib in Resources */,
 				D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */,
 				B7E6A60E9906C2D10C8F2F70 /* MapDetailViewController.xib in Resources */,
 				B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */,
@@ -881,6 +1122,7 @@
 				B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */,
 				D60598D61CC4A863009C5BEB /* CommentTableViewCell.xib in Resources */,
 				1063B5BE1CCB541A00D08A33 /* WorkTimeTableViewCell.xib in Resources */,
+				D60D177C1CD2369A004B1182 /* LoginController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,19 +1190,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D60D177D1CD3FC8A004B1182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60D178C1CD3FD2A004B1182 /* MD5Tests.swift in Sources */,
+				D60D17841CD3FC8A004B1182 /* pakrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6490D341CBFF85700016AA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60D17991CD4BC29004B1182 /* LoginRouter.swift in Sources */,
 				B7E6A7598B1D7BE108B42ACA /* Post.swift in Sources */,
+				D60D17C31CD52BD6004B1182 /* GTMTracker.swift in Sources */,
 				B7E6A4AACDDABB7130F3DBA7 /* Role.swift in Sources */,
 				7274B8E21CC32CF9007E4B82 /* GMServices.swift in Sources */,
 				723552991CC4CD8400090651 /* GMPlace.swift in Sources */,
 				B7E6A60EEBB24D2C771BB096 /* User.swift in Sources */,
 				B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */,
+				D60D17931CD4ADD8004B1182 /* LoginDataManagerImpl.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
 				1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */,
+				D60D17D11CD53228004B1182 /* ProfileItem.swift in Sources */,
 				105548051CCF514700A9DD8B /* AllPostParkingTableViewController.swift in Sources */,
+				D60D17AF1CD50693004B1182 /* ProfileDataModelImpl.swift in Sources */,
 				D66128791CCCF8FD00B435A8 /* UploadManager.swift in Sources */,
 				B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */,
 				B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */,
@@ -968,6 +1224,8 @@
 				B7E6AA0432B1309BA5CEC6AD /* TimeRange.swift in Sources */,
 				B7E6A5BC6F196BF0F02FAD3A /* Coordinate.swift in Sources */,
 				B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */,
+				D60D17951CD4B0FB004B1182 /* LoginListener.swift in Sources */,
+				D60D17D71CD5480C004B1182 /* TrackerDelegatorImpl.swift in Sources */,
 				D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */,
 				10C3DF391CC5E84100352E2D /* ShowAllCommentTableViewController.swift in Sources */,
 				B7E6A90D275DCF191BE990E9 /* VehicleDetail.swift in Sources */,
@@ -977,26 +1235,35 @@
 				B7E6A999BFF349E7A0407789 /* WebServiceFactory.swift in Sources */,
 				723E739D1CC995F3008C527C /* ModelProxy.swift in Sources */,
 				B7E6A9544AAB2F696EC945AA /* AddressService.swift in Sources */,
-				D6A14E591CC27DFB00BC6A64 /* ProfileDataManager.swift in Sources */,
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				B7E6A0470AE6CDBCC3453AEC /* Repository.swift in Sources */,
+				D60D17D51CD53FF8004B1182 /* ProfileAdapterImpl.swift in Sources */,
 				D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */,
+				D60D177B1CD2369A004B1182 /* LoginController.swift in Sources */,
 				D654A38E1CC36A6C0095F74D /* SocialAuth.swift in Sources */,
 				10D1A8AF1CC64649002867BC /* RatingControl.swift in Sources */,
+				D60D179F1CD4C878004B1182 /* ProfileController.swift in Sources */,
 				B7E6A8E9982F4A8F2E898258 /* HomeViewController.swift in Sources */,
+				D60D17721CD2344B004B1182 /* LoginPresenterImpl.swift in Sources */,
 				723552A21CC4D3DB00090651 /* GMPlaceCell.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
+				D60D17AE1CD50693004B1182 /* ProfileDataModel.swift in Sources */,
+				D60D17C81CD52C75004B1182 /* LoginTracker.swift in Sources */,
 				D60598D91CC4A863009C5BEB /* ReviewViewController.swift in Sources */,
 				B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */,
 				D654A3851CC369F50095F74D /* AuthService.swift in Sources */,
+				D60D17BD1CD51C9C004B1182 /* GATracker.swift in Sources */,
+				D60D17701CD23437004B1182 /* LoginPresenter.swift in Sources */,
 				D60598F61CC9E79E009C5BEB /* MD5.swift in Sources */,
 				D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */,
 				D654A3861CC369F50095F74D /* AuthServiceImpl.swift in Sources */,
-				D6A14E4E1CC26CF300BC6A64 /* LoginController.swift in Sources */,
+				D60D17B51CD50FB4004B1182 /* ProfileRouterImpl.swift in Sources */,
 				B7E6AC26951ACD27B35085B9 /* BookmarkController.swift in Sources */,
+				D60D17C11CD52BA8004B1182 /* GATrackerImpl.swift in Sources */,
 				D60598EB1CC4FFAF009C5BEB /* TestUploadController.swift in Sources */,
 				B7E6AC842CC3B34A20172827 /* ParkingResultCell.swift in Sources */,
 				B7E6ABFA04ECC1111B378897 /* SearchController.swift in Sources */,
+				D60D178E1CD4AB36004B1182 /* LoginView.swift in Sources */,
 				B7E6A949DC4DD496BB0052B3 /* PostParkingController.swift in Sources */,
 				7235529D1CC4D39400090651 /* AddressPickerController.swift in Sources */,
 				B7E6AA8A109EAEBB232F4B13 /* PostInfoController.swift in Sources */,
@@ -1004,24 +1271,35 @@
 				B7E6AF56707503C0430290D1 /* SelectMapImageController.swift in Sources */,
 				7274B8D41CC2884B007E4B82 /* PakrImageUtils.swift in Sources */,
 				10D1A8B21CC64B29002867BC /* CommentTableViewCell.swift in Sources */,
-				B7E6A1770D75BCAC87B58ED1 /* ProfileController.swift in Sources */,
 				D654A38B1CC36A000095F74D /* GoogleAuth.swift in Sources */,
 				72E678121CCCBC630045CB00 /* UIColor+Pakr.swift in Sources */,
 				B7E6AA2D5F5E58C520E27A33 /* MoreInfoViewController.swift in Sources */,
 				B7E6A5C323135FB8258548DA /* MapDetailViewController.swift in Sources */,
+				D60D17AA1CD4CADB004B1182 /* ProfileView.swift in Sources */,
 				D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */,
+				D60D179B1CD4BC37004B1182 /* LoginRouterImpl.swift in Sources */,
 				B7E6A70D6A02D6E611445818 /* PhotosCollectionViewCell.swift in Sources */,
+				D60D17D31CD53FCB004B1182 /* ProfileAdapter.swift in Sources */,
 				B7E6AC10C6333F9CB1A58377 /* DetailParkingController.swift in Sources */,
+				D60D17B21CD50F8F004B1182 /* ProfileRouter.swift in Sources */,
+				D60D17BA1CD51C6D004B1182 /* TrackerDelegator.swift in Sources */,
+				D60D17921CD4ADD8004B1182 /* LoginDataManager.swift in Sources */,
+				D60D17CA1CD52C86004B1182 /* LoginTrackerImpl.swift in Sources */,
 				D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */,
 				D654A38A1CC36A000095F74D /* FacebookAuth.swift in Sources */,
 				D60598F21CC9E0DC009C5BEB /* AWSClient.swift in Sources */,
+				D60D17CD1CD52D1E004B1182 /* ProfileTracker.swift in Sources */,
 				B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */,
 				D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */,
 				B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */,
+				D60D17CF1CD52D39004B1182 /* ProfileTrackerImpl.swift in Sources */,
+				D60D17A61CD4C8C4004B1182 /* ProfilePresenterImpl.swift in Sources */,
 				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
+				D60D17C51CD52BE9004B1182 /* GTMTrackerImpl.swift in Sources */,
 				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,
 				B7E6A9C2A41FE994DE773C26 /* PakrCLLocationCoordinate2D.swift in Sources */,
 				10519FBB1CCE1DDC0006F5E7 /* PriceTableViewCell.swift in Sources */,
+				D60D17A31CD4C89E004B1182 /* ProfilePresenter.swift in Sources */,
 				D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */,
 				D60598EF1CC963F7009C5BEB /* UIImage+Resize.swift in Sources */,
 				B7E6AE1FA3C29FC389132252 /* DataServiceUtils.swift in Sources */,
@@ -1033,7 +1311,41 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D60D17871CD3FC8A004B1182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6490D371CBFF85700016AA6 /* pakr */;
+			targetProxy = D60D17861CD3FC8A004B1182 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D60D17891CD3FC8A004B1182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = pakrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pakr/Pakr-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pakr.app/pakr";
+			};
+			name = Debug;
+		};
+		D60D178A1CD3FC8A004B1182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = pakrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pakr/Pakr-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pakr.app/pakr";
+			};
+			name = Release;
+		};
 		D6490D481CBFF85700016AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1182,6 +1494,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D60D17881CD3FC8A004B1182 /* Build configuration list for PBXNativeTarget "pakrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60D17891CD3FC8A004B1182 /* Debug */,
+				D60D178A1CD3FC8A004B1182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D6490D331CBFF85700016AA6 /* Build configuration list for PBXProject "pakr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
