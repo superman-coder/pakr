@@ -17,7 +17,9 @@ protocol AddressService {
     
     func getUserById(userId: String, complete:(success: User?,  error: NSError?) -> Void)
     
-    func postBookMark(topic: Topic, userId: String, complete:(bookMark: Bookmark?, error: NSError?) -> Void)
-    func getAllBookMarksByUser(userId: String, complete:(bookMarks: [Bookmark]?, error: NSError?))
+    func postBookMark(bookMark: Bookmark, complete:(bookMark: Bookmark?, error: NSError?) -> Void)
+    func getAllBookMarksByUser(userId: String, complete:(bookMarks: [Bookmark]?, error: NSError?) -> Void)
+    
+    func checkIsBookMarkTopicByUser(userId: String, topicId: String, complete:(isBookMark: Bool) -> Void)
 }
 

@@ -58,7 +58,7 @@ class DetailParkingController: UIViewController {
         let nibComment = UINib(nibName: "CommentTableViewCell", bundle: nil)
         commentsTableView.registerNib(nibComment, forCellReuseIdentifier: "CommentTableViewCell")
         setData()
-        
+        setBookMark()
         self.title = parking.parkingName
         setShadow()
     }
@@ -68,7 +68,15 @@ class DetailParkingController: UIViewController {
     }
     
 // MARK: - Private Method
-
+    func setBookMark(){
+        let user = WebServiceFactory.getAuthService().getLoginUser()
+        WebServiceFactory.getAddressService().checkIsBookMarkTopicByUser((user?.objectId)!, topicId: topic.postId!) { (isBookMark) in
+            dispatch_async(dispatch_get_main_queue(), { 
+                self.btnBookMark.selected = isBookMark
+            })
+        }
+    }
+    
     func setShadow(){
         LayoutUtils.dropShadowView(photoCollectionView)
         LayoutUtils.dropShadowView(infoTableView)
@@ -189,9 +197,19 @@ class DetailParkingController: UIViewController {
     }
     @IBAction func bookMarkAction(sender: AnyObject) {
         if  btnBookMark.selected {
-            btnBookMark.selected = false
+            return
         }else{
-            btnBookMark.selected = true
+            self.btnBookMark.selected = true
+            let currentUser = WebServiceFactory.getAuthService().getLoginUser()
+            let bookMark = Bookmark(userId: currentUser?.objectId, topicId: topic.postId)
+            WebServiceFactory.getAddressService().postBookMark(bookMark) { (bookMark, error) in
+                if error == nil {
+                    let userInfo : [String:Bookmark] = ["bookMark": bookMark!]
+                    NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UpLoadBookMarkDone, object: nil, userInfo: userInfo)
+                }else{
+                    self.btnBookMark.selected = false
+                }
+            }
         }
         
     }
