@@ -22,6 +22,7 @@ class Constants {
         static let Topic = "Topic"
         static let Parking = "Parking"
         static let Comment = "Comment"
+        static let Bookmark = "Bookmark"
     }
     
     class AWS {

@@ -97,7 +97,20 @@ class DetailParkingController: UIViewController {
             hoursToday.text = "Hours ToDay: \(openTime) - \(closeTime)"
         }
         rating.rating = topic.rating
-        numReviews.text = "197 Reviews"
+        numReviews.text = "  "
+        WebServiceFactory.getAddressService().getAllCommentsByTopic(topic.postId!, success: { (comments) in
+            self.numReviews.text = " \(comments.count) Reviews"
+            if comments.count > 0 {
+                var rating = 0
+                for comment in comments {
+                    rating = comment.rating + rating
+                }
+                self.rating.rating = rating / comments.count
+            }
+            }) { (error) in
+            self.numReviews.text = "0 Review"
+        }
+        
         
         if parking.imageUrl != nil {
             let url  = NSURL(string:(parking.imageUrl?.first)!)!

@@ -164,4 +164,10 @@ public class AddressServiceParseImpl: NSObject, AddressService {
             }
         }
     }
+    func postBookMark(topic: Topic, userId: String, complete:(bookMark: Bookmark?, error: NSError?) -> Void){
+        abcs
+    }
+    func getAllBookMarksByUser(userId: String, complete:(bookMarks: [Bookmark]?, error: NSError?)){
+        
+    }
 }

@@ -4,19 +4,33 @@
 //
 
 import Foundation
+import Parse
 
-class Bookmark {
-
-    let bookmarkId: String!
+class Bookmark:Post, ParseModelProtocol {
+    let PKTopic = "topic"
+    let PKUser = "user"
+    let PKTopicId = "topicId"
+    
     let topic: Topic!
-    let user: User!
-    let dateCreated: NSDate!
-
-    init(bookmarkId: String!, user: User!, topic: Topic!, dateCreated: NSDate!) {
-        self.bookmarkId = bookmarkId
-        self.user = user
-        self.dateCreated = dateCreated
+    
+    init(userId: String!, topic: Topic!) {
         self.topic = topic
+        super.init(userId: userId)
+    }
+    
+    required init(pfObject: PFObject) {
+        topic = Topic(pfObject:pfObject[PKTopic] as! PFObject)
+        let userId = pfObject[Bookmark.PKPostUser].objectId
+        super.init(userId: userId)
+        self.dateCreated = pfObject.createdAt
+        self.postId = pfObject.objectId
+    }
+    
+    func toPFObject() -> PFObject {
+        let pfObject = PFObject(className: Constants.Table.Bookmark)
+        pfObject[PKUser] = user
+        pfObject[PKTopic] = topic.toPFObject()
+        return pfObject
     }
 
 }
