@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpAWS()
         setUpGoogleAnalytic()
         
+
         authenService = WebServiceFactory.getAuthService()
         
        if authenService.isLogin() {

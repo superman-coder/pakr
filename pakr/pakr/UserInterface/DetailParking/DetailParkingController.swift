@@ -11,6 +11,7 @@ import AFNetworking
 import MapKit
 
 class DetailParkingController: UIViewController {
+    var topic: Topic!
     var parking : Parking!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fromBusinessView: UIControl!
@@ -57,7 +58,7 @@ class DetailParkingController: UIViewController {
         let nibComment = UINib(nibName: "CommentTableViewCell", bundle: nil)
         commentsTableView.registerNib(nibComment, forCellReuseIdentifier: "CommentTableViewCell")
         setData()
-        
+        setBookMark()
         self.title = parking.parkingName
         setShadow()
     }
@@ -67,7 +68,15 @@ class DetailParkingController: UIViewController {
     }
     
 // MARK: - Private Method
-
+    func setBookMark(){
+        let user = WebServiceFactory.getAuthService().getLoginUser()
+        WebServiceFactory.getAddressService().checkIsBookMarkTopicByUser((user?.objectId)!, topicId: topic.postId!) { (isBookMark) in
+            dispatch_async(dispatch_get_main_queue(), { 
+                self.btnBookMark.selected = isBookMark
+            })
+        }
+    }
+    
     func setShadow(){
         LayoutUtils.dropShadowView(photoCollectionView)
         LayoutUtils.dropShadowView(infoTableView)
@@ -78,7 +87,8 @@ class DetailParkingController: UIViewController {
         LayoutUtils.dropShadowView(addressView)
         LayoutUtils.dropShadowView(fromBusinessView)
     }
-    func setData(){        
+    func setData(){
+        parking = topic.parking
         arrUrlImageParking = parking.imageUrl
         lblAddress.text = parking.addressName
         lblBusinessReview.text = parking.business.businessDescription
@@ -94,8 +104,21 @@ class DetailParkingController: UIViewController {
             let openTime = "\(parking.schedule[dayOfWeek].openTime)"
             hoursToday.text = "Hours ToDay: \(openTime) - \(closeTime)"
         }
-        rating.rating = 3
-        numReviews.text = "197 Reviews"
+        rating.rating = topic.rating
+        numReviews.text = "  "
+        WebServiceFactory.getAddressService().getAllCommentsByTopic(topic.postId!, success: { (comments) in
+            self.numReviews.text = " \(comments.count) Reviews"
+            if comments.count > 0 {
+                var rating = 0
+                for comment in comments {
+                    rating = comment.rating + rating
+                }
+                self.rating.rating = rating / comments.count
+            }
+            }) { (error) in
+            self.numReviews.text = "0 Review"
+        }
+        
         
         if parking.imageUrl != nil {
             let url  = NSURL(string:(parking.imageUrl?.first)!)!
@@ -153,11 +176,13 @@ class DetailParkingController: UIViewController {
     
     func startReview(){
         let reviewCOntroler = ReviewViewController()
-        reviewCOntroler.delegate = self
+        reviewCOntroler.topic = topic
         self.navigationController?.pushViewController(reviewCOntroler, animated: true)
     }
     func showAllComments(){
-        self.navigationController?.pushViewController(ShowAllCommentTableViewController(), animated: true)
+        let allCommentsViewController = ShowAllCommentTableViewController()
+        allCommentsViewController.topic = topic
+        self.navigationController?.pushViewController(allCommentsViewController, animated: true)
     }
 // MARK: - IBAction
     @IBAction func didSelectMapView(sender: AnyObject) {
@@ -172,9 +197,19 @@ class DetailParkingController: UIViewController {
     }
     @IBAction func bookMarkAction(sender: AnyObject) {
         if  btnBookMark.selected {
-            btnBookMark.selected = false
+            return
         }else{
-            btnBookMark.selected = true
+            self.btnBookMark.selected = true
+            let currentUser = WebServiceFactory.getAuthService().getLoginUser()
+            let bookMark = Bookmark(userId: currentUser?.objectId, topicId: topic.postId)
+            WebServiceFactory.getAddressService().postBookMark(bookMark) { (bookMark, error) in
+                if error == nil {
+                    let userInfo : [String:Bookmark] = ["bookMark": bookMark!]
+                    NSNotificationCenter.defaultCenter().postNotificationName(EventSignal.UpLoadBookMarkDone, object: nil, userInfo: userInfo)
+                }else{
+                    self.btnBookMark.selected = false
+                }
+            }
         }
         
     }
@@ -285,11 +320,3 @@ extension DetailParkingController: UICollectionViewDelegate, UICollectionViewDat
     
 }
 
-
-extension DetailParkingController: ReviewViewControllerDelegate{
-    func DidPostReview(rating: Int, title: String, content: String) {
-        print(rating)
-        print(title)
-        print(content)
-    }
-}

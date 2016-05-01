@@ -31,6 +31,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="parkingLot" width="170" height="170"/>
+        <image name="parkingLot" width="128" height="128"/>
     </resources>
 </document>

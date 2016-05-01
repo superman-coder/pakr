@@ -77,6 +77,7 @@ class UploadManager: NSObject {
     }
     
     func startUpload() {
+        print("UPLoad___________________________________")
         if arrImages.count > 0 {
             delegate.startUpload(order)
             awsClient.uploadImage(authService.getLoginUser()?.email, image: arrImages[0], success: nil, error: nil, progress: nil)
