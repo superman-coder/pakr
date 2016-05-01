@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import AFNetworking
 
 class ReviewTableViewCell: UITableViewCell {
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var timeCreateLbl: UILabel!
+    @IBOutlet weak var userNameLbl: UILabel!
+    @IBOutlet weak var contentLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        userImage.layer.cornerRadius = 5;
+        userImage.clipsToBounds = true;
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -21,4 +29,20 @@ class ReviewTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    var comment: Comment!{
+        didSet{
+            titleLbl.text = comment.title
+            ratingControl.rating = comment.rating
+            contentLbl.text = comment.content
+            userNameLbl.text = "   "
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .MediumStyle
+            let string = dateFormatter.stringFromDate(comment.dateCreated)
+            timeCreateLbl.text = string
+            WebServiceFactory.getAddressService().getUserById(comment.userId) { (user, error) in
+                self.userNameLbl.text = user?.name
+                self.userImage.setImageWithURL(NSURL(string: (user?.avatarUrl)!)!, placeholderImage: nil)
+            }
+        }
+    }
 }

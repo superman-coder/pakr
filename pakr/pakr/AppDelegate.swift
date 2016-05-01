@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpParse()
         setUpAWS()
         
+
         authenService = WebServiceFactory.getAuthService()
         
        if authenService.isLogin() {

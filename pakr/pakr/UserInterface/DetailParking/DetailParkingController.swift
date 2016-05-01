@@ -159,12 +159,9 @@ class DetailParkingController: UIViewController {
         self.navigationController?.pushViewController(reviewCOntroler, animated: true)
     }
     func showAllComments(){
-        WebServiceFactory.getAddressService().getAllCommentsByTopic(topic.postId!, success: { (comments) in
-            
-            }) { (error) in
-                
-        }
-        self.navigationController?.pushViewController(ShowAllCommentTableViewController(), animated: true)
+        let allCommentsViewController = ShowAllCommentTableViewController()
+        allCommentsViewController.topic = topic
+        self.navigationController?.pushViewController(allCommentsViewController, animated: true)
     }
 // MARK: - IBAction
     @IBAction func didSelectMapView(sender: AnyObject) {

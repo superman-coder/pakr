@@ -12,7 +12,10 @@ protocol AddressService {
     
     func getAllParkingByUser(userId: String, success:([Topic] -> Void), failure:(NSError -> Void))
     
-    func postComment(comment: Comment, complete:(success: Bool, error: NSError?) -> Void)
+    func postComment(comment: Comment, complete:(comment: Comment?, error: NSError?) -> Void)
     func getAllCommentsByTopic(topicId: String, success:([Comment] -> Void), failure:(NSError -> Void))
+    
+    func getUserById(userId: String, complete:(success: User?,  error: NSError?) -> Void)
+    
 }
 
