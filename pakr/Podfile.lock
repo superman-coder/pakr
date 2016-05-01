@@ -74,6 +74,7 @@ PODS:
   - Material (1.39.17)
   - MBProgressHUD (0.9.2)
   - MBXPageViewController (1.0.0)
+  - OCMock (3.3)
   - Parse (1.13.0):
     - Bolts/Tasks (~> 1.6)
   - pop (1.0.9)
@@ -97,6 +98,7 @@ DEPENDENCIES:
   - Material (~> 1.0)
   - MBProgressHUD
   - MBXPageViewController
+  - OCMock
   - Parse
 
 SPEC CHECKSUMS:
@@ -127,6 +129,7 @@ SPEC CHECKSUMS:
   Material: eccc5afdac89e10aa7a635ad34d6c3564387bfd3
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MBXPageViewController: a706073c28deb7b40a0c83269322859a584b9e66
+  OCMock: d68685bde31f69cb61d518dcb39269080c78b5ed
   Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   UIImageViewModeScaleAspect: ec78901acfc20d3782154111a21d34390f8f71ad

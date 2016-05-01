@@ -18,6 +18,7 @@
 		10D1A8AF1CC64649002867BC /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1A8AE1CC64649002867BC /* RatingControl.swift */; };
 		10D1A8B21CC64B29002867BC /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1A8B11CC64B29002867BC /* CommentTableViewCell.swift */; };
 		23223FA1AA3AF5DA4D275A26 /* Pods_pakr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9870136ADB30BD79474A430C /* Pods_pakr.framework */; };
+		2FE6DA8EB247330D5FDC577A /* Pods_pakrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057C4FFD8B2249A98C44E601 /* Pods_pakrTests.framework */; };
 		723552991CC4CD8400090651 /* GMPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723552981CC4CD8400090651 /* GMPlace.swift */; };
 		7235529D1CC4D39400090651 /* AddressPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7235529B1CC4D39400090651 /* AddressPickerController.swift */; };
 		7235529E1CC4D39400090651 /* AddressPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7235529C1CC4D39400090651 /* AddressPickerController.xib */; };
@@ -143,6 +144,7 @@
 		D60D17F91CD637CA004B1182 /* AllPostPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17F81CD637CA004B1182 /* AllPostPresenterImpl.swift */; };
 		D60D17FB1CD637E9004B1182 /* LoginRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17FA1CD637E9004B1182 /* LoginRouterImpl.swift */; };
 		D60D17FD1CD6380A004B1182 /* AllPostTrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D17FC1CD6380A004B1182 /* AllPostTrackerImpl.swift */; };
+		D60D18011CD63EE6004B1182 /* ProfilePresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D18001CD63EE6004B1182 /* ProfilePresenterTests.m */; };
 		D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */; };
 		D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3791CC2D3D20095F74D /* MapPreferences.swift */; };
 		D654A3851CC369F50095F74D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654A3831CC369F50095F74D /* AuthService.swift */; };
@@ -168,6 +170,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		057C4FFD8B2249A98C44E601 /* Pods_pakrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		100C66651CD08EE200B5D2A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10519FB91CCE1DDC0006F5E7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		10519FBA1CCE1DDC0006F5E7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		10D1A8AB1CC63282002867BC /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewTableViewCell.xib; path = ../Children/ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		10D1A8AE1CC64649002867BC /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingControl.swift; path = Children/Controller/RatingControl.swift; sourceTree = "<group>"; };
 		10D1A8B11CC64B29002867BC /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		3F713338763DAB4CDBA25704 /* Pods-pakrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakrTests/Pods-pakrTests.release.xcconfig"; sourceTree = "<group>"; };
 		4FD9FFB8B2A762AE7B807D9E /* Pods-pakr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.debug.xcconfig"; sourceTree = "<group>"; };
 		723552981CC4CD8400090651 /* GMPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMPlace.swift; sourceTree = "<group>"; };
 		7235529B1CC4D39400090651 /* AddressPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPickerController.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		B7E6AED608E5BCC64FD9D5AE /* VehicleDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDetail.swift; sourceTree = "<group>"; };
 		B7E6AFC20BF691E4A0CFE221 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7E6AFEBDE30EC4F495F0F9C /* VerifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyController.swift; sourceTree = "<group>"; };
+		BD13422ABDD011EE13175FE4 /* Pods-pakrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pakrTests/Pods-pakrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D60598B81CC416CB009C5BEB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D60598BA1CC416F2009C5BEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D60598BC1CC41701009C5BEB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -311,6 +316,7 @@
 		D60D17F81CD637CA004B1182 /* AllPostPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllPostPresenterImpl.swift; path = AllPostParking/Presenter/AllPostPresenterImpl.swift; sourceTree = "<group>"; };
 		D60D17FA1CD637E9004B1182 /* LoginRouterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRouterImpl.swift; path = Login/router/LoginRouterImpl.swift; sourceTree = "<group>"; };
 		D60D17FC1CD6380A004B1182 /* AllPostTrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllPostTrackerImpl.swift; path = AllPostParking/Tracker/AllPostTrackerImpl.swift; sourceTree = "<group>"; };
+		D60D18001CD63EE6004B1182 /* ProfilePresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePresenterTests.m; path = profile/ProfilePresenterTests.m; sourceTree = "<group>"; };
 		D6490D381CBFF85700016AA6 /* pakr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pakr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D654A3771CC2D33D0095F74D /* AuthenPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenPreferences.swift; path = Preferences/AuthenPreferences.swift; sourceTree = "<group>"; };
 		D654A3791CC2D3D20095F74D /* MapPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPreferences.swift; path = Preferences/MapPreferences.swift; sourceTree = "<group>"; };
@@ -331,6 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FE6DA8EB247330D5FDC577A /* Pods_pakrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +372,7 @@
 				D60598BA1CC416F2009C5BEB /* StoreKit.framework */,
 				D60598B81CC416CB009C5BEB /* AddressBook.framework */,
 				9870136ADB30BD79474A430C /* Pods_pakr.framework */,
+				057C4FFD8B2249A98C44E601 /* Pods_pakrTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -433,6 +441,8 @@
 			children = (
 				4FD9FFB8B2A762AE7B807D9E /* Pods-pakr.debug.xcconfig */,
 				8883172CD0A6C2613E2AB210 /* Pods-pakr.release.xcconfig */,
+				BD13422ABDD011EE13175FE4 /* Pods-pakrTests.debug.xcconfig */,
+				3F713338763DAB4CDBA25704 /* Pods-pakrTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -784,6 +794,7 @@
 		D60D17821CD3FC8A004B1182 /* pakrTests */ = {
 			isa = PBXGroup;
 			children = (
+				D60D18001CD63EE6004B1182 /* ProfilePresenterTests.m */,
 				D60D178B1CD3FD2A004B1182 /* MD5Tests.swift */,
 				D60D17831CD3FC8A004B1182 /* pakrTests.swift */,
 				D60D17851CD3FC8A004B1182 /* Info.plist */,
@@ -1059,9 +1070,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D60D17881CD3FC8A004B1182 /* Build configuration list for PBXNativeTarget "pakrTests" */;
 			buildPhases = (
+				B8910F867B9609B91A974B61 /* Check Pods Manifest.lock */,
 				D60D177D1CD3FC8A004B1182 /* Sources */,
 				D60D177E1CD3FC8A004B1182 /* Frameworks */,
 				D60D177F1CD3FC8A004B1182 /* Resources */,
+				FD28757B6130F7DFEA50DC9E /* Embed Pods Frameworks */,
+				B3B6E9264886F7679309F4F1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1204,6 +1218,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" c804603b40d70704536f6ceb7b4a689f97bcb1bf fb67ce4ac8b25298657c26558b1ed6dd1607fcd7c8f2af02a26068921bd19c49";
 		};
+		B3B6E9264886F7679309F4F1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pakrTests/Pods-pakrTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B55E48E1D15739B55A2F6260 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1217,6 +1246,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pakr/Pods-pakr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8910F867B9609B91A974B61 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C0571E45CA9F629989C12243 /* Check Pods Manifest.lock */ = {
@@ -1234,6 +1278,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		FD28757B6130F7DFEA50DC9E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pakrTests/Pods-pakrTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1242,6 +1301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60D178C1CD3FD2A004B1182 /* MD5Tests.swift in Sources */,
+				D60D18011CD63EE6004B1182 /* ProfilePresenterTests.m in Sources */,
 				D60D17841CD3FC8A004B1182 /* pakrTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1378,6 +1438,7 @@
 /* Begin XCBuildConfiguration section */
 		D60D17891CD3FC8A004B1182 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD13422ABDD011EE13175FE4 /* Pods-pakrTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = pakrTests/Info.plist;
@@ -1391,8 +1452,10 @@
 		};
 		D60D178A1CD3FC8A004B1182 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F713338763DAB4CDBA25704 /* Pods-pakrTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = pakrTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.pakrTests;

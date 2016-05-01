@@ -22,3 +22,6 @@ target 'pakr' do
     pod 'Crashlytics'
 end
 
+target 'pakrTests' do
+    pod 'OCMock'
+end
