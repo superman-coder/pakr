@@ -22,3 +22,7 @@ target 'pakr' do
     pod 'Crashlytics'
 end
 
+target 'pakrTests' do
+    pod 'Google/SignIn'
+    pod 'Google/Analytics'
+end

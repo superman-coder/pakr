@@ -25,7 +25,7 @@ class ProfileDataModelImpl: NSObject, ProfileDataModel {
     override init() {
         authService = WebServiceFactory.getAuthService()
         currentUser = authService.getLoginUser()
-        
+       
         profileItems = []
         for (order, item) in profileItemStr.enumerate() {
             let item = ProfileItem(order: order, name: item)
