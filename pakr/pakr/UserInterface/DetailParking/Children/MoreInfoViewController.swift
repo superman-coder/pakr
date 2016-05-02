@@ -45,6 +45,7 @@ class MoreInfoViewController: UIViewController {
 //
         lblAddress.text = parking?.addressName
         lblSpecialties.text = parking?.vehicleList.first?.note
+        lblcapacity.text = ("\(parking!.capacity)")
         initWorkTime()
         initVehicle()
     }

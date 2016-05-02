@@ -216,7 +216,7 @@ class PostInfoController: BaseViewController {
             let vehic = VehicleDetail(vehicleType: VehicleType.Motor, minPrice: motorMinPriceTextField.text, maxPrice: motorMaxPriceTextField.text, note: noteWorkTime.text)
             vehicleList.addObject(vehic)
         }
-        parking = Parking(business: business, parkingName: parkingNameTextField.text, capacity: 200, addressName: parkingAddressTextField.text!, coordinate: nil, vehicleDetailList: vehicleList.copy() as! [VehicleDetail], schedule: arrTimeRange.copy() as! [TimeRange], region: [])
+        parking = Parking(business: business, parkingName: parkingNameTextField.text, capacity: Int(capacityTextField.text!), addressName: parkingAddressTextField.text!, coordinate: nil, vehicleDetailList: vehicleList.copy() as! [VehicleDetail], schedule: arrTimeRange.copy() as! [TimeRange], region: [])
         dispatch_async(dispatch_get_main_queue()) {
             self.delegate?.nextStep(self.parking!)
         }

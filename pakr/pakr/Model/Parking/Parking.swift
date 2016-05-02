@@ -30,7 +30,7 @@ class Parking: NSObject, ParseModelProtocol {
     let parkingName: String!
     let capacity: Int!
     var addressName: String!
-    let coordinate: Coordinate!
+    var coordinate: Coordinate!
     var verify: Bool! = false
     var vehicleList: [VehicleDetail]!
     var region: [String]!

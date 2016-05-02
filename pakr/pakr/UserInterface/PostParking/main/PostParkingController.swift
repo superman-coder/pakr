@@ -25,6 +25,7 @@ class PostParkingController: BaseViewController {
     
     var arrStepButton: NSArray!
     var currentIndex: Int = 0
+    var parking: Parking!
     
     @IBOutlet weak var containerView: UIView!
     
@@ -162,33 +163,7 @@ class PostParkingController: BaseViewController {
         // 2. upload all images
         arrImages.appendContentsOf(mapImageController.arrImageParking?.copy() as! [UIImage])
         
-        
-        // --- create a parking ---
-        
-        // create business
-        let business = Business(businessName: postInfoController.businessNameTextField.text, businessDescription: postInfoController.businessDescriptionTextField.text, telephone: postInfoController.businessTelephoneTextField.text)
-        
-        // create all vehicle detail
-        var vehicleDetails : [VehicleDetail] = []
-        if (postInfoController.bikeCheckBox.on) {
-            let bikeDetail = VehicleDetail(vehicleType: VehicleType.Bike, minPrice: postInfoController.bikeMinPriceTextField.text, maxPrice: postInfoController.bikeMaxPriceTextField.text, note: "")
-            vehicleDetails.append(bikeDetail)
-        }
-        
-        if (postInfoController.motorCheckBox.on) {
-            let motorDetail = VehicleDetail(vehicleType: VehicleType.Motor, minPrice: postInfoController.motorMinPriceTextField.text, maxPrice: postInfoController.motorMaxPriceTextField.text, note: "")
-            vehicleDetails.append(motorDetail)
-        }
-        if (postInfoController.carCheckBox.on) {
-            let carDetail = VehicleDetail(vehicleType: VehicleType.Car, minPrice: postInfoController.carMinPriceTextField.text, maxPrice: postInfoController.carMaxPriceTextField.text, note: "")
-            vehicleDetails.append(carDetail)
-        }
-        
-        // create time range
-        let timeRange = postInfoController.arrTimeRange.copy() as! [TimeRange]
-        
-        let parking = Parking(business: business, parkingName: postInfoController.parkingNameTextField.text, capacity: 20, addressName: postInfoController.parkingAddressTextField.text!, coordinate: mapImageController.parkingLocation!.coordinate(), vehicleDetailList: vehicleDetails, schedule: timeRange, region: [])
-        
+        parking.coordinate = mapImageController.parkingLocation!.coordinate()
         let topic = Topic(userId: authService.getLoginUser()?.objectId, parking: parking, rating: 0)
         print(authService.getLoginUser()?.objectId)
         
@@ -227,6 +202,7 @@ extension PostParkingController: MBXPageControllerDataSource {
 
 extension PostParkingController: PostInfoControllerDelegate{
     func nextStep(parking: Parking) {
+        self.parking = parking
         self.mapImageController.parking = parking
     }
 }
