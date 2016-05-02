@@ -73,6 +73,7 @@ class DetailParkingController: UIViewController {
         WebServiceFactory.getAddressService().checkIsBookMarkTopicByUser((user?.objectId)!, topicId: topic.postId!) { (isBookMark) in
             dispatch_async(dispatch_get_main_queue(), { 
                 self.btnBookMark.selected = isBookMark
+                self.btnBookMark.enabled = true
             })
         }
     }
@@ -88,6 +89,7 @@ class DetailParkingController: UIViewController {
         LayoutUtils.dropShadowView(fromBusinessView)
     }
     func setData(){
+        btnBookMark.enabled = false
         parking = topic.parking
         arrUrlImageParking = parking.imageUrl
         lblAddress.text = parking.addressName
@@ -201,7 +203,7 @@ class DetailParkingController: UIViewController {
         }else{
             self.btnBookMark.selected = true
             let currentUser = WebServiceFactory.getAuthService().getLoginUser()
-            let bookMark = Bookmark(userId: currentUser?.objectId, topicId: topic.postId)
+            let bookMark = Bookmark(userId: currentUser?.objectId, topicId: topic.postId, topic: topic)
             WebServiceFactory.getAddressService().postBookMark(bookMark) { (bookMark, error) in
                 if error == nil {
                     let userInfo : [String:Bookmark] = ["bookMark": bookMark!]

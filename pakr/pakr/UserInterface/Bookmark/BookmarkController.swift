@@ -41,9 +41,14 @@ class BookmarkController: BaseViewController {
     
     func postBookMark(notification: NSNotification) {
         let bookMark = notification.userInfo!["bookMark"] as! Bookmark
-        bookMarks?.insert(bookMark, atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        if bookMarks?.count > 0 {
+            bookMarks?.insert(bookMark, atIndex: 0)
+            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }else{
+            bookMarks = [bookMark]
+            reloadData()
+        }
     }
     func  getData(){
         let user = WebServiceFactory.getAuthService().getLoginUser()
@@ -51,6 +56,8 @@ class BookmarkController: BaseViewController {
             if error == nil {
                 self.bookMarks = bookMarks
                 self.reloadData()
+            }else{
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
             }
         }
     }
@@ -62,6 +69,8 @@ extension BookmarkController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCellWithIdentifier("ParkingResultCell", forIndexPath: indexPath) as! ParkingResultCell
+        let bookMark = bookMarks![indexPath.row]
+        cell.configWithTopic(bookMark.topic)
         return cell
     }
 }

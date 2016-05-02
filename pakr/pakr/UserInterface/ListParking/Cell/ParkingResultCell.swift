@@ -91,7 +91,7 @@ class ParkingResultCell: UITableViewCell {
         }
         avatarImageView.setImageWithURL(url, placeholderImage: UIImage(named: "parkingLot"))
     }
-    
+
     func getTodaySchedule(parking:Parking) -> (open: String, close: String) {
         let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let dateComponents = calendar!.component(.Weekday, fromDate: NSDate())

@@ -81,6 +81,29 @@ public class AddressServiceParseImpl: NSObject, AddressService {
         }
     }
     
+    func postTopic(topic:Topic, complete:(Topic?,NSError?) -> Void) {
+        topic.toPFObject().saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                let query = PFQuery(className: Constants.Table.Topic)
+                query.includeKey(Topic.PKParking)
+                query.orderByDescending("createdAt")
+                query.limit = 1
+                query.findObjectsInBackgroundWithBlock({ (objects, error) in
+                    if error != nil {
+                        complete(nil, error)
+                    }else{
+                       let topic = Topic(pfObject: objects![0])
+                        complete(topic, nil)
+                    }
+                })
+            } else {
+                complete(nil, error)
+            }
+        }
+    }
+
+    
     func getAllParkingByUser(userId: String, success:([Topic] -> Void), failure:(NSError -> Void)) {
         let query = PFQuery(className: Constants.Table.Topic)
         query.includeKey(Topic.PKParking)
@@ -148,17 +171,15 @@ public class AddressServiceParseImpl: NSObject, AddressService {
     
     func getUserById(userId: String, complete:(success: User?,  error: NSError?) -> Void){
         let query = PFQuery(className: Constants.Table.User)
+        query.whereKey("objectId", equalTo: userId)
         query.findObjectsInBackgroundWithBlock { (users, error) in
             if let error = error {
                 complete(success:nil, error: error)
             }else{
                 if let users = users {
-                    for pfUser in users {
-                        if (pfUser.objectId == userId){
-                            complete(success: pfUser as? User, error: error)
+                            complete(success: users[0] as? User, error: error)
                             return
-                        }
-                    }
+                }else{
                     complete(success:nil, error: NSError(domain: "", code: -1, userInfo: nil))
                 }
             }
@@ -175,7 +196,9 @@ public class AddressServiceParseImpl: NSObject, AddressService {
                         complete(bookMark: nil, error: error)
                     } else if let bookMarks = bookMarks {
                         let bookMark = Bookmark(pfObject: bookMarks.first!)
-                        complete(bookMark: bookMark, error: error)
+                        self.getTopicById(bookMark, complete: { (bookMark) in
+                            complete(bookMark: bookMark, error: error)
+                        })
                     }
                 })
             }else{
@@ -193,14 +216,40 @@ public class AddressServiceParseImpl: NSObject, AddressService {
                 complete(bookMarks: nil, error: error)
             } else if let objects = objects {
                 var bookmarks = [Bookmark]()
-                for object in objects {
-                    let  bookMark = Bookmark(pfObject: object)
-                        bookmarks.append(bookMark)
+                if objects.count == 0 {
+                    complete(bookMarks: nil, error: error)
+                }else{
+                    for object in objects {
+                        let  bookMark = Bookmark(pfObject: object)
+                        self.getTopicById(bookMark, complete: { (bookMark) in
+                            bookmarks.append(bookMark)
+                            if objects.count == bookmarks.count {
+                                complete(bookMarks: bookmarks, error: nil)
+                            }
+                        })
+                    }
                 }
-                complete(bookMarks: bookmarks, error: nil)
+            }else{
+              complete(bookMarks: nil, error: error)
             }
         }
     }
+    
+    func getTopicById(bookMark: Bookmark, complete:(bookMark: Bookmark!) -> Void){
+        let query = PFQuery(className: Constants.Table.Topic)
+        query.includeKey(Topic.PKParking)
+        query.whereKey("objectId", equalTo: bookMark.topicId)
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if  let objects = objects {
+                let topic = Topic(pfObject: objects[0])
+                bookMark.topic = topic
+                complete(bookMark: bookMark)
+            }else{
+                complete(bookMark: nil)
+            }
+        }
+    }
+
     func checkIsBookMarkTopicByUser(userId: String, topicId: String, complete:(isBookMark: Bool) -> Void){
         let query = PFQuery(className: Constants.Table.Bookmark)
         let user = PFObject(withoutDataWithClassName: Constants.Table.User, objectId: userId)
@@ -224,4 +273,5 @@ public class AddressServiceParseImpl: NSObject, AddressService {
             }
         }
     }
+
 }
