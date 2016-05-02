@@ -31,10 +31,10 @@ class ReviewTableViewCell: UITableViewCell {
     
     var comment: Comment!{
         didSet{
-            titleLbl.text = comment.title
+            userNameLbl.text = comment.title
             ratingControl.rating = comment.rating
             contentLbl.text = comment.content
-            userNameLbl.text = "   "
+            titleLbl.text = "   "
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = .MediumStyle
             let string = dateFormatter.stringFromDate(comment.dateCreated)
