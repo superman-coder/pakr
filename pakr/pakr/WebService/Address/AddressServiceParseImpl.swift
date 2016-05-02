@@ -222,9 +222,13 @@ public class AddressServiceParseImpl: NSObject, AddressService {
                     for object in objects {
                         let  bookMark = Bookmark(pfObject: object)
                         self.getTopicById(bookMark, complete: { (bookMark) in
-                            bookmarks.append(bookMark)
-                            if objects.count == bookmarks.count {
-                                complete(bookMarks: bookmarks, error: nil)
+                            if let bookMark = bookMark {
+                                bookmarks.append(bookMark)
+                                if objects.count == bookmarks.count {
+                                    complete(bookMarks: bookmarks, error: nil)
+                                }
+                            }else{
+                              complete(bookMarks: nil, error: error)
                             }
                         })
                     }

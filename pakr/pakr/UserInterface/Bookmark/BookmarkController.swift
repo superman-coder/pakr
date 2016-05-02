@@ -73,4 +73,10 @@ extension BookmarkController: UITableViewDelegate, UITableViewDataSource {
         cell.configWithTopic(bookMark.topic)
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detail = DetailParkingController()
+        detail.topic = bookMarks![indexPath.row].topic
+        self.navigationController?.pushViewController(detail, animated: true)
+    }
 }
