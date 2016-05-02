@@ -241,9 +241,13 @@ public class AddressServiceParseImpl: NSObject, AddressService {
         query.whereKey("objectId", equalTo: bookMark.topicId)
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if  let objects = objects {
-                let topic = Topic(pfObject: objects[0])
-                bookMark.topic = topic
-                complete(bookMark: bookMark)
+                if objects.count > 0 {
+                    let topic = Topic(pfObject: objects[0])
+                    bookMark.topic = topic
+                    complete(bookMark: bookMark)
+                }else{
+                    complete(bookMark: nil)
+                }
             }else{
                 complete(bookMark: nil)
             }
