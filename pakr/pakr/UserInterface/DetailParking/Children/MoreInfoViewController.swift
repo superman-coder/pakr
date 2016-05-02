@@ -43,11 +43,12 @@ class MoreInfoViewController: UIViewController {
         let nib1 = UINib(nibName: "PriceTableViewCell", bundle: nil)
         priceTableView.registerNib(nib1 , forCellReuseIdentifier: "PriceTableViewCell")
 //
+        initWorkTime()
+        initVehicle()
         lblAddress.text = parking?.addressName
         lblSpecialties.text = parking?.vehicleList.first?.note
         lblcapacity.text = ("\(parking!.capacity)")
-        initWorkTime()
-        initVehicle()
+        lblSpecialties.text = arrvehicle.first?.note
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,10 +64,6 @@ class MoreInfoViewController: UIViewController {
     }
     func initVehicle() {
         arrvehicle = parking?.vehicleList
-        print(arrvehicle.first!.vehicleType)
-        print(arrvehicle.first!.minPrice)
-        print(arrvehicle.first!.maxPrice)
-        print(arrvehicle.first!.note)
         priceHeight.constant = CGFloat(arrvehicle.count * 45)
         priceTableView.reloadData()
     }
