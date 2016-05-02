@@ -6,6 +6,8 @@ target 'pakr' do
     pod 'Google/SignIn'
     pod 'Google/Analytics'
     pod 'GoogleTagManager'
+    pod 'RxSwift'
+    pod 'RxCocoa'
     pod 'Parse'
     pod 'AFNetworking'
     pod 'Alamofire', '~> 3.3'
