@@ -47,7 +47,6 @@
 		B7E6A60E9906C2D10C8F2F70 /* MapDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A60D20B035896508B0E8 /* MapDetailViewController.xib */; };
 		B7E6A60EEBB24D2C771BB096 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AFC20BF691E4A0CFE221 /* User.swift */; };
 		B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A0FCBFCFE1378FBCFF93 /* MoreInfoViewController.xib */; };
-		B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A8510BAF5056FAF378E0 /* AppDelegate.swift */; };
 		B7E6A6AC99192DAD0784DC3C /* CustomTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AB3FEFBC936273E16A5B /* CustomTimePicker.m */; };
 		B7E6A6E0904E6CED18BDF1D8 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A99549118700A88D2B9C /* MapController.swift */; };
 		B7E6A70D6A02D6E611445818 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AE23F891252FC6A10BA5 /* PhotosCollectionViewCell.swift */; };
@@ -93,7 +92,6 @@
 		D60598DA1CC4A863009C5BEB /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60598D41CC4A863009C5BEB /* ReviewViewController.xib */; };
 		D60598DE1CC4EA64009C5BEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598DD1CC4EA64009C5BEB /* Constants.swift */; };
 		D60598EF1CC963F7009C5BEB /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598EE1CC963F7009C5BEB /* UIImage+Resize.swift */; };
-		D60598F21CC9E0DC009C5BEB /* AWSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F11CC9E0DC009C5BEB /* AWSClient.swift */; };
 		D60598F61CC9E79E009C5BEB /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F51CC9E79E009C5BEB /* MD5.swift */; };
 		D60598F81CCA19BB009C5BEB /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F71CCA19BB009C5BEB /* FileUtils.swift */; };
 		D60598FC1CCCB98C009C5BEB /* AWSPromiseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */; };
@@ -156,6 +154,8 @@
 		D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E521CC2798000BC6A64 /* CircularImageView.swift */; };
 		D6A14E5D1CC280B300BC6A64 /* RoundCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */; };
 		D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */; };
+		D6F92B1B1CD7146F003C28FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B1A1CD7146F003C28FC /* AppDelegate.swift */; };
+		D6F92B1D1CD71534003C28FC /* AWSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B1C1CD71534003C28FC /* AWSClient.swift */; };
 		D6FE66CF1CD673E000F11168 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F51CC9E79E009C5BEB /* MD5.swift */; };
 		D6FE66D11CD680AD00F11168 /* CommonMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE66D01CD680AD00F11168 /* CommonMacros.swift */; };
 		D6FE66D31CD6826B00F11168 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE66D21CD6826B00F11168 /* String+Helper.swift */; };
@@ -229,7 +229,6 @@
 		B7E6A732F76F5BB71877755C /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PhotosCollectionViewCell.xib; path = ../Children/PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		B7E6A74F09DDD0FB60E1832E /* DetailParkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailParkingController.swift; sourceTree = "<group>"; };
 		B7E6A7DADD4E069C9FDC1205 /* PakrTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PakrTabBarController.swift; sourceTree = "<group>"; };
-		B7E6A8510BAF5056FAF378E0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E6A8EE7F3988A5CD7DEDA7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		B7E6A946454CF4EFFE32706D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		B7E6A99549118700A88D2B9C /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -265,7 +264,6 @@
 		D60598D41CC4A863009C5BEB /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewViewController.xib; path = Children/Controller/ReviewViewController.xib; sourceTree = "<group>"; };
 		D60598DD1CC4EA64009C5BEB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D60598EE1CC963F7009C5BEB /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Resize.swift"; path = "Extensions/UIImage+Resize.swift"; sourceTree = "<group>"; };
-		D60598F11CC9E0DC009C5BEB /* AWSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSClient.swift; sourceTree = "<group>"; };
 		D60598F51CC9E79E009C5BEB /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Extensions/MD5.swift; sourceTree = "<group>"; };
 		D60598F71CCA19BB009C5BEB /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWSPromiseClient.swift; path = AWS/AWSPromiseClient.swift; sourceTree = "<group>"; };
@@ -331,6 +329,8 @@
 		D6A14E521CC2798000BC6A64 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularImageView.swift; path = ImageView/CircularImageView.swift; sourceTree = "<group>"; };
 		D6A14E5C1CC280B300BC6A64 /* RoundCornerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundCornerImageView.swift; path = ImageView/RoundCornerImageView.swift; sourceTree = "<group>"; };
 		D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtendedCell.swift; path = Cell/ExtendedCell.swift; sourceTree = "<group>"; };
+		D6F92B1A1CD7146F003C28FC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6F92B1C1CD71534003C28FC /* AWSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWSClient.swift; path = AWS/AWSClient.swift; sourceTree = "<group>"; };
 		D6FE66D01CD680AD00F11168 /* CommonMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMacros.swift; sourceTree = "<group>"; };
 		D6FE66D21CD6826B00F11168 /* String+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Helper.swift"; path = "Extensions/String+Helper.swift"; sourceTree = "<group>"; };
 		D6FE66D41CD682E700F11168 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -479,6 +479,9 @@
 		B7E6A2043B5477A424C601A4 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
+				D68423791CD712A500384402 /* Model */,
+				D68423781CD7129F00384402 /* View */,
+				D68423771CD7129500384402 /* Presenter */,
 				B7E6AD0D73315D341A68D925 /* Cell */,
 				B7E6A122699477C5E67ECE5E /* SearchController.xib */,
 				B7E6A071EBFF288A1F900705 /* SearchController.swift */,
@@ -503,6 +506,7 @@
 		B7E6A2ACF500396A05F94F96 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				D6F92B1A1CD7146F003C28FC /* AppDelegate.swift */,
 				D60598DD1CC4EA64009C5BEB /* Constants.swift */,
 				D60598FD1CCCDFB2009C5BEB /* EventSignal.swift */,
 				D6FE66D01CD680AD00F11168 /* CommonMacros.swift */,
@@ -578,7 +582,6 @@
 				B7E6A2ACF500396A05F94F96 /* Configuration */,
 				B7E6A0B8F1F7E1D22FD0CC00 /* UserInterface */,
 				B7E6AEA2FD426EE1E39640E6 /* CustomController */,
-				B7E6A8510BAF5056FAF378E0 /* AppDelegate.swift */,
 				B7E6A39C08F96CC6C1F9AA4A /* Resources */,
 			);
 			path = pakr;
@@ -773,7 +776,7 @@
 		D60598F01CC9D9BB009C5BEB /* AWS */ = {
 			isa = PBXGroup;
 			children = (
-				D60598F11CC9E0DC009C5BEB /* AWSClient.swift */,
+				D6F92B1C1CD71534003C28FC /* AWSClient.swift */,
 				D60598FB1CCCB98B009C5BEB /* AWSPromiseClient.swift */,
 			);
 			name = AWS;
@@ -1027,6 +1030,27 @@
 				D66128781CCCF8FD00B435A8 /* UploadManager.swift */,
 			);
 			name = DataManager;
+			sourceTree = "<group>";
+		};
+		D68423771CD7129500384402 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		D68423781CD7129F00384402 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D68423791CD712A500384402 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		D6A14E4C1CC26CD600BC6A64 /* Login */ = {
@@ -1327,6 +1351,7 @@
 				B7E6A60EEBB24D2C771BB096 /* User.swift in Sources */,
 				B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */,
 				D60D17931CD4ADD8004B1182 /* LoginDataManagerImpl.swift in Sources */,
+				D6F92B1D1CD71534003C28FC /* AWSClient.swift in Sources */,
 				B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */,
 				D6FE66D11CD680AD00F11168 /* CommonMacros.swift in Sources */,
 				1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */,
@@ -1385,6 +1410,7 @@
 				D6FE66D31CD6826B00F11168 /* String+Helper.swift in Sources */,
 				D60D17C11CD52BA8004B1182 /* GATrackerImpl.swift in Sources */,
 				B7E6AC842CC3B34A20172827 /* ParkingResultCell.swift in Sources */,
+				D6F92B1B1CD7146F003C28FC /* AppDelegate.swift in Sources */,
 				B7E6ABFA04ECC1111B378897 /* SearchController.swift in Sources */,
 				D60D178E1CD4AB36004B1182 /* LoginView.swift in Sources */,
 				B7E6A949DC4DD496BB0052B3 /* PostParkingController.swift in Sources */,
@@ -1411,14 +1437,12 @@
 				D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */,
 				D654A38A1CC36A000095F74D /* FacebookAuth.swift in Sources */,
 				D60D17E91CD6241D004B1182 /* AllPostView.swift in Sources */,
-				D60598F21CC9E0DC009C5BEB /* AWSClient.swift in Sources */,
 				D60D17CD1CD52D1E004B1182 /* ProfileTracker.swift in Sources */,
 				B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */,
 				D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */,
 				B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */,
 				D60D17CF1CD52D39004B1182 /* ProfileTrackerImpl.swift in Sources */,
 				D60D17A61CD4C8C4004B1182 /* ProfilePresenterImpl.swift in Sources */,
-				B7E6A680579C3EEC68F7CF5F /* AppDelegate.swift in Sources */,
 				D60D17C51CD52BE9004B1182 /* GTMTrackerImpl.swift in Sources */,
 				D654A3781CC2D33D0095F74D /* AuthenPreferences.swift in Sources */,
 				B7E6A9C2A41FE994DE773C26 /* PakrCLLocationCoordinate2D.swift in Sources */,
