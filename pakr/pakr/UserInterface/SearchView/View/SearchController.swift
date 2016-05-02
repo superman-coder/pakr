@@ -102,6 +102,7 @@ class SearchController: UIViewController {
                                    completion: nil
         )
     }
+    
     @IBAction func onTapView(sender: AnyObject) {
         self.view.endEditing(false)
     }

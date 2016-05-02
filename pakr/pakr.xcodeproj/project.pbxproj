@@ -165,6 +165,8 @@
 		D6F92B341CD717EA003C28FC /* SearchViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B331CD717EA003C28FC /* SearchViewModelImpl.swift */; };
 		D6F92B371CD71838003C28FC /* SearchViewTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B361CD71838003C28FC /* SearchViewTracker.swift */; };
 		D6F92B391CD71851003C28FC /* SearchViewTrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B381CD71851003C28FC /* SearchViewTrackerImpl.swift */; };
+		D6F92B3C1CD71D0B003C28FC /* SearchViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B3B1CD71D0B003C28FC /* SearchViewRouter.swift */; };
+		D6F92B3E1CD71D24003C28FC /* SearchViewRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B3D1CD71D24003C28FC /* SearchViewRouterImpl.swift */; };
 		D6FE66CF1CD673E000F11168 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F51CC9E79E009C5BEB /* MD5.swift */; };
 		D6FE66D11CD680AD00F11168 /* CommonMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE66D01CD680AD00F11168 /* CommonMacros.swift */; };
 		D6FE66D31CD6826B00F11168 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE66D21CD6826B00F11168 /* String+Helper.swift */; };
@@ -349,6 +351,8 @@
 		D6F92B331CD717EA003C28FC /* SearchViewModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModelImpl.swift; path = pakr/UserInterface/SearchView/Model/SearchViewModelImpl.swift; sourceTree = SOURCE_ROOT; };
 		D6F92B361CD71838003C28FC /* SearchViewTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewTracker.swift; path = pakr/UserInterface/SearchView/Tracker/SearchViewTracker.swift; sourceTree = SOURCE_ROOT; };
 		D6F92B381CD71851003C28FC /* SearchViewTrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewTrackerImpl.swift; path = pakr/UserInterface/SearchView/Tracker/SearchViewTrackerImpl.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B3B1CD71D0B003C28FC /* SearchViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewRouter.swift; path = pakr/UserInterface/SearchView/Router/SearchViewRouter.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B3D1CD71D24003C28FC /* SearchViewRouterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewRouterImpl.swift; path = pakr/UserInterface/SearchView/Router/SearchViewRouterImpl.swift; sourceTree = SOURCE_ROOT; };
 		D6FE66D01CD680AD00F11168 /* CommonMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMacros.swift; sourceTree = "<group>"; };
 		D6FE66D21CD6826B00F11168 /* String+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Helper.swift"; path = "Extensions/String+Helper.swift"; sourceTree = "<group>"; };
 		D6FE66D41CD682E700F11168 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -497,6 +501,7 @@
 		B7E6A2043B5477A424C601A4 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
+				D6F92B3A1CD71CF5003C28FC /* Router */,
 				D6F92B351CD71822003C28FC /* Tracker */,
 				D68423791CD712A500384402 /* Model */,
 				D68423781CD7129F00384402 /* View */,
@@ -1129,6 +1134,15 @@
 			name = Tracker;
 			sourceTree = "<group>";
 		};
+		D6F92B3A1CD71CF5003C28FC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D6F92B3B1CD71D0B003C28FC /* SearchViewRouter.swift */,
+				D6F92B3D1CD71D24003C28FC /* SearchViewRouterImpl.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1400,6 +1414,7 @@
 				B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */,
 				D60D17F91CD637CA004B1182 /* AllPostPresenterImpl.swift in Sources */,
 				B7E6AF7F39AE4F0E492EC726 /* Business.swift in Sources */,
+				D6F92B3C1CD71D0B003C28FC /* SearchViewRouter.swift in Sources */,
 				B7E6AA0432B1309BA5CEC6AD /* TimeRange.swift in Sources */,
 				B7E6A5BC6F196BF0F02FAD3A /* Coordinate.swift in Sources */,
 				B7E6AF3C937CB19EF3DD55AD /* VehicleType.swift in Sources */,
@@ -1414,6 +1429,7 @@
 				B7E6A6AC99192DAD0784DC3C /* CustomTimePicker.m in Sources */,
 				B7E6A999BFF349E7A0407789 /* WebServiceFactory.swift in Sources */,
 				723E739D1CC995F3008C527C /* ModelProxy.swift in Sources */,
+				D6F92B3E1CD71D24003C28FC /* SearchViewRouterImpl.swift in Sources */,
 				B7E6A9544AAB2F696EC945AA /* AddressService.swift in Sources */,
 				B7E6A7DD2869568ED7C089DB /* AddressServiceParseImpl.swift in Sources */,
 				D60D17F21CD62902004B1182 /* AllPostModelImpl.swift in Sources */,
