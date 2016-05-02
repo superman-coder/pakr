@@ -35,7 +35,6 @@
 		B7E6A110E741A4C75C5D7F35 /* LayoutUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A091AAB6F9843BAE5107 /* LayoutUtils.swift */; };
 		B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AC6D92106C69A930C5BE /* Bookmark.swift */; };
 		B7E6A21C91E2CF079F32DCA9 /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A145EF2DF7DDD58149AD /* Parking.swift */; };
-		B7E6A23A88726CC0D19CD553 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A122699477C5E67ECE5E /* SearchController.xib */; };
 		B7E6A25A2B4DCA5610E27897 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A401D78FD167E1317138 /* JSONUtils.swift */; };
 		B7E6A4AACDDABB7130F3DBA7 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A62B148D4FB6723C6476 /* Role.swift */; };
 		B7E6A59FF1C2DE0CEDAD811B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACFA00B87FBB2B3A50D1 /* Topic.swift */; };
@@ -62,15 +61,12 @@
 		B7E6AA2D5F5E58C520E27A33 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A63481B334288580DA83 /* MoreInfoViewController.swift */; };
 		B7E6AA8A109EAEBB232F4B13 /* PostInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ACEFDD142635A5538916 /* PostInfoController.swift */; };
 		B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A7DADD4E069C9FDC1205 /* PakrTabBarController.swift */; };
-		B7E6AAC9E99348518E9B6D21 /* ParkingResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A51ACE4DE755F7FFD0B0 /* ParkingResultCell.xib */; };
 		B7E6AB23AF7B4AE99784DE6A /* parkings.json in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A386378DAACA4E24F7D5 /* parkings.json */; };
 		B7E6ABD3A10AC65DB81E05D6 /* ModifiedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A24A8DBFC8C0007805D2 /* ModifiedTextField.swift */; };
-		B7E6ABFA04ECC1111B378897 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A071EBFF288A1F900705 /* SearchController.swift */; };
 		B7E6AC10C6333F9CB1A58377 /* DetailParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A74F09DDD0FB60E1832E /* DetailParkingController.swift */; };
 		B7E6AC26951ACD27B35085B9 /* BookmarkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AD4CA630E87E2BDDBB76 /* BookmarkController.swift */; };
 		B7E6AC35E4C87F435C2D14EE /* MapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6AE118A66C51CF9111EFE /* MapController.xib */; };
 		B7E6AC7B78DB97C1857BFF86 /* BookmarkController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A55C48C62A83F2312ECA /* BookmarkController.xib */; };
-		B7E6AC842CC3B34A20172827 /* ParkingResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6AA27BF66F1D94F9CEBEB /* ParkingResultCell.swift */; };
 		B7E6ACB7810CEC161EDDFE54 /* DetailParkingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E6A2693D20AC447658B4D2 /* DetailParkingController.xib */; };
 		B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6ADBCC16F1F1310FEF0B3 /* BaseViewController.swift */; };
 		B7E6AD3E3288600B7BBFED3A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6A3C93DAA63FED816EBDC /* Comment.swift */; };
@@ -156,6 +152,19 @@
 		D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */; };
 		D6F92B1B1CD7146F003C28FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B1A1CD7146F003C28FC /* AppDelegate.swift */; };
 		D6F92B1D1CD71534003C28FC /* AWSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B1C1CD71534003C28FC /* AWSClient.swift */; };
+		D6F92B201CD716BE003C28FC /* ParkingResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B1E1CD716BE003C28FC /* ParkingResultCell.swift */; };
+		D6F92B211CD716BE003C28FC /* ParkingResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F92B1F1CD716BE003C28FC /* ParkingResultCell.xib */; };
+		D6F92B241CD716CD003C28FC /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B221CD716CD003C28FC /* SearchController.swift */; };
+		D6F92B251CD716CD003C28FC /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F92B231CD716CD003C28FC /* SearchController.xib */; };
+		D6F92B271CD71717003C28FC /* SearchViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B261CD71717003C28FC /* SearchViewPresenter.swift */; };
+		D6F92B291CD71730003C28FC /* SearchViewPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B281CD71730003C28FC /* SearchViewPresenterImpl.swift */; };
+		D6F92B2B1CD71756003C28FC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B2A1CD71756003C28FC /* SearchView.swift */; };
+		D6F92B2E1CD71778003C28FC /* SearchViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B2D1CD71778003C28FC /* SearchViewAdapter.swift */; };
+		D6F92B301CD71792003C28FC /* SearchViewAdapterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B2F1CD71792003C28FC /* SearchViewAdapterImpl.swift */; };
+		D6F92B321CD717DE003C28FC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B311CD717DE003C28FC /* SearchViewModel.swift */; };
+		D6F92B341CD717EA003C28FC /* SearchViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B331CD717EA003C28FC /* SearchViewModelImpl.swift */; };
+		D6F92B371CD71838003C28FC /* SearchViewTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B361CD71838003C28FC /* SearchViewTracker.swift */; };
+		D6F92B391CD71851003C28FC /* SearchViewTrackerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F92B381CD71851003C28FC /* SearchViewTrackerImpl.swift */; };
 		D6FE66CF1CD673E000F11168 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60598F51CC9E79E009C5BEB /* MD5.swift */; };
 		D6FE66D11CD680AD00F11168 /* CommonMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE66D01CD680AD00F11168 /* CommonMacros.swift */; };
 		D6FE66D31CD6826B00F11168 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE66D21CD6826B00F11168 /* String+Helper.swift */; };
@@ -198,10 +207,8 @@
 		8883172CD0A6C2613E2AB210 /* Pods-pakr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pakr.release.xcconfig"; path = "Pods/Target Support Files/Pods-pakr/Pods-pakr.release.xcconfig"; sourceTree = "<group>"; };
 		9870136ADB30BD79474A430C /* Pods_pakr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pakr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E6A032DDDCAB9FB073B82B /* WebServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceFactory.swift; sourceTree = "<group>"; };
-		B7E6A071EBFF288A1F900705 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		B7E6A091AAB6F9843BAE5107 /* LayoutUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutUtils.swift; sourceTree = "<group>"; };
 		B7E6A0FCBFCFE1378FBCFF93 /* MoreInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreInfoViewController.xib; sourceTree = "<group>"; };
-		B7E6A122699477C5E67ECE5E /* SearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		B7E6A145EF2DF7DDD58149AD /* Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
 		B7E6A22BC922751D53642CFB /* PostInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostInfoController.xib; sourceTree = "<group>"; };
 		B7E6A23B81B68BFA49FF4D68 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -218,7 +225,6 @@
 		B7E6A472B3B61BB6955C8474 /* AddressServiceParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressServiceParseImpl.swift; sourceTree = "<group>"; };
 		B7E6A4C179A35653DB255FA2 /* TimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeRange.swift; sourceTree = "<group>"; };
 		B7E6A4FF18220112CA540A35 /* AddressService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
-		B7E6A51ACE4DE755F7FFD0B0 /* ParkingResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingResultCell.xib; sourceTree = "<group>"; };
 		B7E6A543093BE10B2149A1B1 /* CustomTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTimePicker.h; sourceTree = "<group>"; };
 		B7E6A55C48C62A83F2312ECA /* BookmarkController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkController.xib; sourceTree = "<group>"; };
 		B7E6A60D20B035896508B0E8 /* MapDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapDetailViewController.xib; sourceTree = "<group>"; };
@@ -232,7 +238,6 @@
 		B7E6A8EE7F3988A5CD7DEDA7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		B7E6A946454CF4EFFE32706D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		B7E6A99549118700A88D2B9C /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
-		B7E6AA27BF66F1D94F9CEBEB /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingResultCell.swift; sourceTree = "<group>"; };
 		B7E6AB3FEFBC936273E16A5B /* CustomTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimePicker.m; sourceTree = "<group>"; };
 		B7E6AC3CA3BBC69562B36F25 /* PakrCLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PakrCLLocationCoordinate2D.swift; path = Utils/PakrCLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		B7E6AC6D92106C69A930C5BE /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
@@ -331,6 +336,19 @@
 		D6A14E5F1CC2A90A00BC6A64 /* ExtendedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtendedCell.swift; path = Cell/ExtendedCell.swift; sourceTree = "<group>"; };
 		D6F92B1A1CD7146F003C28FC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6F92B1C1CD71534003C28FC /* AWSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWSClient.swift; path = AWS/AWSClient.swift; sourceTree = "<group>"; };
+		D6F92B1E1CD716BE003C28FC /* ParkingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkingResultCell.swift; path = pakr/UserInterface/SearchView/Cell/ParkingResultCell.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B1F1CD716BE003C28FC /* ParkingResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ParkingResultCell.xib; path = pakr/UserInterface/SearchView/Cell/ParkingResultCell.xib; sourceTree = SOURCE_ROOT; };
+		D6F92B221CD716CD003C28FC /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchController.swift; path = pakr/UserInterface/SearchView/View/SearchController.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B231CD716CD003C28FC /* SearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchController.xib; path = pakr/UserInterface/SearchView/View/SearchController.xib; sourceTree = SOURCE_ROOT; };
+		D6F92B261CD71717003C28FC /* SearchViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewPresenter.swift; path = pakr/UserInterface/SearchView/Presenter/SearchViewPresenter.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B281CD71730003C28FC /* SearchViewPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewPresenterImpl.swift; path = pakr/UserInterface/SearchView/Presenter/SearchViewPresenterImpl.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B2A1CD71756003C28FC /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = pakr/UserInterface/SearchView/View/SearchView.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B2D1CD71778003C28FC /* SearchViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewAdapter.swift; path = pakr/UserInterface/SearchView/View/SearchViewAdapter.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B2F1CD71792003C28FC /* SearchViewAdapterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewAdapterImpl.swift; path = pakr/UserInterface/SearchView/View/SearchViewAdapterImpl.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B311CD717DE003C28FC /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = pakr/UserInterface/SearchView/Model/SearchViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B331CD717EA003C28FC /* SearchViewModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModelImpl.swift; path = pakr/UserInterface/SearchView/Model/SearchViewModelImpl.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B361CD71838003C28FC /* SearchViewTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewTracker.swift; path = pakr/UserInterface/SearchView/Tracker/SearchViewTracker.swift; sourceTree = SOURCE_ROOT; };
+		D6F92B381CD71851003C28FC /* SearchViewTrackerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewTrackerImpl.swift; path = pakr/UserInterface/SearchView/Tracker/SearchViewTrackerImpl.swift; sourceTree = SOURCE_ROOT; };
 		D6FE66D01CD680AD00F11168 /* CommonMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMacros.swift; sourceTree = "<group>"; };
 		D6FE66D21CD6826B00F11168 /* String+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Helper.swift"; path = "Extensions/String+Helper.swift"; sourceTree = "<group>"; };
 		D6FE66D41CD682E700F11168 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -479,12 +497,11 @@
 		B7E6A2043B5477A424C601A4 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
+				D6F92B351CD71822003C28FC /* Tracker */,
 				D68423791CD712A500384402 /* Model */,
 				D68423781CD7129F00384402 /* View */,
 				D68423771CD7129500384402 /* Presenter */,
 				B7E6AD0D73315D341A68D925 /* Cell */,
-				B7E6A122699477C5E67ECE5E /* SearchController.xib */,
-				B7E6A071EBFF288A1F900705 /* SearchController.swift */,
 			);
 			name = SearchView;
 			path = ListParking;
@@ -723,8 +740,8 @@
 		B7E6AD0D73315D341A68D925 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				B7E6A51ACE4DE755F7FFD0B0 /* ParkingResultCell.xib */,
-				B7E6AA27BF66F1D94F9CEBEB /* ParkingResultCell.swift */,
+				D6F92B1E1CD716BE003C28FC /* ParkingResultCell.swift */,
+				D6F92B1F1CD716BE003C28FC /* ParkingResultCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1035,6 +1052,8 @@
 		D68423771CD7129500384402 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D6F92B261CD71717003C28FC /* SearchViewPresenter.swift */,
+				D6F92B281CD71730003C28FC /* SearchViewPresenterImpl.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -1042,6 +1061,11 @@
 		D68423781CD7129F00384402 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D6F92B221CD716CD003C28FC /* SearchController.swift */,
+				D6F92B231CD716CD003C28FC /* SearchController.xib */,
+				D6F92B2A1CD71756003C28FC /* SearchView.swift */,
+				D6F92B2D1CD71778003C28FC /* SearchViewAdapter.swift */,
+				D6F92B2F1CD71792003C28FC /* SearchViewAdapterImpl.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1049,6 +1073,8 @@
 		D68423791CD712A500384402 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6F92B311CD717DE003C28FC /* SearchViewModel.swift */,
+				D6F92B331CD717EA003C28FC /* SearchViewModelImpl.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1092,6 +1118,15 @@
 				D6FE66D21CD6826B00F11168 /* String+Helper.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D6F92B351CD71822003C28FC /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				D6F92B361CD71838003C28FC /* SearchViewTracker.swift */,
+				D6F92B381CD71851003C28FC /* SearchViewTrackerImpl.swift */,
+			);
+			name = Tracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1194,15 +1229,15 @@
 				D60D17A01CD4C878004B1182 /* ProfileController.xib in Resources */,
 				B7E6AC35E4C87F435C2D14EE /* MapController.xib in Resources */,
 				B7E6AC7B78DB97C1857BFF86 /* BookmarkController.xib in Resources */,
-				B7E6AAC9E99348518E9B6D21 /* ParkingResultCell.xib in Resources */,
-				B7E6A23A88726CC0D19CD553 /* SearchController.xib in Resources */,
 				B7E6A75B8792F930FC0D46E8 /* PostParkingController.xib in Resources */,
 				723552A31CC4D3DB00090651 /* GMPlaceCell.xib in Resources */,
 				100C66661CD08EE200B5D2A9 /* LaunchScreen.storyboard in Resources */,
 				B7E6A075011D3E56D1D6F747 /* PostInfoController.xib in Resources */,
 				B7E6A1037EA58D7A02BD6B2B /* VerifyController.xib in Resources */,
+				D6F92B211CD716BE003C28FC /* ParkingResultCell.xib in Resources */,
 				B7E6AEF2228BC974A36C5467 /* SelectMapImageController.xib in Resources */,
 				B7E6A6509ADB9AA6D877EF70 /* MoreInfoViewController.xib in Resources */,
+				D6F92B251CD716CD003C28FC /* SearchController.xib in Resources */,
 				D6A14E4B1CC26AF600BC6A64 /* GoogleService-Info.plist in Resources */,
 				B7E6A60E9906C2D10C8F2F70 /* MapDetailViewController.xib in Resources */,
 				B7E6A5EA66C326A60FCF8502 /* PhotosCollectionViewCell.xib in Resources */,
@@ -1357,6 +1392,7 @@
 				1063B5BD1CCB541A00D08A33 /* WorkTimeTableViewCell.swift in Sources */,
 				D60D17D11CD53228004B1182 /* ProfileItem.swift in Sources */,
 				D60D17AF1CD50693004B1182 /* ProfileDataModelImpl.swift in Sources */,
+				D6F92B241CD716CD003C28FC /* SearchController.swift in Sources */,
 				D66128791CCCF8FD00B435A8 /* UploadManager.swift in Sources */,
 				B7E6A21C1DA746BBFAC340A7 /* Bookmark.swift in Sources */,
 				D60D17FD1CD6380A004B1182 /* AllPostTrackerImpl.swift in Sources */,
@@ -1389,6 +1425,7 @@
 				10D1A8AF1CC64649002867BC /* RatingControl.swift in Sources */,
 				D60D179F1CD4C878004B1182 /* ProfileController.swift in Sources */,
 				D60D17721CD2344B004B1182 /* LoginPresenterImpl.swift in Sources */,
+				D6F92B391CD71851003C28FC /* SearchViewTrackerImpl.swift in Sources */,
 				723552A21CC4D3DB00090651 /* GMPlaceCell.swift in Sources */,
 				B7E6A5DF78B1154F6089496A /* ParkAnnotation.swift in Sources */,
 				D60D17AE1CD50693004B1182 /* ProfileDataModel.swift in Sources */,
@@ -1404,14 +1441,15 @@
 				D6A14E601CC2A90A00BC6A64 /* ExtendedCell.swift in Sources */,
 				D654A3861CC369F50095F74D /* AuthServiceImpl.swift in Sources */,
 				D60D17EC1CD62445004B1182 /* AllPostRouter.swift in Sources */,
+				D6F92B341CD717EA003C28FC /* SearchViewModelImpl.swift in Sources */,
 				D60D17B51CD50FB4004B1182 /* ProfileRouterImpl.swift in Sources */,
 				B7E6AC26951ACD27B35085B9 /* BookmarkController.swift in Sources */,
+				D6F92B321CD717DE003C28FC /* SearchViewModel.swift in Sources */,
+				D6F92B2E1CD71778003C28FC /* SearchViewAdapter.swift in Sources */,
 				D60D17F51CD6374F004B1182 /* AllPostTracker.swift in Sources */,
 				D6FE66D31CD6826B00F11168 /* String+Helper.swift in Sources */,
 				D60D17C11CD52BA8004B1182 /* GATrackerImpl.swift in Sources */,
-				B7E6AC842CC3B34A20172827 /* ParkingResultCell.swift in Sources */,
 				D6F92B1B1CD7146F003C28FC /* AppDelegate.swift in Sources */,
-				B7E6ABFA04ECC1111B378897 /* SearchController.swift in Sources */,
 				D60D178E1CD4AB36004B1182 /* LoginView.swift in Sources */,
 				B7E6A949DC4DD496BB0052B3 /* PostParkingController.swift in Sources */,
 				7235529D1CC4D39400090651 /* AddressPickerController.swift in Sources */,
@@ -1430,17 +1468,23 @@
 				D60D17D31CD53FCB004B1182 /* ProfileAdapter.swift in Sources */,
 				B7E6AC10C6333F9CB1A58377 /* DetailParkingController.swift in Sources */,
 				D60D17B21CD50F8F004B1182 /* ProfileRouter.swift in Sources */,
+				D6F92B201CD716BE003C28FC /* ParkingResultCell.swift in Sources */,
 				D60D17BA1CD51C6D004B1182 /* TrackerDelegator.swift in Sources */,
 				D60D17DF1CD62382004B1182 /* AllPostParkingTableViewController.swift in Sources */,
 				D60D17921CD4ADD8004B1182 /* LoginDataManager.swift in Sources */,
 				D60D17CA1CD52C86004B1182 /* LoginTrackerImpl.swift in Sources */,
+				D6F92B271CD71717003C28FC /* SearchViewPresenter.swift in Sources */,
+				D6F92B2B1CD71756003C28FC /* SearchView.swift in Sources */,
 				D6A14E531CC2798000BC6A64 /* CircularImageView.swift in Sources */,
 				D654A38A1CC36A000095F74D /* FacebookAuth.swift in Sources */,
+				D6F92B301CD71792003C28FC /* SearchViewAdapterImpl.swift in Sources */,
+				D6F92B371CD71838003C28FC /* SearchViewTracker.swift in Sources */,
 				D60D17E91CD6241D004B1182 /* AllPostView.swift in Sources */,
 				D60D17CD1CD52D1E004B1182 /* ProfileTracker.swift in Sources */,
 				B7E6ACD4AFB74727E11B8305 /* BaseViewController.swift in Sources */,
 				D654A37A1CC2D3D20095F74D /* MapPreferences.swift in Sources */,
 				B7E6AAC76CC37347DDC5E839 /* PakrTabBarController.swift in Sources */,
+				D6F92B291CD71730003C28FC /* SearchViewPresenterImpl.swift in Sources */,
 				D60D17CF1CD52D39004B1182 /* ProfileTrackerImpl.swift in Sources */,
 				D60D17A61CD4C8C4004B1182 /* ProfilePresenterImpl.swift in Sources */,
 				D60D17C51CD52BE9004B1182 /* GTMTrackerImpl.swift in Sources */,
