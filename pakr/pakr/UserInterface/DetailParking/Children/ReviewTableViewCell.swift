@@ -40,7 +40,7 @@ class ReviewTableViewCell: UITableViewCell {
             let string = dateFormatter.stringFromDate(comment.dateCreated)
             timeCreateLbl.text = string
             WebServiceFactory.getAddressService().getUserById(comment.userId) { (user, error) in
-                self.userNameLbl.text = user?.name
+                self.titleLbl.text = user?.name
                 self.userImage.setImageWithURL(NSURL(string: (user?.avatarUrl)!)!, placeholderImage: UIImage(named: "parkingLot"))
             }
         }
