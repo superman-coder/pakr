@@ -139,10 +139,8 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let topic = self.parkSearchResult[indexPath.section];
-        let parking = topic.parking
-        
         let detailVc = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
-        detailVc.parking = parking
+        detailVc.topic = topic
         
         self.navigationController?.pushViewController(detailVc, animated: true)
     }

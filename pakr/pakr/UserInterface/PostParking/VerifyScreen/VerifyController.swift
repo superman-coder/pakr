@@ -81,7 +81,7 @@ extension VerifyController: UploadManagerDelegate {
             (action: UIAlertAction) in
             // move to detail screen
             let detailViewController = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
-            detailViewController.parking = topic.parking
+            detailViewController.topic = topic
             
             var controllers = self.navigationController?.viewControllers
             controllers?.removeLast()

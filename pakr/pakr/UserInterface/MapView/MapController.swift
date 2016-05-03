@@ -204,10 +204,8 @@ extension MapController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let tag = view.tag
         let topic = self.parkingList[tag];
-        let parking = topic.parking
-        
         let detailVc = DetailParkingController(nibName: "DetailParkingController", bundle: nil)
-        detailVc.parking = parking
+        detailVc.topic = topic
         
         self.navigationController?.pushViewController(detailVc, animated: true)
     }
