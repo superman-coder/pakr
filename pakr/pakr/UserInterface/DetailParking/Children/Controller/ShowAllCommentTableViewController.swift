@@ -90,5 +90,6 @@ extension ShowAllCommentTableViewController: ReviewViewControllerDelegate{
         self.comments?.insert(comment, atIndex: 0)
         let insexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([insexPath], withRowAnimation: .Automatic)
+        imageView.hidden = true
     }
 }

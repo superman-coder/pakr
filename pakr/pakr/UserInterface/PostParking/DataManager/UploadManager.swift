@@ -64,15 +64,13 @@ class UploadManager: NSObject {
             delegate.startUpload(-1)
             // assign all uploaded url to topic again
             topic.parking.imageUrl = serverImageUrls
-            topic.toPFObject().saveInBackgroundWithBlock {
-                (success: Bool, error: NSError?) -> Void in
-                if (success) {
-                    self.delegate.doneUploadTopic(self.topic)
-                    print("UPLOAD ALL FINISH")
-                } else {
-                    print("\(error!.localizedDescription)")
+            WebServiceFactory.getAddressService().postTopic(topic, complete: { (topic, error) in
+                if error != nil {
+                     print("\(error!.localizedDescription)")
+                }else{
+                    self.delegate.doneUploadTopic(topic!)
                 }
-            }
+            })
         }
     }
     

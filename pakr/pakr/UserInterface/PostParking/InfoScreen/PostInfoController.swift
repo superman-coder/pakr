@@ -205,18 +205,18 @@ class PostInfoController: BaseViewController {
         //        let coordinate = Coordinate(latitude: <#T##Double!#>, longitude: <#T##Double!#>)
         let vehicleList = NSMutableArray()
         if carCheckBox.on {
-            let vehic = VehicleDetail(vehicleType: VehicleType.Car, minPrice: carMinPriceTextField.text, maxPrice: carMaxPriceTextField.text, note: "")
+            let vehic = VehicleDetail(vehicleType: VehicleType.Car, minPrice: carMinPriceTextField.text, maxPrice: carMaxPriceTextField.text, note: noteWorkTime.text)
             vehicleList.addObject(vehic)
         }
         if bikeCheckBox.on {
-            let vehic = VehicleDetail(vehicleType: VehicleType.Bike, minPrice: bikeMinPriceTextField.text, maxPrice: bikeMaxPriceTextField.text, note: "")
+            let vehic = VehicleDetail(vehicleType: VehicleType.Bike, minPrice: bikeMinPriceTextField.text, maxPrice: bikeMaxPriceTextField.text, note: noteWorkTime.text)
             vehicleList.addObject(vehic)
         }
         if motorCheckBox.on {
             let vehic = VehicleDetail(vehicleType: VehicleType.Motor, minPrice: motorMinPriceTextField.text, maxPrice: motorMaxPriceTextField.text, note: noteWorkTime.text)
             vehicleList.addObject(vehic)
         }
-        parking = Parking(business: business, parkingName: parkingNameTextField.text, capacity: 0, addressName: parkingAddressTextField.text!, coordinate: nil, vehicleDetailList: vehicleList.copy() as! [VehicleDetail], schedule: arrTimeRange.copy() as! [TimeRange], region: [])
+        parking = Parking(business: business, parkingName: parkingNameTextField.text, capacity: Int(capacityTextField.text!), addressName: parkingAddressTextField.text!, coordinate: nil, vehicleDetailList: vehicleList.copy() as! [VehicleDetail], schedule: arrTimeRange.copy() as! [TimeRange], region: [])
         dispatch_async(dispatch_get_main_queue()) {
             self.delegate?.nextStep(self.parking!)
         }
@@ -230,7 +230,6 @@ class PostInfoController: BaseViewController {
         }
         workTimeTableView.reloadData()
     }
-    
     func configTextFields(){
         LayoutUtils.setUpTextField(businessNameTextField, title: "Company Name", suggestionText: "Please tell us your company name")
         LayoutUtils.setUpTextField(businessDescriptionTextField, title: "Description", suggestionText: "Let us know more about you")

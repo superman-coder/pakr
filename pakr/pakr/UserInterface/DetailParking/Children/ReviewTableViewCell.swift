@@ -31,17 +31,17 @@ class ReviewTableViewCell: UITableViewCell {
     
     var comment: Comment!{
         didSet{
-            titleLbl.text = comment.title
+            userNameLbl.text = comment.title
             ratingControl.rating = comment.rating
             contentLbl.text = comment.content
-            userNameLbl.text = "   "
+            titleLbl.text = "   "
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = .MediumStyle
             let string = dateFormatter.stringFromDate(comment.dateCreated)
             timeCreateLbl.text = string
             WebServiceFactory.getAddressService().getUserById(comment.userId) { (user, error) in
-                self.userNameLbl.text = user?.name
-                self.userImage.setImageWithURL(NSURL(string: (user?.avatarUrl)!)!, placeholderImage: nil)
+                self.titleLbl.text = user?.name
+                self.userImage.setImageWithURL(NSURL(string: (user?.avatarUrl)!)!, placeholderImage: UIImage(named: "parkingLot"))
             }
         }
     }

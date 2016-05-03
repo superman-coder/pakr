@@ -25,7 +25,7 @@ class PriceTableViewCell: UITableViewCell {
     }
     
     func disPlay(vehicle: VehicleDetail){
-        lblMaxPrice.text = vehicle.minPrice
+        lblMinPrice.text = vehicle.minPrice
         lblMaxPrice.text = vehicle.maxPrice
         if vehicle.vehicleType == VehicleType.Car {
             imgType.image = UIImage(named: "carPrice")

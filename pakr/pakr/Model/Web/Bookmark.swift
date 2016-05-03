@@ -8,16 +8,18 @@ import Parse
 
 class Bookmark:Post, ParseModelProtocol {
     let PKTopicId = "topicId"
-
     var topicId: String!
+    var topic: Topic!
     
-    init(userId: String!, topicId: String!) {
+    init(userId: String!, topicId: String!, topic: Topic!) {
         self.topicId = topicId
+        self.topic = topic
         super.init(userId: userId)
     }
     
     required init(pfObject: PFObject) {
         topicId = pfObject[PKTopicId] as! String
+
         let userId = pfObject[Bookmark.PKPostUser].objectId
         super.init(userId: userId)
         self.dateCreated = pfObject.createdAt

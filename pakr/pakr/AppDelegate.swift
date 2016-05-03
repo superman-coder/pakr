@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var authenService: AuthService!
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
+       
+        // if we run from testing environment. nothing happen for saving time
+            if NSProcessInfo.processInfo().environment["XCInjectBundle"] != nil  ||
+               NSProcessInfo.processInfo().environment["XCTestConfigurationFilePath"] != nil  {
+                return false
+            }
+        
         Fabric.with([Crashlytics.self])
 
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -31,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpAWS()
         setUpGoogleAnalytic()
         
-
         authenService = WebServiceFactory.getAuthService()
         
        if authenService.isLogin() {

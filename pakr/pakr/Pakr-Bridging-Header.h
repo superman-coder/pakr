@@ -9,8 +9,8 @@
 #ifndef Pakr_Bridging_Header_h
 #define Pakr_Bridging_Header_h
 
-#import <Google/Analytics.h>
 #import <Google/SignIn.h>
+#import <Google/Analytics.h>
 
 #import <GoogleTagManager/TAGManager.h>
 #import <GoogleTagManager/TAGContainer.h>
