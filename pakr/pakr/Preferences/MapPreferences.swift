@@ -20,7 +20,7 @@ extension NSUserDefaults {
         var storedLocation:CLLocationCoordinate2D?
         if validStoredLocation == nil {
             // No stored location
-            storedLocation = CLLocationCoordinate2D(latitude: 10.801657081893337, longitude: 106.71410865522336)
+            storedLocation = CLLocationCoordinate2D(latitude:10.766650, longitude:106.707269)
         } else {
             let latitude = self.doubleForKey(kLastLocationLatitude)
             let longitude = self.doubleForKey(kLastLocationLongitude)
