@@ -64,10 +64,12 @@ class UploadManager: NSObject {
             delegate.startUpload(-1)
             // assign all uploaded url to topic again
             topic.parking.imageUrl = serverImageUrls
+            NSNotificationCenter.defaultCenter().removeObserver(self, name: EventSignal.UploadDoneEvent, object: nil)
             WebServiceFactory.getAddressService().postTopic(topic, complete: { (topic, error) in
                 if error != nil {
                      print("\(error!.localizedDescription)")
                 }else{
+                    print("______________________")
                     self.delegate.doneUploadTopic(topic!)
                 }
             })
