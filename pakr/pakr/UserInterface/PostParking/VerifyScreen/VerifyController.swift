@@ -5,6 +5,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class VerifyController: BaseViewController {
 
@@ -39,6 +40,7 @@ class VerifyController: BaseViewController {
     
     @IBAction func postParkingEvent(sender: AnyObject) {
         //controlButton.enabled = false
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         postParkingController.upLoadParking()
     }
 }
@@ -74,6 +76,7 @@ extension VerifyController: UploadManagerDelegate {
     }
     
     func doneUploadTopic(topic: Topic) {
+        MBProgressHUD.hideHUDForView(self.view, animated: true)
         uploadStatusTextView.text = "Finish :D :D :D"
         
         let alert = UIAlertController(title: "Upload Finish", message: "Your parking lot is ready", preferredStyle: .Alert)
